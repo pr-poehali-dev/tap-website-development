@@ -213,8 +213,6 @@ const Index = () => {
 
       {/* 3D Viewer */}
       <Cabinet3DViewer />
-        </div>
-      </section>
 
       {/* About Section */}
       <section className="py-16 px-6 bg-white">
