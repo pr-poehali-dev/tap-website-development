@@ -6,6 +6,7 @@ import Icon from '@/components/ui/icon';
 import CostCalculator from '@/components/CostCalculator';
 import ProjectGallery from '@/components/ProjectGallery';
 import Cabinet3DViewer from '@/components/Cabinet3DViewer';
+import HatchSection from '@/components/HatchSection';
 
 const Index = () => {
   const priceData = [
@@ -16,25 +17,27 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+    <div className="min-h-screen bg-gradient-to-br from-background to-accent/5">
       {/* Header */}
       <header className="bg-white/95 backdrop-blur-sm border-b sticky top-0 z-50">
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-blue-800 rounded-lg flex items-center justify-center">
-                <Icon name="Settings" className="text-white" size={24} />
-              </div>
+              <img 
+                src="https://cdn.poehali.dev/files/176ac5ba-384c-4c88-8fdb-feb18c2c8ea7.png" 
+                alt="ТАП Логотип" 
+                className="w-10 h-10"
+              />
               <div>
-                <h1 className="text-2xl font-bold text-slate-800">ТАП</h1>
-                <p className="text-sm text-slate-600">Технологии автоматизации производств</p>
+                <h1 className="text-2xl font-bold text-foreground">ТАП</h1>
+                <p className="text-sm text-muted-foreground">Технологии автоматизации производств</p>
               </div>
             </div>
             <nav className="hidden md:flex space-x-8">
-              <a href="#services" className="text-slate-600 hover:text-blue-600 transition-colors">Услуги</a>
-              <a href="#products" className="text-slate-600 hover:text-blue-600 transition-colors">Продукция</a>
-              <a href="#price" className="text-slate-600 hover:text-blue-600 transition-colors">Прайс</a>
-              <a href="#contacts" className="text-slate-600 hover:text-blue-600 transition-colors">Контакты</a>
+              <a href="#services" className="text-muted-foreground hover:text-primary transition-colors">Услуги</a>
+              <a href="#products" className="text-muted-foreground hover:text-primary transition-colors">Продукция</a>
+              <a href="#price" className="text-muted-foreground hover:text-primary transition-colors">Прайс</a>
+              <a href="#contacts" className="text-muted-foreground hover:text-primary transition-colors">Контакты</a>
             </nav>
           </div>
         </div>
@@ -44,21 +47,21 @@ const Index = () => {
       <section className="py-20 px-6">
         <div className="container mx-auto text-center">
           <div className="max-w-4xl mx-auto">
-            <Badge variant="secondary" className="mb-6 bg-blue-100 text-blue-800 hover:bg-blue-200">
+            <Badge variant="secondary" className="mb-6 bg-primary/10 text-primary hover:bg-primary/20">
               🏭 Промышленная автоматизация
             </Badge>
-            <h1 className="text-5xl md:text-6xl font-bold text-slate-800 mb-6 leading-tight">
+            <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-6 leading-tight">
               Шкафы управления<br/>
-              <span className="bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-primary to-accent-foreground bg-clip-text text-transparent">
                 нового поколения
               </span>
             </h1>
-            <p className="text-xl text-slate-600 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
               Разрабатываем и производим шкафы управления с программированием ПЛК 
               и сенсорных панелей оператора. Поставляем КИПиА и корпуса из нержавеющей стали.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
+              <Button size="lg" className="bg-primary hover:bg-primary/90">
                 <Icon name="Phone" className="mr-2" size={20} />
                 Получить консультацию
               </Button>
@@ -75,68 +78,68 @@ const Index = () => {
       <section id="services" className="py-16 px-6 bg-white">
         <div className="container mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-slate-800 mb-4">Наши услуги</h2>
-            <p className="text-slate-600 max-w-2xl mx-auto">
+            <h2 className="text-3xl font-bold text-foreground mb-4">Наши услуги</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
               Полный цикл разработки и производства систем автоматизации
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
-            <Card className="group hover:shadow-lg transition-all duration-300 border-0 shadow-md hover:shadow-blue-100">
+            <Card className="group hover:shadow-lg transition-all duration-300 border-0 shadow-md hover:shadow-primary/10">
               <CardHeader>
-                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                <div className="w-12 h-12 bg-gradient-to-r from-primary to-primary/80 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                   <Icon name="Cpu" className="text-white" size={24} />
                 </div>
-                <CardTitle className="text-slate-800">Шкафы управления</CardTitle>
+                <CardTitle className="text-foreground">Шкафы управления</CardTitle>
                 <CardDescription>
                   Проектирование и сборка шкафов управления с программированием ПЛК
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <ul className="space-y-2 text-sm text-slate-600">
-                  <li className="flex items-center"><Icon name="Check" className="text-green-600 mr-2" size={16} />Siemens, ABB, Schneider</li>
-                  <li className="flex items-center"><Icon name="Check" className="text-green-600 mr-2" size={16} />Программирование ПЛК</li>
-                  <li className="flex items-center"><Icon name="Check" className="text-green-600 mr-2" size={16} />Сенсорные панели HMI</li>
-                  <li className="flex items-center"><Icon name="Check" className="text-green-600 mr-2" size={16} />Пуско-наладочные работы</li>
+                <ul className="space-y-2 text-sm text-muted-foreground">
+                  <li className="flex items-center"><Icon name="Check" className="text-primary mr-2" size={16} />Siemens, ABB, Schneider</li>
+                  <li className="flex items-center"><Icon name="Check" className="text-primary mr-2" size={16} />Программирование ПЛК</li>
+                  <li className="flex items-center"><Icon name="Check" className="text-primary mr-2" size={16} />Сенсорные панели HMI</li>
+                  <li className="flex items-center"><Icon name="Check" className="text-primary mr-2" size={16} />Пуско-наладочные работы</li>
                 </ul>
               </CardContent>
             </Card>
 
-            <Card className="group hover:shadow-lg transition-all duration-300 border-0 shadow-md hover:shadow-blue-100">
+            <Card className="group hover:shadow-lg transition-all duration-300 border-0 shadow-md hover:shadow-primary/10">
               <CardHeader>
-                <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-green-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                <div className="w-12 h-12 bg-gradient-to-r from-accent to-accent/80 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                   <Icon name="Gauge" className="text-white" size={24} />
                 </div>
-                <CardTitle className="text-slate-800">КИПиА</CardTitle>
+                <CardTitle className="text-foreground">КИПиА</CardTitle>
                 <CardDescription>
                   Поставка контрольно-измерительных приборов и средств автоматизации
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <ul className="space-y-2 text-sm text-slate-600">
-                  <li className="flex items-center"><Icon name="Check" className="text-green-600 mr-2" size={16} />Датчики и преобразователи</li>
-                  <li className="flex items-center"><Icon name="Check" className="text-green-600 mr-2" size={16} />Регулирующая арматура</li>
-                  <li className="flex items-center"><Icon name="Check" className="text-green-600 mr-2" size={16} />Приборы учёта и контроля</li>
-                  <li className="flex items-center"><Icon name="Check" className="text-green-600 mr-2" size={16} />Системы связи и передачи данных</li>
+                <ul className="space-y-2 text-sm text-muted-foreground">
+                  <li className="flex items-center"><Icon name="Check" className="text-primary mr-2" size={16} />Датчики и преобразователи</li>
+                  <li className="flex items-center"><Icon name="Check" className="text-primary mr-2" size={16} />Регулирующая арматура</li>
+                  <li className="flex items-center"><Icon name="Check" className="text-primary mr-2" size={16} />Приборы учёта и контроля</li>
+                  <li className="flex items-center"><Icon name="Check" className="text-primary mr-2" size={16} />Системы связи и передачи данных</li>
                 </ul>
               </CardContent>
             </Card>
 
-            <Card className="group hover:shadow-lg transition-all duration-300 border-0 shadow-md hover:shadow-blue-100">
+            <Card className="group hover:shadow-lg transition-all duration-300 border-0 shadow-md hover:shadow-primary/10">
               <CardHeader>
-                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-purple-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                <div className="w-12 h-12 bg-gradient-to-r from-secondary to-secondary/80 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                   <Icon name="Shield" className="text-white" size={24} />
                 </div>
-                <CardTitle className="text-slate-800">Корпуса из нержавейки</CardTitle>
+                <CardTitle className="text-slate-800">Корпуса и люки из нержавейки</CardTitle>
                 <CardDescription>
-                  Производство и поставка корпусов из нержавеющей стали для промышленности
+                  Производство корпусов из нержавеющей стали и технологических люков
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <ul className="space-y-2 text-sm text-slate-600">
-                  <li className="flex items-center"><Icon name="Check" className="text-green-600 mr-2" size={16} />AISI 304, 316, 316L</li>
-                  <li className="flex items-center"><Icon name="Check" className="text-green-600 mr-2" size={16} />Степень защиты до IP68</li>
-                  <li className="flex items-center"><Icon name="Check" className="text-green-600 mr-2" size={16} />Любые размеры под заказ</li>
-                  <li className="flex items-center"><Icon name="Check" className="text-green-600 mr-2" size={16} />Быстрая поставка со склада</li>
+                <ul className="space-y-2 text-sm text-muted-foreground">
+                  <li className="flex items-center"><Icon name="Check" className="text-primary mr-2" size={16} />Корпуса AISI 304, 316, 316L</li>
+                  <li className="flex items-center"><Icon name="Check" className="text-primary mr-2" size={16} />Люки овальные 340×440</li>
+                  <li className="flex items-center"><Icon name="Check" className="text-primary mr-2" size={16} />Люки кольцевые DN400, DN450</li>
+                  <li className="flex items-center"><Icon name="Check" className="text-primary mr-2" size={16} />Давление до 0.6 МПа</li>
                 </ul>
               </CardContent>
             </Card>
@@ -213,6 +216,9 @@ const Index = () => {
 
       {/* 3D Viewer */}
       <Cabinet3DViewer />
+
+      {/* Hatch Section */}
+      <HatchSection />
 
       {/* About Section */}
       <section className="py-16 px-6 bg-white">
@@ -329,15 +335,17 @@ const Index = () => {
         <div className="container mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex items-center space-x-3 mb-4 md:mb-0">
-              <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-blue-800 rounded-lg flex items-center justify-center">
-                <Icon name="Settings" className="text-white" size={16} />
-              </div>
+              <img 
+                src="https://cdn.poehali.dev/files/176ac5ba-384c-4c88-8fdb-feb18c2c8ea7.png" 
+                alt="ТАП Логотип" 
+                className="w-8 h-8"
+              />
               <div>
                 <div className="text-white font-bold">ТАП</div>
-                <div className="text-xs text-slate-400">Технологии автоматизации производств</div>
+                <div className="text-xs text-muted-foreground">Технологии автоматизации производств</div>
               </div>
             </div>
-            <div className="text-slate-400 text-sm">
+            <div className="text-muted-foreground text-sm">
               © 2024 ТАП. Все права защищены.
             </div>
           </div>
