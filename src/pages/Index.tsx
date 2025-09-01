@@ -12,6 +12,29 @@ const Index = () => {
     <div className="min-h-screen bg-gradient-to-br from-background to-accent/5">
       {/* Header */}
       <header className="bg-white/95 backdrop-blur-sm border-b sticky top-0 z-50">
+        {/* Contact Bar */}
+        <div className="bg-secondary text-white py-2 px-6">
+          <div className="container mx-auto flex justify-between items-center text-sm">
+            <div className="flex items-center space-x-6">
+              <div className="flex items-center">
+                <Icon name="Phone" className="w-4 h-4 mr-2" />
+                <span>+7 (3412) 555-123</span>
+              </div>
+              <div className="flex items-center">
+                <Icon name="MapPin" className="w-4 h-4 mr-2" />
+                <span>г. Ижевск, ул. Промышленная, д. 15</span>
+              </div>
+            </div>
+            <div className="flex items-center">
+              <a href="https://vk.com/tap_tech" target="_blank" rel="noopener noreferrer" className="flex items-center hover:text-primary transition-colors">
+                <Icon name="Users" className="w-4 h-4 mr-2" />
+                <span>ВКонтакте</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        {/* Main Header */}
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
@@ -28,8 +51,8 @@ const Index = () => {
             <nav className="hidden md:flex space-x-8">
               <a href="/" className="text-primary font-medium">Главная</a>
               <a href="/models3d" className="text-muted-foreground hover:text-primary transition-colors">3D Модели</a>
+              <a href="/pricing" className="text-muted-foreground hover:text-primary transition-colors">Корпуса AISI304</a>
               <a href="/hatches" className="text-muted-foreground hover:text-primary transition-colors">Люки</a>
-              <a href="/pricing" className="text-muted-foreground hover:text-primary transition-colors">Прайс</a>
               <a href="/calculator" className="text-muted-foreground hover:text-primary transition-colors">Калькулятор</a>
               <a href="#contacts" className="text-muted-foreground hover:text-primary transition-colors">Контакты</a>
             </nav>
@@ -38,28 +61,39 @@ const Index = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="py-20 px-6">
-        <div className="container mx-auto text-center">
+      <section 
+        className="py-20 px-6 relative overflow-hidden"
+        style={{
+          backgroundImage: `url('/img/00de617f-f004-44aa-9e7d-a72d08bd6c1a.jpg')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      >
+        {/* Dark overlay for text readability */}
+        <div className="absolute inset-0 bg-black/60"></div>
+        
+        <div className="container mx-auto text-center relative z-10">
           <div className="max-w-4xl mx-auto">
-            <Badge variant="secondary" className="mb-6 bg-primary/10 text-primary hover:bg-primary/20">
+            <Badge variant="secondary" className="mb-6 bg-primary/90 text-white hover:bg-primary border-primary">
               🏭 Промышленная автоматизация
             </Badge>
-            <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-6 leading-tight">
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight drop-shadow-2xl">
               Шкафы управления<br/>
-              <span className="bg-gradient-to-r from-primary to-accent-foreground bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-primary to-red-400 bg-clip-text text-transparent">
                 нового поколения
               </span>
             </h1>
-            <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto drop-shadow-lg">
               Разрабатываем и производим шкафы управления с программированием ПЛК 
               и сенсорных панелей оператора. Поставляем КИПиА и корпуса из нержавеющей стали.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-primary hover:bg-primary/90">
+              <Button size="lg" className="bg-primary hover:bg-primary/90 shadow-lg">
                 <Icon name="Phone" className="mr-2" size={20} />
                 Получить консультацию
               </Button>
-              <Button variant="outline" size="lg">
+              <Button variant="outline" size="lg" className="border-white text-white hover:bg-white/10 shadow-lg">
                 <Icon name="Download" className="mr-2" size={20} />
                 Скачать каталог
               </Button>
@@ -293,8 +327,8 @@ const Index = () => {
                 <CardTitle className="text-white">Телефон</CardTitle>
               </CardHeader>
               <CardContent className="text-center">
-                <p className="text-muted-foreground mb-2">+7 (495) 123-45-67</p>
-                <p className="text-muted-foreground">+7 (800) 987-65-43</p>
+                <p className="text-white mb-2">+7 (3412) 555-123</p>
+                <p className="text-white">+7 (800) 987-65-43</p>
               </CardContent>
             </Card>
             <Card className="bg-accent border-border">
@@ -305,8 +339,8 @@ const Index = () => {
                 <CardTitle className="text-white">Email</CardTitle>
               </CardHeader>
               <CardContent className="text-center">
-                <p className="text-muted-foreground mb-2">info@tap-auto.ru</p>
-                <p className="text-muted-foreground">sales@tap-auto.ru</p>
+                <p className="text-white mb-2">info@tap-tech.ru</p>
+                <p className="text-white">sales@tap-tech.ru</p>
               </CardContent>
             </Card>
             <Card className="bg-accent border-border">
@@ -317,8 +351,8 @@ const Index = () => {
                 <CardTitle className="text-white">Адрес</CardTitle>
               </CardHeader>
               <CardContent className="text-center">
-                <p className="text-muted-foreground mb-2">г. Москва,</p>
-                <p className="text-muted-foreground">ул. Промышленная, д. 15</p>
+                <p className="text-white mb-2">г. Ижевск,</p>
+                <p className="text-white">ул. Промышленная, д. 15</p>
               </CardContent>
             </Card>
           </div>
@@ -343,10 +377,10 @@ const Index = () => {
               />
               <div>
                 <div className="text-white font-bold">ТАП</div>
-                <div className="text-xs text-muted-foreground">Технологии автоматизации производств</div>
+                <div className="text-xs text-white/70">Технологии автоматизации производств</div>
               </div>
             </div>
-            <div className="text-muted-foreground text-sm">
+            <div className="text-white text-sm">
               © 2024 ТАП. Все права защищены.
             </div>
           </div>
