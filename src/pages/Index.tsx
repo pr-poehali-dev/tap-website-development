@@ -76,7 +76,7 @@ const Index = () => {
           <div className="max-w-4xl mx-auto">
 
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight drop-shadow-2xl">
-              <span className="bg-gradient-to-r from-primary to-red-400 bg-clip-text text-transparent">
+              <span className="text-white">
                 Шкафы управления
               </span>
             </h1>
