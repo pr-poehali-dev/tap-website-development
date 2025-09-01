@@ -3,18 +3,10 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Badge } from '@/components/ui/badge';
 import { Separator } from '@/components/ui/separator';
 import Icon from '@/components/ui/icon';
-import CostCalculator from '@/components/CostCalculator';
 import ProjectGallery from '@/components/ProjectGallery';
-import Cabinet3DViewer from '@/components/Cabinet3DViewer';
-import HatchSection from '@/components/HatchSection';
 
 const Index = () => {
-  const priceData = [
-    { size: "300x400x200", material: "AISI 304", price: "45,000", features: ["IP65", "Смотровое окно", "Замок"] },
-    { size: "400x500x250", material: "AISI 304", price: "62,000", features: ["IP66", "Вентиляция", "DIN-рейка"] },
-    { size: "500x600x300", material: "AISI 316", price: "85,000", features: ["IP67", "Подогрев", "Кабельные вводы"] },
-    { size: "600x800x350", material: "AISI 316L", price: "120,000", features: ["IP68", "Антивандальный", "Терморегулятор"] }
-  ];
+
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-background to-accent/5">
@@ -34,9 +26,11 @@ const Index = () => {
               </div>
             </div>
             <nav className="hidden md:flex space-x-8">
-              <a href="#services" className="text-muted-foreground hover:text-primary transition-colors">Услуги</a>
-              <a href="#products" className="text-muted-foreground hover:text-primary transition-colors">Продукция</a>
-              <a href="#price" className="text-muted-foreground hover:text-primary transition-colors">Прайс</a>
+              <a href="/" className="text-primary font-medium">Главная</a>
+              <a href="/models3d" className="text-muted-foreground hover:text-primary transition-colors">3D Модели</a>
+              <a href="/hatches" className="text-muted-foreground hover:text-primary transition-colors">Люки</a>
+              <a href="/pricing" className="text-muted-foreground hover:text-primary transition-colors">Прайс</a>
+              <a href="/calculator" className="text-muted-foreground hover:text-primary transition-colors">Калькулятор</a>
               <a href="#contacts" className="text-muted-foreground hover:text-primary transition-colors">Контакты</a>
             </nav>
           </div>
@@ -147,127 +141,134 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Price Section */}
-      <section id="price" className="py-16 px-6 bg-gradient-to-r from-slate-50 to-blue-50">
+      {/* Quick Links Section */}
+      <section className="py-16 px-6 bg-white">
         <div className="container mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-slate-800 mb-4">Прайс на корпуса из нержавеющей стали</h2>
-            <p className="text-slate-600">Актуальные цены на складские позиции</p>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {priceData.map((item, index) => (
-              <Card key={index} className="relative overflow-hidden border-0 shadow-md hover:shadow-lg transition-all duration-300">
-                <CardHeader className="pb-2">
-                  <div className="flex justify-between items-start">
-                    <Badge variant="outline" className="bg-blue-50 text-blue-700 border-blue-200">
-                      {item.material}
-                    </Badge>
-                    <div className="text-right">
-                      <div className="text-2xl font-bold text-slate-800">{item.price} ₽</div>
-                      <div className="text-xs text-slate-500">с НДС</div>
-                    </div>
-                  </div>
-                  <CardTitle className="text-lg text-slate-800">{item.size} мм</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="space-y-2">
-                    {item.features.map((feature, i) => (
-                      <div key={i} className="flex items-center text-sm">
-                        <Icon name="CheckCircle2" className="text-green-600 mr-2" size={14} />
-                        <span className="text-slate-600">{feature}</span>
-                      </div>
-                    ))}
-                  </div>
-                  <Button className="w-full mt-4 bg-blue-600 hover:bg-blue-700" size="sm">
-                    <Icon name="ShoppingCart" className="mr-2" size={16} />
-                    Заказать
-                  </Button>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-          <div className="text-center mt-8">
-            <p className="text-slate-600 mb-4">Нужны другие размеры или характеристики?</p>
-            <Button variant="outline" size="lg">
-              <Icon name="Calculator" className="mr-2" size={20} />
-              Рассчитать стоимость под заказ
-            </Button>
-          </div>
-        </div>
-      </section>
-
-      {/* Cost Calculator Section */}
-      <section className="py-20 px-6 bg-white">
-        <div className="container mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-foreground mb-4">
-              Калькулятор стоимости
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Рассчитайте стоимость вашего проекта и оставьте заявку
+            <h2 className="text-3xl font-bold text-foreground mb-4">Наши решения</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Ознакомьтесь с нашими продуктами и рассчитайте стоимость
             </p>
           </div>
-          <CostCalculator />
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <a href="/models3d">
+              <Card className="h-full hover:shadow-lg transition-all duration-300 cursor-pointer group">
+                <CardHeader className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-primary to-primary/80 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                    <Icon name="Box" className="text-white" size={32} />
+                  </div>
+                  <CardTitle className="text-foreground">3D Модели</CardTitle>
+                </CardHeader>
+                <CardContent className="text-center">
+                  <p className="text-muted-foreground text-sm">
+                    Интерактивный просмотр шкафов управления
+                  </p>
+                </CardContent>
+              </Card>
+            </a>
+            
+            <a href="/hatches">
+              <Card className="h-full hover:shadow-lg transition-all duration-300 cursor-pointer group">
+                <CardHeader className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-accent to-accent/80 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                    <Icon name="Circle" className="text-white" size={32} />
+                  </div>
+                  <CardTitle className="text-foreground">Люки</CardTitle>
+                </CardHeader>
+                <CardContent className="text-center">
+                  <p className="text-muted-foreground text-sm">
+                    Овальные и кольцевые люки из нержавейки
+                  </p>
+                </CardContent>
+              </Card>
+            </a>
+            
+            <a href="/pricing">
+              <Card className="h-full hover:shadow-lg transition-all duration-300 cursor-pointer group">
+                <CardHeader className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-secondary to-secondary/80 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                    <Icon name="DollarSign" className="text-white" size={32} />
+                  </div>
+                  <CardTitle className="text-foreground">Прайс</CardTitle>
+                </CardHeader>
+                <CardContent className="text-center">
+                  <p className="text-muted-foreground text-sm">
+                    Цены на корпуса из нержавеющей стали
+                  </p>
+                </CardContent>
+              </Card>
+            </a>
+            
+            <a href="/calculator">
+              <Card className="h-full hover:shadow-lg transition-all duration-300 cursor-pointer group">
+                <CardHeader className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-primary/80 to-primary rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                    <Icon name="Calculator" className="text-white" size={32} />
+                  </div>
+                  <CardTitle className="text-foreground">Калькулятор</CardTitle>
+                </CardHeader>
+                <CardContent className="text-center">
+                  <p className="text-muted-foreground text-sm">
+                    Рассчет стоимости индивидуального проекта
+                  </p>
+                </CardContent>
+              </Card>
+            </a>
+          </div>
         </div>
       </section>
 
       {/* Project Gallery */}
       <ProjectGallery />
 
-      {/* 3D Viewer */}
-      <Cabinet3DViewer />
-
-      {/* Hatch Section */}
-      <HatchSection />
-
       {/* About Section */}
       <section className="py-16 px-6 bg-white">
         <div className="container mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl font-bold text-slate-800 mb-6">О компании ТАП</h2>
-              <p className="text-slate-600 mb-4">
+              <h2 className="text-3xl font-bold text-foreground mb-6">О компании ТАП</h2>
+              <p className="text-muted-foreground mb-4">
                 Более 10 лет мы специализируемся на разработке и производстве систем автоматизации 
                 для промышленных предприятий. Наша команда инженеров имеет богатый опыт работы 
                 с ведущими мировыми брендами промышленной автоматизации.
               </p>
-              <p className="text-slate-600 mb-6">
+              <p className="text-muted-foreground mb-6">
                 Мы гарантируем высокое качество продукции, соблюдение сроков поставки 
                 и комплексную техническую поддержку на всех этапах реализации проекта.
               </p>
               <div className="grid grid-cols-2 gap-6">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-blue-600 mb-2">500+</div>
-                  <div className="text-sm text-slate-600">Выполненных проектов</div>
+                  <div className="text-3xl font-bold text-primary mb-2">500+</div>
+                  <div className="text-sm text-muted-foreground">Выполненных проектов</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-blue-600 mb-2">10+</div>
-                  <div className="text-sm text-slate-600">Лет опыта</div>
+                  <div className="text-3xl font-bold text-primary mb-2">10+</div>
+                  <div className="text-sm text-muted-foreground">Лет опыта</div>
                 </div>
               </div>
             </div>
-            <div className="bg-gradient-to-br from-blue-50 to-slate-50 p-8 rounded-2xl">
-              <h3 className="text-xl font-semibold text-slate-800 mb-4">Наши преимущества:</h3>
+            <div className="bg-gradient-to-br from-accent/5 to-background p-8 rounded-2xl">
+              <h3 className="text-xl font-semibold text-foreground mb-4">Наши преимущества:</h3>
               <div className="space-y-4">
                 <div className="flex items-start">
-                  <Icon name="Award" className="text-blue-600 mt-1 mr-3" size={20} />
+                  <Icon name="Award" className="text-primary mt-1 mr-3" size={20} />
                   <div>
-                    <h4 className="font-medium text-slate-800">Сертифицированное производство</h4>
-                    <p className="text-sm text-slate-600">ISO 9001, все необходимые разрешения</p>
+                    <h4 className="font-medium text-foreground">Сертифицированное производство</h4>
+                    <p className="text-sm text-muted-foreground">ISO 9001, все необходимые разрешения</p>
                   </div>
                 </div>
                 <div className="flex items-start">
-                  <Icon name="Clock" className="text-blue-600 mt-1 mr-3" size={20} />
+                  <Icon name="Clock" className="text-primary mt-1 mr-3" size={20} />
                   <div>
-                    <h4 className="font-medium text-slate-800">Быстрые сроки</h4>
-                    <p className="text-sm text-slate-600">От проекта до пуска в эксплуатацию</p>
+                    <h4 className="font-medium text-foreground">Быстрые сроки</h4>
+                    <p className="text-sm text-muted-foreground">От проекта до пуска в эксплуатацию</p>
                   </div>
                 </div>
                 <div className="flex items-start">
-                  <Icon name="Headphones" className="text-blue-600 mt-1 mr-3" size={20} />
+                  <Icon name="Headphones" className="text-primary mt-1 mr-3" size={20} />
                   <div>
-                    <h4 className="font-medium text-slate-800">Техподдержка 24/7</h4>
-                    <p className="text-sm text-slate-600">Гарантийное и постгарантийное обслуживание</p>
+                    <h4 className="font-medium text-foreground">Техподдержка 24/7</h4>
+                    <p className="text-sm text-muted-foreground">Гарантийное и постгарантийное обслуживание</p>
                   </div>
                 </div>
               </div>
@@ -277,52 +278,52 @@ const Index = () => {
       </section>
 
       {/* Contacts Section */}
-      <section id="contacts" className="py-16 px-6 bg-slate-900">
+      <section id="contacts" className="py-16 px-6 bg-secondary">
         <div className="container mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-white mb-4">Контакты</h2>
             <p className="text-slate-300">Свяжитесь с нами для обсуждения вашего проекта</p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
-            <Card className="bg-slate-800 border-slate-700">
+            <Card className="bg-accent border-border">
               <CardHeader className="text-center">
-                <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mx-auto mb-4">
                   <Icon name="Phone" className="text-white" size={24} />
                 </div>
                 <CardTitle className="text-white">Телефон</CardTitle>
               </CardHeader>
               <CardContent className="text-center">
-                <p className="text-slate-300 mb-2">+7 (495) 123-45-67</p>
-                <p className="text-slate-300">+7 (800) 987-65-43</p>
+                <p className="text-muted-foreground mb-2">+7 (495) 123-45-67</p>
+                <p className="text-muted-foreground">+7 (800) 987-65-43</p>
               </CardContent>
             </Card>
-            <Card className="bg-slate-800 border-slate-700">
+            <Card className="bg-accent border-border">
               <CardHeader className="text-center">
-                <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mx-auto mb-4">
                   <Icon name="Mail" className="text-white" size={24} />
                 </div>
                 <CardTitle className="text-white">Email</CardTitle>
               </CardHeader>
               <CardContent className="text-center">
-                <p className="text-slate-300 mb-2">info@tap-auto.ru</p>
-                <p className="text-slate-300">sales@tap-auto.ru</p>
+                <p className="text-muted-foreground mb-2">info@tap-auto.ru</p>
+                <p className="text-muted-foreground">sales@tap-auto.ru</p>
               </CardContent>
             </Card>
-            <Card className="bg-slate-800 border-slate-700">
+            <Card className="bg-accent border-border">
               <CardHeader className="text-center">
-                <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mx-auto mb-4">
                   <Icon name="MapPin" className="text-white" size={24} />
                 </div>
                 <CardTitle className="text-white">Адрес</CardTitle>
               </CardHeader>
               <CardContent className="text-center">
-                <p className="text-slate-300 mb-2">г. Москва,</p>
-                <p className="text-slate-300">ул. Промышленная, д. 15</p>
+                <p className="text-muted-foreground mb-2">г. Москва,</p>
+                <p className="text-muted-foreground">ул. Промышленная, д. 15</p>
               </CardContent>
             </Card>
           </div>
           <div className="text-center mt-12">
-            <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
+            <Button size="lg" className="bg-primary hover:bg-primary/90">
               <Icon name="MessageSquare" className="mr-2" size={20} />
               Написать в WhatsApp
             </Button>
@@ -331,7 +332,7 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-slate-950 py-8 px-6">
+      <footer className="bg-accent py-8 px-6">
         <div className="container mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex items-center space-x-3 mb-4 md:mb-0">
