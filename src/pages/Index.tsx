@@ -3,6 +3,9 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Badge } from '@/components/ui/badge';
 import { Separator } from '@/components/ui/separator';
 import Icon from '@/components/ui/icon';
+import CostCalculator from '@/components/CostCalculator';
+import ProjectGallery from '@/components/ProjectGallery';
+import Cabinet3DViewer from '@/components/Cabinet3DViewer';
 
 const Index = () => {
   const priceData = [
@@ -187,6 +190,29 @@ const Index = () => {
               Рассчитать стоимость под заказ
             </Button>
           </div>
+        </div>
+      </section>
+
+      {/* Cost Calculator Section */}
+      <section className="py-20 px-6 bg-white">
+        <div className="container mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold text-foreground mb-4">
+              Калькулятор стоимости
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Рассчитайте стоимость вашего проекта и оставьте заявку
+            </p>
+          </div>
+          <CostCalculator />
+        </div>
+      </section>
+
+      {/* Project Gallery */}
+      <ProjectGallery />
+
+      {/* 3D Viewer */}
+      <Cabinet3DViewer />
         </div>
       </section>
 
