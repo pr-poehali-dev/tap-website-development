@@ -20,10 +20,9 @@ const Hatches = () => {
             </div>
             <nav className="hidden md:flex space-x-8">
               <a href="/" className="text-muted-foreground hover:text-primary transition-colors">Главная</a>
-              <a href="/models3d" className="text-muted-foreground hover:text-primary transition-colors">3D Модели</a>
+              <a href="/pricing" className="text-muted-foreground hover:text-primary transition-colors">Корпуса AISI304</a>
               <a href="/hatches" className="text-primary font-medium">Люки</a>
-              <a href="/pricing" className="text-muted-foreground hover:text-primary transition-colors">Прайс</a>
-              <a href="/calculator" className="text-muted-foreground hover:text-primary transition-colors">Калькулятор</a>
+              <a href="/#projects" className="text-muted-foreground hover:text-primary transition-colors">Проекты</a>
               <a href="/#contacts" className="text-muted-foreground hover:text-primary transition-colors">Контакты</a>
             </nav>
           </div>
@@ -44,11 +43,11 @@ const Hatches = () => {
               />
               <div>
                 <div className="text-white font-bold">ТАП</div>
-                <div className="text-xs text-muted-foreground">Технологии автоматизации производств</div>
+                <div className="text-xs text-white/70">Технологии автоматизации производств</div>
               </div>
             </div>
-            <div className="text-muted-foreground text-sm">
-              © 2024 ТАП. Все права защищены.
+            <div className="text-white text-sm">
+              © 2025 ООО "ТАП". Все права защищены.
             </div>
           </div>
         </div>

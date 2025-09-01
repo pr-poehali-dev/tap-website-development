@@ -14,7 +14,7 @@ const HatchSection = () => {
       pressure: ["0.4 МПа", "0.6 МПа"],
       features: ["Самоуплотняющийся", "Овальная форма", "Нержавеющая сталь", "Быстрое открытие"],
       price: "от 25,000 ₽",
-      image: "oval-hatch"
+      image: "/img/093c540c-9b4d-433d-863c-453b74e39adc.jpg"
     },
     {
       id: 2,
@@ -24,7 +24,7 @@ const HatchSection = () => {
       pressure: ["0.4 МПа", "0.6 МПа"],
       features: ["Поворотно-откидная крышка", "Кольцевая конструкция", "Уплотнение EPDM", "Болтовое соединение"],
       price: "от 35,000 ₽",
-      image: "ring-hatch"
+      image: "/img/b494f9d9-478f-4f1e-8bd3-5fe9068d30d8.jpg"
     }
   ];
 
@@ -43,11 +43,12 @@ const HatchSection = () => {
         <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
           {hatchData.map((hatch) => (
             <Card key={hatch.id} className="overflow-hidden hover:shadow-lg transition-all duration-300">
-              <div className="aspect-video bg-gradient-to-br from-accent/20 to-primary/10 relative flex items-center justify-center">
-                <div className="text-center">
-                  <Icon name="Circle" className="w-20 h-20 text-muted-foreground/30 mb-4" />
-                  <p className="text-sm text-muted-foreground">{hatch.image}</p>
-                </div>
+              <div className="aspect-video bg-gradient-to-br from-accent/20 to-primary/10 relative overflow-hidden">
+                <img 
+                  src={hatch.image} 
+                  alt={hatch.name} 
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                />
                 <div className="absolute top-4 right-4">
                   <Badge className="bg-primary text-primary-foreground">
                     Новинка

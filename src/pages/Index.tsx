@@ -26,7 +26,7 @@ const Index = () => {
               </div>
             </div>
             <div className="flex items-center">
-              <a href="https://vk.com/tap_tech" target="_blank" rel="noopener noreferrer" className="flex items-center hover:text-primary transition-colors">
+              <a href="https://vk.com/asutp_tap18" target="_blank" rel="noopener noreferrer" className="flex items-center hover:text-primary transition-colors">
                 <Icon name="Users" className="w-4 h-4 mr-2" />
                 <span>ВКонтакте</span>
               </a>
@@ -50,10 +50,9 @@ const Index = () => {
             </div>
             <nav className="hidden md:flex space-x-8">
               <a href="/" className="text-primary font-medium">Главная</a>
-              <a href="/models3d" className="text-muted-foreground hover:text-primary transition-colors">3D Модели</a>
               <a href="/pricing" className="text-muted-foreground hover:text-primary transition-colors">Корпуса AISI304</a>
               <a href="/hatches" className="text-muted-foreground hover:text-primary transition-colors">Люки</a>
-              <a href="/calculator" className="text-muted-foreground hover:text-primary transition-colors">Калькулятор</a>
+              <a href="#projects" className="text-muted-foreground hover:text-primary transition-colors">Проекты</a>
               <a href="#contacts" className="text-muted-foreground hover:text-primary transition-colors">Контакты</a>
             </nav>
           </div>
@@ -75,13 +74,10 @@ const Index = () => {
         
         <div className="container mx-auto text-center relative z-10">
           <div className="max-w-4xl mx-auto">
-            <Badge variant="secondary" className="mb-6 bg-primary/90 text-white hover:bg-primary border-primary">
-              🏭 Промышленная автоматизация
-            </Badge>
+
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight drop-shadow-2xl">
-              Шкафы управления<br/>
               <span className="bg-gradient-to-r from-primary to-red-400 bg-clip-text text-transparent">
-                нового поколения
+                Шкафы управления
               </span>
             </h1>
             <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto drop-shadow-lg">
@@ -93,10 +89,7 @@ const Index = () => {
                 <Icon name="Phone" className="mr-2" size={20} />
                 Получить консультацию
               </Button>
-              <Button variant="outline" size="lg" className="border-white text-white hover:bg-white/10 shadow-lg">
-                <Icon name="Download" className="mr-2" size={20} />
-                Скачать каталог
-              </Button>
+
             </div>
           </div>
         </div>
@@ -327,8 +320,7 @@ const Index = () => {
                 <CardTitle className="text-white">Телефон</CardTitle>
               </CardHeader>
               <CardContent className="text-center">
-                <p className="text-white mb-2">+7 (3412) 555-123</p>
-                <p className="text-white">+7 (800) 987-65-43</p>
+                <p className="text-white">+7 (3412) 555-123</p>
               </CardContent>
             </Card>
             <Card className="bg-accent border-border">
@@ -339,8 +331,7 @@ const Index = () => {
                 <CardTitle className="text-white">Email</CardTitle>
               </CardHeader>
               <CardContent className="text-center">
-                <p className="text-white mb-2">info@tap-tech.ru</p>
-                <p className="text-white">sales@tap-tech.ru</p>
+                <p className="text-white">info@tap18.ru</p>
               </CardContent>
             </Card>
             <Card className="bg-accent border-border">
@@ -381,7 +372,7 @@ const Index = () => {
               </div>
             </div>
             <div className="text-white text-sm">
-              © 2024 ТАП. Все права защищены.
+              © 2025 ООО "ТАП". Все права защищены.
             </div>
           </div>
         </div>

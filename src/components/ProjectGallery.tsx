@@ -19,7 +19,7 @@ const ProjectGallery = () => {
       id: 1,
       title: "Система управления конвейером",
       category: "Шкафы управления",
-      image: "/img/project1.jpg",
+      image: "/img/1642172b-c9b6-4c63-97a9-b2777e239ffe.jpg",
       description: "Автоматизированная система управления ленточным конвейером для горнодобывающего предприятия",
       specs: ["IP65", "2000×800×600 мм", "Нержавеющая сталь", "Вентиляция"],
       year: "2024"
@@ -28,7 +28,7 @@ const ProjectGallery = () => {
       id: 2,
       title: "КИПиА для очистных сооружений",
       category: "КИПиА",
-      image: "/img/project2.jpg",
+      image: "/img/246eeeb9-8ec6-41c9-af32-61c36ba29565.jpg",
       description: "Комплекс контрольно-измерительных приборов для мониторинга водоочистной станции",
       specs: ["Датчики pH", "Расходомеры", "ПЛК Siemens", "HMI панель"],
       year: "2024"
@@ -37,7 +37,7 @@ const ProjectGallery = () => {
       id: 3,
       title: "Корпуса для пищевого производства",
       category: "Корпуса из нержавейки",
-      image: "/img/project3.jpg",
+      image: "/img/bd325f34-14e9-4140-905f-54da6625e6d5.jpg",
       description: "Специализированные корпуса из пищевой нержавеющей стали для молочного комбината",
       specs: ["AISI 316L", "Санитарное исполнение", "IP66", "Быстросъемные панели"],
       year: "2023"
@@ -46,7 +46,7 @@ const ProjectGallery = () => {
       id: 4,
       title: "Шкаф АВР для ТЭЦ",
       category: "Шкафы управления",
-      image: "/img/project4.jpg",
+      image: "/img/1642172b-c9b6-4c63-97a9-b2777e239ffe.jpg",
       description: "Автоматический ввод резерва для критически важного оборудования теплоэлектроцентрали",
       specs: ["АВР 0.4кВ", "2500×1200×800 мм", "Дублированные системы", "Удаленный мониторинг"],
       year: "2023"
@@ -55,7 +55,7 @@ const ProjectGallery = () => {
       id: 5,
       title: "Измерительная система для НПЗ",
       category: "КИПиА",
-      image: "/img/project5.jpg",
+      image: "/img/246eeeb9-8ec6-41c9-af32-61c36ba29565.jpg",
       description: "Система измерения и учета нефтепродуктов с взрывозащищенным исполнением",
       specs: ["Взрывозащита Ex", "Ультразвуковые датчики", "HART протокол", "Резервирование"],
       year: "2023"
@@ -64,7 +64,7 @@ const ProjectGallery = () => {
       id: 6,
       title: "Морские контейнеры",
       category: "Корпуса из нержавейки",
-      image: "/img/project6.jpg",
+      image: "/img/bd325f34-14e9-4140-905f-54da6625e6d5.jpg",
       description: "Специальные корпуса для морского применения с усиленной антикоррозийной защитой",
       specs: ["Морское исполнение", "Дуплекс сталь", "IP67", "Виброустойчивость"],
       year: "2022"
@@ -110,9 +110,11 @@ const ProjectGallery = () => {
           {filteredProjects.map((project) => (
             <Card key={project.id} className="group hover:shadow-lg transition-all duration-300 overflow-hidden">
               <div className="aspect-video bg-gradient-to-br from-accent/20 to-primary/10 relative overflow-hidden">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <Icon name="Image" className="w-16 h-16 text-muted-foreground/50" />
-                </div>
+                <img 
+                  src={project.image} 
+                  alt={project.title} 
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
                 <div className="absolute top-4 right-4">
                   <Badge variant="secondary">{project.year}</Badge>
                 </div>
@@ -164,7 +166,7 @@ const ProjectGallery = () => {
                 <Icon name="Phone" className="w-4 h-4 mr-2" />
                 Позвонить
               </a>
-              <a href="mailto:info@tap-tech.ru" className="inline-flex items-center px-6 py-3 border border-primary text-primary rounded-lg hover:bg-primary/10 transition-colors">
+              <a href="mailto:info@tap18.ru" className="inline-flex items-center px-6 py-3 border border-primary text-primary rounded-lg hover:bg-primary/10 transition-colors">
                 <Icon name="Mail" className="w-4 h-4 mr-2" />
                 Написать
               </a>
