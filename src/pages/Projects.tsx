@@ -1,6 +1,7 @@
-import HatchSection from '@/components/HatchSection';
+import ProjectGallery from '@/components/ProjectGallery';
+import Icon from '@/components/ui/icon';
 
-const Hatches = () => {
+const Projects = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-background to-accent/5">
       {/* Header */}
@@ -20,20 +21,42 @@ const Hatches = () => {
             </div>
             <nav className="hidden md:flex space-x-8">
               <a href="/" className="text-muted-foreground hover:text-primary transition-colors">Главная</a>
-              <a href="/projects" className="text-muted-foreground hover:text-primary transition-colors">Проекты</a>
+              <a href="/projects" className="text-primary font-medium">Проекты</a>
               <a href="/pricing" className="text-muted-foreground hover:text-primary transition-colors">Корпуса AISI304</a>
-              <a href="/hatches" className="text-primary font-medium">Люки</a>
+              <a href="/hatches" className="text-muted-foreground hover:text-primary transition-colors">Люки</a>
               <a href="/#contacts" className="text-muted-foreground hover:text-primary transition-colors">Контакты</a>
             </nav>
           </div>
         </div>
       </header>
 
-      <HatchSection />
+      <ProjectGallery />
 
       {/* Footer */}
       <footer className="bg-secondary py-8 px-6">
         <div className="container mx-auto">
+          {/* Contact Bar */}
+          <div className="border-b border-white/20 pb-4 mb-6">
+            <div className="flex flex-col md:flex-row justify-between items-center text-sm text-white">
+              <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-6 mb-4 md:mb-0">
+                <div className="flex items-center">
+                  <Icon name="Phone" className="w-4 h-4 mr-2" />
+                  <span>+7 (3412) 555-123</span>
+                </div>
+                <div className="flex items-center">
+                  <Icon name="MapPin" className="w-4 h-4 mr-2" />
+                  <span>г. Ижевск, ул. Промышленная, д. 15</span>
+                </div>
+              </div>
+              <div className="flex items-center">
+                <a href="https://vk.com/asutp_tap18" target="_blank" rel="noopener noreferrer" className="flex items-center hover:text-primary transition-colors">
+                  <Icon name="Users" className="w-4 h-4 mr-2" />
+                  <span>ВКонтакте</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex items-center space-x-3 mb-4 md:mb-0">
               <img 
@@ -56,4 +79,4 @@ const Hatches = () => {
   );
 };
 
-export default Hatches;
+export default Projects;

@@ -33,9 +33,9 @@ const Pricing = () => {
             </div>
             <nav className="hidden md:flex space-x-8">
               <a href="/" className="text-muted-foreground hover:text-primary transition-colors">Главная</a>
+              <a href="/projects" className="text-muted-foreground hover:text-primary transition-colors">Проекты</a>
               <a href="/pricing" className="text-primary font-medium">Корпуса AISI304</a>
               <a href="/hatches" className="text-muted-foreground hover:text-primary transition-colors">Люки</a>
-              <a href="/#projects" className="text-muted-foreground hover:text-primary transition-colors">Проекты</a>
               <a href="/#contacts" className="text-muted-foreground hover:text-primary transition-colors">Контакты</a>
             </nav>
           </div>

@@ -3,7 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Badge } from '@/components/ui/badge';
 import { Separator } from '@/components/ui/separator';
 import Icon from '@/components/ui/icon';
-import ProjectGallery from '@/components/ProjectGallery';
+
 
 const Index = () => {
 
@@ -50,9 +50,9 @@ const Index = () => {
             </div>
             <nav className="hidden md:flex space-x-8">
               <a href="/" className="text-primary font-medium">Главная</a>
+              <a href="/projects" className="text-muted-foreground hover:text-primary transition-colors">Проекты</a>
               <a href="/pricing" className="text-muted-foreground hover:text-primary transition-colors">Корпуса AISI304</a>
               <a href="/hatches" className="text-muted-foreground hover:text-primary transition-colors">Люки</a>
-              <a href="#projects" className="text-muted-foreground hover:text-primary transition-colors">Проекты</a>
               <a href="#contacts" className="text-muted-foreground hover:text-primary transition-colors">Контакты</a>
             </nav>
           </div>
@@ -177,18 +177,34 @@ const Index = () => {
               Ознакомьтесь с нашими продуктами и рассчитайте стоимость
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <a href="/models3d">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <a href="/projects">
               <Card className="h-full hover:shadow-lg transition-all duration-300 cursor-pointer group">
                 <CardHeader className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-primary to-primary/80 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
-                    <Icon name="Box" className="text-white" size={32} />
+                    <Icon name="Zap" className="text-white" size={32} />
                   </div>
-                  <CardTitle className="text-foreground">3D Модели</CardTitle>
+                  <CardTitle className="text-foreground">Шкафы управления</CardTitle>
                 </CardHeader>
                 <CardContent className="text-center">
                   <p className="text-muted-foreground text-sm">
-                    Интерактивный просмотр шкафов управления
+                    Портфолио реализованных проектов автоматизации
+                  </p>
+                </CardContent>
+              </Card>
+            </a>
+            
+            <a href="/pricing">
+              <Card className="h-full hover:shadow-lg transition-all duration-300 cursor-pointer group">
+                <CardHeader className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-secondary to-secondary/80 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                    <Icon name="Shield" className="text-white" size={32} />
+                  </div>
+                  <CardTitle className="text-foreground">Корпуса</CardTitle>
+                </CardHeader>
+                <CardContent className="text-center">
+                  <p className="text-muted-foreground text-sm">
+                    Корпуса из нержавеющей стали AISI
                   </p>
                 </CardContent>
               </Card>
@@ -209,44 +225,11 @@ const Index = () => {
                 </CardContent>
               </Card>
             </a>
-            
-            <a href="/pricing">
-              <Card className="h-full hover:shadow-lg transition-all duration-300 cursor-pointer group">
-                <CardHeader className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-r from-secondary to-secondary/80 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
-                    <Icon name="DollarSign" className="text-white" size={32} />
-                  </div>
-                  <CardTitle className="text-foreground">Прайс</CardTitle>
-                </CardHeader>
-                <CardContent className="text-center">
-                  <p className="text-muted-foreground text-sm">
-                    Цены на корпуса из нержавеющей стали
-                  </p>
-                </CardContent>
-              </Card>
-            </a>
-            
-            <a href="/calculator">
-              <Card className="h-full hover:shadow-lg transition-all duration-300 cursor-pointer group">
-                <CardHeader className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-r from-primary/80 to-primary rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
-                    <Icon name="Calculator" className="text-white" size={32} />
-                  </div>
-                  <CardTitle className="text-foreground">Калькулятор</CardTitle>
-                </CardHeader>
-                <CardContent className="text-center">
-                  <p className="text-muted-foreground text-sm">
-                    Рассчет стоимости индивидуального проекта
-                  </p>
-                </CardContent>
-              </Card>
-            </a>
           </div>
         </div>
       </section>
 
-      {/* Project Gallery */}
-      <ProjectGallery />
+
 
       {/* About Section */}
       <section className="py-16 px-6 bg-white">
