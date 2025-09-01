@@ -9,6 +9,7 @@ import Models3D from "./pages/Models3D";
 import Hatches from "./pages/Hatches";
 import Pricing from "./pages/Pricing";
 import Calculator from "./pages/Calculator";
+import Projects from "./pages/Projects";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -21,6 +22,7 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/projects" element={<Projects />} />
           <Route path="/models3d" element={<Models3D />} />
           <Route path="/hatches" element={<Hatches />} />
           <Route path="/pricing" element={<Pricing />} />
