@@ -8,7 +8,7 @@ const Projects = () => {
       <header className="bg-white/95 backdrop-blur-sm border-b sticky top-0 z-50">
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-3">
+            <a href="/" className="flex items-center space-x-3 hover:opacity-80 transition-opacity">
               <img 
                 src="https://cdn.poehali.dev/files/176ac5ba-384c-4c88-8fdb-feb18c2c8ea7.png" 
                 alt="ТАП Логотип" 
@@ -18,7 +18,7 @@ const Projects = () => {
                 <h1 className="text-2xl font-bold text-foreground">ТАП</h1>
                 <p className="text-sm text-muted-foreground">Технологии автоматизации производств</p>
               </div>
-            </div>
+            </a>
             <nav className="hidden md:flex space-x-8">
               <a href="/" className="text-muted-foreground hover:text-primary transition-colors">Главная</a>
               <a href="/projects" className="text-primary font-medium">Проекты</a>
@@ -50,8 +50,9 @@ const Projects = () => {
               </div>
               <div className="flex items-center">
                 <a href="https://vk.com/asutp_tap18" target="_blank" rel="noopener noreferrer" className="flex items-center hover:text-primary transition-colors">
-                  <Icon name="Users" className="w-4 h-4 mr-2" />
-                  <span>ВКонтакте</span>
+                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M19.915 13.028c-.388-.49-.277-.708 0-1.146.005-.005 2.842-4.004 3.138-5.36.153-.699 0-1.215-.994-1.215h-3.28c-.836 0-1.215.441-1.411.932 0 0-1.635 3.993-3.953 6.591-.75.75-.108.994-.108 1.578v3.262c0 .441.357.798.798.798h2.506c.836 0 1.006-.357 1.006-.798v-2.366s3.393.241 3.393 3.262c0 .441.357.798.798.798h2.506c.836 0 1.215-.535.994-1.215-.304-1.356-3.133-5.355-3.138-5.36z"/>
+                  </svg>
                 </a>
               </div>
             </div>
