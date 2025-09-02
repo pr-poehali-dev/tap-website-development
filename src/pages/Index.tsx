@@ -33,15 +33,11 @@ const Index = () => {
             </div>
             <div className="flex items-center space-x-4">
               <a href="https://t.me/tap18_channel" target="_blank" rel="noopener noreferrer" className="flex items-center hover:text-primary transition-colors">
-                <svg className="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
-                </svg>
+                <img src="/img/telegram_icon.svg" alt="Telegram" className="w-4 h-4 mr-1 filter invert" />
                 <span className="sr-only">Telegram</span>
               </a>
               <a href="https://vk.com/asutp_tap18" target="_blank" rel="noopener noreferrer" className="flex items-center hover:text-primary transition-colors">
-                <svg className="w-5 h-5 mr-1" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M19.915 13.028c-.388-.49-.277-.708 0-1.146.005-.005 2.842-4.004 3.138-5.36.153-.699 0-1.215-.994-1.215h-3.28c-.836 0-1.215.441-1.411.932 0 0-1.635 3.993-3.953 6.591-.75.75-.108.994-.108 1.578v3.262c0 .441.357.798.798.798h2.506c.836 0 1.006-.357 1.006-.798v-2.366s3.393.241 3.393 3.262c0 .441.357.798.798.798h2.506c.836 0 1.215-.535.994-1.215-.304-1.356-3.133-5.355-3.138-5.36z"/>
-                </svg>
+                <img src="/img/vk_icon.svg" alt="VK" className="w-5 h-5 mr-1 filter invert" />
                 <span className="sr-only">VK</span>
               </a>
             </div>
@@ -78,9 +74,9 @@ const Index = () => {
       {/* Hero Section */}
       <HeroSlideshow 
         images={[
-          '/img/00de617f-f004-44aa-9e7d-a72d08bd6c1a.jpg',
-          '/img/5cc96a7a-52ef-426d-b7dd-7bdd32d6ffe0.jpg',
-          '/img/08a7b2f8-a71b-42ac-afcc-b2090d6e4a3c.jpg'
+          'https://cdn.poehali.dev/files/c6b1b560-6b28-4c62-b60d-438f321a90fc.jpg',
+          'https://cdn.poehali.dev/files/73911082-3977-447a-8c36-910277fc705f.jpg',
+          'https://cdn.poehali.dev/files/ac6854fd-7479-42aa-b248-3daabe79d90e.jpg'
         ]}
       >
         <div className="max-w-4xl mx-auto">
