@@ -309,14 +309,14 @@ const Index = () => {
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
             {[
-              'https://cdn.poehali.dev/files/a1903610-2198-4904-8244-0fc4f0618ce8.png',
+              '/img/logo_01.svg',
               'https://cdn.poehali.dev/files/b0bfa2d4-b39f-467b-be20-39de38bf0acc.png',
               'https://cdn.poehali.dev/files/6993019b-1939-4ac1-b258-6b1d5ad9ed8b.png',
               'https://cdn.poehali.dev/files/22e944d6-b073-4de9-90cd-de2536cc5d79.png',
+              'https://cdn.poehali.dev/files/a1903610-2198-4904-8244-0fc4f0618ce8.png',
               '/img/43f1d3ce-f111-45f3-863b-16fff168d572.jpg',
               '/img/a120d517-d80d-4dfc-b335-dae2d45558bb.jpg',
               '/img/20104128-452a-4e3c-bb20-133aa50014d7.jpg',
-              '/img/1b9a2294-7232-449e-bae2-e90b86b8cbf9.jpg',
               '/img/edb09d29-1d5d-40f2-9dbe-39ddc6c83097.jpg',
               '/img/2dc5a2ad-d3a0-4812-a541-ae9fd738b1f3.jpg'
             ].map((logo, index) => (
