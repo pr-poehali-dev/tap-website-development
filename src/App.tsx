@@ -10,7 +10,6 @@ import Hatches from "./pages/Hatches";
 import Pricing from "./pages/Pricing";
 import Projects from "./pages/Projects";
 import NotFound from "./pages/NotFound";
-import ScrollToTop from "./components/ScrollToTop";
 
 const queryClient = new QueryClient();
 
