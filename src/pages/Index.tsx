@@ -108,7 +108,7 @@ const Index = () => {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-foreground mb-4">Наша продукция</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Полный цикл разработки и производства систем автоматизации
+              Полный кил разработки и производства шкафов управления, корпусов и люков из нержавеющей стали, а также поставка оборудования для промышленной автоматизации
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
@@ -162,17 +162,43 @@ const Index = () => {
               </CardContent>
             </Card>
 
+            <Card className="h-full group hover:shadow-lg transition-all duration-300 border-0 shadow-md hover:shadow-primary/10">
+              <div className="h-48 overflow-hidden rounded-t-lg">
+                <img 
+                  src="/img/5ede963c-a634-44a4-8c90-fc72858951c2.jpg" 
+                  alt="Частотные преобразователи" 
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <CardHeader>
+                <CardTitle className="text-foreground">Частотные преобразователи Optimus Drive</CardTitle>
+                <CardDescription>
+                  Поставка частотных преобразователей для управления электродвигателями
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-2 text-sm text-muted-foreground">
+                  <li className="flex items-center"><Icon name="Check" className="text-primary mr-2" size={16} />Мощность от 0.75 до 500 кВт</li>
+                  <li className="flex items-center"><Icon name="Check" className="text-primary mr-2" size={16} />Векторное управление</li>
+                  <li className="flex items-center"><Icon name="Check" className="text-primary mr-2" size={16} />Встроенные фильтры EMC</li>
+                  <li className="flex items-center"><Icon name="Check" className="text-primary mr-2" size={16} />Интерфейсы связи RS485, Ethernet</li>
+                </ul>
+              </CardContent>
+            </Card>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-8 mt-8 justify-center max-w-4xl mx-auto">
             <a href="/pricing">
               <Card className="h-full group hover:shadow-lg transition-all duration-300 border-0 shadow-md hover:shadow-primary/10 cursor-pointer">
                 <div className="h-48 overflow-hidden rounded-t-lg">
                   <img 
                     src="/img/86918c3f-7be5-4655-8644-89472c4c28ef.jpg" 
-                    alt="Корпуса из нержавейки" 
+                    alt="Корпуса из нержавеющей стали" 
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
                 <CardHeader>
-                  <CardTitle className="text-slate-800">Корпуса AISI</CardTitle>
+                  <CardTitle className="text-slate-800">Корпуса из нержавеющей стали</CardTitle>
                   <CardDescription>
                     Производство корпусов из нержавеющей стали
                   </CardDescription>
@@ -187,20 +213,18 @@ const Index = () => {
                 </CardContent>
               </Card>
             </a>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-8 mt-8">
+
             <a href="/hatches">
               <Card className="h-full group hover:shadow-lg transition-all duration-300 border-0 shadow-md hover:shadow-primary/10 cursor-pointer">
                 <div className="h-48 overflow-hidden rounded-t-lg">
                   <img 
                     src="/img/86918c3f-7be5-4655-8644-89472c4c28ef.jpg" 
-                    alt="Люки из нержавейки" 
+                    alt="Люки из нержавеющей стали" 
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
                 <CardHeader>
-                  <CardTitle className="text-slate-800">Люки из нержавейки</CardTitle>
+                  <CardTitle className="text-slate-800">Люки из нержавеющей стали</CardTitle>
                   <CardDescription>
                     Технологические люки для промышленного применения
                   </CardDescription>
