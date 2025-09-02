@@ -11,9 +11,9 @@ const HatchSection = () => {
       name: "Люк овальный самоуплотняющийся",
       size: "340×440 мм",
       model: "Аналог 6009ECO",
-      pressure: ["0.4 МПа", "0.6 МПа"],
-      features: ["Самоуплотняющийся", "Овальная форма", "Нержавеющая сталь", "Быстрое открытие"],
-      price: "от 25,000 ₽",
+      pressure: ["0.6 МПа"],
+      features: ["Самоуплотняющийся", "Овальная форма", "Нержавеющая сталь AISI304 крышка 2,5 мм, горловина 3 мм", "Опциональный кронштейн"],
+      price: "от 25 000,00 ₽",
       image: "/img/093c540c-9b4d-433d-863c-453b74e39adc.jpg"
     },
     {
@@ -21,9 +21,9 @@ const HatchSection = () => {
       name: "Люк кольцевой с поворотно-откидной крышкой",
       size: "DN400 / DN450",
       model: "Промышленный тип",
-      pressure: ["0.4 МПа", "0.6 МПа"],
-      features: ["Поворотно-откидная крышка", "Кольцевая конструкция", "Уплотнение EPDM", "Болтовое соединение"],
-      price: "от 35,000 ₽",
+      pressure: ["0.6 МПа"],
+      features: ["Поворотно-откидная крышка", "Кольцевая конструкция", "Нержавеющая сталь AISI304 или AISI316", "Горловина от 100 мм до 400 мм"],
+      price: "от 35 000,00 ₽",
       image: "/img/b494f9d9-478f-4f1e-8bd3-5fe9068d30d8.jpg"
     }
   ];
@@ -35,8 +35,19 @@ const HatchSection = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
             Технологические люки
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Производим овальные и кольцевые люки из нержавеющей стали для промышленного применения
+          <p className="text-xl text-muted-foreground max-w-4xl mx-auto">
+            Производим люки из нержавеющей стали, предназначены для герметичного закрывания емкостей с хранимыми или транспортируемыми пищевыми продуктами. Используемая для изготовления люков нержавеющая сталь обладает не только высокой устойчивостью к воздействию агрессивной среды, но и химической инертностью.
+          </p>
+        </div>
+
+        <div className="text-center mb-8">
+          <img 
+            src="/img/b2f06e4e-d122-40ea-bcce-3066c8763a77.jpg" 
+            alt="Чертеж люка с габаритными размерами" 
+            className="max-w-md mx-auto rounded-lg shadow-lg"
+          />
+          <p className="text-sm text-muted-foreground mt-2">
+            Пример чертежа с габаритными размерами
           </p>
         </div>
 
@@ -109,10 +120,6 @@ const HatchSection = () => {
                     <Button className="flex-1" size="sm">
                       <Icon name="ShoppingCart" className="w-4 h-4 mr-2" />
                       Заказать
-                    </Button>
-                    <Button variant="outline" size="sm">
-                      <Icon name="FileText" className="w-4 h-4 mr-2" />
-                      Чертеж
                     </Button>
                   </div>
                 </div>

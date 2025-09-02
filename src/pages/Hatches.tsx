@@ -1,4 +1,5 @@
 import HatchSection from '@/components/HatchSection';
+import Navigation from '@/components/ui/navigation';
 
 const Hatches = () => {
   return (
@@ -19,11 +20,11 @@ const Hatches = () => {
               </div>
             </div>
             <nav className="hidden md:flex space-x-8">
-              <a href="/" className="text-muted-foreground hover:text-primary transition-colors">Главная</a>
-              <a href="/projects" className="text-muted-foreground hover:text-primary transition-colors">Проекты</a>
-              <a href="/pricing" className="text-muted-foreground hover:text-primary transition-colors">Корпуса AISI304</a>
-              <a href="/hatches" className="text-primary font-medium">Люки</a>
-              <a href="/#contacts" className="text-muted-foreground hover:text-primary transition-colors">Контакты</a>
+              <Navigation href="/" className="text-muted-foreground hover:text-primary transition-colors">Главная</Navigation>
+              <Navigation href="/projects" className="text-muted-foreground hover:text-primary transition-colors">Проекты</Navigation>
+              <Navigation href="/pricing" className="text-muted-foreground hover:text-primary transition-colors">Корпуса AISI304</Navigation>
+              <Navigation href="/hatches" className="text-primary font-medium">Люки</Navigation>
+              <Navigation href="#contacts" className="text-muted-foreground hover:text-primary transition-colors">Контакты</Navigation>
             </nav>
           </div>
         </div>
