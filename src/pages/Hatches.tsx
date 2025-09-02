@@ -9,8 +9,8 @@ const Hatches = () => {
       <header className="bg-white/95 backdrop-blur-sm border-b sticky top-0 z-50">
         {/* Contact Bar */}
         <div className="bg-secondary text-white py-2 px-6">
-          <div className="container mx-auto flex justify-between items-center text-sm">
-            <div className="flex items-center space-x-6">
+          <div className="container mx-auto flex flex-col md:flex-row justify-between items-center text-sm">
+            <div className="flex flex-col md:flex-row md:items-center space-y-1 md:space-y-0 md:space-x-6 w-full md:w-auto">
               <div className="flex items-center">
                 <Icon name="Phone" className="w-4 h-4 mr-2" />
                 <span>+7 (3412) 555-123</span>
