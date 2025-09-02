@@ -1,5 +1,6 @@
 import HatchSection from '@/components/HatchSection';
 import Navigation from '@/components/ui/navigation';
+import Icon from '@/components/ui/icon';
 
 const Hatches = () => {
   return (

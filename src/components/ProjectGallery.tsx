@@ -153,24 +153,40 @@ const ProjectGallery = () => {
         </div>
 
         <div className="text-center mt-16">
-          <Card className="inline-block p-8 bg-accent/5">
-            <div className="flex items-center justify-center mb-4">
-              <Icon name="FileText" className="w-8 h-8 text-primary mr-3" />
-              <h3 className="text-xl font-semibold">Нужен детальный обзор проектов?</h3>
-            </div>
-            <p className="text-muted-foreground mb-6 max-w-md">
+          <Card className="inline-block p-8 max-w-2xl mx-auto bg-accent/5">
+            <h3 className="text-2xl font-semibold text-foreground mb-4">
+              Контакты
+            </h3>
+            <p className="text-muted-foreground mb-6">
               Запросите подробное портфолио с техническими характеристиками и фотографиями реализованных объектов
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="tel:+78432123456" className="inline-flex items-center px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors">
-                <Icon name="Phone" className="w-4 h-4 mr-2" />
-                Позвонить
-              </a>
-              <a href="mailto:info@tap18.ru" className="inline-flex items-center px-6 py-3 border border-primary text-primary rounded-lg hover:bg-primary/10 transition-colors">
-                <Icon name="Mail" className="w-4 h-4 mr-2" />
-                Написать
-              </a>
+            <div className="grid md:grid-cols-3 gap-6 mb-6">
+              <div className="text-center">
+                <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mx-auto mb-3">
+                  <Icon name="Phone" className="text-white" size={20} />
+                </div>
+                <h4 className="font-semibold text-foreground mb-1">Телефон</h4>
+                <p className="text-sm text-muted-foreground">+7 (3412) 555-123</p>
+              </div>
+              <div className="text-center">
+                <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mx-auto mb-3">
+                  <Icon name="Mail" className="text-white" size={20} />
+                </div>
+                <h4 className="font-semibold text-foreground mb-1">Email</h4>
+                <p className="text-sm text-muted-foreground">info@tap18.ru</p>
+              </div>
+              <div className="text-center">
+                <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mx-auto mb-3">
+                  <Icon name="MapPin" className="text-white" size={20} />
+                </div>
+                <h4 className="font-semibold text-foreground mb-1">Адрес</h4>
+                <p className="text-sm text-muted-foreground">г. Ижевск, ул. Молодёжная 12Б</p>
+              </div>
             </div>
+            <button className="bg-primary hover:bg-primary/90 text-white px-8 py-3 rounded-lg transition-colors inline-flex items-center">
+              <Icon name="MessageCircle" className="mr-2" size={20} />
+              Связаться с нами
+            </button>
           </Card>
         </div>
       </div>
