@@ -10,11 +10,13 @@ const Hatches = () => {
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
-              <img 
-                src="https://cdn.poehali.dev/files/176ac5ba-384c-4c88-8fdb-feb18c2c8ea7.png" 
-                alt="ТАП Логотип" 
-                className="w-10 h-10"
-              />
+              <a href="/" className="block">
+                <img 
+                  src="https://cdn.poehali.dev/files/176ac5ba-384c-4c88-8fdb-feb18c2c8ea7.png" 
+                  alt="ТАП Логотип" 
+                  className="w-10 h-10 hover:scale-105 transition-transform cursor-pointer"
+                />
+              </a>
               <div>
                 <h1 className="text-2xl font-bold text-foreground">ТАП</h1>
                 <p className="text-sm text-muted-foreground">Технологии автоматизации производств</p>
@@ -38,11 +40,13 @@ const Hatches = () => {
         <div className="container mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex items-center space-x-3 mb-4 md:mb-0">
-              <img 
-                src="https://cdn.poehali.dev/files/176ac5ba-384c-4c88-8fdb-feb18c2c8ea7.png" 
-                alt="ТАП Логотип" 
-                className="w-8 h-8"
-              />
+              <a href="/" className="block">
+                <img 
+                  src="https://cdn.poehali.dev/files/176ac5ba-384c-4c88-8fdb-feb18c2c8ea7.png" 
+                  alt="ТАП Логотип" 
+                  className="w-8 h-8 hover:scale-105 transition-transform cursor-pointer"
+                />
+              </a>
               <div>
                 <div className="text-white font-bold">ТАП</div>
                 <div className="text-xs text-white/70">Технологии автоматизации производств</div>
