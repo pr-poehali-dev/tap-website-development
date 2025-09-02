@@ -14,7 +14,8 @@ const HatchSection = () => {
       pressure: ["0.6 МПа"],
       features: ["Самоуплотняющийся", "Овальная форма", "Нержавеющая сталь AISI304 крышка 2,5 мм, горловина 3 мм", "Опциональный кронштейн"],
       price: "от 25 000,00 ₽",
-      image: "/img/093c540c-9b4d-433d-863c-453b74e39adc.jpg"
+      image: "/img/093c540c-9b4d-433d-863c-453b74e39adc.jpg",
+      blueprint: "/img/1ac9da1a-8243-4705-8d52-abcfbf66f1a6.jpg"
     },
     {
       id: 2,
@@ -24,7 +25,8 @@ const HatchSection = () => {
       pressure: ["0.6 МПа"],
       features: ["Поворотно-откидная крышка", "Кольцевая конструкция", "Нержавеющая сталь AISI304 или AISI316", "Горловина от 100 мм до 400 мм"],
       price: "от 35 000,00 ₽",
-      image: "/img/b494f9d9-478f-4f1e-8bd3-5fe9068d30d8.jpg"
+      image: "/img/b494f9d9-478f-4f1e-8bd3-5fe9068d30d8.jpg",
+      blueprint: "/img/9c89715e-9526-4946-b7e1-d1c6b914d66e.jpg"
     }
   ];
 
@@ -40,16 +42,7 @@ const HatchSection = () => {
           </p>
         </div>
 
-        <div className="text-center mb-8">
-          <img 
-            src="/img/b2f06e4e-d122-40ea-bcce-3066c8763a77.jpg" 
-            alt="Чертеж люка с габаритными размерами" 
-            className="max-w-md mx-auto rounded-lg shadow-lg"
-          />
-          <p className="text-sm text-muted-foreground mt-2">
-            Пример чертежа с габаритными размерами
-          </p>
-        </div>
+
 
         <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
           {hatchData.map((hatch) => (
@@ -123,6 +116,17 @@ const HatchSection = () => {
                     </Button>
                   </div>
                 </div>
+
+                <div className="mt-4">
+                  <img 
+                    src={hatch.blueprint} 
+                    alt={`Чертеж ${hatch.name}`} 
+                    className="w-full rounded-lg shadow-lg"
+                  />
+                  <p className="text-xs text-muted-foreground mt-2 text-center">
+                    Технический чертеж с размерами
+                  </p>
+                </div>
               </CardContent>
             </Card>
           ))}
@@ -133,14 +137,14 @@ const HatchSection = () => {
             <div className="text-center">
               <Icon name="Settings" className="w-8 h-8 text-primary mx-auto mb-3" />
               <h3 className="text-lg font-semibold text-foreground mb-2">
-                Индивидуальные решения
+                Производство
               </h3>
               <p className="text-sm text-muted-foreground mb-4">
-                Производим люки по индивидуальным чертежам и техническим требованиям заказчика
+                Производим люки на собственном производстве с помощью пресс-форм
               </p>
-              <Button variant="outline" size="sm">
+              <Button className="bg-red-600 hover:bg-red-700 text-white" size="sm">
                 <Icon name="Phone" className="w-4 h-4 mr-2" />
-                Обсудить проект
+                Свяжитесь с нами
               </Button>
             </div>
           </Card>

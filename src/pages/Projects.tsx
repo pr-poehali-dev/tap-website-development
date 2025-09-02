@@ -20,7 +20,7 @@ const Projects = () => {
               </div>
               <div className="flex items-center">
                 <Icon name="MapPin" className="w-4 h-4 mr-2" />
-                <span>г. Ижевск, ул. Промышленная, д. 15</span>
+                <span>г. Ижевск, ул. Молодёжная 12Б</span>
               </div>
             </div>
             <div className="flex items-center space-x-4">

@@ -16,8 +16,8 @@ const Index = () => {
       <header className="bg-white/95 backdrop-blur-sm border-b sticky top-0 z-50">
         {/* Contact Bar */}
         <div className="bg-secondary text-white py-2 px-6">
-          <div className="container mx-auto flex justify-between items-center text-sm">
-            <div className="flex items-center space-x-6">
+          <div className="container mx-auto flex flex-col md:flex-row justify-between items-center text-sm">
+            <div className="flex flex-col md:flex-row md:items-center space-y-1 md:space-y-0 md:space-x-6 w-full md:w-auto">
               <div className="flex items-center">
                 <Icon name="Phone" className="w-4 h-4 mr-2" />
                 <span>+7 (3412) 555-123</span>
@@ -28,7 +28,7 @@ const Index = () => {
               </div>
               <div className="flex items-center">
                 <Icon name="MapPin" className="w-4 h-4 mr-2" />
-                <span>г. Ижевск, ул. Промышленная, д. 15</span>
+                <span>г. Ижевск, ул. Молодёжная 12Б</span>
               </div>
             </div>
             <div className="flex items-center space-x-4">
@@ -228,9 +228,9 @@ const Index = () => {
             <div>
               <h2 className="text-3xl font-bold text-foreground mb-6">О компании ТАП</h2>
               <p className="text-muted-foreground mb-4">
-                Более 10 лет мы специализируемся на разработке и производстве систем автоматизации 
-                для промышленных предприятий. Наша команда инженеров имеет богатый опыт работы 
-                с ведущими мировыми брендами промышленной автоматизации.
+                Основываясь на богатом практическом опыте, мы разрабатываем системы автоматизации, 
+                которые решают реальные проблемы промышленных предприятий. Наше глубокое понимание технологий 
+                ведущих мировых брендов позволяет нам создавать уникальные, под ключ решения именно для вашего дела.
               </p>
               <p className="text-muted-foreground mb-6">
                 Мы гарантируем высокое качество продукции, соблюдение сроков поставки 
@@ -238,7 +238,7 @@ const Index = () => {
               </p>
               <div className="grid grid-cols-2 gap-6">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-primary mb-2">500+</div>
+                  <div className="text-3xl font-bold text-primary mb-2">100+</div>
                   <div className="text-sm text-muted-foreground">Выполненных проектов</div>
                 </div>
                 <div className="text-center">
@@ -250,25 +250,26 @@ const Index = () => {
             <div className="bg-gradient-to-br from-accent/5 to-background p-8 rounded-2xl">
               <h3 className="text-xl font-semibold text-foreground mb-4">Наши преимущества:</h3>
               <div className="space-y-4">
+
                 <div className="flex items-start">
                   <Icon name="Award" className="text-primary mt-1 mr-3" size={20} />
                   <div>
-                    <h4 className="font-medium text-foreground">Сертифицированное производство</h4>
-                    <p className="text-sm text-muted-foreground">ISO 9001, все необходимые разрешения</p>
-                  </div>
-                </div>
-                <div className="flex items-start">
-                  <Icon name="Clock" className="text-primary mt-1 mr-3" size={20} />
-                  <div>
-                    <h4 className="font-medium text-foreground">Быстрые сроки</h4>
+                    <h4 className="font-medium text-foreground">Практичный опыт</h4>
                     <p className="text-sm text-muted-foreground">От проекта до пуска в эксплуатацию</p>
                   </div>
                 </div>
                 <div className="flex items-start">
                   <Icon name="Headphones" className="text-primary mt-1 mr-3" size={20} />
                   <div>
-                    <h4 className="font-medium text-foreground">Техподдержка 24/7</h4>
-                    <p className="text-sm text-muted-foreground">Гарантийное и постгарантийное обслуживание</p>
+                    <h4 className="font-medium text-foreground">Техподдержка</h4>
+                    <p className="text-sm text-muted-foreground">Гарантийное и удалённое постгарантийное обслуживание</p>
+                  </div>
+                </div>
+                <div className="flex items-start">
+                  <Icon name="ShieldCheck" className="text-primary mt-1 mr-3" size={20} />
+                  <div>
+                    <h4 className="font-medium text-foreground">Сертифицированное производство корпусов и люков</h4>
+                    <p className="text-sm text-muted-foreground">ISO 9001, все необходимые разрешения</p>
                   </div>
                 </div>
               </div>
@@ -353,7 +354,7 @@ const Index = () => {
               </CardHeader>
               <CardContent className="text-center">
                 <p className="text-white mb-2">г. Ижевск,</p>
-                <p className="text-white">ул. Промышленная, д. 15</p>
+                <p className="text-white">ул. Молодёжная 12Б</p>
               </CardContent>
             </Card>
           </div>
