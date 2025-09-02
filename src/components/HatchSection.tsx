@@ -14,7 +14,7 @@ const HatchSection = () => {
       pressure: ["0.6 МПа"],
       features: ["Самоуплотняющийся", "Овальная форма", "Нержавеющая сталь AISI304 крышка 2,5 мм, горловина 3 мм", "Опциональный кронштейн"],
       price: "от 25 000,00 ₽",
-      image: "/img/093c540c-9b4d-433d-863c-453b74e39adc.jpg",
+      image: "https://cdn.poehali.dev/files/71b88224-89da-4704-88d0-e4826d2d231e.jpg",
       blueprint: "/img/1ac9da1a-8243-4705-8d52-abcfbf66f1a6.jpg"
     },
     {
@@ -25,7 +25,7 @@ const HatchSection = () => {
       pressure: ["0.6 МПа"],
       features: ["Поворотно-откидная крышка", "Кольцевая конструкция", "Нержавеющая сталь AISI304 или AISI316", "Горловина от 100 мм до 400 мм"],
       price: "от 35 000,00 ₽",
-      image: "/img/b494f9d9-478f-4f1e-8bd3-5fe9068d30d8.jpg",
+      image: "https://cdn.poehali.dev/files/e57d06e3-e0fd-4542-8719-4a013db706a7.png",
       blueprint: "/img/9c89715e-9526-4946-b7e1-d1c6b914d66e.jpg"
     }
   ];
@@ -61,18 +61,14 @@ const HatchSection = () => {
               </div>
               
               <CardHeader>
-                <div className="flex justify-between items-start mb-2">
-                  <div>
-                    <CardTitle className="text-xl text-foreground mb-2">
-                      {hatch.name}
-                    </CardTitle>
-                    <p className="text-sm text-muted-foreground">
-                      {hatch.model}
-                    </p>
-                  </div>
-                  <div className="text-right">
-                    <div className="text-2xl font-bold text-primary">{hatch.price}</div>
-                  </div>
+                <div>
+                  <CardTitle className="text-xl text-foreground mb-3">
+                    {hatch.name}
+                  </CardTitle>
+                  <div className="text-2xl font-bold text-primary mb-2">{hatch.price}</div>
+                  <p className="text-sm text-muted-foreground">
+                    {hatch.model}
+                  </p>
                 </div>
               </CardHeader>
 

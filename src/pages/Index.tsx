@@ -112,7 +112,7 @@ const Index = () => {
               <Card className="h-full group hover:shadow-lg transition-all duration-300 border-0 shadow-md hover:shadow-primary/10 cursor-pointer">
                 <div className="h-48 overflow-hidden rounded-t-lg">
                   <img 
-                    src="/img/919342b2-436f-4d1d-b772-d8c6950c11e4.jpg" 
+                    src="https://cdn.poehali.dev/files/b14bf4f8-e72d-4de2-b587-57718327eee4.jpg" 
                     alt="Шкафы управления" 
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   />
@@ -161,7 +161,7 @@ const Index = () => {
             <Card className="h-full group hover:shadow-lg transition-all duration-300 border-0 shadow-md hover:shadow-primary/10">
               <div className="h-48 overflow-hidden rounded-t-lg">
                 <img 
-                  src="/img/5ede963c-a634-44a4-8c90-fc72858951c2.jpg" 
+                  src="https://cdn.poehali.dev/files/91ee8b1b-2624-44bd-b986-d6b870fd3b82.jpg" 
                   alt="Частотные преобразователи" 
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
@@ -214,7 +214,7 @@ const Index = () => {
               <Card className="h-full group hover:shadow-lg transition-all duration-300 border-0 shadow-md hover:shadow-primary/10 cursor-pointer">
                 <div className="h-48 overflow-hidden rounded-t-lg">
                   <img 
-                    src="/img/86918c3f-7be5-4655-8644-89472c4c28ef.jpg" 
+                    src="https://cdn.poehali.dev/files/71b88224-89da-4704-88d0-e4826d2d231e.jpg" 
                     alt="Люки из нержавеющей стали" 
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   />
