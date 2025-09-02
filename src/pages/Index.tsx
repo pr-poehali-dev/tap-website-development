@@ -314,11 +314,11 @@ const Index = () => {
               'https://cdn.poehali.dev/files/6993019b-1939-4ac1-b258-6b1d5ad9ed8b.png',
               'https://cdn.poehali.dev/files/22e944d6-b073-4de9-90cd-de2536cc5d79.png',
               'https://cdn.poehali.dev/files/a1903610-2198-4904-8244-0fc4f0618ce8.png',
-              '/img/43f1d3ce-f111-45f3-863b-16fff168d572.jpg',
-              '/img/a120d517-d80d-4dfc-b335-dae2d45558bb.jpg',
-              '/img/20104128-452a-4e3c-bb20-133aa50014d7.jpg',
-              '/img/edb09d29-1d5d-40f2-9dbe-39ddc6c83097.jpg',
-              '/img/2dc5a2ad-d3a0-4812-a541-ae9fd738b1f3.jpg'
+              'https://cdn.poehali.dev/files/ee317193-f102-47b2-a08e-46e5294fa91b.png',
+              'https://cdn.poehali.dev/files/c9d6a645-4f58-485f-8da7-09139a1174f3.png',
+              'https://cdn.poehali.dev/files/f5e50fc7-388b-4950-b027-9c5bef63924a.png',
+              'https://cdn.poehali.dev/files/be194f41-3731-46d1-a387-7acd0384ab8a.png',
+              'https://cdn.poehali.dev/files/dd50023b-6019-4640-8da5-bcd8f9cf083b.png'
             ].map((logo, index) => (
               <div key={index} className="flex items-center justify-center p-4">
                 <img 
