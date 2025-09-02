@@ -309,7 +309,7 @@ const Index = () => {
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
             {[
-              '/img/logo_01.svg',
+              'https://cdn.poehali.dev/files/fcc0a262-51db-4462-a460-1ffa05f9376a.png',
               'https://cdn.poehali.dev/files/b0bfa2d4-b39f-467b-be20-39de38bf0acc.png',
               'https://cdn.poehali.dev/files/6993019b-1939-4ac1-b258-6b1d5ad9ed8b.png',
               'https://cdn.poehali.dev/files/22e944d6-b073-4de9-90cd-de2536cc5d79.png',
