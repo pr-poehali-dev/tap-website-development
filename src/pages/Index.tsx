@@ -304,23 +304,21 @@ const Index = () => {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-foreground mb-4">Нам доверяют</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Более 200 компаний выбрали нас для решения задач автоматизации
+              Компании по всей России доверяют нам решение задач по автоматизации
             </p>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
             {[
-              '/img/ef171e51-72a0-49f2-aa0a-5d509cdde490.jpg',
-              '/img/a72157e5-9cad-44fc-afa8-54ea64d4297c.jpg',
-              '/img/dec724ca-f7a7-4bfc-b536-618aa2371fa5.jpg',
-              '/img/7560d116-37fb-45dd-a18c-2cabd6279d8a.jpg',
+              'https://cdn.poehali.dev/files/a1903610-2198-4904-8244-0fc4f0618ce8.png',
+              'https://cdn.poehali.dev/files/b0bfa2d4-b39f-467b-be20-39de38bf0acc.png',
+              'https://cdn.poehali.dev/files/6993019b-1939-4ac1-b258-6b1d5ad9ed8b.png',
+              'https://cdn.poehali.dev/files/22e944d6-b073-4de9-90cd-de2536cc5d79.png',
               '/img/43f1d3ce-f111-45f3-863b-16fff168d572.jpg',
               '/img/a120d517-d80d-4dfc-b335-dae2d45558bb.jpg',
               '/img/20104128-452a-4e3c-bb20-133aa50014d7.jpg',
               '/img/1b9a2294-7232-449e-bae2-e90b86b8cbf9.jpg',
               '/img/edb09d29-1d5d-40f2-9dbe-39ddc6c83097.jpg',
-              '/img/2dc5a2ad-d3a0-4812-a541-ae9fd738b1f3.jpg',
-              '/img/8c2cd75b-82aa-4481-ae60-7bd321e009ce.jpg',
-              '/img/64aa0a18-d1db-498d-b335-ed292fb33e65.jpg'
+              '/img/2dc5a2ad-d3a0-4812-a541-ae9fd738b1f3.jpg'
             ].map((logo, index) => (
               <div key={index} className="flex items-center justify-center p-4">
                 <img 
