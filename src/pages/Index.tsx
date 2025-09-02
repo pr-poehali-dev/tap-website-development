@@ -59,10 +59,10 @@ const Index = () => {
                   className="w-10 h-10 hover:scale-105 transition-transform cursor-pointer"
                 />
               </a>
-              <div>
-                <h1 className="text-2xl font-bold text-foreground">ТАП</h1>
-                <p className="text-sm text-muted-foreground">Технологии автоматизации производств</p>
-              </div>
+              <a href="/" className="block">
+                <h1 className="text-2xl font-bold text-foreground hover:text-primary transition-colors cursor-pointer">ТАП</h1>
+                <p className="text-sm text-muted-foreground hover:text-primary transition-colors cursor-pointer">Технологии автоматизации производств</p>
+              </a>
             </div>
             <nav className="hidden md:flex space-x-8">
               <Navigation href="/" className="text-primary font-medium">Главная</Navigation>
