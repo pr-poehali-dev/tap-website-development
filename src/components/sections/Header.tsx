@@ -4,9 +4,10 @@ import MainHeader from './MainHeader';
 
 interface HeaderProps {
   className?: string;
+  currentPage?: string;
 }
 
-const Header = ({ className = '' }: HeaderProps) => {
+const Header = ({ className = '', currentPage = 'home' }: HeaderProps) => {
   const [isHeaderVisible, setIsHeaderVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
 
@@ -32,7 +33,7 @@ const Header = ({ className = '' }: HeaderProps) => {
       isHeaderVisible ? 'translate-y-0' : '-translate-y-full'
     } ${className}`}>
       <ContactBar />
-      <MainHeader />
+      <MainHeader currentPage={currentPage} />
     </header>
   );
 };

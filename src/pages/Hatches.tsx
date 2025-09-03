@@ -5,9 +5,11 @@ import Footer from '@/components/sections/Footer';
 const Hatches = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-background to-accent/5">
-      <Header />
+      <Header currentPage="hatches" />
 
-      <HatchSection />
+      <div className="pt-24">
+        <HatchSection />
+      </div>
 
       <Footer />
     </div>

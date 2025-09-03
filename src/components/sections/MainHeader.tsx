@@ -2,9 +2,10 @@ import Navigation from '@/components/ui/navigation';
 
 interface MainHeaderProps {
   className?: string;
+  currentPage?: string;
 }
 
-const MainHeader = ({ className = '' }: MainHeaderProps) => {
+const MainHeader = ({ className = '', currentPage = 'home' }: MainHeaderProps) => {
   return (
     <div className={`container mx-auto px-6 py-2 ${className}`}>
       <div className="flex items-center justify-between px-0 mx-[55px]">
@@ -22,10 +23,10 @@ const MainHeader = ({ className = '' }: MainHeaderProps) => {
           </a>
         </div>
         <nav className="hidden md:flex space-x-8 md:scale-125 md:origin-center">
-          <Navigation href="/" className="text-primary font-medium">Главная</Navigation>
-          <Navigation href="/projects" className="text-muted-foreground hover:text-primary transition-colors">Проекты</Navigation>
-          <Navigation href="/pricing" className="text-muted-foreground hover:text-primary transition-colors">Корпуса AISI304</Navigation>
-          <Navigation href="/hatches" className="text-muted-foreground hover:text-primary transition-colors">Люки</Navigation>
+          <Navigation href="/" className={currentPage === 'home' ? 'text-primary font-medium' : 'text-muted-foreground hover:text-primary transition-colors'}>Главная</Navigation>
+          <Navigation href="/projects" className={currentPage === 'projects' ? 'text-primary font-medium' : 'text-muted-foreground hover:text-primary transition-colors'}>Проекты</Navigation>
+          <Navigation href="/pricing" className={currentPage === 'pricing' ? 'text-primary font-medium' : 'text-muted-foreground hover:text-primary transition-colors'}>Корпуса AISI304</Navigation>
+          <Navigation href="/hatches" className={currentPage === 'hatches' ? 'text-primary font-medium' : 'text-muted-foreground hover:text-primary transition-colors'}>Люки</Navigation>
           <Navigation href="#contacts" className="text-muted-foreground hover:text-primary transition-colors">Контакты</Navigation>
         </nav>
       </div>
