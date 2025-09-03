@@ -6,8 +6,8 @@ interface ContactBarProps {
 
 const ContactBar = ({ className = '' }: ContactBarProps) => {
   return (
-    <div className={`bg-secondary text-white py-2 px-6 ${className}`}>
-      <div className="container mx-auto text-sm">
+    <div className={`bg-secondary text-white py-1 px-6 ${className}`}>
+      <div className="container mx-auto text-sm scale-125 origin-top">
         {/* Desktop Layout */}
         <div className="hidden md:flex justify-between items-center">
           <div className="flex items-center space-x-6">
