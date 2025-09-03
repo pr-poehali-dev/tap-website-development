@@ -104,7 +104,7 @@ const Index = () => {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-foreground mb-4">Наша продукция</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Полный кил разработки и производства шкафов управления, корпусов и люков из нержавеющей стали, а также поставка оборудования для промышленной автоматизации
+              Полный цикл разработки и производства шкафов управления, навесных корпусов и люков из нержавеющей стали, а также поставка оборудования для промышленной автоматизации
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
@@ -120,19 +120,97 @@ const Index = () => {
                 <CardHeader>
                   <CardTitle className="text-foreground">Шкафы управления</CardTitle>
                   <CardDescription>
-                    Проектирование и сборка шкафов управления с программированием ПЛК
+                    Проектирование, сборка и программирование шкафов управления под ключ
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-2 text-sm text-muted-foreground">
-                    <li className="flex items-center"><Icon name="Check" className="text-primary mr-2" size={16} />Siemens, ABB, Schneider</li>
-                    <li className="flex items-center"><Icon name="Check" className="text-primary mr-2" size={16} />Программирование ПЛК</li>
-                    <li className="flex items-center"><Icon name="Check" className="text-primary mr-2" size={16} />Сенсорные панели HMI</li>
+                    <li className="flex items-center"><Icon name="Check" className="text-primary mr-2" size={16} />SIEMENS, ОВЕН, Weintek, Schneider, Optimus Drive, Autonics</li>
+                    <li className="flex items-center"><Icon name="Check" className="text-primary mr-2" size={16} />Программирование PLC, HMI и SCADA</li>
+                    <li className="flex items-center"><Icon name="Check" className="text-primary mr-2" size={16} />Контроль сборки и ПО перед отправкой</li>
                     <li className="flex items-center"><Icon name="Check" className="text-primary mr-2" size={16} />Пуско-наладочные работы</li>
                   </ul>
                 </CardContent>
               </Card>
             </a>
+
+            <a href="/hatches">
+              <Card className="h-full group hover:shadow-lg transition-all duration-300 border-0 shadow-md hover:shadow-primary/10 cursor-pointer">
+                <div className="h-48 overflow-hidden rounded-t-lg">
+                  <img 
+                    src="https://cdn.poehali.dev/files/71b88224-89da-4704-88d0-e4826d2d231e.jpg" 
+                    alt="Люки из нержавеющей стали" 
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <CardHeader>
+                  <CardTitle className="text-slate-800">Люки из нержавеющей стали</CardTitle>
+                  <CardDescription>
+                    Технологические люки для промышленного применения
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-2 text-sm text-muted-foreground">
+                    <li className="flex items-center"><Icon name="Check" className="text-primary mr-2" size={16} />AISI 304, 316</li>
+                    <li className="flex items-center"><Icon name="Check" className="text-primary mr-2" size={16} />Люки овальные 340×440, давление до 0.6 МПа</li>
+                    <li className="flex items-center"><Icon name="Check" className="text-primary mr-2" size={16} />Люки кольцевые DN400, DN450</li>
+                    <li className="flex items-center"><Icon name="Check" className="text-primary mr-2" size={16} />Высокая степень полировки</li>
+                  </ul>
+                </CardContent>
+              </Card>
+            </a>
+
+            <a href="/pricing">
+              <Card className="h-full group hover:shadow-lg transition-all duration-300 border-0 shadow-md hover:shadow-primary/10 cursor-pointer">
+                <div className="h-48 overflow-hidden rounded-t-lg">
+                  <img 
+                    src="/img/86918c3f-7be5-4655-8644-89472c4c28ef.jpg" 
+                    alt="Корпуса из нержавеющей стали" 
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <CardHeader>
+                  <CardTitle className="text-slate-800">Корпуса из нержавеющей стали</CardTitle>
+                  <CardDescription>
+                    Производство корпусов из нержавеющей стали
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-2 text-sm text-muted-foreground">
+                    <li className="flex items-center"><Icon name="Check" className="text-primary mr-2" size={16} />AISI 304, 316, 316L</li>
+                    <li className="flex items-center"><Icon name="Check" className="text-primary mr-2" size={16} />Различные размеры</li>
+                    <li className="flex items-center"><Icon name="Check" className="text-primary mr-2" size={16} />Степень защиты от IP54 до IP66</li>
+                    <li className="flex items-center"><Icon name="Check" className="text-primary mr-2" size={16} />Вырез дополнительных отверстий по чертежу</li>
+                  </ul>
+                </CardContent>
+              </Card>
+            </a>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-8 mt-8 justify-center max-w-4xl mx-auto">
+            <Card className="h-full group hover:shadow-lg transition-all duration-300 border-0 shadow-md hover:shadow-primary/10">
+              <div className="h-48 overflow-hidden rounded-t-lg">
+                <img 
+                  src="https://cdn.poehali.dev/files/91ee8b1b-2624-44bd-b986-d6b870fd3b82.jpg" 
+                  alt="Частотные преобразователи" 
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <CardHeader>
+                <CardTitle className="text-foreground">Частотные преобразователи Optimus Drive</CardTitle>
+                <CardDescription>
+                  Поставка частотных преобразователей для управления электродвигателями
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-2 text-sm text-muted-foreground">
+                  <li className="flex items-center"><Icon name="Check" className="text-primary mr-2" size={16} />Мощность от 0.75 до 630 кВт</li>
+                  <li className="flex items-center"><Icon name="Check" className="text-primary mr-2" size={16} />Векторное управление</li>
+                  <li className="flex items-center"><Icon name="Check" className="text-primary mr-2" size={16} />Встроенные фильтры EMC</li>
+                  <li className="flex items-center"><Icon name="Check" className="text-primary mr-2" size={16} />Интерфейсы связи RS485, Ethernet</li>
+                </ul>
+              </CardContent>
+            </Card>
 
             <Card className="h-full group hover:shadow-lg transition-all duration-300 border-0 shadow-md hover:shadow-primary/10">
               <div className="h-48 overflow-hidden rounded-t-lg">
@@ -157,84 +235,6 @@ const Index = () => {
                 </ul>
               </CardContent>
             </Card>
-
-            <Card className="h-full group hover:shadow-lg transition-all duration-300 border-0 shadow-md hover:shadow-primary/10">
-              <div className="h-48 overflow-hidden rounded-t-lg">
-                <img 
-                  src="https://cdn.poehali.dev/files/91ee8b1b-2624-44bd-b986-d6b870fd3b82.jpg" 
-                  alt="Частотные преобразователи" 
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-              <CardHeader>
-                <CardTitle className="text-foreground">Частотные преобразователи Optimus Drive</CardTitle>
-                <CardDescription>
-                  Поставка частотных преобразователей для управления электродвигателями
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-2 text-sm text-muted-foreground">
-                  <li className="flex items-center"><Icon name="Check" className="text-primary mr-2" size={16} />Мощность от 0.75 до 500 кВт</li>
-                  <li className="flex items-center"><Icon name="Check" className="text-primary mr-2" size={16} />Векторное управление</li>
-                  <li className="flex items-center"><Icon name="Check" className="text-primary mr-2" size={16} />Встроенные фильтры EMC</li>
-                  <li className="flex items-center"><Icon name="Check" className="text-primary mr-2" size={16} />Интерфейсы связи RS485, Ethernet</li>
-                </ul>
-              </CardContent>
-            </Card>
-          </div>
-          
-          <div className="grid md:grid-cols-2 gap-8 mt-8 justify-center max-w-4xl mx-auto">
-            <a href="/pricing">
-              <Card className="h-full group hover:shadow-lg transition-all duration-300 border-0 shadow-md hover:shadow-primary/10 cursor-pointer">
-                <div className="h-48 overflow-hidden rounded-t-lg">
-                  <img 
-                    src="/img/86918c3f-7be5-4655-8644-89472c4c28ef.jpg" 
-                    alt="Корпуса из нержавеющей стали" 
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-                <CardHeader>
-                  <CardTitle className="text-slate-800">Корпуса из нержавеющей стали</CardTitle>
-                  <CardDescription>
-                    Производство корпусов из нержавеющей стали
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-2 text-sm text-muted-foreground">
-                    <li className="flex items-center"><Icon name="Check" className="text-primary mr-2" size={16} />Корпуса AISI 304, 316, 316L</li>
-                    <li className="flex items-center"><Icon name="Check" className="text-primary mr-2" size={16} />Различные размеры</li>
-                    <li className="flex items-center"><Icon name="Check" className="text-primary mr-2" size={16} />Степень защиты IP65/IP66</li>
-                    <li className="flex items-center"><Icon name="Check" className="text-primary mr-2" size={16} />Индивидуальные проекты</li>
-                  </ul>
-                </CardContent>
-              </Card>
-            </a>
-
-            <a href="/hatches">
-              <Card className="h-full group hover:shadow-lg transition-all duration-300 border-0 shadow-md hover:shadow-primary/10 cursor-pointer">
-                <div className="h-48 overflow-hidden rounded-t-lg">
-                  <img 
-                    src="https://cdn.poehali.dev/files/71b88224-89da-4704-88d0-e4826d2d231e.jpg" 
-                    alt="Люки из нержавеющей стали" 
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-                <CardHeader>
-                  <CardTitle className="text-slate-800">Люки из нержавеющей стали</CardTitle>
-                  <CardDescription>
-                    Технологические люки для промышленного применения
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-2 text-sm text-muted-foreground">
-                    <li className="flex items-center"><Icon name="Check" className="text-primary mr-2" size={16} />Люки овальные 340×440</li>
-                    <li className="flex items-center"><Icon name="Check" className="text-primary mr-2" size={16} />Люки кольцевые DN400, DN450</li>
-                    <li className="flex items-center"><Icon name="Check" className="text-primary mr-2" size={16} />Давление до 0.6 МПа</li>
-                    <li className="flex items-center"><Icon name="Check" className="text-primary mr-2" size={16} />AISI 304, 316</li>
-                  </ul>
-                </CardContent>
-              </Card>
-            </a>
           </div>
         </div>
       </section>
