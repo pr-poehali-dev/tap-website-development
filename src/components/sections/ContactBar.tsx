@@ -9,7 +9,7 @@ const ContactBar = ({ className = '' }: ContactBarProps) => {
     <div className={`bg-secondary text-white py-1 px-6 ${className}`}>
       <div className="container mx-auto text-sm">
         {/* Desktop Layout */}
-        <div className="hidden md:flex justify-between items-center scale-125 origin-center">
+        <div className="hidden md:flex justify-between items-center scale-125 origin-center mx-0 px-[120px]">
           <div className="flex items-center space-x-6">
             <div className="flex items-center">
               <Icon name="Phone" className="w-4 h-4 mr-2" />
