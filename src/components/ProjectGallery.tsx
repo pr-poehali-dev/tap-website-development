@@ -3,12 +3,14 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import Icon from '@/components/ui/icon';
 import ImageModal from '@/components/ImageModal';
+import ImageSlider from '@/components/ImageSlider';
 
 interface Project {
   id: number;
   title: string;
   category: string;
   image: string;
+  images?: string[];
   description: string;
   specs: string[];
   year: string;
@@ -23,6 +25,11 @@ const ProjectGallery = () => {
       title: "CIP станция 3 контурная",
       category: "Пищевая промышленность",
       image: "/img/1642172b-c9b6-4c63-97a9-b2777e239ffe.jpg",
+      images: [
+        "/img/1642172b-c9b6-4c63-97a9-b2777e239ffe.jpg",
+        "/img/246eeeb9-8ec6-41c9-af32-61c36ba29565.jpg",
+        "/img/bd325f34-14e9-4140-905f-54da6625e6d5.jpg"
+      ],
       description: "Шкаф управления на базе SIEMENS S7-1200\n\n🔹 Управление тремя контурами с гибкой настройкой процессов.\n🔹 15.6\" сенсорная панель Weintek – удобный контроль и настройка.\n🔹 4 независимые емкости – подготовка ёмкостей на разных контурах без остановки мойки.\n🔹 Мойка по 16 этапам с динамической подсветкой маршрута и индивидуальными параметрами.\n🔹 Полный мониторинг: журналы аварий, событий, графики температур и электропроводности.",
       specs: ["SIEMENS S7-1200", "Optimus Drive AD800", "Systeme Electric", "STEZ", "Пневматика EMC", "Weintek"],
       year: "2025"
@@ -112,21 +119,31 @@ const ProjectGallery = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredProjects.map((project) => (
             <Card key={project.id} className="group hover:shadow-lg transition-all duration-300 overflow-hidden">
-              <div 
-                className="aspect-video bg-gradient-to-br from-accent/20 to-primary/10 relative overflow-hidden cursor-pointer group/image"
-                onClick={() => setModalImage({src: project.image, alt: project.title})}
-                title="Нажмите для увеличения"
-              >
-                <img 
-                  src={project.image} 
-                  alt={project.title} 
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+              {project.images && project.images.length > 1 ? (
+                <ImageSlider
+                  images={project.images}
+                  alt={project.title}
+                  onImageClick={(src) => setModalImage({src, alt: project.title})}
+                  title="Нажмите для увеличения"
                 />
-                <div className="absolute inset-0 bg-black/0 group-hover/image:bg-black/20 transition-colors duration-300 flex items-center justify-center">
-                  <div className="opacity-0 group-hover/image:opacity-100 transition-opacity duration-300 bg-white/90 rounded-full p-2">
-                    <Icon name="ZoomIn" className="text-gray-800" size={20} />
+              ) : (
+                <div 
+                  className="aspect-video bg-gradient-to-br from-accent/20 to-primary/10 relative overflow-hidden cursor-pointer group/image"
+                  onClick={() => setModalImage({src: project.image, alt: project.title})}
+                  title="Нажмите для увеличения"
+                >
+                  <img 
+                    src={project.image} 
+                    alt={project.title} 
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                  <div className="absolute inset-0 bg-black/0 group-hover/image:bg-black/20 transition-colors duration-300 flex items-center justify-center">
+                    <div className="opacity-0 group-hover/image:opacity-100 transition-opacity duration-300 bg-white/90 rounded-full p-2">
+                      <Icon name="ZoomIn" className="text-gray-800" size={20} />
+                    </div>
                   </div>
                 </div>
+              )}
                 <div className="absolute top-4 right-4">
                   <Badge variant="secondary">{project.year}</Badge>
                 </div>
