@@ -307,7 +307,7 @@ const Index = () => {
               Компании по всей России доверяют нам решение задач по автоматизации
             </p>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 md:gap-5">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-1.5 md:gap-5">
             {[
               'https://cdn.poehali.dev/files/fcc0a262-51db-4462-a460-1ffa05f9376a.png',
               'https://cdn.poehali.dev/files/b0bfa2d4-b39f-467b-be20-39de38bf0acc.png',
