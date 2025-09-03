@@ -20,11 +20,11 @@ const Index = () => {
             <div className="flex flex-col md:flex-row md:items-center space-y-1 md:space-y-0 md:space-x-6 w-full md:w-auto">
               <div className="flex items-center">
                 <Icon name="Phone" className="w-4 h-4 mr-2" />
-                <span>+7 (3412) 555-123</span>
+                <a href="tel:+79225106088" className="hover:text-primary transition-colors">+7 (922) 510-60-88</a>
               </div>
               <div className="flex items-center">
                 <Icon name="Mail" className="w-4 h-4 mr-2" />
-                <span>info@tap18.ru</span>
+                <a href="mailto:info@tap18.ru" className="hover:text-primary transition-colors">info@tap18.ru</a>
               </div>
               <div className="flex items-center">
                 <Icon name="MapPin" className="w-4 h-4 mr-2" />
@@ -341,40 +341,46 @@ const Index = () => {
             <p className="text-slate-300">Свяжитесь с нами для обсуждения вашего проекта</p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
-            <Card className="bg-accent border-border">
-              <CardHeader className="text-center">
-                <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <Icon name="Phone" className="text-white" size={24} />
-                </div>
-                <CardTitle className="text-white">Телефон</CardTitle>
-              </CardHeader>
-              <CardContent className="text-center">
-                <p className="text-white">+7 (3412) 555-123</p>
-              </CardContent>
-            </Card>
-            <Card className="bg-accent border-border">
-              <CardHeader className="text-center">
-                <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <Icon name="Mail" className="text-white" size={24} />
-                </div>
-                <CardTitle className="text-white">Email</CardTitle>
-              </CardHeader>
-              <CardContent className="text-center">
-                <p className="text-white">info@tap18.ru</p>
-              </CardContent>
-            </Card>
-            <Card className="bg-accent border-border">
-              <CardHeader className="text-center">
-                <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <Icon name="MapPin" className="text-white" size={24} />
-                </div>
-                <CardTitle className="text-white">Адрес</CardTitle>
-              </CardHeader>
-              <CardContent className="text-center">
-                <p className="text-white mb-2">г. Ижевск,</p>
-                <p className="text-white">ул. Молодёжная 12Б</p>
-              </CardContent>
-            </Card>
+            <a href="tel:+79225106088" className="block hover:scale-105 transition-transform">
+              <Card className="bg-accent border-border h-full">
+                <CardHeader className="text-center">
+                  <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mx-auto mb-4">
+                    <Icon name="Phone" className="text-white" size={24} />
+                  </div>
+                  <CardTitle className="text-white">Телефон</CardTitle>
+                </CardHeader>
+                <CardContent className="text-center">
+                  <p className="text-white">+7 (922) 510-60-88</p>
+                </CardContent>
+              </Card>
+            </a>
+            <a href="mailto:info@tap18.ru" className="block hover:scale-105 transition-transform">
+              <Card className="bg-accent border-border h-full">
+                <CardHeader className="text-center">
+                  <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mx-auto mb-4">
+                    <Icon name="Mail" className="text-white" size={24} />
+                  </div>
+                  <CardTitle className="text-white">Email</CardTitle>
+                </CardHeader>
+                <CardContent className="text-center">
+                  <p className="text-white">info@tap18.ru</p>
+                </CardContent>
+              </Card>
+            </a>
+            <a href="https://yandex.ru/maps/?text=г.%20Ижевск,%20улица%20Молодёжная,%20дом%2012Б" target="_blank" rel="noopener noreferrer" className="block hover:scale-105 transition-transform">
+              <Card className="bg-accent border-border h-full">
+                <CardHeader className="text-center">
+                  <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mx-auto mb-4">
+                    <Icon name="MapPin" className="text-white" size={24} />
+                  </div>
+                  <CardTitle className="text-white">Адрес</CardTitle>
+                </CardHeader>
+                <CardContent className="text-center">
+                  <p className="text-white mb-2">г. Ижевск,</p>
+                  <p className="text-white">ул. Молодёжная 12Б</p>
+                </CardContent>
+              </Card>
+            </a>
           </div>
           <div className="text-center mt-12">
             <Button size="lg" className="bg-primary hover:bg-primary/90" asChild>

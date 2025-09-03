@@ -24,11 +24,11 @@ const Aisi = () => {
             <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-6 mb-2 md:mb-0">
               <div className="flex items-center">
                 <Icon name="Phone" className="w-4 h-4 mr-2" />
-                <span>+7 (3412) 555-123</span>
+                <a href="tel:+79225106088" className="hover:text-primary transition-colors">+7 (922) 510-60-88</a>
               </div>
               <div className="flex items-center">
                 <Icon name="Mail" className="w-4 h-4 mr-2" />
-                <span>info@tap18.ru</span>
+                <a href="mailto:info@tap18.ru" className="hover:text-primary transition-colors">info@tap18.ru</a>
               </div>
               <div className="flex items-center">
                 <Icon name="MapPin" className="w-4 h-4 mr-2" />
@@ -138,14 +138,14 @@ const Aisi = () => {
                     <Icon name="Phone" className="text-white" size={20} />
                   </div>
                   <h4 className="font-semibold text-foreground mb-1">Телефон</h4>
-                  <p className="text-sm text-muted-foreground">+7 (3412) 555-123</p>
+                  <a href="tel:+79225106088" className="text-sm text-muted-foreground hover:text-primary transition-colors">+7 (922) 510-60-88</a>
                 </div>
                 <div className="text-center">
                   <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mx-auto mb-3">
                     <Icon name="Mail" className="text-white" size={20} />
                   </div>
                   <h4 className="font-semibold text-foreground mb-1">Email</h4>
-                  <p className="text-sm text-muted-foreground">info@tap18.ru</p>
+                  <a href="mailto:info@tap18.ru" className="text-sm text-muted-foreground hover:text-primary transition-colors">info@tap18.ru</a>
                 </div>
                 <div className="text-center">
                   <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mx-auto mb-3">

@@ -12,11 +12,11 @@ const Projects = () => {
             <div className="flex flex-col md:flex-row md:items-center space-y-1 md:space-y-0 md:space-x-6 w-full md:w-auto">
               <div className="flex items-center">
                 <Icon name="Phone" className="w-4 h-4 mr-2" />
-                <span>+7 (3412) 555-123</span>
+                <a href="tel:+79225106088" className="hover:text-primary transition-colors">+7 (922) 510-60-88</a>
               </div>
               <div className="flex items-center">
                 <Icon name="Mail" className="w-4 h-4 mr-2" />
-                <span>info@tap18.ru</span>
+                <a href="mailto:info@tap18.ru" className="hover:text-primary transition-colors">info@tap18.ru</a>
               </div>
               <div className="flex items-center">
                 <Icon name="MapPin" className="w-4 h-4 mr-2" />

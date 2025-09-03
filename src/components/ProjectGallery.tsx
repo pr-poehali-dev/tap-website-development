@@ -166,14 +166,14 @@ const ProjectGallery = () => {
                   <Icon name="Phone" className="text-white" size={20} />
                 </div>
                 <h4 className="font-semibold text-foreground mb-1">Телефон</h4>
-                <p className="text-sm text-muted-foreground">+7 (3412) 555-123</p>
+                <a href="tel:+79225106088" className="text-sm text-muted-foreground hover:text-primary transition-colors">+7 (922) 510-60-88</a>
               </div>
               <div className="text-center">
                 <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mx-auto mb-3">
                   <Icon name="Mail" className="text-white" size={20} />
                 </div>
                 <h4 className="font-semibold text-foreground mb-1">Email</h4>
-                <p className="text-sm text-muted-foreground">info@tap18.ru</p>
+                <a href="mailto:info@tap18.ru" className="text-sm text-muted-foreground hover:text-primary transition-colors">info@tap18.ru</a>
               </div>
               <div className="text-center">
                 <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mx-auto mb-3">
