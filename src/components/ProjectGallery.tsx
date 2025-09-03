@@ -17,7 +17,7 @@ interface Project {
 }
 
 const ProjectGallery = () => {
-  const [modalImage, setModalImage] = React.useState<{src: string, alt: string} | null>(null);
+  const [modalImage, setModalImage] = React.useState<{src: string, alt: string, images?: string[]} | null>(null);
 
   const projects: Project[] = [
     {
@@ -123,7 +123,7 @@ const ProjectGallery = () => {
                 <ImageSlider
                   images={project.images}
                   alt={project.title}
-                  onImageClick={(src) => setModalImage({src, alt: project.title})}
+                  onImageClick={(src) => setModalImage({src, alt: project.title, images: project.images})}
                   title="Нажмите для увеличения"
                 />
               ) : (
@@ -185,6 +185,8 @@ const ProjectGallery = () => {
           alt={modalImage?.alt || ''}
           isOpen={!!modalImage}
           onClose={() => setModalImage(null)}
+          images={modalImage?.images}
+          onImageChange={(src) => setModalImage(prev => prev ? {...prev, src} : null)}
         />
 
         <div className="text-center mt-16">
