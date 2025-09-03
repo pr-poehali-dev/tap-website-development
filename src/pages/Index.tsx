@@ -324,8 +324,8 @@ const Index = () => {
                 <img 
                   src={logo} 
                   alt={`Логотип компании ${index + 1}`}
-                  className="w-full h-41 md:h-34 object-contain transition-all duration-300"
-                  style={{ maxWidth: '306px', maxHeight: '210px' }}
+                  className="w-full h-57 md:h-34 object-contain transition-all duration-300"
+                  style={{ maxWidth: '428px', maxHeight: '294px' }}
                 />
               </div>
             ))}
