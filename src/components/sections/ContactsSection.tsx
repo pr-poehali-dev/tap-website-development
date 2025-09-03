@@ -12,7 +12,7 @@ const ContactsSection = ({ className = '' }: ContactsSectionProps) => {
       <div className="container mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-white mb-4">Контакты</h2>
-          <p className="text-slate-300">Свяжитесь с нами для обсуждения вашего проекта</p>
+          <p className="text-slate-300">Свяжитесь с нами для обсуждения вашего вопроса</p>
         </div>
         <div className="grid md:grid-cols-3 gap-8">
           <a href="tel:+79225106088" className="block hover:scale-105 transition-transform">
