@@ -2,6 +2,7 @@ import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import Icon from '@/components/ui/icon';
+import ImageModal from '@/components/ImageModal';
 
 interface Project {
   id: number;
@@ -14,11 +15,13 @@ interface Project {
 }
 
 const ProjectGallery = () => {
+  const [modalImage, setModalImage] = React.useState<{src: string, alt: string} | null>(null);
+
   const projects: Project[] = [
     {
       id: 1,
       title: "Система управления конвейером",
-      category: "Шкафы управления",
+      category: "Пищевая промышленность",
       image: "/img/1642172b-c9b6-4c63-97a9-b2777e239ffe.jpg",
       description: "Автоматизированная система управления ленточным конвейером для горнодобывающего предприятия",
       specs: ["IP65", "2000×800×600 мм", "Нержавеющая сталь", "Вентиляция"],
@@ -27,7 +30,7 @@ const ProjectGallery = () => {
     {
       id: 2,
       title: "КИПиА для очистных сооружений",
-      category: "КИПиА",
+      category: "Теплоснабжение",
       image: "/img/246eeeb9-8ec6-41c9-af32-61c36ba29565.jpg",
       description: "Комплекс контрольно-измерительных приборов для мониторинга водоочистной станции",
       specs: ["Датчики pH", "Расходомеры", "ПЛК Siemens", "HMI панель"],
@@ -36,7 +39,7 @@ const ProjectGallery = () => {
     {
       id: 3,
       title: "Корпуса для пищевого производства",
-      category: "Корпуса из нержавейки",
+      category: "Аграрная промышленность",
       image: "/img/bd325f34-14e9-4140-905f-54da6625e6d5.jpg",
       description: "Специализированные корпуса из пищевой нержавеющей стали для молочного комбината",
       specs: ["AISI 316L", "Санитарное исполнение", "IP66", "Быстросъемные панели"],
@@ -45,7 +48,7 @@ const ProjectGallery = () => {
     {
       id: 4,
       title: "Шкаф АВР для ТЭЦ",
-      category: "Шкафы управления",
+      category: "Пищевая промышленность",
       image: "/img/1642172b-c9b6-4c63-97a9-b2777e239ffe.jpg",
       description: "Автоматический ввод резерва для критически важного оборудования теплоэлектроцентрали",
       specs: ["АВР 0.4кВ", "2500×1200×800 мм", "Дублированные системы", "Удаленный мониторинг"],
@@ -54,7 +57,7 @@ const ProjectGallery = () => {
     {
       id: 5,
       title: "Измерительная система для НПЗ",
-      category: "КИПиА",
+      category: "Теплоснабжение",
       image: "/img/246eeeb9-8ec6-41c9-af32-61c36ba29565.jpg",
       description: "Система измерения и учета нефтепродуктов с взрывозащищенным исполнением",
       specs: ["Взрывозащита Ex", "Ультразвуковые датчики", "HART протокол", "Резервирование"],
@@ -63,7 +66,7 @@ const ProjectGallery = () => {
     {
       id: 6,
       title: "Морские контейнеры",
-      category: "Корпуса из нержавейки",
+      category: "Аграрная промышленность",
       image: "/img/bd325f34-14e9-4140-905f-54da6625e6d5.jpg",
       description: "Специальные корпуса для морского применения с усиленной антикоррозийной защитой",
       specs: ["Морское исполнение", "Дуплекс сталь", "IP67", "Виброустойчивость"],
@@ -71,7 +74,7 @@ const ProjectGallery = () => {
     }
   ];
 
-  const categories = ["Все проекты", "Шкафы управления", "КИПиА", "Корпуса из нержавейки"];
+  const categories = ["Все проекты", "Пищевая промышленность", "Теплоснабжение", "Аграрная промышленность"];
   const [selectedCategory, setSelectedCategory] = React.useState("Все проекты");
 
   const filteredProjects = selectedCategory === "Все проекты" 
@@ -109,12 +112,21 @@ const ProjectGallery = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredProjects.map((project) => (
             <Card key={project.id} className="group hover:shadow-lg transition-all duration-300 overflow-hidden">
-              <div className="aspect-video bg-gradient-to-br from-accent/20 to-primary/10 relative overflow-hidden">
+              <div 
+                className="aspect-video bg-gradient-to-br from-accent/20 to-primary/10 relative overflow-hidden cursor-pointer group/image"
+                onClick={() => setModalImage({src: project.image, alt: project.title})}
+                title="Нажмите для увеличения"
+              >
                 <img 
                   src={project.image} 
                   alt={project.title} 
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
+                <div className="absolute inset-0 bg-black/0 group-hover/image:bg-black/20 transition-colors duration-300 flex items-center justify-center">
+                  <div className="opacity-0 group-hover/image:opacity-100 transition-opacity duration-300 bg-white/90 rounded-full p-2">
+                    <Icon name="ZoomIn" className="text-gray-800" size={20} />
+                  </div>
+                </div>
                 <div className="absolute top-4 right-4">
                   <Badge variant="secondary">{project.year}</Badge>
                 </div>
@@ -151,6 +163,13 @@ const ProjectGallery = () => {
             </Card>
           ))}
         </div>
+
+        <ImageModal 
+          src={modalImage?.src || ''}
+          alt={modalImage?.alt || ''}
+          isOpen={!!modalImage}
+          onClose={() => setModalImage(null)}
+        />
 
         <div className="text-center mt-16">
           <Card className="inline-block p-8 max-w-2xl mx-auto bg-accent/5">
