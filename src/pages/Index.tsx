@@ -307,7 +307,7 @@ const Index = () => {
               Компании по всей России доверяют нам решение задач по автоматизации
             </p>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 md:gap-5">
             {[
               'https://cdn.poehali.dev/files/fcc0a262-51db-4462-a460-1ffa05f9376a.png',
               'https://cdn.poehali.dev/files/b0bfa2d4-b39f-467b-be20-39de38bf0acc.png',
@@ -320,12 +320,12 @@ const Index = () => {
               'https://cdn.poehali.dev/files/be194f41-3731-46d1-a387-7acd0384ab8a.png',
               'https://cdn.poehali.dev/files/dd50023b-6019-4640-8da5-bcd8f9cf083b.png'
             ].map((logo, index) => (
-              <div key={index} className="flex items-center justify-center p-4">
+              <div key={index} className="flex items-center justify-center p-2 md:p-3">
                 <img 
                   src={logo} 
                   alt={`Логотип компании ${index + 1}`}
-                  className="w-full h-24 object-contain transition-all duration-300"
-                  style={{ maxWidth: '180px', maxHeight: '150px' }}
+                  className="w-full h-41 md:h-34 object-contain transition-all duration-300"
+                  style={{ maxWidth: '306px', maxHeight: '210px' }}
                 />
               </div>
             ))}
