@@ -24,9 +24,9 @@ const HeroSection = ({ className = '' }: HeroSectionProps) => {
           </h1>
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto drop-shadow-lg">
             Разрабатываем и производим шкафы управления с программированием ПЛК 
-            и сенсорных панелей оператора. 
-            <br /><br />
-            Производим навесные корпуса и технически люки из нержавеющей стали, а также осуществляем поставку КИПиА.
+            и сенсорных панелей оператора. Производим навесные корпуса и технически люки из нержавеющей стали, 
+            <br />
+            а также осуществляем поставку КИПиА.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="bg-primary hover:bg-primary/90 shadow-lg">
