@@ -8,7 +8,7 @@ interface MainHeaderProps {
 const MainHeader = ({ className = '', currentPage = 'home' }: MainHeaderProps) => {
   return (
     <div className={`container mx-auto px-6 py-2 ${className}`}>
-      <div className="flex items-center justify-between px-0 mx-[55px]">
+      <div className="flex items-center justify-center md:justify-between px-0 mx-[55px]">
         <div className="flex items-center space-x-3 md:scale-125 md:origin-center">
           <a href="/" className="block">
             <img 
