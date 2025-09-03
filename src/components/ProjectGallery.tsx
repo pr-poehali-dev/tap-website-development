@@ -144,12 +144,11 @@ const ProjectGallery = () => {
                   </div>
                 </div>
               )}
-                <div className="absolute top-4 right-4">
-                  <Badge variant="secondary">{project.year}</Badge>
-                </div>
-                <div className="absolute top-4 left-4">
-                  <Badge className="bg-primary/90">{project.category}</Badge>
-                </div>
+              <div className="absolute top-4 right-4">
+                <Badge variant="secondary">{project.year}</Badge>
+              </div>
+              <div className="absolute top-4 left-4">
+                <Badge className="bg-primary/90">{project.category}</Badge>
               </div>
               
               <CardContent className="p-6">
