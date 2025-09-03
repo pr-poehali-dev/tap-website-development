@@ -5,15 +5,36 @@ import { Separator } from '@/components/ui/separator';
 import Icon from '@/components/ui/icon';
 import Navigation from '@/components/ui/navigation';
 import HeroSlideshow from '@/components/ui/hero-slideshow';
+import { useState, useEffect } from 'react';
 
 
 const Index = () => {
+  const [isHeaderVisible, setIsHeaderVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      
+      if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        setIsHeaderVisible(false);
+      } else {
+        setIsHeaderVisible(true);
+      }
+      
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [lastScrollY]);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-background to-accent/5">
       {/* Header */}
-      <header className="bg-white/95 backdrop-blur-sm border-b sticky top-0 z-50">
+      <header className={`bg-white/95 backdrop-blur-sm border-b fixed top-0 left-0 right-0 z-50 transition-transform duration-300 ${
+        isHeaderVisible ? 'translate-y-0' : '-translate-y-full'
+      }`}>
         {/* Contact Bar */}
         <div className="bg-secondary text-white py-2 px-6">
           <div className="container mx-auto flex flex-col md:flex-row justify-between items-center text-sm">
@@ -28,17 +49,24 @@ const Index = () => {
               </div>
               <div className="flex items-center">
                 <Icon name="MapPin" className="w-4 h-4 mr-2" />
-                <span>г. Ижевск, ул. Молодёжная 12Б</span>
+                <a 
+                  href="https://yandex.ru/maps/?text=г.%20Ижевск,%20ул.%20Молодёжная%2012Б" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="hover:text-primary transition-colors"
+                >
+                  г. Ижевск, ул. Молодёжная 12Б
+                </a>
               </div>
             </div>
             <div className="flex items-center space-x-4">
-              <a href="https://t.me/tap18_channel" target="_blank" rel="noopener noreferrer" className="flex items-center hover:text-primary transition-colors">
-                <img src="/img/telegram_icon.svg" alt="Telegram" className="w-4 h-4 mr-1 filter invert" />
+              <a href="https://t.me/tap18_channel" target="_blank" rel="noopener noreferrer" className="flex items-center hover:text-primary transition-colors group">
+                <Icon name="MessageSquare" className="w-4 h-4 text-white group-hover:text-primary transition-colors" />
                 <span className="sr-only">Telegram</span>
               </a>
-              <a href="https://vk.com/asutp_tap18" target="_blank" rel="noopener noreferrer" className="flex items-center hover:text-primary transition-colors">
-                <img src="/img/vk_icon.svg" alt="VK" className="w-5 h-5 mr-1 filter invert" />
-                <span className="sr-only">VK</span>
+              <a href="https://vk.com/asutp_tap18" target="_blank" rel="noopener noreferrer" className="flex items-center hover:text-primary transition-colors group">
+                <Icon name="Users" className="w-4 h-4 text-white group-hover:text-primary transition-colors" />
+                <span className="sr-only">VKontakte</span>
               </a>
             </div>
           </div>
@@ -72,7 +100,8 @@ const Index = () => {
       </header>
 
       {/* Hero Section */}
-      <HeroSlideshow 
+      <div className="pt-24">
+        <HeroSlideshow 
         images={[
           'https://cdn.poehali.dev/files/c6b1b560-6b28-4c62-b60d-438f321a90fc.jpg',
           'https://cdn.poehali.dev/files/73911082-3977-447a-8c36-910277fc705f.jpg',
@@ -394,6 +423,7 @@ const Index = () => {
           </div>
         </div>
       </section>
+      </div>
 
       {/* Footer */}
       <footer className="bg-accent py-8 px-6">
