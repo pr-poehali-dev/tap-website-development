@@ -11,6 +11,9 @@ interface ImageModalProps {
 }
 
 const ImageModal = ({ src, alt, isOpen, onClose, images, onImageChange }: ImageModalProps) => {
+  const [touchStart, setTouchStart] = React.useState<number | null>(null);
+  const [touchEnd, setTouchEnd] = React.useState<number | null>(null);
+  
   if (!isOpen) return null;
 
   const currentIndex = images ? images.indexOf(src) : -1;
@@ -45,12 +48,45 @@ const ImageModal = ({ src, alt, isOpen, onClose, images, onImageChange }: ImageM
     }
   };
 
+  // Touch handlers for swipe navigation
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setTouchEnd(null);
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchEnd = () => {
+    if (!touchStart || !touchEnd || !hasMultipleImages || !onImageChange || currentIndex === -1) return;
+    
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > 50;
+    const isRightSwipe = distance < -50;
+
+    if (isLeftSwipe) {
+      const nextIndex = (currentIndex + 1) % images!.length;
+      onImageChange(images![nextIndex]);
+    }
+    
+    if (isRightSwipe) {
+      const prevIndex = (currentIndex - 1 + images!.length) % images!.length;
+      onImageChange(images![prevIndex]);
+    }
+  };
+
   return (
     <div 
       className="fixed inset-0 bg-black/80 flex items-center justify-center z-50 p-4"
       onClick={handleBackdropClick}
     >
-      <div className="relative max-w-[90vw] max-h-[90vh]">
+      <div 
+        className="relative max-w-[90vw] max-h-[90vh]"
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
+      >
         <button
           onClick={onClose}
           className="absolute -top-12 right-0 text-white hover:text-gray-300 transition-colors"

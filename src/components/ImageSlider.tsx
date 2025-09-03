@@ -10,6 +10,8 @@ interface ImageSliderProps {
 
 const ImageSlider = ({ images, alt, onImageClick, title }: ImageSliderProps) => {
   const [currentIndex, setCurrentIndex] = React.useState(0);
+  const [touchStart, setTouchStart] = React.useState<number | null>(null);
+  const [touchEnd, setTouchEnd] = React.useState<number | null>(null);
 
   React.useEffect(() => {
     if (images.length <= 1) return;
@@ -35,6 +37,34 @@ const ImageSlider = ({ images, alt, onImageClick, title }: ImageSliderProps) => 
     setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
   };
 
+  // Touch handlers for swipe navigation
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setTouchEnd(null);
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    if (!touchStart || !touchEnd) return;
+    
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > 50;
+    const isRightSwipe = distance < -50;
+
+    if (isLeftSwipe && images.length > 1) {
+      e.stopPropagation();
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }
+    
+    if (isRightSwipe && images.length > 1) {
+      e.stopPropagation();
+      setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
+    }
+  };
+
   if (images.length === 0) return null;
 
   return (
@@ -42,6 +72,9 @@ const ImageSlider = ({ images, alt, onImageClick, title }: ImageSliderProps) => 
       className="aspect-video bg-gradient-to-br from-accent/20 to-primary/10 relative overflow-hidden cursor-pointer group/image"
       onClick={() => onImageClick(images[currentIndex])}
       title={title || "Нажмите для увеличения"}
+      onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
+      onTouchEnd={handleTouchEnd}
     >
       <img 
         src={images[currentIndex]} 
