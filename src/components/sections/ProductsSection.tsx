@@ -42,6 +42,32 @@ const ProductsSection = ({ className = '' }: ProductsSectionProps) => {
             </Card>
           </a>
 
+          <a href="/pricing">
+            <Card className="h-full group hover:shadow-lg transition-all duration-300 border-0 shadow-md hover:shadow-primary/10 cursor-pointer">
+              <div className="h-48 overflow-hidden rounded-t-lg">
+                <img 
+                  src="https://cdn.poehali.dev/files/2154a0f8-3c93-4286-8377-eb8d01f6676f.jpg" 
+                  alt="Корпуса из нержавеющей стали" 
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <CardHeader>
+                <CardTitle className="text-slate-800">Корпуса из нержавеющей стали</CardTitle>
+                <CardDescription>
+                  Производство корпусов из нержавеющей стали
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-2 text-sm text-muted-foreground">
+                  <li className="flex items-center"><Icon name="Check" className="text-primary mr-2" size={16} />AISI 304, 316, 316L</li>
+                  <li className="flex items-center"><Icon name="Check" className="text-primary mr-2" size={16} />Различные размеры</li>
+                  <li className="flex items-center"><Icon name="Check" className="text-primary mr-2" size={16} />Степень защиты от IP54 до IP66</li>
+                  <li className="flex items-center"><Icon name="Check" className="text-primary mr-2" size={16} />Вырез дополнительных отверстий по чертежу</li>
+                </ul>
+              </CardContent>
+            </Card>
+          </a>
+
           <a href="/hatches">
             <Card className="h-full group hover:shadow-lg transition-all duration-300 border-0 shadow-md hover:shadow-primary/10 cursor-pointer">
               <div className="h-48 overflow-hidden rounded-t-lg">
@@ -63,32 +89,6 @@ const ProductsSection = ({ className = '' }: ProductsSectionProps) => {
                   <li className="flex items-center"><Icon name="Check" className="text-primary mr-2" size={16} />Люки овальные 340×440, давление до 0.6 МПа</li>
                   <li className="flex items-center"><Icon name="Check" className="text-primary mr-2" size={16} />Люки кольцевые DN400, DN450</li>
                   <li className="flex items-center"><Icon name="Check" className="text-primary mr-2" size={16} />Высокая степень полировки</li>
-                </ul>
-              </CardContent>
-            </Card>
-          </a>
-
-          <a href="/pricing">
-            <Card className="h-full group hover:shadow-lg transition-all duration-300 border-0 shadow-md hover:shadow-primary/10 cursor-pointer">
-              <div className="h-48 overflow-hidden rounded-t-lg">
-                <img 
-                  src="/img/86918c3f-7be5-4655-8644-89472c4c28ef.jpg" 
-                  alt="Корпуса из нержавеющей стали" 
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-              <CardHeader>
-                <CardTitle className="text-slate-800">Корпуса из нержавеющей стали</CardTitle>
-                <CardDescription>
-                  Производство корпусов из нержавеющей стали
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-2 text-sm text-muted-foreground">
-                  <li className="flex items-center"><Icon name="Check" className="text-primary mr-2" size={16} />AISI 304, 316, 316L</li>
-                  <li className="flex items-center"><Icon name="Check" className="text-primary mr-2" size={16} />Различные размеры</li>
-                  <li className="flex items-center"><Icon name="Check" className="text-primary mr-2" size={16} />Степень защиты от IP54 до IP66</li>
-                  <li className="flex items-center"><Icon name="Check" className="text-primary mr-2" size={16} />Вырез дополнительных отверстий по чертежу</li>
                 </ul>
               </CardContent>
             </Card>
@@ -123,7 +123,7 @@ const ProductsSection = ({ className = '' }: ProductsSectionProps) => {
           <Card className="h-full group hover:shadow-lg transition-all duration-300 border-0 shadow-md hover:shadow-primary/10">
             <div className="h-48 overflow-hidden rounded-t-lg">
               <img 
-                src="/img/5ede963c-a634-44a4-8c90-fc72858951c2.jpg" 
+                src="https://cdn.poehali.dev/files/f90f6220-4e98-4b38-b96f-0eae1fd38318.png" 
                 alt="КИПиА" 
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
               />
