@@ -27,7 +27,7 @@ const ContactBar = ({ className = '' }: ContactBarProps) => {
                 rel="noopener noreferrer" 
                 className="hover:text-primary transition-colors whitespace-nowrap"
               >
-                г. Ижевск, ул. Молодёжная 12Б
+                г. Ижевск, ул. Молодёжная, д. 12Б
               </a>
             </div>
           </div>
@@ -66,7 +66,7 @@ const ContactBar = ({ className = '' }: ContactBarProps) => {
                 rel="noopener noreferrer" 
                 className="hover:text-primary transition-colors whitespace-nowrap"
               >
-                г. Ижевск, ул. Молодёжная 12Б
+                г. Ижевск, ул. Молодёжная, д. 12Б
               </a>
             </div>
           </div>

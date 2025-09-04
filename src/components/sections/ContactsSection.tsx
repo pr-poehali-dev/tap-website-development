@@ -51,7 +51,7 @@ const ContactsSection = ({ className = '' }: ContactsSectionProps) => {
               </CardHeader>
               <CardContent className="text-center">
                 <p className="text-white mb-2">г. Ижевск,</p>
-                <p className="text-white">ул. Молодёжная 12Б</p>
+                <p className="text-white">ул. Молодёжная, д. 12Б</p>
               </CardContent>
             </Card>
           </a>

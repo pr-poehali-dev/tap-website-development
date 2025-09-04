@@ -40,10 +40,9 @@ const ProjectGallery = () => {
       category: "Пищевая промышленность",
       image: "https://cdn.poehali.dev/files/a7015e22-3e72-4492-a189-1ed39e18d1aa.jpg",
       images: [
-        "https://cdn.poehali.dev/files/a7015e22-3e72-4492-a189-1ed39e18d1aa.jpg",
+        "https://cdn.poehali.dev/files/ef291fbd-2e7b-4590-8840-21e9c55aaa02.jpg",
         "https://cdn.poehali.dev/files/38b45870-1be3-4651-ad0f-9541dfcbd8f5.jpg",
-        "https://cdn.poehali.dev/files/9058189b-5477-445c-8da9-80ecdcd17610.jpg",
-        "https://cdn.poehali.dev/files/ef291fbd-2e7b-4590-8840-21e9c55aaa02.jpg"
+        "https://cdn.poehali.dev/files/9058189b-5477-445c-8da9-80ecdcd17610.jpg"
       ],
       description: "Шкаф управления на базе SIEMENS S7-1200\n\n✔ 10.1\" сенсорная панель Weintek – удобный контроль и настройка.\n✔ Интеллектуальная автонастройка PID-регулятора – больше не нужны специальные знания для настройки, оборудование адаптируется автоматически!\n✔ Расширенные режимы работы – стандартные функции + мойка с 5 этапами и 30 рецептами для гибкости процессов.\n✔ Интуитивная мнемосхема с подсветкой пути движения продукта – наглядность и удобство контроля.",
       specs: ["SIEMENS S7-1200", "Optimus Drive AD800", "Systeme Electric", "STEZ", "Пневматика EMC", "Weintek"],

@@ -18,14 +18,14 @@ const MainHeader = ({ className = '', currentPage = 'home' }: MainHeaderProps) =
             />
           </a>
           <a href="/" className="block">
-            <div className="flex flex-col">
-              <h1 className="text-2xl font-bold text-foreground hover:text-primary transition-colors cursor-pointer leading-tight">
+            <div className="flex flex-col -space-y-1">
+              <h1 className="font-bold text-foreground hover:text-primary transition-colors cursor-pointer leading-tight" style={{fontSize: '22px'}}>
                 <span className="text-red-600">Т</span>ехнологии
               </h1>
-              <h2 className="font-bold text-foreground hover:text-primary transition-colors cursor-pointer leading-tight text-xl">
+              <h2 className="font-bold text-foreground hover:text-primary transition-colors cursor-pointer leading-tight" style={{fontSize: '22px'}}>
                 <span className="text-red-600">А</span>втоматизации
               </h2>
-              <h3 className="text-xl font-bold text-foreground hover:text-primary transition-colors cursor-pointer leading-tight">
+              <h3 className="font-bold text-foreground hover:text-primary transition-colors cursor-pointer leading-tight" style={{fontSize: '22px'}}>
                 <span className="text-red-600">П</span>роизводств
               </h3>
             </div>
