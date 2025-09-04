@@ -129,36 +129,38 @@ const ProjectGallery = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredProjects.map((project) => (
             <Card key={project.id} className="group hover:shadow-lg transition-all duration-300 overflow-hidden">
-              {project.images && project.images.length > 1 ? (
-                <ImageSlider
-                  images={project.images}
-                  alt={project.title}
-                  onImageClick={(src) => setModalImage({src, alt: project.title, images: project.images})}
-                  title="Нажмите для увеличения"
-                />
-              ) : (
-                <div 
-                  className="aspect-video bg-gradient-to-br from-accent/20 to-primary/10 relative overflow-hidden cursor-pointer group/image"
-                  onClick={() => setModalImage({src: project.image, alt: project.title})}
-                  title="Нажмите для увеличения"
-                >
-                  <img 
-                    src={project.image} 
-                    alt={project.title} 
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+              <div className="relative">
+                {project.images && project.images.length > 1 ? (
+                  <ImageSlider
+                    images={project.images}
+                    alt={project.title}
+                    onImageClick={(src) => setModalImage({src, alt: project.title, images: project.images})}
+                    title="Нажмите для увеличения"
                   />
-                  <div className="absolute inset-0 bg-black/0 group-hover/image:bg-black/20 transition-colors duration-300 flex items-center justify-center">
-                    <div className="opacity-0 group-hover/image:opacity-100 transition-opacity duration-300 bg-white/90 rounded-full p-2">
-                      <Icon name="ZoomIn" className="text-gray-800" size={20} />
+                ) : (
+                  <div 
+                    className="aspect-video bg-gradient-to-br from-accent/20 to-primary/10 relative overflow-hidden cursor-pointer group/image"
+                    onClick={() => setModalImage({src: project.image, alt: project.title})}
+                    title="Нажмите для увеличения"
+                  >
+                    <img 
+                      src={project.image} 
+                      alt={project.title} 
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                    <div className="absolute inset-0 bg-black/0 group-hover/image:bg-black/20 transition-colors duration-300 flex items-center justify-center">
+                      <div className="opacity-0 group-hover/image:opacity-100 transition-opacity duration-300 bg-white/90 rounded-full p-2">
+                        <Icon name="ZoomIn" className="text-gray-800" size={20} />
+                      </div>
                     </div>
                   </div>
+                )}
+                <div className="absolute top-4 right-4">
+                  <Badge variant="secondary">{project.year}</Badge>
                 </div>
-              )}
-              <div className="absolute top-4 right-4">
-                <Badge variant="secondary">{project.year}</Badge>
-              </div>
-              <div className="absolute top-4 left-4">
-                <Badge className="bg-primary/90">{project.category}</Badge>
+                <div className="absolute top-4 left-4">
+                  <Badge className="bg-primary/90">{project.category}</Badge>
+                </div>
               </div>
               
               <CardContent className="p-6">
