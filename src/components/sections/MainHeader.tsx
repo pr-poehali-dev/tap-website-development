@@ -8,13 +8,13 @@ interface MainHeaderProps {
 const MainHeader = ({ className = '', currentPage = 'home' }: MainHeaderProps) => {
   return (
     <div className={`container mx-auto px-6 py-2 ${className}`}>
-      <div className="flex items-center justify-between px-0 mx-[55px]">
+      <div className="flex items-center justify-between px-0 mx-0">
         <div className="flex items-center space-x-4">
           <a href="/" className="block">
             <img 
               src="https://cdn.poehali.dev/files/acfcc0af-ddd4-4f5f-92da-04dddb78431e.png" 
               alt="ТАП Логотип" 
-              className="w-16 h-16 hover:scale-105 transition-transform cursor-pointer px-0.5"
+              className="w-16 h-16 hover:scale-105 transition-transform cursor-pointer px-0.5 my-0"
             />
           </a>
           <a href="/" className="block">
