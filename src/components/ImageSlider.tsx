@@ -21,7 +21,7 @@ const ImageSlider = ({ images, alt, onImageClick, title }: ImageSliderProps) => 
     }, 4000);
 
     return () => clearInterval(interval);
-  }, [images.length]);
+  }, [images.length, currentIndex]);
 
   const goToSlide = (index: number) => {
     setCurrentIndex(index);

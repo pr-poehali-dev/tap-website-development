@@ -14,7 +14,7 @@ const HeroSlideshow = ({ images, children }: HeroSlideshowProps) => {
     }, 5000);
     
     return () => clearInterval(interval);
-  }, [images.length]);
+  }, [images.length, currentSlide]);
 
   return (
     <section className="py-20 px-6 relative overflow-hidden">

@@ -29,9 +29,15 @@ const HeroSection = ({ className = '' }: HeroSectionProps) => {
             Производим навесные корпуса и технически люки из нержавеющей стали, а также осуществляем поставку КИПиА.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-primary hover:bg-primary/90 shadow-lg">
-              <Icon name="Phone" className="mr-2" size={20} />
-              Получить консультацию
+            <Button 
+              size="lg" 
+              className="bg-primary hover:bg-primary/90 shadow-lg"
+              asChild
+            >
+              <a href="tel:+79225106088">
+                <Icon name="Phone" className="mr-2" size={20} />
+                Получить консультацию
+              </a>
             </Button>
           </div>
         </div>
