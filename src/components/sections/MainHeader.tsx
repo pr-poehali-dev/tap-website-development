@@ -12,18 +12,18 @@ const MainHeader = ({ className = '', currentPage = 'home' }: MainHeaderProps) =
         <div className="flex items-center space-x-3">
           <a href="/" className="block">
             <img 
-              src="/Текст логотипа.svg" 
+              src="https://cdn.poehali.dev/files/9bc77807-af00-46a3-990a-17e3df62a19a.png" 
               alt="ТАП" 
-              className="h-8 hover:scale-105 transition-transform cursor-pointer"
+              className="h-10 hover:scale-105 transition-transform cursor-pointer"
             />
           </a>
         </div>
         <div className="flex items-center justify-center">
           <a href="/" className="block">
             <img 
-              src="/Логотип.svg" 
+              src="https://cdn.poehali.dev/files/acfcc0af-ddd4-4f5f-92da-04dddb78431e.png" 
               alt="ТАП Логотип" 
-              className="w-12 h-12 hover:scale-105 transition-transform cursor-pointer"
+              className="w-16 h-16 hover:scale-105 transition-transform cursor-pointer"
             />
           </a>
         </div>
