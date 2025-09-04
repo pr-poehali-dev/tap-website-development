@@ -217,43 +217,7 @@ const ProjectGallery = () => {
           onImageChange={(src) => setModalImage(prev => prev ? {...prev, src} : null)}
         />
 
-        <div className="text-center mt-16">
-          <Card className="inline-block p-8 max-w-2xl mx-auto bg-accent/5">
-            <h3 className="text-2xl font-semibold text-foreground mb-4">
-              Контакты
-            </h3>
-            <p className="text-muted-foreground mb-6">
-              Запросите подробное портфолио с техническими характеристиками и фотографиями реализованных объектов
-            </p>
-            <div className="grid md:grid-cols-3 gap-6 mb-6">
-              <div className="text-center">
-                <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mx-auto mb-3">
-                  <Icon name="Phone" className="text-white" size={20} />
-                </div>
-                <h4 className="font-semibold text-foreground mb-1">Телефон</h4>
-                <a href="tel:+79225106088" className="text-sm text-muted-foreground hover:text-primary transition-colors">+7 (922) 510-60-88</a>
-              </div>
-              <div className="text-center">
-                <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mx-auto mb-3">
-                  <Icon name="Mail" className="text-white" size={20} />
-                </div>
-                <h4 className="font-semibold text-foreground mb-1">Email</h4>
-                <a href="mailto:info@tap18.ru" className="text-sm text-muted-foreground hover:text-primary transition-colors">info@tap18.ru</a>
-              </div>
-              <div className="text-center">
-                <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mx-auto mb-3">
-                  <Icon name="MapPin" className="text-white" size={20} />
-                </div>
-                <h4 className="font-semibold text-foreground mb-1">Адрес</h4>
-                <p className="text-sm text-muted-foreground">г. Ижевск, ул. Молодёжная 12Б</p>
-              </div>
-            </div>
-            <button className="bg-primary hover:bg-primary/90 text-white px-8 py-3 rounded-lg transition-colors inline-flex items-center">
-              <Icon name="MessageCircle" className="mr-2" size={20} />
-              Связаться с нами
-            </button>
-          </Card>
-        </div>
+
       </div>
     </section>
   );

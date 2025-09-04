@@ -1,6 +1,7 @@
 import ProjectGallery from '@/components/ProjectGallery';
 import Header from '@/components/sections/Header';
 import Footer from '@/components/sections/Footer';
+import ContactsSection from '@/components/sections/ContactsSection';
 
 const Projects = () => {
   return (
@@ -11,6 +12,8 @@ const Projects = () => {
         <ProjectGallery />
       </div>
 
+      <ContactsSection />
+      
       <Footer />
     </div>
   );
