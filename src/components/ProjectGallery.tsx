@@ -50,12 +50,17 @@ const ProjectGallery = () => {
     },
     {
       id: 3,
-      title: "Корпуса для пищевого производства",
+      title: "Пастеризационно-охладительная установка",
       category: "Аграрная промышленность",
-      image: "/img/bd325f34-14e9-4140-905f-54da6625e6d5.jpg",
-      description: "Специализированные корпуса из пищевой нержавеющей стали для молочного комбината",
-      specs: ["AISI 316L", "Санитарное исполнение", "IP66", "Быстросъемные панели"],
-      year: "2023"
+      image: "https://cdn.poehali.dev/files/1d400d9f-2a52-4145-9807-a0bd156ba0b3.jpg",
+      images: [
+        "https://cdn.poehali.dev/files/1d400d9f-2a52-4145-9807-a0bd156ba0b3.jpg",
+        "https://cdn.poehali.dev/files/c16de542-05e9-40e5-8181-a8347ca4fb6b.jpg",
+        "https://cdn.poehali.dev/files/4565a80a-10b7-4f21-9260-8a439930cc8a.jpg"
+      ],
+      description: "Шкаф управления на ОВЕН\n\n✔ GSM-контроль для удалённого мониторинга и управления.\n✔ Поддержание температуры с помощью котлов.\n✔ Каскадное управление подающими насосами.\n✔ Аварийное ручное управление.",
+      specs: ["ОВЕН ПР200", "ELHART-PUMP", "DEKRAFT", "STEZ", "MEYERTEC", "IEK"],
+      year: "2025"
     },
     {
       id: 4,
