@@ -14,7 +14,7 @@ const MainHeader = ({ className = '', currentPage = 'home' }: MainHeaderProps) =
             <img 
               src="https://cdn.poehali.dev/files/acfcc0af-ddd4-4f5f-92da-04dddb78431e.png" 
               alt="ТАП Логотип" 
-              className="w-16 h-16 hover:scale-105 transition-transform cursor-pointer"
+              className="w-16 h-16 hover:scale-105 transition-transform cursor-pointer px-0.5"
             />
           </a>
           <a href="/" className="block">
@@ -22,7 +22,7 @@ const MainHeader = ({ className = '', currentPage = 'home' }: MainHeaderProps) =
               <h1 className="text-2xl font-bold text-foreground hover:text-primary transition-colors cursor-pointer leading-tight">
                 <span className="text-red-600">Т</span>ехнологии
               </h1>
-              <h2 className="text-xl font-bold text-foreground hover:text-primary transition-colors cursor-pointer leading-tight">
+              <h2 className="font-bold text-foreground hover:text-primary transition-colors cursor-pointer leading-tight text-xl">
                 <span className="text-red-600">А</span>втоматизации
               </h2>
               <h3 className="text-xl font-bold text-foreground hover:text-primary transition-colors cursor-pointer leading-tight">
