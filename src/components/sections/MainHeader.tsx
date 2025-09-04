@@ -14,7 +14,7 @@ const MainHeader = ({ className = '', currentPage = 'home' }: MainHeaderProps) =
             <img 
               src="https://cdn.poehali.dev/files/acfcc0af-ddd4-4f5f-92da-04dddb78431e.png" 
               alt="ТАП Логотип" 
-              className="w-16 h-16 hover:scale-105 transition-transform cursor-pointer px-0.5 my-0"
+              className="w-16 h-16 hover:scale-105 transition-transform cursor-pointer my-0 px-[5px]"
             />
           </a>
           <a href="/" className="block">
