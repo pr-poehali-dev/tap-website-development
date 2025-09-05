@@ -10,9 +10,9 @@ const Footer = ({ className = '' }: FooterProps) => {
           <div className="flex items-center space-x-3 mb-4 md:mb-0">
             <a href="/" className="block">
               <img 
-                src="https://cdn.poehali.dev/files/176ac5ba-384c-4c88-8fdb-feb18c2c8ea7.png" 
+                src="https://cdn.poehali.dev/files/5bb4483f-5f6e-46ae-aabb-6175f2f929c0.png" 
                 alt="ТАП Логотип" 
-                className="w-8 h-8 hover:scale-105 transition-transform cursor-pointer"
+                className="h-8 hover:scale-105 transition-transform cursor-pointer"
               />
             </a>
             <div>
