@@ -22,7 +22,7 @@ const ProjectGallery = () => {
   const projects: Project[] = [
     {
       id: 0,
-      title: "Кофемашина для производства концентрата",
+      title: "Кофемашина для производства кофейного концентрата",
       category: "Пищевая промышленность",
       image: "https://cdn.poehali.dev/files/b92c500e-cb29-4976-b572-444e596324be.jpg",
       images: [
@@ -31,11 +31,25 @@ const ProjectGallery = () => {
         "https://cdn.poehali.dev/files/289cd412-0572-4a69-8c5d-a2113ca16e49.jpg"
       ],
       description: "Шкаф управления на базе ОВЕН ПР\n\n✔ Система рецептов для быстрого переключения между настройками.\n✔ Автоматическое поддержание давления с учётом необходимого расхода.\n✔ Автоматический режим работы для приготовления концентра.\n✔ Автоматический режим промывки установки.",
-      specs: ["ОВЕН ПР103", "WEINTEK", "ELHART", "STEZ", "MEYERTEC", "DKC", "MEAN WELL", "IFM"],
+      specs: ["ОВЕН ПР103", "WEINTEK", "ELHART", "STEZ", "MEYERTEC", "DKC", "MEAN WELL", "Пневматика EMC"],
       year: "2025"
     },
     {
       id: 1,
+      title: "Ванна длительной пастеризации ВДП-300",
+      category: "Пищевая промышленность",
+      image: "https://cdn.poehali.dev/files/8ea1d273-a24f-4e0e-a236-eed623c8a7b9.jpg",
+      images: [
+        "https://cdn.poehali.dev/files/8ea1d273-a24f-4e0e-a236-eed623c8a7b9.jpg",
+        "https://cdn.poehali.dev/files/a0354164-cd50-4936-939c-43e6f1a3345b.jpg",
+        "https://cdn.poehali.dev/files/36817329-1244-473c-9c52-01128ad75fec.jpg"
+      ],
+      description: "Шкаф управления на базе ОВЕН ТРМ\n\n✔ Нагрев до заданной температуры с учётом температуры продукта и рубашки.\n✔ Блокировка мешалки при открытии люка.\n✔ Контроль верхнего и нижнего уровня рубашки.\n✔ Защита от обрыва фазы, нуля, пониженного и повышенного напряжения, а также от перекоса фаз.",
+      specs: ["ОВЕН 2ТРМ1", "WEINTEK", "STEZ", "MEYERTEC", "IEK", "MEAN WELL", "CHINT", "SUPU"],
+      year: "2025"
+    },
+    {
+      id: 2,
       title: "Автоматическая CIP станция для 3-х контуров",
       category: "Пищевая промышленность",
       image: "https://cdn.poehali.dev/files/0fbdd3d7-ddbc-4c1d-ad9e-54c05e4cc478.jpg",
@@ -49,7 +63,7 @@ const ProjectGallery = () => {
       year: "2025"
     },
     {
-      id: 2,
+      id: 3,
       title: "Пастеризационно-охладительная установка",
       category: "Пищевая промышленность",
       image: "https://cdn.poehali.dev/files/a7015e22-3e72-4492-a189-1ed39e18d1aa.jpg",
@@ -63,7 +77,7 @@ const ProjectGallery = () => {
       year: "2025"
     },
     {
-      id: 3,
+      id: 4,
       title: "Индивидуальный тепловой пункт в ЖК г. Казань",
       category: "Теплоснабжение",
       image: "https://cdn.poehali.dev/files/1d400d9f-2a52-4145-9807-a0bd156ba0b3.jpg",
@@ -77,7 +91,7 @@ const ProjectGallery = () => {
       year: "2025"
     },
     {
-      id: 4,
+      id: 5,
       title: "Лебёдка для подъёма земельных ископаемых",
       category: "Станкостроение",
       image: "https://cdn.poehali.dev/files/73ca4d66-c0a9-4eba-84b3-665da66c5ba7.jpg",
@@ -91,7 +105,7 @@ const ProjectGallery = () => {
       year: "2025"
     },
     {
-      id: 5,
+      id: 6,
       title: "Система смазки подшипников мельницы тонкого помола сои",
       category: "Аграрная промышленность",
       image: "https://cdn.poehali.dev/files/27e57516-c2f8-44da-9117-dbd2b206eda4.jpg",
@@ -105,7 +119,7 @@ const ProjectGallery = () => {
       year: "2024"
     },
     {
-      id: 6,
+      id: 7,
       title: "Дозирование удобрений",
       category: "Аграрная промышленность",
       image: "https://cdn.poehali.dev/files/89906699-377c-4cef-837f-5c867b4d9828.jpg",
