@@ -21,6 +21,20 @@ const ProjectGallery = () => {
 
   const projects: Project[] = [
     {
+      id: 0,
+      title: "Кофемашина для производства концентрата",
+      category: "Пищевая промышленность",
+      image: "https://cdn.poehali.dev/files/b92c500e-cb29-4976-b572-444e596324be.jpg",
+      images: [
+        "https://cdn.poehali.dev/files/b92c500e-cb29-4976-b572-444e596324be.jpg",
+        "https://cdn.poehali.dev/files/c0f109a1-09c6-41ca-8851-0014f64c7eee.jpg",
+        "https://cdn.poehali.dev/files/289cd412-0572-4a69-8c5d-a2113ca16e49.jpg"
+      ],
+      description: "Шкаф управления на базе ОВЕН ПР\n\n✔ Система рецептов для быстрого переключения между настройками.\n✔ Автоматическое поддержание давления с учётом необходимого расхода.\n✔ Автоматический режим работы для приготовления концентра.\n✔ Автоматический режим промывки установки.",
+      specs: ["ОВЕН ПР103", "WEINTEK", "ELHART", "STEZ", "MEYERTEC", "DKC", "MEAN WELL", "IFM"],
+      year: "2025"
+    },
+    {
       id: 1,
       title: "Автоматическая CIP станция для 3-х контуров",
       category: "Пищевая промышленность",
