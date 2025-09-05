@@ -22,6 +22,20 @@ const ProjectGallery = () => {
   const projects: Project[] = [
     {
       id: 0,
+      title: "Насосная станция поддержания давления",
+      category: "Теплоснабжение",
+      image: "https://cdn.poehali.dev/files/4bafb6c1-883d-4faf-8694-f147cb91846a.jpg",
+      images: [
+        "https://cdn.poehali.dev/files/4bafb6c1-883d-4faf-8694-f147cb91846a.jpg",
+        "https://cdn.poehali.dev/files/7d3aa69c-61b1-4eb0-b684-08ddfda153a8.jpg",
+        "https://cdn.poehali.dev/files/03c39c83-e9f1-4dd4-9526-5041de8cc8fc.jpg"
+      ],
+      description: "Шкаф управления на базе ОВЕН ПР\n\n✔ Каскадное управление насосами с ведущим мастером.\n✔ Поддержание заданного давления с помощью ПИД регулятора.\n✔ Подключение насосов подпитки при старте основной системы.\n✔ Предусмотрена возможность расширения с дооснащением шкафа управления оборудованием ещё для двух насосов.",
+      specs: ["ОВЕН ПР200", "ELHART-PUMP", "STEZ", "MEYERTEC", "ESB", "MEAN WELL", "DEKRAFT", "SUPU"],
+      year: "2025"
+    },
+    {
+      id: 1,
       title: "Кофемашина для производства кофейного концентрата",
       category: "Пищевая промышленность",
       image: "https://cdn.poehali.dev/files/b92c500e-cb29-4976-b572-444e596324be.jpg",
@@ -32,20 +46,6 @@ const ProjectGallery = () => {
       ],
       description: "Шкаф управления на базе ОВЕН ПР\n\n✔ Система рецептов для быстрого переключения между настройками.\n✔ Автоматическое поддержание давления с учётом необходимого расхода.\n✔ Автоматический режим работы для приготовления концентра.\n✔ Автоматический режим промывки установки.",
       specs: ["ОВЕН ПР103", "WEINTEK", "ELHART", "STEZ", "MEYERTEC", "DKC", "MEAN WELL", "Пневматика EMC"],
-      year: "2025"
-    },
-    {
-      id: 1,
-      title: "Ванна длительной пастеризации ВДП-300",
-      category: "Пищевая промышленность",
-      image: "https://cdn.poehali.dev/files/8ea1d273-a24f-4e0e-a236-eed623c8a7b9.jpg",
-      images: [
-        "https://cdn.poehali.dev/files/8ea1d273-a24f-4e0e-a236-eed623c8a7b9.jpg",
-        "https://cdn.poehali.dev/files/a0354164-cd50-4936-939c-43e6f1a3345b.jpg",
-        "https://cdn.poehali.dev/files/36817329-1244-473c-9c52-01128ad75fec.jpg"
-      ],
-      description: "Шкаф управления на базе ОВЕН ТРМ\n\n✔ Нагрев до заданной температуры с учётом температуры продукта и рубашки.\n✔ Блокировка мешалки при открытии люка.\n✔ Контроль верхнего и нижнего уровня рубашки.\n✔ Защита от обрыва фазы, нуля, пониженного и повышенного напряжения, а также от перекоса фаз.",
-      specs: ["ОВЕН 2ТРМ1", "WEINTEK", "STEZ", "MEYERTEC", "IEK", "MEAN WELL", "CHINT", "SUPU"],
       year: "2025"
     },
     {
@@ -63,7 +63,7 @@ const ProjectGallery = () => {
       year: "2025"
     },
     {
-      id: 3,
+      id: 4,
       title: "Пастеризационно-охладительная установка",
       category: "Пищевая промышленность",
       image: "https://cdn.poehali.dev/files/a7015e22-3e72-4492-a189-1ed39e18d1aa.jpg",
@@ -77,7 +77,7 @@ const ProjectGallery = () => {
       year: "2025"
     },
     {
-      id: 4,
+      id: 5,
       title: "Индивидуальный тепловой пункт в ЖК г. Казань",
       category: "Теплоснабжение",
       image: "https://cdn.poehali.dev/files/1d400d9f-2a52-4145-9807-a0bd156ba0b3.jpg",
@@ -91,7 +91,7 @@ const ProjectGallery = () => {
       year: "2025"
     },
     {
-      id: 5,
+      id: 6,
       title: "Лебёдка для подъёма земельных ископаемых",
       category: "Станкостроение",
       image: "https://cdn.poehali.dev/files/73ca4d66-c0a9-4eba-84b3-665da66c5ba7.jpg",
@@ -105,7 +105,7 @@ const ProjectGallery = () => {
       year: "2025"
     },
     {
-      id: 6,
+      id: 7,
       title: "Система смазки подшипников мельницы тонкого помола сои",
       category: "Аграрная промышленность",
       image: "https://cdn.poehali.dev/files/27e57516-c2f8-44da-9117-dbd2b206eda4.jpg",
@@ -119,7 +119,7 @@ const ProjectGallery = () => {
       year: "2024"
     },
     {
-      id: 7,
+      id: 8,
       title: "Дозирование удобрений",
       category: "Аграрная промышленность",
       image: "https://cdn.poehali.dev/files/89906699-377c-4cef-837f-5c867b4d9828.jpg",
