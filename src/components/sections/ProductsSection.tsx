@@ -96,7 +96,8 @@ const ProductsSection = ({ className = '' }: ProductsSectionProps) => {
         </div>
         
         <div className="grid md:grid-cols-2 gap-8 mt-8 justify-center max-w-4xl mx-auto">
-          <Card className="h-full group hover:shadow-lg transition-all duration-300 border-0 shadow-md hover:shadow-primary/10">
+          <a href="#contacts">
+            <Card className="h-full group hover:shadow-lg transition-all duration-300 border-0 shadow-md hover:shadow-primary/10 cursor-pointer">
             <div className="h-48 overflow-hidden rounded-t-lg">
               <img 
                 src="https://cdn.poehali.dev/files/91ee8b1b-2624-44bd-b986-d6b870fd3b82.jpg" 
@@ -118,10 +119,12 @@ const ProductsSection = ({ className = '' }: ProductsSectionProps) => {
                 <li className="flex items-center"><Icon name="Check" className="text-primary mr-2" size={16} />Интерфейсы связи RS485, Ethernet</li>
               </ul>
             </CardContent>
-          </Card>
+            </Card>
+          </a>
 
-          <Card className="h-full group hover:shadow-lg transition-all duration-300 border-0 shadow-md hover:shadow-primary/10">
-            <div className="h-48 overflow-hidden rounded-t-lg">
+          <a href="#contacts">
+            <Card className="h-full group hover:shadow-lg transition-all duration-300 border-0 shadow-md hover:shadow-primary/10 cursor-pointer">
+              <div className="h-48 overflow-hidden rounded-t-lg">
               <img 
                 src="https://cdn.poehali.dev/files/f90f6220-4e98-4b38-b96f-0eae1fd38318.png" 
                 alt="КИПиА" 
@@ -142,7 +145,8 @@ const ProductsSection = ({ className = '' }: ProductsSectionProps) => {
                 <li className="flex items-center"><Icon name="Check" className="text-primary mr-2" size={16} />Системы связи и передачи данных</li>
               </ul>
             </CardContent>
-          </Card>
+            </Card>
+          </a>
         </div>
       </div>
     </section>
