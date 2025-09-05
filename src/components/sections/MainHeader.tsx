@@ -19,35 +19,35 @@ const MainHeader = ({ className = '', currentPage = 'home' }: MainHeaderProps) =
           </a>
           <a href="/" className="block">
             <div className="flex flex-col -space-y-1 md:block hidden">
-              <h1 className="text-muted-foreground hover:text-primary transition-colors cursor-pointer leading-tight font-bold" style={{fontSize: '22px'}}>
+              <h1 className="text-black hover:text-primary transition-colors cursor-pointer leading-tight font-bold" style={{fontSize: '22px'}}>
                 <span className="text-red-600">Т</span>ехнологии
               </h1>
-              <h2 className="text-muted-foreground hover:text-primary transition-colors cursor-pointer leading-tight font-bold" style={{fontSize: '22px'}}>
+              <h2 className="text-black hover:text-primary transition-colors cursor-pointer leading-tight font-bold" style={{fontSize: '22px'}}>
                 <span className="text-red-600">А</span>втоматизации
               </h2>
-              <h3 className="text-muted-foreground hover:text-primary transition-colors cursor-pointer leading-tight font-bold" style={{fontSize: '22px'}}>
+              <h3 className="text-black hover:text-primary transition-colors cursor-pointer leading-tight font-bold" style={{fontSize: '22px'}}>
                 <span className="text-red-600">П</span>роизводств
               </h3>
             </div>
             <div className="flex flex-col -space-y-1 md:hidden block text-center">
-              <h1 className="text-muted-foreground hover:text-primary transition-colors cursor-pointer leading-tight text-lg font-bold">
+              <h1 className="text-black hover:text-primary transition-colors cursor-pointer leading-tight text-lg font-bold">
                 <span className="text-red-600">Т</span>ехнологии
               </h1>
-              <h2 className="text-muted-foreground hover:text-primary transition-colors cursor-pointer leading-tight text-lg font-bold">
+              <h2 className="text-black hover:text-primary transition-colors cursor-pointer leading-tight text-lg font-bold">
                 <span className="text-red-600">А</span>втоматизации
               </h2>
-              <h3 className="text-muted-foreground hover:text-primary transition-colors cursor-pointer leading-tight text-lg font-bold">
+              <h3 className="text-black hover:text-primary transition-colors cursor-pointer leading-tight text-lg font-bold">
                 <span className="text-red-600">П</span>роизводств
               </h3>
             </div>
           </a>
         </div>
         <nav className="hidden md:flex space-x-8 text-xl">
-          <Navigation href="/" className={currentPage === 'home' ? 'text-primary font-medium' : 'text-muted-foreground hover:text-primary transition-colors'}>Главная</Navigation>
-          <Navigation href="/projects" className={currentPage === 'projects' ? 'text-primary font-medium' : 'text-muted-foreground hover:text-primary transition-colors'}>Проекты</Navigation>
-          <Navigation href="/pricing" className={currentPage === 'pricing' ? 'text-primary font-medium' : 'text-muted-foreground hover:text-primary transition-colors'}>Корпуса AISI304</Navigation>
-          <Navigation href="/hatches" className={currentPage === 'hatches' ? 'text-primary font-medium' : 'text-muted-foreground hover:text-primary transition-colors'}>Люки</Navigation>
-          <Navigation href="#contacts" className="text-muted-foreground hover:text-primary transition-colors">Контакты</Navigation>
+          <Navigation href="/" className={currentPage === 'home' ? 'text-primary font-medium' : 'text-black hover:text-primary transition-colors'}>Главная</Navigation>
+          <Navigation href="/projects" className={currentPage === 'projects' ? 'text-primary font-medium' : 'text-black hover:text-primary transition-colors'}>Проекты</Navigation>
+          <Navigation href="/pricing" className={currentPage === 'pricing' ? 'text-primary font-medium' : 'text-black hover:text-primary transition-colors'}>Корпуса AISI304</Navigation>
+          <Navigation href="/hatches" className={currentPage === 'hatches' ? 'text-primary font-medium' : 'text-black hover:text-primary transition-colors'}>Люки</Navigation>
+          <Navigation href="#contacts" className="text-black hover:text-primary transition-colors">Контакты</Navigation>
         </nav>
       </div>
     </div>
