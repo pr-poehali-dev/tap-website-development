@@ -77,8 +77,22 @@ const ProjectGallery = () => {
       year: "2025"
     },
     {
+      id: 4,
+      title: "Ванна длительной пастеризации ВДП-300",
+      category: "Пищевая промышленность",
+      image: "https://cdn.poehali.dev/files/8ea1d273-a24f-4e0e-a236-eed623c8a7b9.jpg",
+      images: [
+        "https://cdn.poehali.dev/files/8ea1d273-a24f-4e0e-a236-eed623c8a7b9.jpg",
+        "https://cdn.poehali.dev/files/a0354164-cd50-4936-939c-43e6f1a3345b.jpg",
+        "https://cdn.poehali.dev/files/36817329-1244-473c-9c52-01128ad75fec.jpg"
+      ],
+      description: "Шкаф управления на базе ОВЕН ТРМ\n\n✔ Нагрев до заданной температуры с учётом температуры продукта и рубашки.\n✔ Блокировка мешалки при открытии люка.\n✔ Контроль верхнего и нижнего уровня рубашки.\n✔ Защита от обрыва фазы, нуля, пониженного и повышенного напряжения, а также от перекоса фаз.",
+      specs: ["ОВЕН 2ТРМ1", "WEINTEK", "STEZ", "MEYERTEC", "IEK", "MEAN WELL", "CHINT", "SUPU"],
+      year: "2025"
+    },
+    {
       id: 5,
-      title: "Индивидуальный тепловой пункт в ЖК г. Казань",
+      title: "Пастеризационно-охладительная установка",
       category: "Теплоснабжение",
       image: "https://cdn.poehali.dev/files/1d400d9f-2a52-4145-9807-a0bd156ba0b3.jpg",
       images: [
@@ -92,7 +106,7 @@ const ProjectGallery = () => {
     },
     {
       id: 6,
-      title: "Лебёдка для подъёма земельных ископаемых",
+      title: "Индивидуальный тепловой пункт в ЖК г. Казань",
       category: "Станкостроение",
       image: "https://cdn.poehali.dev/files/73ca4d66-c0a9-4eba-84b3-665da66c5ba7.jpg",
       images: [
@@ -106,7 +120,7 @@ const ProjectGallery = () => {
     },
     {
       id: 7,
-      title: "Система смазки подшипников мельницы тонкого помола сои",
+      title: "Лебёдка для подъёма земельных ископаемых",
       category: "Аграрная промышленность",
       image: "https://cdn.poehali.dev/files/27e57516-c2f8-44da-9117-dbd2b206eda4.jpg",
       images: [
@@ -120,6 +134,20 @@ const ProjectGallery = () => {
     },
     {
       id: 8,
+      title: "Система смазки подшипников мельницы тонкого помола сои",
+      category: "Аграрная промышленность", 
+      image: "https://cdn.poehali.dev/files/27e57516-c2f8-44da-9117-dbd2b206eda4.jpg",
+      images: [
+        "https://cdn.poehali.dev/files/27e57516-c2f8-44da-9117-dbd2b206eda4.jpg",
+        "https://cdn.poehali.dev/files/007eff64-e68b-4ce8-a4a8-878768c740c6.jpg",
+        "https://cdn.poehali.dev/files/b9629c4b-b14d-4007-a2fc-68a96789bb30.jpg"
+      ],
+      description: "Шкаф управления на базе ОВЕН ПР\n\n✔ Автоматическая подача смазки в нужном объёме по заданному алгоритму.\n✔ Контроль всех нештатный ситуаций с фиксацией в журнале событий.\n✔ Удобное управление через сенсорную панель оператора.\n✔ Надежная и бюджетная база на оборудовании ОВЕН ПР200.",
+      specs: ["ОВЕН ПР200", "WEINTEK", "STEZ", "MEYERTEC", "IEK", "MEAN WELL"],
+      year: "2024"
+    },
+    {
+      id: 9,
       title: "Дозирование удобрений",
       category: "Аграрная промышленность",
       image: "https://cdn.poehali.dev/files/89906699-377c-4cef-837f-5c867b4d9828.jpg",
