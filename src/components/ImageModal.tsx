@@ -101,12 +101,12 @@ const ImageModal = ({ src, alt, isOpen, onClose, images, onImageChange }: ImageM
           className="max-w-full max-h-[85vh] object-contain rounded-lg shadow-2xl"
         />
         
-        {/* Navigation arrows for slideshow */}
+        {/* Navigation arrows for slideshow - positioned at screen edges */}
         {hasMultipleImages && (
           <>
             <button
               onClick={goToPrev}
-              className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/70 hover:bg-black/90 text-white rounded-full p-3 transition-all duration-200"
+              className="fixed left-4 top-1/2 -translate-y-1/2 bg-black/70 hover:bg-black/90 text-white rounded-full p-3 transition-all duration-200 z-10"
               aria-label="Предыдущее изображение"
             >
               <Icon name="ChevronLeft" size={24} />
@@ -114,7 +114,7 @@ const ImageModal = ({ src, alt, isOpen, onClose, images, onImageChange }: ImageM
 
             <button
               onClick={goToNext}
-              className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/70 hover:bg-black/90 text-white rounded-full p-3 transition-all duration-200"
+              className="fixed right-4 top-1/2 -translate-y-1/2 bg-black/70 hover:bg-black/90 text-white rounded-full p-3 transition-all duration-200 z-10"
               aria-label="Следующее изображение"
             >
               <Icon name="ChevronRight" size={24} />
