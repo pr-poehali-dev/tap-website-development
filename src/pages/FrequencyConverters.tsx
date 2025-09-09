@@ -4,7 +4,9 @@ import Footer from '@/components/sections/Footer';
 import ContactsSection from '@/components/sections/ContactsSection';
 
 const FrequencyConverters = () => {
-  const [isExpanded, setIsExpanded] = useState(true);
+  const [isModelsExpanded, setIsModelsExpanded] = useState(true);
+  const [isFeaturesExpanded, setIsFeaturesExpanded] = useState(false);
+  const [isAdditionalExpanded, setIsAdditionalExpanded] = useState(false);
   
   return (
     <div className="min-h-screen bg-gradient-to-br from-background to-accent/5">
@@ -14,7 +16,7 @@ const FrequencyConverters = () => {
       <section className="pt-32 pb-8 px-6">
         <div className="container mx-auto">
           <div className="text-center mb-4">
-            <h1 className="md:text-5xl font-bold text-foreground py-[5px] text-4xl">
+            <h1 className="font-bold text-foreground" style={{fontSize: '36px'}}>
               Серия AD30 Optimus Drive
             </h1>
           </div>
@@ -55,16 +57,19 @@ const FrequencyConverters = () => {
             {/* Price List Section with Collapsible */}
             <div className="bg-white rounded-lg shadow-lg p-8">
               <button 
-                onClick={() => setIsExpanded(!isExpanded)}
+                onClick={() => setIsModelsExpanded(!isModelsExpanded)}
                 className="w-full flex items-center justify-between text-left mb-4 hover:bg-gray-50 p-2 rounded"
               >
                 <h3 className="text-xl font-bold text-gray-800">СПИСОК МОДЕЛЕЙ</h3>
-                <span className={`transform transition-transform duration-300 ${isExpanded ? 'rotate-180' : ''}`}>
-                  ▼
-                </span>
+                <div className="flex items-center gap-2">
+                  <span className="text-sm text-gray-600">{isModelsExpanded ? 'Скрыть' : 'Показать'}</span>
+                  <span className={`transform transition-transform duration-300 ${isModelsExpanded ? 'rotate-180' : ''}`}>
+                    ▼
+                  </span>
+                </div>
               </button>
               
-              {isExpanded && (
+              {isModelsExpanded && (
                 <div className="space-y-4">
                   <p className="text-gray-600">Стоимость указана с НДС. Не является публичной офертой.</p>
                   
@@ -186,6 +191,136 @@ const FrequencyConverters = () => {
                       </tbody>
                     </table>
                   </div>
+                </div>
+              )}
+            </div>
+
+            {/* Features Section */}
+            <div className="bg-white rounded-lg shadow-lg p-8 mt-8">
+              <button 
+                onClick={() => setIsFeaturesExpanded(!isFeaturesExpanded)}
+                className="w-full flex items-center justify-between text-left mb-4 hover:bg-gray-50 p-2 rounded"
+              >
+                <h3 className="text-xl font-bold text-gray-800">ОСНОВНЫЕ ФУНКЦИИ И ХАРАКТЕРИСТИКИ</h3>
+                <div className="flex items-center gap-2">
+                  <span className="text-sm text-gray-600">{isFeaturesExpanded ? 'Скрыть' : 'Показать'}</span>
+                  <span className={`transform transition-transform duration-300 ${isFeaturesExpanded ? 'rotate-180' : ''}`}>
+                    ▼
+                  </span>
+                </div>
+              </button>
+              
+              {isFeaturesExpanded && (
+                <div className="space-y-3">
+                  <ul className="space-y-3 text-gray-700">
+                    <li className="flex items-start">
+                      <span className="text-primary mr-3 mt-1">•</span>
+                      <span>Регулирование скорости или момента асинхронных двигателей</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-primary mr-3 mt-1">•</span>
+                      <span>Поддержание регулируемого параметра (давления, температуры)</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-primary mr-3 mt-1">•</span>
+                      <span>Векторный и скалярный режимы работы</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-primary mr-3 mt-1">•</span>
+                      <span>Нормальный и легкий режимы работы</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-primary mr-3 mt-1">•</span>
+                      <span>4 дискретных входа (PNP/NPN), 1 дискретный (импульсный) выход и 1 аналоговый выход</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-primary mr-3 mt-1">•</span>
+                      <span>1 аналоговый вход и 1 аналоговый выход</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-primary mr-3 mt-1">•</span>
+                      <span>Торможение постоянным током</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-primary mr-3 mt-1">•</span>
+                      <span>Защита двигателя</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-primary mr-3 mt-1">•</span>
+                      <span>Встроенный тормозной модуль</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-primary mr-3 mt-1">•</span>
+                      <span>Встроенный фильтр ЭМС</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-primary mr-3 mt-1">•</span>
+                      <span>Потенциометр задания на пульте</span>
+                    </li>
+                  </ul>
+                </div>
+              )}
+            </div>
+
+            {/* Additional Features Section */}
+            <div className="bg-white rounded-lg shadow-lg p-8 mt-8">
+              <button 
+                onClick={() => setIsAdditionalExpanded(!isAdditionalExpanded)}
+                className="w-full flex items-center justify-between text-left mb-4 hover:bg-gray-50 p-2 rounded"
+              >
+                <h3 className="text-xl font-bold text-gray-800">ДОПОЛНИТЕЛЬНЫЕ ФУНКЦИИ</h3>
+                <div className="flex items-center gap-2">
+                  <span className="text-sm text-gray-600">{isAdditionalExpanded ? 'Скрыть' : 'Показать'}</span>
+                  <span className={`transform transition-transform duration-300 ${isAdditionalExpanded ? 'rotate-180' : ''}`}>
+                    ▼
+                  </span>
+                </div>
+              </button>
+              
+              {isAdditionalExpanded && (
+                <div className="space-y-3">
+                  <ul className="space-y-3 text-gray-700">
+                    <li className="flex items-start">
+                      <span className="text-primary mr-3 mt-1">•</span>
+                      <span>Автонастройка на двигатель</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-primary mr-3 mt-1">•</span>
+                      <span>Останов насоса при отсутствии расхода (спящий режим)</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-primary mr-3 mt-1">•</span>
+                      <span>Энергосберегающий режим</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-primary mr-3 mt-1">•</span>
+                      <span>Встроенный ПЛК (работа в цикле по фиксированным скоростям)</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-primary mr-3 mt-1">•</span>
+                      <span>Функция качания частоты (вобуляция)</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-primary mr-3 mt-1">•</span>
+                      <span>Встроенный порт Modbus</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-primary mr-3 mt-1">•</span>
+                      <span>Пожарный режим</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-primary mr-3 mt-1">•</span>
+                      <span>Защитное покрытие плат 3C3</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-primary mr-3 mt-1">•</span>
+                      <span>Опциональный выносной пульт с возможностью копирования параметров</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-primary mr-3 mt-1">•</span>
+                      <span>3 года гарантии</span>
+                    </li>
+                  </ul>
                 </div>
               )}
             </div>
