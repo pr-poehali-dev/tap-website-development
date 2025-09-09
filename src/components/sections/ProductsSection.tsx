@@ -42,7 +42,7 @@ const ProductsSection = ({ className = '' }: ProductsSectionProps) => {
             </Card>
           </a>
 
-          <a href="/pricing">
+          <a href="/aisi">
             <Card className="h-full group hover:shadow-lg transition-all duration-300 border-0 shadow-md hover:shadow-primary/10 cursor-pointer">
               <div className="h-48 overflow-hidden rounded-t-lg">
                 <img 
