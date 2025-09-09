@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import Icon from '@/components/ui/icon';
 
 const HatchSection = () => {
+  const [selectedBlueprint, setSelectedBlueprint] = useState<string | null>(null);
   const hatchData = [
     {
       id: 1,
@@ -13,7 +14,7 @@ const HatchSection = () => {
       model: "Аналог 6009ECO",
       pressure: ["0.6 МПа"],
       features: ["Самоуплотняющийся", "Овальная форма", "Нержавеющая сталь AISI304 крышка 2,5 мм, горловина 3 мм", "Опциональный кронштейн"],
-      price: "от 25 000,00 ₽",
+      price: "23 800,00 ₽",
       image: "https://cdn.poehali.dev/files/71b88224-89da-4704-88d0-e4826d2d231e.jpg",
       blueprint: "/img/1ac9da1a-8243-4705-8d52-abcfbf66f1a6.jpg"
     },
@@ -22,9 +23,9 @@ const HatchSection = () => {
       name: "Люк кольцевой с поворотно-откидной крышкой",
       size: "DN400 / DN450",
       model: "Промышленный тип",
-      pressure: ["0.6 МПа"],
-      features: ["Поворотно-откидная крышка", "Кольцевая конструкция", "Нержавеющая сталь AISI304 или AISI316", "Горловина от 100 мм до 400 мм"],
-      price: "от 35 000,00 ₽",
+      pressure: [],
+      features: ["Поворотно-откидная крышка", "Кольцевая конструкция", "Нержавеющая сталь AISI304 или AISI316", "Высота горловины от 100 мм до 400 мм"],
+      price: "11 620,00 ₽",
       image: "https://cdn.poehali.dev/files/e57d06e3-e0fd-4542-8719-4a013db706a7.png",
       blueprint: "/img/9c89715e-9526-4946-b7e1-d1c6b914d66e.jpg"
     }
@@ -73,21 +74,23 @@ const HatchSection = () => {
               </CardHeader>
 
               <CardContent className="space-y-6">
-                <div className="grid grid-cols-2 gap-4">
+                <div className={hatch.pressure.length > 0 ? "grid grid-cols-2 gap-4" : "grid grid-cols-1 gap-4"}>
                   <div>
                     <span className="text-sm font-medium text-foreground">Размер:</span>
                     <p className="text-lg font-semibold text-primary">{hatch.size}</p>
                   </div>
-                  <div>
-                    <span className="text-sm font-medium text-foreground">Давление:</span>
-                    <div className="flex gap-2 mt-1">
-                      {hatch.pressure.map((p, index) => (
-                        <Badge key={index} variant="outline" className="text-xs">
-                          {p}
-                        </Badge>
-                      ))}
+                  {hatch.pressure.length > 0 && (
+                    <div>
+                      <span className="text-sm font-medium text-foreground">Давление:</span>
+                      <div className="flex gap-2 mt-1">
+                        {hatch.pressure.map((p, index) => (
+                          <Badge key={index} variant="outline" className="text-xs">
+                            {p}
+                          </Badge>
+                        ))}
+                      </div>
                     </div>
-                  </div>
+                  )}
                 </div>
 
                 <div>
@@ -104,23 +107,17 @@ const HatchSection = () => {
                   </div>
                 </div>
 
-                <div className="pt-4 border-t border-border">
-                  <div className="flex gap-3">
-                    <Button className="flex-1" size="sm">
-                      <Icon name="ShoppingCart" className="w-4 h-4 mr-2" />
-                      Заказать
-                    </Button>
-                  </div>
-                </div>
+
 
                 <div className="mt-4">
                   <img 
                     src={hatch.blueprint} 
                     alt={`Чертеж ${hatch.name}`} 
-                    className="w-full rounded-lg shadow-lg"
+                    className="w-full rounded-lg shadow-lg cursor-pointer hover:scale-105 transition-transform"
+                    onClick={() => setSelectedBlueprint(hatch.blueprint)}
                   />
                   <p className="text-xs text-muted-foreground mt-2 text-center">
-                    Технический чертеж с размерами
+                    Технический чертеж с размерами • Нажмите для увеличения
                   </p>
                 </div>
               </CardContent>
@@ -128,24 +125,30 @@ const HatchSection = () => {
           ))}
         </div>
 
-        <div className="text-center mt-16">
-          <Card className="inline-block p-6 max-w-md mx-auto bg-accent/5">
-            <div className="text-center">
-              <Icon name="Settings" className="w-8 h-8 text-primary mx-auto mb-3" />
-              <h3 className="text-lg font-semibold text-foreground mb-2">
-                Производство
-              </h3>
-              <p className="text-sm text-muted-foreground mb-4">
-                Производим люки на собственном производстве с помощью пресс-форм
-              </p>
-              <Button className="bg-red-600 hover:bg-red-700 text-white" size="sm">
-                <Icon name="Phone" className="w-4 h-4 mr-2" />
-                Свяжитесь с нами
-              </Button>
-            </div>
-          </Card>
-        </div>
+
       </div>
+      
+      {/* Blueprint Modal */}
+      {selectedBlueprint && (
+        <div 
+          className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4"
+          onClick={() => setSelectedBlueprint(null)}
+        >
+          <div className="relative max-w-4xl max-h-full">
+            <img 
+              src={selectedBlueprint} 
+              alt="Увеличенный чертеж" 
+              className="max-w-full max-h-full object-contain rounded-lg"
+            />
+            <button 
+              onClick={() => setSelectedBlueprint(null)}
+              className="absolute top-4 right-4 bg-white bg-opacity-20 hover:bg-opacity-30 rounded-full p-2 transition-all"
+            >
+              <Icon name="X" className="w-6 h-6 text-white" />
+            </button>
+          </div>
+        </div>
+      )}
     </section>
   );
 };

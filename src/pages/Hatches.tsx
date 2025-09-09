@@ -1,6 +1,7 @@
 import HatchSection from '@/components/HatchSection';
 import Header from '@/components/sections/Header';
 import Footer from '@/components/sections/Footer';
+import ContactsSection from '@/components/sections/ContactsSection';
 
 const Hatches = () => {
   return (
@@ -11,6 +12,7 @@ const Hatches = () => {
         <HatchSection />
       </div>
 
+      <ContactsSection />
       <Footer />
     </div>
   );
