@@ -22,10 +22,10 @@ const FrequencyConverters = () => {
       <Header currentPage="converters" />
 
       {/* Page Title Section */}
-      <section className="pt-32 pb-8 px-6">
+      <section className="pt-32 pb-8 px-6 sm:pt-24">
         <div className="container mx-auto">
           <div className="text-center mb-4">
-            <h1 className="font-bold text-foreground" style={{fontSize: '36px'}}>
+            <h1 className="font-bold text-foreground text-2xl sm:text-3xl lg:text-4xl px-4">
               Серия AD30 Optimus Drive
             </h1>
           </div>
