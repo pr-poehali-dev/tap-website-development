@@ -14,7 +14,7 @@ const FrequencyConverters = () => {
       <section className="pt-32 pb-8 px-6">
         <div className="container mx-auto">
           <div className="text-center mb-4">
-            <h1 className="text-4xl md:text-5xl font-bold text-foreground">
+            <h1 className="md:text-5xl font-bold text-foreground text-5xl">
               Серия AD30 Optimus Drive
             </h1>
           </div>
@@ -22,7 +22,7 @@ const FrequencyConverters = () => {
       </section>
 
       {/* Main Content Section */}
-      <section className="py-8 px-6">
+      <section className="px-6 py-0">
         <div className="container mx-auto">
           <div className="max-w-6xl mx-auto">
             {/* Header Section */}
