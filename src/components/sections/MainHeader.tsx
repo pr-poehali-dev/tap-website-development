@@ -42,7 +42,7 @@ const MainHeader = ({ className = '', currentPage = 'home' }: MainHeaderProps) =
             </div>
           </a>
         </div>
-        <nav className="hidden md:flex space-x-8 text-xl">
+        <nav className="hidden md:flex space-x-8 text-xl items-center">
           <Navigation href="/" className={currentPage === 'home' ? 'text-primary font-medium' : 'text-black hover:text-primary transition-colors'}>Главная</Navigation>
           <Navigation href="/projects" className={currentPage === 'projects' ? 'text-primary font-medium' : 'text-black hover:text-primary transition-colors'}>Проекты</Navigation>
           <Navigation href="/aisi" className={currentPage === 'aisi' ? 'text-primary font-medium' : 'text-black hover:text-primary transition-colors'}>Корпуса AISI304</Navigation>

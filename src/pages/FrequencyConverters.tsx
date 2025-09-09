@@ -8,8 +8,19 @@ const FrequencyConverters = () => {
     <div className="min-h-screen bg-gradient-to-br from-background to-accent/5">
       <Header currentPage="converters" />
 
+      {/* Page Title Section */}
+      <section className="pt-32 pb-8 px-6">
+        <div className="container mx-auto">
+          <div className="text-center mb-8">
+            <h1 className="text-4xl md:text-5xl font-bold text-foreground">
+              Серия AD30 Optimus Drive
+            </h1>
+          </div>
+        </div>
+      </section>
+
       {/* Main Content Section */}
-      <section className="py-20 px-6 pt-32">
+      <section className="py-8 px-6">
         <div className="container mx-auto">
           <div className="max-w-6xl mx-auto">
             {/* Header Section */}
@@ -23,12 +34,12 @@ const FrequencyConverters = () => {
               </div>
               
               <div className="lg:w-2/3">
-                <h1 className="text-2xl md:text-3xl font-bold text-gray-600 mb-4 uppercase tracking-wide">
+                <h2 className="text-lg md:text-xl font-bold text-gray-600 mb-3 uppercase tracking-wide">
                   AD30 КОМПАКТНЫЕ УНИВЕРСАЛЬНЫЕ
-                </h1>
-                <h2 className="text-2xl md:text-3xl font-bold text-gray-600 mb-8 uppercase tracking-wide">
-                  ПРЕОБРАЗОВАТЕЛИ ЧАСТОТЫ
                 </h2>
+                <h3 className="text-lg md:text-xl font-bold text-gray-600 mb-8 uppercase tracking-wide">
+                  ПРЕОБРАЗОВАТЕЛИ ЧАСТОТЫ
+                </h3>
                 
                 <div className="space-y-4 text-gray-700 leading-relaxed">
                   <p>
