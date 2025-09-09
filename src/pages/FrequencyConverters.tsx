@@ -22,7 +22,7 @@ const FrequencyConverters = () => {
       <Header currentPage="converters" />
 
       {/* Page Title Section */}
-      <section className="pt-32 pb-8 px-6 sm:pt-24">
+      <section className="pt-40 pb-8 px-6 sm:pt-36 md:pt-40">
         <div className="container mx-auto">
           <div className="text-center mb-4">
             <h1 className="font-bold text-foreground text-2xl sm:text-3xl lg:text-4xl px-4">
