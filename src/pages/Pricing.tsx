@@ -8,7 +8,7 @@ import ContactsSection from '@/components/sections/ContactsSection';
 const Pricing = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-background to-accent/5">
-      <Header currentPage="pricing" />
+      <Header currentPage="aisi" />
 
       {/* Development Notice Section */}
       <section className="py-20 px-6 pt-44">
