@@ -19,7 +19,7 @@ const Pricing = () => {
                 <Icon name="HardHat" className="text-primary" size={48} />
               </div>
               <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-                Корпуса и люки
+                Корпуса из нержавеющей стали
               </h1>
               <p className="text-xl text-muted-foreground mb-8">
                 Раздел находится в разработке
@@ -65,7 +65,7 @@ const Pricing = () => {
                       <Icon name="Wrench" className="text-primary mr-3 mt-1" size={20} />
                       <div>
                         <h3 className="font-semibold text-foreground mb-1">Материалы и исполнения</h3>
-                        <p className="text-muted-foreground text-sm">Варианты материалов: нержавеющая сталь, специальные покрытия</p>
+                        <p className="text-muted-foreground text-sm">Варианты материалов: марки нержавеющей стали</p>
                       </div>
                     </div>
                   </div>
