@@ -1,96 +1,88 @@
 import React from 'react';
-import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
 import Icon from '@/components/ui/icon';
 import Header from '@/components/sections/Header';
 import Footer from '@/components/sections/Footer';
+import ContactsSection from '@/components/sections/ContactsSection';
 
 const Pricing = () => {
-  const priceData = [
-    { size: "300x400x200", material: "AISI 304", price: "45,000", features: ["IP65", "Смотровое окно", "Замок"] },
-    { size: "400x500x250", material: "AISI 304", price: "62,000", features: ["IP66", "Вентиляция", "DIN-рейка"] },
-    { size: "500x600x300", material: "AISI 316", price: "85,000", features: ["IP67", "Подогрев", "Кабельные вводы"] },
-    { size: "600x800x350", material: "AISI 316L", price: "120,000", features: ["IP68", "Антивандальный", "Терморегулятор"] },
-    { size: "800x1000x400", material: "AISI 316L", price: "165,000", features: ["IP68", "Морское исполнение", "Усиленная конструкция"] },
-    { size: "1000x1200x500", material: "AISI 316L", price: "220,000", features: ["IP68", "Взрывозащита Ex", "Специальные уплотнения"] }
-  ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-background to-accent/5">
       <Header currentPage="pricing" />
 
-      {/* Price Section */}
+      {/* Development Notice Section */}
       <section className="py-20 px-6 pt-44">
         <div className="container mx-auto">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-              Прайс-лист на корпуса из нержавеющей стали
-            </h1>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Актуальные цены на складские позиции с доставкой по России
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {priceData.map((item, index) => (
-              <Card key={index} className="relative overflow-hidden hover:shadow-lg transition-all duration-300">
-                <CardHeader className="pb-2">
-                  <div className="flex justify-between items-start">
-                    <Badge variant="outline" className="bg-primary/10 text-primary border-primary/20">
-                      {item.material}
-                    </Badge>
-                    <div className="text-right">
-                      <div className="text-2xl font-bold text-primary">{item.price} ₽</div>
-                      <div className="text-xs text-muted-foreground">с НДС</div>
+          <div className="text-center max-w-3xl mx-auto">
+            <div className="mb-12">
+              <div className="w-24 h-24 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-8">
+                <Icon name="HardHat" className="text-primary" size={48} />
+              </div>
+              <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+                Корпуса и люки
+              </h1>
+              <p className="text-xl text-muted-foreground mb-8">
+                Раздел находится в разработке
+              </p>
+            </div>
+            
+            <Card className="p-8 bg-accent/5 border-primary/20">
+              <CardContent className="space-y-6">
+                <div className="flex items-center justify-center mb-6">
+                  <Icon name="Clock" className="text-primary mr-3" size={32} />
+                  <h2 className="text-2xl font-semibold text-foreground">В ближайшее время здесь появится:</h2>
+                </div>
+                
+                <div className="grid md:grid-cols-2 gap-6 text-left">
+                  <div className="space-y-4">
+                    <div className="flex items-start">
+                      <Icon name="FileText" className="text-primary mr-3 mt-1" size={20} />
+                      <div>
+                        <h3 className="font-semibold text-foreground mb-1">Прайс-лист</h3>
+                        <p className="text-muted-foreground text-sm">Актуальные цены на корпуса и люки различных размеров и характеристик</p>
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-start">
+                      <Icon name="Settings" className="text-primary mr-3 mt-1" size={20} />
+                      <div>
+                        <h3 className="font-semibold text-foreground mb-1">Техническая информация</h3>
+                        <p className="text-muted-foreground text-sm">Подробные спецификации, чертежи и технические характеристики</p>
+                      </div>
                     </div>
                   </div>
-                  <CardTitle className="text-xl text-foreground">{item.size} мм</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="space-y-3 mb-6">
-                    {item.features.map((feature, i) => (
-                      <div key={i} className="flex items-center text-sm">
-                        <Icon name="CheckCircle2" className="text-primary mr-3" size={16} />
-                        <span className="text-muted-foreground">{feature}</span>
+                  
+                  <div className="space-y-4">
+                    <div className="flex items-start">
+                      <Icon name="Shield" className="text-primary mr-3 mt-1" size={20} />
+                      <div>
+                        <h3 className="font-semibold text-foreground mb-1">Степени защиты</h3>
+                        <p className="text-muted-foreground text-sm">Информация о классах защиты IP65, IP66, IP67, IP68</p>
                       </div>
-                    ))}
+                    </div>
+                    
+                    <div className="flex items-start">
+                      <Icon name="Wrench" className="text-primary mr-3 mt-1" size={20} />
+                      <div>
+                        <h3 className="font-semibold text-foreground mb-1">Материалы и исполнения</h3>
+                        <p className="text-muted-foreground text-sm">Варианты материалов: нержавеющая сталь, специальные покрытия</p>
+                      </div>
+                    </div>
                   </div>
-                  <Button className="w-full bg-primary hover:bg-primary/90">
-                    <Icon name="ShoppingCart" className="mr-2" size={16} />
-                    Заказать
-                  </Button>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-          
-          <div className="text-center mt-16">
-            <Card className="inline-block p-8 max-w-2xl mx-auto bg-accent/5">
-              <h3 className="text-2xl font-semibold text-foreground mb-4">
-                Нужны другие размеры или характеристики?
-              </h3>
-              <p className="text-muted-foreground mb-6">
-                Производим корпуса по индивидуальным требованиям. Любые размеры, степень защиты до IP68, 
-                специальные материалы и покрытия.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="/calculator">
-                  <Button size="lg" className="bg-primary hover:bg-primary/90">
-                    <Icon name="Calculator" className="mr-2" size={20} />
-                    Рассчитать стоимость
-                  </Button>
-                </a>
-                <Button variant="outline" size="lg">
-                  <Icon name="Phone" className="mr-2" size={20} />
-                  Получить консультацию
-                </Button>
-              </div>
+                </div>
+                
+                <div className="pt-6 border-t border-primary/20">
+                  <p className="text-muted-foreground text-center">
+                    Для получения актуальной информации о корпусах и люках обращайтесь к нашим специалистам
+                  </p>
+                </div>
+              </CardContent>
             </Card>
           </div>
         </div>
       </section>
 
+      <ContactsSection />
       <Footer />
     </div>
   );
