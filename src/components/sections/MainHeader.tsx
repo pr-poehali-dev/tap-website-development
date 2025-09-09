@@ -47,6 +47,12 @@ const MainHeader = ({ className = '', currentPage = 'home' }: MainHeaderProps) =
           <Navigation href="/projects" className={currentPage === 'projects' ? 'text-primary font-medium' : 'text-black hover:text-primary transition-colors'}>Проекты</Navigation>
           <Navigation href="/aisi" className={currentPage === 'aisi' ? 'text-primary font-medium' : 'text-black hover:text-primary transition-colors'}>Корпуса AISI304</Navigation>
           <Navigation href="/hatches" className={currentPage === 'hatches' ? 'text-primary font-medium' : 'text-black hover:text-primary transition-colors'}>Люки</Navigation>
+          <Navigation href="/preobrazovateli-chastotyi" className={currentPage === 'converters' ? 'text-primary font-medium' : 'text-black hover:text-primary transition-colors'}>
+            <span className="flex flex-col leading-tight text-center">
+              <span>Частотные</span>
+              <span>преобразователи</span>
+            </span>
+          </Navigation>
           <Navigation href="#contacts" className="text-black hover:text-primary transition-colors">Контакты</Navigation>
         </nav>
       </div>

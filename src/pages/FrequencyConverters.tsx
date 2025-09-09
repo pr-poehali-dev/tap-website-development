@@ -1,0 +1,179 @@
+import React from 'react';
+import Header from '@/components/sections/Header';
+import Footer from '@/components/sections/Footer';
+import ContactsSection from '@/components/sections/ContactsSection';
+
+const FrequencyConverters = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-background to-accent/5">
+      <Header currentPage="converters" />
+
+      {/* Main Content Section */}
+      <section className="py-20 px-6 pt-32">
+        <div className="container mx-auto">
+          <div className="max-w-6xl mx-auto">
+            {/* Header Section */}
+            <div className="flex flex-col lg:flex-row items-center lg:items-start gap-12 mb-16">
+              <div className="lg:w-1/3">
+                <img 
+                  src="https://cdn.poehali.dev/files/91ee8b1b-2624-44bd-b986-d6b870fd3b82.jpg" 
+                  alt="Частотные преобразователи AD30" 
+                  className="w-full h-auto rounded-lg shadow-lg"
+                />
+              </div>
+              
+              <div className="lg:w-2/3">
+                <h1 className="text-2xl md:text-3xl font-bold text-gray-600 mb-4 uppercase tracking-wide">
+                  AD30 КОМПАКТНЫЕ УНИВЕРСАЛЬНЫЕ
+                </h1>
+                <h2 className="text-2xl md:text-3xl font-bold text-gray-600 mb-8 uppercase tracking-wide">
+                  ПРЕОБРАЗОВАТЕЛИ ЧАСТОТЫ
+                </h2>
+                
+                <div className="space-y-4 text-gray-700 leading-relaxed">
+                  <p>
+                    AD30 – это универсальные и надежные преобразователи частоты для точного управления асинхронными двигателями.
+                  </p>
+                  
+                  <p>
+                    Они сочетают в себе компактность, высокую перегрузочную способность, простоту монтажа и богатый функционал, благодаря чему идеально подходят для общепромышленного применения, а также для установки в насосных и вентиляционных системах.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Price List Section */}
+            <div className="bg-white rounded-lg shadow-lg p-8">
+              <h3 className="text-xl font-bold text-gray-800 mb-2">СПИСОК МОДЕЛЕЙ</h3>
+              <p className="text-gray-600 mb-6">Стоимость указана с НДС. Не является публичной офертой.</p>
+              
+              <div className="overflow-x-auto">
+                <table className="w-full border-collapse border border-gray-300">
+                  <thead>
+                    <tr className="bg-gray-50">
+                      <th className="border border-gray-300 px-4 py-3 text-center font-semibold text-gray-800">Модель</th>
+                      <th className="border border-gray-300 px-4 py-3 text-center font-semibold text-gray-800">Напряжение питания</th>
+                      <th className="border border-gray-300 px-4 py-3 text-center font-semibold text-gray-800">Мощность двигателя</th>
+                      <th className="border border-gray-300 px-4 py-3 text-center font-semibold text-gray-800">Ток</th>
+                      <th className="border border-gray-300 px-4 py-3 text-center font-semibold text-gray-800">Тормозной модуль</th>
+                      <th className="border border-gray-300 px-4 py-3 text-center font-semibold text-gray-800">Фильтр ЭМС</th>
+                      <th className="border border-gray-300 px-4 py-3 text-center font-semibold text-gray-800">Стоимость</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {/* Single Phase 1x220 VAC */}
+                    <tr>
+                      <td className="border border-gray-300 px-4 py-2 text-center font-medium">AD30-2SD40</td>
+                      <td className="border border-gray-300 px-4 py-2 text-center" rowSpan={4}>1x220 VAC</td>
+                      <td className="border border-gray-300 px-4 py-2 text-center">0,4 кВт</td>
+                      <td className="border border-gray-300 px-4 py-2 text-center">2,3 А</td>
+                      <td className="border border-gray-300 px-4 py-2 text-center">Да</td>
+                      <td className="border border-gray-300 px-4 py-2 text-center">Да</td>
+                      <td className="border border-gray-300 px-4 py-2 text-center font-semibold">6 187,50 ₽</td>
+                    </tr>
+                    <tr>
+                      <td className="border border-gray-300 px-4 py-2 text-center font-medium">AD30-2SD75</td>
+                      <td className="border border-gray-300 px-4 py-2 text-center">0,75 кВт</td>
+                      <td className="border border-gray-300 px-4 py-2 text-center">4,0 А</td>
+                      <td className="border border-gray-300 px-4 py-2 text-center">Да</td>
+                      <td className="border border-gray-300 px-4 py-2 text-center">Да</td>
+                      <td className="border border-gray-300 px-4 py-2 text-center font-semibold">6 765,00 ₽</td>
+                    </tr>
+                    <tr>
+                      <td className="border border-gray-300 px-4 py-2 text-center font-medium">AD30-2S1D5</td>
+                      <td className="border border-gray-300 px-4 py-2 text-center">1,5 кВт</td>
+                      <td className="border border-gray-300 px-4 py-2 text-center">7,0 А</td>
+                      <td className="border border-gray-300 px-4 py-2 text-center">Да</td>
+                      <td className="border border-gray-300 px-4 py-2 text-center">Да</td>
+                      <td className="border border-gray-300 px-4 py-2 text-center font-semibold">7 095,00 ₽</td>
+                    </tr>
+                    <tr>
+                      <td className="border border-gray-300 px-4 py-2 text-center font-medium">AD30-2S2D2</td>
+                      <td className="border border-gray-300 px-4 py-2 text-center">2,2 кВт</td>
+                      <td className="border border-gray-300 px-4 py-2 text-center">9,6 А</td>
+                      <td className="border border-gray-300 px-4 py-2 text-center">Да</td>
+                      <td className="border border-gray-300 px-4 py-2 text-center">Да</td>
+                      <td className="border border-gray-300 px-4 py-2 text-center font-semibold">9 322,50 ₽</td>
+                    </tr>
+                    
+                    {/* Three Phase 3x380 VAC */}
+                    <tr>
+                      <td className="border border-gray-300 px-4 py-2 text-center font-medium">AD30-4TD75H/1D5L</td>
+                      <td className="border border-gray-300 px-4 py-2 text-center" rowSpan={8}>3x380 VAC</td>
+                      <td className="border border-gray-300 px-4 py-2 text-center">0,75/1,5 кВт</td>
+                      <td className="border border-gray-300 px-4 py-2 text-center">2,1/3,8 А</td>
+                      <td className="border border-gray-300 px-4 py-2 text-center">Да</td>
+                      <td className="border border-gray-300 px-4 py-2 text-center">Да</td>
+                      <td className="border border-gray-300 px-4 py-2 text-center font-semibold">8 662,50 ₽</td>
+                    </tr>
+                    <tr>
+                      <td className="border border-gray-300 px-4 py-2 text-center font-medium">AD30-4T1D5H/2D2L</td>
+                      <td className="border border-gray-300 px-4 py-2 text-center">1,5/2,2 кВт</td>
+                      <td className="border border-gray-300 px-4 py-2 text-center">3,8/5,1 А</td>
+                      <td className="border border-gray-300 px-4 py-2 text-center">Да</td>
+                      <td className="border border-gray-300 px-4 py-2 text-center">Да</td>
+                      <td className="border border-gray-300 px-4 py-2 text-center font-semibold">9 487,50 ₽</td>
+                    </tr>
+                    <tr>
+                      <td className="border border-gray-300 px-4 py-2 text-center font-medium">AD30-4T2D2H/4D0L</td>
+                      <td className="border border-gray-300 px-4 py-2 text-center">2,2/4 кВт</td>
+                      <td className="border border-gray-300 px-4 py-2 text-center">5,1/9 А</td>
+                      <td className="border border-gray-300 px-4 py-2 text-center">Да</td>
+                      <td className="border border-gray-300 px-4 py-2 text-center">Да</td>
+                      <td className="border border-gray-300 px-4 py-2 text-center font-semibold">9 982,50 ₽</td>
+                    </tr>
+                    <tr>
+                      <td className="border border-gray-300 px-4 py-2 text-center font-medium">AD30-4T4D0H/5D5L</td>
+                      <td className="border border-gray-300 px-4 py-2 text-center">4/5,5 кВт</td>
+                      <td className="border border-gray-300 px-4 py-2 text-center">9/13 А</td>
+                      <td className="border border-gray-300 px-4 py-2 text-center">Да</td>
+                      <td className="border border-gray-300 px-4 py-2 text-center">Да</td>
+                      <td className="border border-gray-300 px-4 py-2 text-center font-semibold">10 725,00 ₽</td>
+                    </tr>
+                    <tr>
+                      <td className="border border-gray-300 px-4 py-2 text-center font-medium">AD30-4T5DH/7D5L</td>
+                      <td className="border border-gray-300 px-4 py-2 text-center">5,5/7,5 кВт</td>
+                      <td className="border border-gray-300 px-4 py-2 text-center">13/17 А</td>
+                      <td className="border border-gray-300 px-4 py-2 text-center">Да</td>
+                      <td className="border border-gray-300 px-4 py-2 text-center">Да</td>
+                      <td className="border border-gray-300 px-4 py-2 text-center font-semibold">13 035,00 ₽</td>
+                    </tr>
+                    <tr>
+                      <td className="border border-gray-300 px-4 py-2 text-center font-medium">AD30-4T7D5H/011L</td>
+                      <td className="border border-gray-300 px-4 py-2 text-center">7,5/11 кВт</td>
+                      <td className="border border-gray-300 px-4 py-2 text-center">17/25 А</td>
+                      <td className="border border-gray-300 px-4 py-2 text-center">Да</td>
+                      <td className="border border-gray-300 px-4 py-2 text-center">Да</td>
+                      <td className="border border-gray-300 px-4 py-2 text-center font-semibold">18 067,50 ₽</td>
+                    </tr>
+                    <tr>
+                      <td className="border border-gray-300 px-4 py-2 text-center font-medium">AD30-4T011H/015L</td>
+                      <td className="border border-gray-300 px-4 py-2 text-center">11/15 кВт</td>
+                      <td className="border border-gray-300 px-4 py-2 text-center">25/32 А</td>
+                      <td className="border border-gray-300 px-4 py-2 text-center">Да</td>
+                      <td className="border border-gray-300 px-4 py-2 text-center">Да</td>
+                      <td className="border border-gray-300 px-4 py-2 text-center font-semibold">24 255,00 ₽</td>
+                    </tr>
+                    <tr>
+                      <td className="border border-gray-300 px-4 py-2 text-center font-medium">AD30-4T015H/18DL</td>
+                      <td className="border border-gray-300 px-4 py-2 text-center">15/18,5 кВт</td>
+                      <td className="border border-gray-300 px-4 py-2 text-center">32/37 А</td>
+                      <td className="border border-gray-300 px-4 py-2 text-center">Да</td>
+                      <td className="border border-gray-300 px-4 py-2 text-center">Да</td>
+                      <td className="border border-gray-300 px-4 py-2 text-center font-semibold">32 092,50 ₽</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <ContactsSection />
+      <Footer />
+    </div>
+  );
+};
+
+export default FrequencyConverters;

@@ -9,6 +9,7 @@ import Index from "./pages/Index";
 import Hatches from "./pages/Hatches";
 import Pricing from "./pages/Pricing";
 import Projects from "./pages/Projects";
+import FrequencyConverters from "./pages/FrequencyConverters";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -25,6 +26,7 @@ const App = () => (
           <Route path="/projects" element={<Projects />} />
           <Route path="/hatches" element={<Hatches />} />
           <Route path="/aisi" element={<Pricing />} />
+          <Route path="/preobrazovateli-chastotyi" element={<FrequencyConverters />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

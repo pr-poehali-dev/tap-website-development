@@ -96,7 +96,7 @@ const ProductsSection = ({ className = '' }: ProductsSectionProps) => {
         </div>
         
         <div className="grid md:grid-cols-2 gap-8 mt-8 justify-center max-w-4xl mx-auto">
-          <a href="#contacts">
+          <a href="/preobrazovateli-chastotyi">
             <Card className="h-full group hover:shadow-lg transition-all duration-300 border-0 shadow-md hover:shadow-primary/10 cursor-pointer">
             <div className="h-48 overflow-hidden rounded-t-lg">
               <img 
