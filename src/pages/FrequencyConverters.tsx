@@ -7,6 +7,9 @@ const FrequencyConverters = () => {
   const [isModelsExpanded, setIsModelsExpanded] = useState(true);
   const [isFeaturesExpanded, setIsFeaturesExpanded] = useState(false);
   const [isAdditionalExpanded, setIsAdditionalExpanded] = useState(false);
+  const [isDimensionsExpanded, setIsDimensionsExpanded] = useState(false);
+  const [isSpecsExpanded, setIsSpecsExpanded] = useState(false);
+  const [modalImage, setModalImage] = useState<{src: string, alt: string} | null>(null);
   
   return (
     <div className="min-h-screen bg-gradient-to-br from-background to-accent/5">
@@ -324,9 +327,180 @@ const FrequencyConverters = () => {
                 </div>
               )}
             </div>
+
+            {/* Dimensions Section */}
+            <div className="bg-white rounded-lg shadow-lg p-8 mt-8">
+              <button 
+                onClick={() => setIsDimensionsExpanded(!isDimensionsExpanded)}
+                className="w-full flex items-center justify-between text-left mb-4 hover:bg-gray-50 p-2 rounded"
+              >
+                <h3 className="text-xl font-bold text-gray-800">ГАБАРИТЫ И ВЕС</h3>
+                <div className="flex items-center gap-2">
+                  <span className="text-sm text-gray-600">{isDimensionsExpanded ? 'Скрыть' : 'Показать'}</span>
+                  <span className={`transform transition-transform duration-300 ${isDimensionsExpanded ? 'rotate-180' : ''}`}>
+                    ▼
+                  </span>
+                </div>
+              </button>
+              
+              {isDimensionsExpanded && (
+                <div className="space-y-6">
+                  <div className="flex flex-col lg:flex-row gap-8 items-start">
+                    <div className="lg:w-1/2">
+                      <div 
+                        className="cursor-pointer hover:opacity-80 transition-opacity"
+                        onClick={() => setModalImage({src: 'https://cdn.poehali.dev/files/1e7a7c84-5bb2-4a2a-9e2f-c6d8e4a3b1f0.jpg', alt: 'Габаритные размеры AD30'})}
+                        title="Нажмите для увеличения"
+                      >
+                        <img 
+                          src="https://cdn.poehali.dev/files/1e7a7c84-5bb2-4a2a-9e2f-c6d8e4a3b1f0.jpg" 
+                          alt="Габаритные размеры AD30" 
+                          className="w-full h-auto rounded-lg shadow-md"
+                        />
+                      </div>
+                    </div>
+                    
+                    <div className="lg:w-1/2">
+                      <div className="overflow-x-auto">
+                        <table className="w-full border-collapse border border-gray-300">
+                          <thead>
+                            <tr className="bg-gray-50">
+                              <th className="border border-gray-300 px-4 py-3 text-center font-semibold text-gray-800">Модель</th>
+                              <th className="border border-gray-300 px-4 py-3 text-center font-semibold text-gray-800">A, мм</th>
+                              <th className="border border-gray-300 px-4 py-3 text-center font-semibold text-gray-800">B, мм</th>
+                              <th className="border border-gray-300 px-4 py-3 text-center font-semibold text-gray-800">C, мм</th>
+                              <th className="border border-gray-300 px-4 py-3 text-center font-semibold text-gray-800">Вес, кг</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td className="border border-gray-300 px-4 py-2 text-center">0.4-2.2кВт</td>
+                              <td className="border border-gray-300 px-4 py-2 text-center">155</td>
+                              <td className="border border-gray-300 px-4 py-2 text-center">100</td>
+                              <td className="border border-gray-300 px-4 py-2 text-center">145</td>
+                              <td className="border border-gray-300 px-4 py-2 text-center">1.2</td>
+                            </tr>
+                            <tr>
+                              <td className="border border-gray-300 px-4 py-2 text-center">4-5.5кВт</td>
+                              <td className="border border-gray-300 px-4 py-2 text-center">200</td>
+                              <td className="border border-gray-300 px-4 py-2 text-center">120</td>
+                              <td className="border border-gray-300 px-4 py-2 text-center">165</td>
+                              <td className="border border-gray-300 px-4 py-2 text-center">2.1</td>
+                            </tr>
+                            <tr>
+                              <td className="border border-gray-300 px-4 py-2 text-center">7.5-18.5кВт</td>
+                              <td className="border border-gray-300 px-4 py-2 text-center">250</td>
+                              <td className="border border-gray-300 px-4 py-2 text-center">150</td>
+                              <td className="border border-gray-300 px-4 py-2 text-center">195</td>
+                              <td className="border border-gray-300 px-4 py-2 text-center">4.2</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
+
+            {/* Specifications Section */}
+            <div className="bg-white rounded-lg shadow-lg p-8 mt-8">
+              <button 
+                onClick={() => setIsSpecsExpanded(!isSpecsExpanded)}
+                className="w-full flex items-center justify-between text-left mb-4 hover:bg-gray-50 p-2 rounded"
+              >
+                <h3 className="text-xl font-bold text-gray-800">ХАРАКТЕРИСТИКИ</h3>
+                <div className="flex items-center gap-2">
+                  <span className="text-sm text-gray-600">{isSpecsExpanded ? 'Скрыть' : 'Показать'}</span>
+                  <span className={`transform transition-transform duration-300 ${isSpecsExpanded ? 'rotate-180' : ''}`}>
+                    ▼
+                  </span>
+                </div>
+              </button>
+              
+              {isSpecsExpanded && (
+                <div className="space-y-4">
+                  <div className="overflow-x-auto">
+                    <table className="w-full border-collapse border border-gray-300">
+                      <tbody>
+                        <tr>
+                          <td className="border border-gray-300 px-4 py-3 font-semibold bg-gray-50">Напряжение питания</td>
+                          <td className="border border-gray-300 px-4 py-3">1×220В ± 15% / 3×380В ± 15%</td>
+                        </tr>
+                        <tr>
+                          <td className="border border-gray-300 px-4 py-3 font-semibold bg-gray-50">Частота питания</td>
+                          <td className="border border-gray-300 px-4 py-3">50/60 Гц ± 5%</td>
+                        </tr>
+                        <tr>
+                          <td className="border border-gray-300 px-4 py-3 font-semibold bg-gray-50">Напряжение на выходе</td>
+                          <td className="border border-gray-300 px-4 py-3">3×(0~напряжение питания)В</td>
+                        </tr>
+                        <tr>
+                          <td className="border border-gray-300 px-4 py-3 font-semibold bg-gray-50">Частота на выходе</td>
+                          <td className="border border-gray-300 px-4 py-3">0.5~400 Гц (векторный режим), 0.5~3200 Гц (скалярный режим)</td>
+                        </tr>
+                        <tr>
+                          <td className="border border-gray-300 px-4 py-3 font-semibold bg-gray-50">Перегрузочная способность</td>
+                          <td className="border border-gray-300 px-4 py-3">150% номинального тока в течение 60 с, 180% номинального тока в течение 10 с</td>
+                        </tr>
+                        <tr>
+                          <td className="border border-gray-300 px-4 py-3 font-semibold bg-gray-50">Точность управления скоростью</td>
+                          <td className="border border-gray-300 px-4 py-3">± 0.2% номинальной скорости (векторный режим)</td>
+                        </tr>
+                        <tr>
+                          <td className="border border-gray-300 px-4 py-3 font-semibold bg-gray-50">Температура эксплуатации</td>
+                          <td className="border border-gray-300 px-4 py-3">-10°C ~ +40°C</td>
+                        </tr>
+                        <tr>
+                          <td className="border border-gray-300 px-4 py-3 font-semibold bg-gray-50">Влажность</td>
+                          <td className="border border-gray-300 px-4 py-2">≤ 95% (без конденсации)</td>
+                        </tr>
+                        <tr>
+                          <td className="border border-gray-300 px-4 py-3 font-semibold bg-gray-50">Высота</td>
+                          <td className="border border-gray-300 px-4 py-3">≤ 1000м над уровнем моря</td>
+                        </tr>
+                        <tr>
+                          <td className="border border-gray-300 px-4 py-3 font-semibold bg-gray-50">Степень защиты</td>
+                          <td className="border border-gray-300 px-4 py-3">IP20</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </section>
+      
+      <div className="py-8"></div>
+
+      {modalImage && (
+        <div 
+          className="fixed inset-0 bg-black/80 flex items-center justify-center z-50 p-4"
+          onClick={() => setModalImage(null)}
+        >
+          <div className="relative max-w-[90vw] max-h-[90vh]">
+            <button
+              onClick={() => setModalImage(null)}
+              className="absolute -top-12 right-0 text-white hover:text-gray-300 transition-colors text-3xl"
+              aria-label="Закрыть"
+            >
+              ×
+            </button>
+            
+            <img 
+              src={modalImage.src} 
+              alt={modalImage.alt} 
+              className="max-w-full max-h-[85vh] object-contain rounded-lg shadow-2xl"
+            />
+            
+            <div className="absolute -bottom-12 left-0 right-0 text-center text-white text-sm">
+              {modalImage.alt}
+            </div>
+          </div>
+        </div>
+      )}
 
       <ContactsSection />
       <Footer />
