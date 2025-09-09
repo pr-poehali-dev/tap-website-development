@@ -14,9 +14,9 @@ const HatchSection = () => {
       model: "Аналог 6009ECO",
       pressure: ["0.6 МПа"],
       features: ["Самоуплотняющийся", "Овальная форма", "Нержавеющая сталь AISI304 крышка 2,5 мм, горловина 3 мм", "Опциональный кронштейн"],
-      price: "23 800,00 ₽",
+      price: "от 23 800,00 ₽",
       image: "https://cdn.poehali.dev/files/71b88224-89da-4704-88d0-e4826d2d231e.jpg",
-      blueprint: "/img/1ac9da1a-8243-4705-8d52-abcfbf66f1a6.jpg"
+      blueprint: "https://cdn.poehali.dev/files/970282f0-86f2-42b7-89cc-ce45f9ead2a8.png"
     },
     {
       id: 2,
@@ -25,9 +25,9 @@ const HatchSection = () => {
       model: "Промышленный тип",
       pressure: [],
       features: ["Поворотно-откидная крышка", "Кольцевая конструкция", "Нержавеющая сталь AISI304 или AISI316", "Высота горловины от 100 мм до 400 мм"],
-      price: "11 620,00 ₽",
+      price: "от 11 620,00 ₽",
       image: "https://cdn.poehali.dev/files/e57d06e3-e0fd-4542-8719-4a013db706a7.png",
-      blueprint: "/img/9c89715e-9526-4946-b7e1-d1c6b914d66e.jpg"
+      blueprint: "https://cdn.poehali.dev/files/4eff3f2e-7965-475d-845b-5e70ee4647f2.png"
     }
   ];
 
@@ -117,7 +117,8 @@ const HatchSection = () => {
                     onClick={() => setSelectedBlueprint(hatch.blueprint)}
                   />
                   <p className="text-xs text-muted-foreground mt-2 text-center">
-                    Технический чертеж с размерами • Нажмите для увеличения
+                    Технический чертеж с размерами<br />
+                    • Нажмите для увеличения
                   </p>
                 </div>
               </CardContent>
