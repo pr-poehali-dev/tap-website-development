@@ -135,15 +135,16 @@ const HatchSection = () => {
           className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4"
           onClick={() => setSelectedBlueprint(null)}
         >
-          <div className="relative max-w-4xl max-h-full">
+          <div className="relative w-full h-full flex items-center justify-center">
             <img 
               src={selectedBlueprint} 
               alt="Увеличенный чертеж" 
-              className="max-w-full max-h-full object-contain rounded-lg"
+              className="max-w-[95vw] max-h-[95vh] w-auto h-auto object-contain rounded-lg"
+              onClick={(e) => e.stopPropagation()}
             />
             <button 
               onClick={() => setSelectedBlueprint(null)}
-              className="absolute top-4 right-4 bg-white bg-opacity-20 hover:bg-opacity-30 rounded-full p-2 transition-all"
+              className="absolute top-4 right-4 bg-black bg-opacity-50 hover:bg-opacity-70 rounded-full p-3 transition-all"
             >
               <Icon name="X" className="w-6 h-6 text-white" />
             </button>
