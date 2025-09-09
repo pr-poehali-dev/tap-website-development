@@ -34,12 +34,9 @@ const FrequencyConverters = () => {
               </div>
               
               <div className="lg:w-2/3">
-                <h2 className="text-lg md:text-xl font-bold text-gray-600 mb-3 uppercase tracking-wide">
-                  AD30 КОМПАКТНЫЕ УНИВЕРСАЛЬНЫЕ
+                <h2 className="text-lg md:text-xl font-bold text-gray-600 mb-8 uppercase tracking-wide">
+                  AD30 КОМПАКТНЫЕ УНИВЕРСАЛЬНЫЕ ПРЕОБРАЗОВАТЕЛИ ЧАСТОТЫ
                 </h2>
-                <h3 className="text-lg md:text-xl font-bold text-gray-600 mb-8 uppercase tracking-wide">
-                  ПРЕОБРАЗОВАТЕЛИ ЧАСТОТЫ
-                </h3>
                 
                 <div className="space-y-4 text-gray-700 leading-relaxed">
                   <p>
