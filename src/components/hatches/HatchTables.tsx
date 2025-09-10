@@ -95,8 +95,12 @@ const HatchTables: React.FC<HatchTablesProps> = ({
                 }`}
                 onClick={() => setSelectedRow(selectedRow === 'oval-06-yes' ? null : 'oval-06-yes')}
               >
-                <td className="border border-gray-300 px-3 py-2 text-center">Да</td>
-                <td className="border border-gray-300 px-3 py-2 text-center">
+                <td className={`border border-gray-300 px-3 py-2 text-center ${
+                  selectedRow === 'oval-06-no' || selectedRow === 'oval-06-yes' ? 'bg-red-100' : ''
+                }`}>Да</td>
+                <td className={`border border-gray-300 px-3 py-2 text-center ${
+                  selectedRow === 'oval-06-no' || selectedRow === 'oval-06-yes' ? 'bg-red-100' : ''
+                }`}>
                   <button
                     onClick={handleContactClick}
                     className="text-red-600 hover:text-red-800 font-semibold cursor-pointer"
@@ -104,7 +108,9 @@ const HatchTables: React.FC<HatchTablesProps> = ({
                     В наличии
                   </button>
                 </td>
-                <td className="border border-gray-300 px-2 md:px-3 py-2 text-center font-semibold">29 400,00 ₽</td>
+                <td className={`border border-gray-300 px-2 md:px-3 py-2 text-center font-semibold ${
+                  selectedRow === 'oval-06-no' || selectedRow === 'oval-06-yes' ? 'bg-red-100' : ''
+                }`}>29 400,00 ₽</td>
               </tr>
             </tbody>
           </table>
