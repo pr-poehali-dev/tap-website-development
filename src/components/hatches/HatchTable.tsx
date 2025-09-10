@@ -16,8 +16,9 @@ const HatchTable: React.FC<HatchTableProps> = ({
   // Oval hatch table
   if (hatchId === 1) {
     return (
-      <div className="overflow-x-auto -mx-2 md:mx-0">
-        <table className="w-full border-collapse border border-gray-300 text-xs md:text-sm min-w-[500px] md:min-w-0">
+      <div className="overflow-x-auto -mx-2 md:mx-0 scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-100">
+        <div className="min-w-[500px] md:min-w-0">
+          <table className="w-full border-collapse border border-gray-300 text-xs md:text-sm">
           <thead>
             <tr className="bg-gray-100">
               <th className="border border-gray-300 px-2 md:px-3 py-2 text-center font-semibold">Рабочее<br className="md:hidden"/><span className="hidden md:inline"> </span>давление</th>
@@ -108,7 +109,8 @@ const HatchTable: React.FC<HatchTableProps> = ({
               }`}>29 400,00 ₽</td>
             </tr>
           </tbody>
-        </table>
+          </table>
+        </div>
       </div>
     );
   }
@@ -116,8 +118,9 @@ const HatchTable: React.FC<HatchTableProps> = ({
   // Ring hatch table
   if (hatchId === 2) {
     return (
-      <div className="overflow-x-auto -mx-2 md:mx-0">
-        <table className="w-full border-collapse border border-gray-300 text-xs md:text-sm min-w-[600px] md:min-w-0">
+      <div className="overflow-x-auto -mx-2 md:mx-0 scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-100">
+        <div className="min-w-[600px] md:min-w-0">
+          <table className="w-full border-collapse border border-gray-300 text-xs md:text-sm">
           <thead>
             <tr className="bg-gray-100">
               <th className="border border-gray-300 px-1 md:px-2 py-2 text-center font-semibold">Материал</th>
@@ -305,7 +308,8 @@ const HatchTable: React.FC<HatchTableProps> = ({
               <td className="border border-gray-300 px-2 py-2 text-center font-semibold">22 820,00 ₽</td>
             </tr>
           </tbody>
-        </table>
+          </table>
+        </div>
       </div>
     );
   }

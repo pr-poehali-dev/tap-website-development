@@ -41,11 +41,11 @@ const HatchCardComponent: React.FC<HatchCardProps> = ({
 }) => {
   return (
     <Card className="overflow-hidden">
-      <CardContent className="p-4 md:p-8">
+      <CardContent className="p-2 md:p-8">
         {/* Top section: Photo left, Text right */}
         <div className="grid lg:grid-cols-2 gap-4 md:gap-8 mb-6 md:mb-8">
           {/* Left: Hatch photo */}
-          <div className="relative max-w-[50%] mx-auto lg:max-w-full">
+          <div className="relative w-full max-w-[250px] mx-auto lg:max-w-full">
             <div className="aspect-square bg-gradient-to-br from-accent/20 to-primary/10 relative overflow-hidden rounded-lg group cursor-pointer"
                  onClick={() => onImageClick({src: hatch.image, alt: hatch.name})}>
               <img 
@@ -68,20 +68,20 @@ const HatchCardComponent: React.FC<HatchCardProps> = ({
 
           {/* Right: Text content */}
           <div className="space-y-6">
-            <div>
-              <h3 className="text-xl md:text-2xl font-bold text-foreground mb-2 md:mb-3">
+            <div className="px-2 md:px-0">
+              <h3 className="text-lg md:text-2xl font-bold text-foreground mb-2 md:mb-3 break-words leading-tight">
                 {hatch.name}
               </h3>
-              <div className="text-2xl md:text-3xl font-bold text-primary mb-2">{hatch.price}</div>
-              <p className="text-lg text-muted-foreground">
+              <div className="text-xl md:text-3xl font-bold text-primary mb-2">{hatch.price}</div>
+              <p className="text-base md:text-lg text-muted-foreground break-words">
                 {hatch.model}
               </p>
             </div>
 
             {/* Список моделей */}
-            <div>
-              <h4 className="text-base md:text-lg font-semibold text-foreground mb-2 px-0">Список моделей</h4>
-              <p className="text-xs md:text-sm text-gray-600 mb-3 md:mb-4">Стоимость указана с НДС. Не является публичной офертой.</p>
+            <div className="px-2 md:px-0">
+              <h4 className="text-base md:text-lg font-semibold text-foreground mb-2">Список моделей</h4>
+              <p className="text-xs md:text-sm text-gray-600 mb-3 md:mb-4 break-words leading-relaxed">Стоимость указана с НДС. Не является публичной офертой.</p>
               
               <HatchTable 
                 hatchId={hatch.id}

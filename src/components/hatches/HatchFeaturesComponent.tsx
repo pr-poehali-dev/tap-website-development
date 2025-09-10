@@ -31,11 +31,11 @@ const HatchFeaturesComponent: React.FC<HatchFeaturesProps> = ({
       </button>
       
       {expanded && (
-        <div className="grid grid-cols-1 gap-3">
+        <div className="grid grid-cols-1 gap-3 px-2">
           {features.map((feature, index) => (
             <div key={index} className="flex items-start">
               <Icon name="CheckCircle2" className="w-5 h-5 text-primary mr-3 mt-0.5 flex-shrink-0" />
-              <span className="text-sm text-muted-foreground">{feature}</span>
+              <span className="text-sm text-muted-foreground break-words leading-relaxed">{feature}</span>
             </div>
           ))}
         </div>
