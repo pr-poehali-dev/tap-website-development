@@ -80,7 +80,7 @@ const HatchCardComponent: React.FC<HatchCardProps> = ({
 
             {/* Список моделей */}
             <div>
-              <h4 className="text-base md:text-lg font-semibold text-foreground mb-2">Список моделей</h4>
+              <h4 className="text-base md:text-lg font-semibold text-foreground mb-2 px-0">Список моделей</h4>
               <p className="text-xs md:text-sm text-gray-600 mb-3 md:mb-4">Стоимость указана с НДС. Не является публичной офертой.</p>
               
               <HatchTable 
