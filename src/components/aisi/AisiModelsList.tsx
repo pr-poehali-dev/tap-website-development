@@ -320,7 +320,7 @@ const AisiModelsList = ({ isExpanded, setIsExpanded }: AisiModelsListProps) => {
   ];
 
   return (
-    <div className="bg-white rounded-lg shadow-lg p-8">
+    <div className="bg-white rounded-lg shadow-lg p-4 sm:p-8 -mx-4 sm:mx-0">
       <button
         onClick={() => setIsExpanded(!isExpanded)}
         className="w-full flex items-center justify-between text-left mb-4 hover:bg-gray-50 p-2 rounded min-h-[60px]"
@@ -342,29 +342,29 @@ const AisiModelsList = ({ isExpanded, setIsExpanded }: AisiModelsListProps) => {
 
       {isExpanded && (
         <div className="space-y-4">
-          <p className="text-gray-600">
+          <p className="text-gray-600 text-sm">
             Стоимость указана с НДС. Не является публичной офертой.
           </p>
 
-          <div className="overflow-x-auto scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-100">
-            <div className="min-w-[600px]">
-              <table className="w-full border-collapse border border-gray-300 text-sm">
+          <div className="overflow-x-auto -mx-4 sm:mx-0">
+            <div className="min-w-full px-4 sm:px-0">
+              <table className="w-full border-collapse border border-gray-300 text-xs sm:text-sm">
                 <thead>
                   <tr className="bg-gray-50">
-                    <th className="border border-gray-300 px-3 py-3 text-center font-semibold text-gray-800">
-                      Ширина, мм
+                    <th className="border border-gray-300 px-1 sm:px-3 py-2 sm:py-3 text-center font-semibold text-gray-800">
+                      Ш, мм
                     </th>
-                    <th className="border border-gray-300 px-3 py-3 text-center font-semibold text-gray-800">
-                      Высота, мм
+                    <th className="border border-gray-300 px-1 sm:px-3 py-2 sm:py-3 text-center font-semibold text-gray-800">
+                      В, мм
                     </th>
-                    <th className="border border-gray-300 px-3 py-3 text-center font-semibold text-gray-800">
-                      Глубина, мм
+                    <th className="border border-gray-300 px-1 sm:px-3 py-2 sm:py-3 text-center font-semibold text-gray-800">
+                      Г, мм
                     </th>
-                    <th className="border border-gray-300 px-3 py-3 text-center font-semibold text-gray-800">
-                      Срок поставки
+                    <th className="border border-gray-300 px-1 sm:px-3 py-2 sm:py-3 text-center font-semibold text-gray-800">
+                      Поставка
                     </th>
-                    <th className="border border-gray-300 px-3 py-3 text-center font-semibold text-gray-800">
-                      Стоимость
+                    <th className="border border-gray-300 px-1 sm:px-3 py-2 sm:py-3 text-center font-semibold text-gray-800">
+                      Цена
                     </th>
                   </tr>
                 </thead>
@@ -383,28 +383,30 @@ const AisiModelsList = ({ isExpanded, setIsExpanded }: AisiModelsListProps) => {
                         )
                       }
                     >
-                      <td className="border border-gray-300 px-3 py-2 text-center">
+                      <td className="border border-gray-300 px-1 sm:px-3 py-1 sm:py-2 text-center">
                         {item.width}
                       </td>
-                      <td className="border border-gray-300 px-3 py-2 text-center">
+                      <td className="border border-gray-300 px-1 sm:px-3 py-1 sm:py-2 text-center">
                         {item.height}
                       </td>
-                      <td className="border border-gray-300 px-3 py-2 text-center">
+                      <td className="border border-gray-300 px-1 sm:px-3 py-1 sm:py-2 text-center">
                         {item.depth}
                       </td>
-                      <td className="border border-gray-300 px-3 py-2 text-center">
+                      <td className="border border-gray-300 px-1 sm:px-3 py-1 sm:py-2 text-center">
                         <button
                           onClick={(e) => {
                             e.stopPropagation();
                             scrollToContacts();
                           }}
-                          className="text-red-600 hover:text-red-800 font-semibold cursor-pointer"
+                          className="text-red-600 hover:text-red-800 font-semibold cursor-pointer text-xs sm:text-sm"
                         >
-                          ✅ {item.delivery}
+                          <span className="hidden sm:inline">✅ {item.delivery}</span>
+                          <span className="sm:hidden">✅ 5р.д.</span>
                         </button>
                       </td>
-                      <td className="border border-gray-300 px-3 py-2 text-center font-semibold">
-                        {item.price}
+                      <td className="border border-gray-300 px-1 sm:px-3 py-1 sm:py-2 text-center font-semibold">
+                        <span className="hidden sm:inline">{item.price}</span>
+                        <span className="sm:hidden">{item.price.replace(',00', '').replace(' ', '')}</span>
                       </td>
                     </tr>
                   ))}
