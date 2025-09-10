@@ -16,15 +16,22 @@ const HatchTable: React.FC<HatchTableProps> = ({
   // Oval hatch table
   if (hatchId === 1) {
     return (
-      <div className="overflow-x-auto -mx-2 md:mx-0 scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-100">
-        <div className="min-w-[500px] md:min-w-0">
-          <table className="w-full border-collapse border border-gray-300 text-xs md:text-sm">
+      <div className="-mx-2 md:mx-0">
+        <table className="w-full border-collapse border border-gray-300 text-xs md:text-sm">
           <thead>
             <tr className="bg-gray-100">
-              <th className="border border-gray-300 px-2 md:px-3 py-2 text-center font-semibold">Рабочее<br className="md:hidden"/><span className="hidden md:inline"> </span>давление</th>
-              <th className="border border-gray-300 px-2 md:px-3 py-2 text-center font-semibold">Кронштейн</th>
-              <th className="border border-gray-300 px-2 md:px-3 py-2 text-center font-semibold">Срок<br className="md:hidden"/><span className="hidden md:inline"> </span>поставки</th>
-              <th className="border border-gray-300 px-2 md:px-3 py-2 text-center font-semibold">Стоимость</th>
+              <th className="border border-gray-300 px-1 md:px-3 py-2 text-center font-semibold text-xs md:text-sm w-[22%] md:w-auto">
+                Рабочее<br className="md:hidden"/><span className="hidden md:inline"> </span>давление
+              </th>
+              <th className="border border-gray-300 px-1 md:px-3 py-2 text-center font-semibold text-xs md:text-sm w-[16%] md:w-auto">
+                Кронштейн
+              </th>
+              <th className="border border-gray-300 px-1 md:px-3 py-2 text-center font-semibold text-xs md:text-sm w-[30%] md:w-auto">
+                Срок<br className="md:hidden"/><span className="hidden md:inline"> </span>поставки
+              </th>
+              <th className="border border-gray-300 px-1 md:px-3 py-2 text-center font-semibold text-xs md:text-sm w-[32%] md:w-auto">
+                Стоимость
+              </th>
             </tr>
           </thead>
           <tbody>
@@ -34,19 +41,23 @@ const HatchTable: React.FC<HatchTableProps> = ({
               }`}
               onClick={() => onRowSelect(selectedRow === 'oval-04-no' ? null : 'oval-04-no')}
             >
-              <td className={`border border-gray-300 px-2 md:px-3 py-2 text-center ${
+              <td className={`border border-gray-300 px-1 md:px-3 py-2 text-center text-xs md:text-sm ${
                 selectedRow === 'oval-04-no' || selectedRow === 'oval-04-yes' ? 'bg-red-100' : ''
               }`} rowSpan={2}>0.4 МПа</td>
-              <td className="border border-gray-300 px-2 md:px-3 py-2 text-center">Нет</td>
+              <td className="border border-gray-300 px-1 md:px-3 py-2 text-center text-xs md:text-sm">Нет</td>
               <td className="border border-gray-300 px-1 md:px-3 py-2 text-center">
                 <button
                   onClick={onContactClick}
-                  className="text-red-600 hover:text-red-800 font-semibold cursor-pointer"
+                  className="text-red-600 hover:text-red-800 font-semibold cursor-pointer text-xs md:text-sm"
                 >
-                  ✅ В наличии
+                  <span className="hidden sm:inline">✅ В наличии</span>
+                  <span className="sm:hidden">✅</span>
                 </button>
               </td>
-              <td className="border border-gray-300 px-2 md:px-3 py-2 text-center font-semibold">23 800,00 ₽</td>
+              <td className="border border-gray-300 px-1 md:px-3 py-2 text-center font-semibold text-xs md:text-sm">
+                <span className="hidden sm:inline">23 800,00 ₽</span>
+                <span className="sm:hidden">23.8к₽</span>
+              </td>
             </tr>
             <tr 
               className={`cursor-pointer transition-colors hover:bg-red-50 ${
@@ -54,16 +65,20 @@ const HatchTable: React.FC<HatchTableProps> = ({
               }`}
               onClick={() => onRowSelect(selectedRow === 'oval-04-yes' ? null : 'oval-04-yes')}
             >
-              <td className="border border-gray-300 px-3 py-2 text-center">Да</td>
-              <td className="border border-gray-300 px-3 py-2 text-center">
+              <td className="border border-gray-300 px-1 md:px-3 py-2 text-center text-xs md:text-sm">Да</td>
+              <td className="border border-gray-300 px-1 md:px-3 py-2 text-center">
                 <button
                   onClick={onContactClick}
-                  className="text-red-600 hover:text-red-800 font-semibold cursor-pointer"
+                  className="text-red-600 hover:text-red-800 font-semibold cursor-pointer text-xs md:text-sm"
                 >
-                  ✅ В наличии
+                  <span className="hidden sm:inline">✅ В наличии</span>
+                  <span className="sm:hidden">✅</span>
                 </button>
               </td>
-              <td className="border border-gray-300 px-2 md:px-3 py-2 text-center font-semibold">26 600,00 ₽</td>
+              <td className="border border-gray-300 px-1 md:px-3 py-2 text-center font-semibold text-xs md:text-sm">
+                <span className="hidden sm:inline">26 600,00 ₽</span>
+                <span className="sm:hidden">26.6к₽</span>
+              </td>
             </tr>
             <tr 
               className={`cursor-pointer transition-colors hover:bg-red-50 ${
@@ -71,19 +86,23 @@ const HatchTable: React.FC<HatchTableProps> = ({
               }`}
               onClick={() => onRowSelect(selectedRow === 'oval-06-no' ? null : 'oval-06-no')}
             >
-              <td className={`border border-gray-300 px-2 md:px-3 py-2 text-center ${
+              <td className={`border border-gray-300 px-1 md:px-3 py-2 text-center text-xs md:text-sm ${
                 selectedRow === 'oval-06-no' || selectedRow === 'oval-06-yes' ? 'bg-red-100' : ''
               }`} rowSpan={2}>0.6 МПа</td>
-              <td className="border border-gray-300 px-2 md:px-3 py-2 text-center">Нет</td>
+              <td className="border border-gray-300 px-1 md:px-3 py-2 text-center text-xs md:text-sm">Нет</td>
               <td className="border border-gray-300 px-1 md:px-3 py-2 text-center">
                 <button
                   onClick={onContactClick}
-                  className="text-red-600 hover:text-red-800 font-semibold cursor-pointer"
+                  className="text-red-600 hover:text-red-800 font-semibold cursor-pointer text-xs md:text-sm"
                 >
-                  🔄 Под заказ
+                  <span className="hidden sm:inline">🔄 Под заказ</span>
+                  <span className="sm:hidden">🔄</span>
                 </button>
               </td>
-              <td className="border border-gray-300 px-2 md:px-3 py-2 text-center font-semibold">26 600,00 ₽</td>
+              <td className="border border-gray-300 px-1 md:px-3 py-2 text-center font-semibold text-xs md:text-sm">
+                <span className="hidden sm:inline">26 600,00 ₽</span>
+                <span className="sm:hidden">26.6к₽</span>
+              </td>
             </tr>
             <tr 
               className={`cursor-pointer transition-colors hover:bg-red-50 ${
@@ -91,26 +110,29 @@ const HatchTable: React.FC<HatchTableProps> = ({
               }`}
               onClick={() => onRowSelect(selectedRow === 'oval-06-yes' ? null : 'oval-06-yes')}
             >
-              <td className={`border border-gray-300 px-3 py-2 text-center ${
+              <td className={`border border-gray-300 px-1 md:px-3 py-2 text-center text-xs md:text-sm ${
                 selectedRow === 'oval-06-no' || selectedRow === 'oval-06-yes' ? 'bg-red-100' : ''
               }`}>Да</td>
-              <td className={`border border-gray-300 px-3 py-2 text-center ${
+              <td className={`border border-gray-300 px-1 md:px-3 py-2 text-center ${
                 selectedRow === 'oval-06-no' || selectedRow === 'oval-06-yes' ? 'bg-red-100' : ''
               }`}>
                 <button
                   onClick={onContactClick}
-                  className="text-red-600 hover:text-red-800 font-semibold cursor-pointer"
+                  className="text-red-600 hover:text-red-800 font-semibold cursor-pointer text-xs md:text-sm"
                 >
-                  🔄 Под заказ
+                  <span className="hidden sm:inline">🔄 Под заказ</span>
+                  <span className="sm:hidden">🔄</span>
                 </button>
               </td>
-              <td className={`border border-gray-300 px-2 md:px-3 py-2 text-center font-semibold ${
+              <td className={`border border-gray-300 px-1 md:px-3 py-2 text-center font-semibold text-xs md:text-sm ${
                 selectedRow === 'oval-06-no' || selectedRow === 'oval-06-yes' ? 'bg-red-100' : ''
-              }`}>29 400,00 ₽</td>
+              }`}>
+                <span className="hidden sm:inline">29 400,00 ₽</span>
+                <span className="sm:hidden">29.4к₽</span>
+              </td>
             </tr>
           </tbody>
-          </table>
-        </div>
+        </table>
       </div>
     );
   }
