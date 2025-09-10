@@ -74,9 +74,9 @@ const HatchSection = () => {
         <div className="space-y-16 max-w-7xl mx-auto">
           {hatchData.map((hatch) => (
             <Card key={hatch.id} className="overflow-hidden">
-              <CardContent className="p-4 md:p-8">
+              <CardContent className="p-8">
                 {/* Top section: Photo left, Text right */}
-                <div className="grid lg:grid-cols-2 gap-4 md:gap-8 mb-6 md:mb-8">
+                <div className="grid lg:grid-cols-2 gap-8 mb-8">
                   {/* Left: Hatch photo */}
                   <div className="relative">
                     <div className="aspect-square bg-gradient-to-br from-accent/20 to-primary/10 relative overflow-hidden rounded-lg group cursor-pointer"
@@ -102,10 +102,10 @@ const HatchSection = () => {
                   {/* Right: Text content */}
                   <div className="space-y-6">
                     <div>
-                      <h3 className="text-xl md:text-2xl font-bold text-foreground mb-2 md:mb-3">
+                      <h3 className="text-2xl font-bold text-foreground mb-3">
                         {hatch.name}
                       </h3>
-                      <div className="text-2xl md:text-3xl font-bold text-primary mb-2">{hatch.price}</div>
+                      <div className="text-3xl font-bold text-primary mb-2">{hatch.price}</div>
                       <p className="text-lg text-muted-foreground">
                         {hatch.model}
                       </p>
@@ -115,26 +115,26 @@ const HatchSection = () => {
 
                     {/* Список моделей */}
                     <div>
-                      <h4 className="text-base md:text-lg font-semibold text-foreground mb-2">Список моделей</h4>
-                      <p className="text-xs md:text-sm text-gray-600 mb-3 md:mb-4">Стоимость указана с НДС. Не является публичной офертой.</p>
+                      <h4 className="text-lg font-semibold text-foreground mb-2">Список моделей</h4>
+                      <p className="text-sm text-gray-600 mb-4">Стоимость указана с НДС. Не является публичной офертой.</p>
                       
                       {/* Oval hatch table */}
                       {hatch.id === 1 && (
-                        <div className="overflow-x-auto -mx-2 md:mx-0">
-                          <table className="w-full border-collapse border border-gray-300 text-xs md:text-sm min-w-[500px] md:min-w-0">
+                        <div className="overflow-x-auto">
+                          <table className="w-full border-collapse border border-gray-300 text-sm">
                             <thead>
                               <tr className="bg-gray-100">
-                                <th className="border border-gray-300 px-2 md:px-3 py-2 text-center font-semibold">Рабочее<br className="md:hidden"/><span className="hidden md:inline"> </span>давление</th>
-                                <th className="border border-gray-300 px-2 md:px-3 py-2 text-center font-semibold">Кронштейн</th>
-                                <th className="border border-gray-300 px-2 md:px-3 py-2 text-center font-semibold">Срок<br className="md:hidden"/><span className="hidden md:inline"> </span>поставки</th>
-                                <th className="border border-gray-300 px-2 md:px-3 py-2 text-center font-semibold">Стоимость</th>
+                                <th className="border border-gray-300 px-3 py-2 text-center font-semibold">Рабочее давление</th>
+                                <th className="border border-gray-300 px-3 py-2 text-center font-semibold">Кронштейн</th>
+                                <th className="border border-gray-300 px-3 py-2 text-center font-semibold">Срок поставки</th>
+                                <th className="border border-gray-300 px-3 py-2 text-center font-semibold">Стоимость</th>
                               </tr>
                             </thead>
                             <tbody>
                               <tr>
-                                <td className="border border-gray-300 px-2 md:px-3 py-2 text-center" rowSpan={2}>0.4 МПа</td>
-                                <td className="border border-gray-300 px-2 md:px-3 py-2 text-center">Нет</td>
-                                <td className="border border-gray-300 px-1 md:px-3 py-2 text-center">
+                                <td className="border border-gray-300 px-3 py-2 text-center" rowSpan={2}>0.4 МПа</td>
+                                <td className="border border-gray-300 px-3 py-2 text-center">Нет</td>
+                                <td className="border border-gray-300 px-3 py-2 text-center">
                                   <button
                                     onClick={handleContactClick}
                                     className="text-red-600 hover:text-red-800 font-semibold cursor-pointer"
@@ -142,7 +142,7 @@ const HatchSection = () => {
                                     В наличии
                                   </button>
                                 </td>
-                                <td className="border border-gray-300 px-2 md:px-3 py-2 text-center font-semibold">23 800,00 ₽</td>
+                                <td className="border border-gray-300 px-3 py-2 text-center font-semibold">23 800,00 ₽</td>
                               </tr>
                               <tr>
                                 <td className="border border-gray-300 px-3 py-2 text-center">Да</td>
@@ -154,12 +154,12 @@ const HatchSection = () => {
                                     В наличии
                                   </button>
                                 </td>
-                                <td className="border border-gray-300 px-2 md:px-3 py-2 text-center font-semibold">26 600,00 ₽</td>
+                                <td className="border border-gray-300 px-3 py-2 text-center font-semibold">26 600,00 ₽</td>
                               </tr>
                               <tr>
-                                <td className="border border-gray-300 px-2 md:px-3 py-2 text-center" rowSpan={2}>0.6 МПа</td>
-                                <td className="border border-gray-300 px-2 md:px-3 py-2 text-center">Нет</td>
-                                <td className="border border-gray-300 px-1 md:px-3 py-2 text-center">
+                                <td className="border border-gray-300 px-3 py-2 text-center" rowSpan={2}>0.6 МПа</td>
+                                <td className="border border-gray-300 px-3 py-2 text-center">Нет</td>
+                                <td className="border border-gray-300 px-3 py-2 text-center">
                                   <button
                                     onClick={handleContactClick}
                                     className="text-red-600 hover:text-red-800 font-semibold cursor-pointer"
@@ -167,7 +167,7 @@ const HatchSection = () => {
                                     В наличии
                                   </button>
                                 </td>
-                                <td className="border border-gray-300 px-2 md:px-3 py-2 text-center font-semibold">26 600,00 ₽</td>
+                                <td className="border border-gray-300 px-3 py-2 text-center font-semibold">26 600,00 ₽</td>
                               </tr>
                               <tr>
                                 <td className="border border-gray-300 px-3 py-2 text-center">Да</td>
@@ -179,7 +179,7 @@ const HatchSection = () => {
                                     В наличии
                                   </button>
                                 </td>
-                                <td className="border border-gray-300 px-2 md:px-3 py-2 text-center font-semibold">29 400,00 ₽</td>
+                                <td className="border border-gray-300 px-3 py-2 text-center font-semibold">29 400,00 ₽</td>
                               </tr>
                             </tbody>
                           </table>
@@ -188,15 +188,15 @@ const HatchSection = () => {
 
                       {/* Ring hatch table */}
                       {hatch.id === 2 && (
-                        <div className="overflow-x-auto -mx-2 md:mx-0">
-                          <table className="w-full border-collapse border border-gray-300 text-xs md:text-sm min-w-[600px] md:min-w-0">
+                        <div className="overflow-x-auto">
+                          <table className="w-full border-collapse border border-gray-300 text-sm">
                             <thead>
                               <tr className="bg-gray-100">
-                                <th className="border border-gray-300 px-1 md:px-2 py-2 text-center font-semibold">Материал</th>
-                                <th className="border border-gray-300 px-1 md:px-2 py-2 text-center font-semibold">Диаметр</th>
-                                <th className="border border-gray-300 px-1 md:px-2 py-2 text-center font-semibold">Высота<br className="md:hidden"/><span className="hidden md:inline"> </span>горловины</th>
-                                <th className="border border-gray-300 px-1 md:px-2 py-2 text-center font-semibold">Срок<br className="md:hidden"/><span className="hidden md:inline"> </span>поставки</th>
-                                <th className="border border-gray-300 px-1 md:px-2 py-2 text-center font-semibold">Стоимость</th>
+                                <th className="border border-gray-300 px-2 py-2 text-center font-semibold">Материал</th>
+                                <th className="border border-gray-300 px-2 py-2 text-center font-semibold">Диаметр</th>
+                                <th className="border border-gray-300 px-2 py-2 text-center font-semibold">Высота горловины</th>
+                                <th className="border border-gray-300 px-2 py-2 text-center font-semibold">Срок поставки</th>
+                                <th className="border border-gray-300 px-2 py-2 text-center font-semibold">Стоимость</th>
                               </tr>
                             </thead>
                             <tbody>
@@ -333,12 +333,12 @@ const HatchSection = () => {
                     </div>
 
                     {/* Характеристики под спойлером */}
-                    <div className="bg-white rounded-lg shadow-lg p-4 md:p-6 mt-4 md:mt-6">
+                    <div className="bg-white rounded-lg shadow-lg p-6 mt-6">
                       <button 
                         onClick={() => setExpandedFeatures(expandedFeatures === hatch.id ? null : hatch.id)}
                         className="w-full flex items-center justify-between text-left mb-4 hover:bg-gray-50 p-2 rounded min-h-[50px]"
                       >
-                        <h4 className="text-base md:text-lg font-semibold text-gray-800 flex-1 pr-2">ХАРАКТЕРИСТИКИ</h4>
+                        <h4 className="text-lg font-semibold text-gray-800 flex-1 pr-2">ХАРАКТЕРИСТИКИ</h4>
                         <div className="flex items-center gap-2 flex-shrink-0">
                           <span className="text-xs sm:text-sm text-gray-600 hidden sm:inline">
                             {expandedFeatures === hatch.id ? 'Скрыть' : 'Показать'}
@@ -364,12 +364,12 @@ const HatchSection = () => {
                 </div>
 
                 {/* Spoiler for Technical Blueprint */}
-                <div className="bg-white rounded-lg shadow-lg p-4 md:p-8 mt-6 md:mt-8">
+                <div className="bg-white rounded-lg shadow-lg p-8 mt-8">
                   <button 
                     onClick={() => setExpandedBlueprint(expandedBlueprint === hatch.id ? null : hatch.id)}
                     className="w-full flex items-center justify-between text-left mb-4 hover:bg-gray-50 p-2 rounded min-h-[60px]"
                   >
-                    <h3 className="text-base md:text-lg lg:text-xl font-bold text-gray-800 flex-1 pr-2">ТЕХНИЧЕСКИЙ ЧЕРТЁЖ</h3>
+                    <h3 className="text-lg sm:text-xl font-bold text-gray-800 flex-1 pr-2">ТЕХНИЧЕСКИЙ ЧЕРТЁЖ</h3>
                     <div className="flex items-center gap-2 flex-shrink-0">
                       <span className="text-xs sm:text-sm text-gray-600 hidden sm:inline">
                         {expandedBlueprint === hatch.id ? 'Скрыть' : 'Показать'}
