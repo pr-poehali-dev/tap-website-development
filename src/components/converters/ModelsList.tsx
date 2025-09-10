@@ -38,10 +38,10 @@ const ModelsList = ({ isExpanded, setIsExpanded }: ModelsListProps) => {
             <table className="w-full border-collapse border border-gray-300">
               <thead>
                 <tr className="bg-gray-50">
-                  <th className="border border-gray-300 px-3 py-3 text-center font-semibold text-gray-800">Модель</th>
-                  <th className="border border-gray-300 px-3 py-3 text-center font-semibold text-gray-800">Напряжение питания</th>
-                  <th className="border border-gray-300 px-3 py-3 text-center font-semibold text-gray-800">Мощность двигателя</th>
-                  <th className="border border-gray-300 px-2 py-3 text-center font-semibold text-gray-800">Ток</th>
+                  <th className="border border-gray-300 px-3 py-3 text-center font-semibold text-gray-800 whitespace-nowrap">Модель</th>
+                  <th className="border border-gray-300 px-2 py-3 text-center font-semibold text-gray-800 whitespace-nowrap">Напряжение питания</th>
+                  <th className="border border-gray-300 px-3 py-3 text-center font-semibold text-gray-800 whitespace-nowrap">Мощность двигателя</th>
+                  <th className="border border-gray-300 px-2 py-3 text-center font-semibold text-gray-800 whitespace-nowrap">Ток</th>
                   <th className="border border-gray-300 px-2 py-3 text-center font-semibold text-gray-800">Тормозной модуль</th>
                   <th className="border border-gray-300 px-2 py-3 text-center font-semibold text-gray-800">Фильтр ЭМС</th>
                   <th className="border border-gray-300 px-2 py-3 text-center font-semibold text-gray-800">Срок поставки</th>
@@ -56,8 +56,8 @@ const ModelsList = ({ isExpanded, setIsExpanded }: ModelsListProps) => {
                   }`}
                   onClick={() => setSelectedRow(selectedRow === 'AD30-2SD40' ? null : 'AD30-2SD40')}
                 >
-                  <td className="border border-gray-300 px-3 py-2 text-center font-medium">AD30-2SD40</td>
-                  <td className="border border-gray-300 px-3 py-2 text-center" rowSpan={4}>1x220 VAC</td>
+                  <td className="border border-gray-300 px-3 py-2 text-center font-medium whitespace-nowrap">AD30-2SD40</td>
+                  <td className="border border-gray-300 px-2 py-2 text-center whitespace-nowrap" rowSpan={4}>1x220 VAC</td>
                   <td className="border border-gray-300 px-3 py-2 text-center">0,4 кВт</td>
                   <td className="border border-gray-300 px-2 py-2 text-center">2,3 А</td>
                   <td className="border border-gray-300 px-2 py-2 text-center">Да</td>
@@ -78,9 +78,9 @@ const ModelsList = ({ isExpanded, setIsExpanded }: ModelsListProps) => {
                   }`}
                   onClick={() => setSelectedRow(selectedRow === 'AD30-2SD75' ? null : 'AD30-2SD75')}
                 >
-                  <td className="border border-gray-300 px-3 py-2 text-center font-medium">AD30-2SD75</td>
-                  <td className="border border-gray-300 px-3 py-2 text-center">0,75 кВт</td>
-                  <td className="border border-gray-300 px-2 py-2 text-center">4,0 А</td>
+                  <td className="border border-gray-300 px-3 py-2 text-center font-medium whitespace-nowrap">AD30-2SD75</td>
+                  <td className="border border-gray-300 px-3 py-2 text-center whitespace-nowrap">0,75 кВт</td>
+                  <td className="border border-gray-300 px-2 py-2 text-center whitespace-nowrap">4,0 А</td>
                   <td className="border border-gray-300 px-2 py-2 text-center">Да</td>
                   <td className="border border-gray-300 px-2 py-2 text-center">Да</td>
                   <td className="border border-gray-300 px-2 py-2 text-center">
@@ -99,9 +99,9 @@ const ModelsList = ({ isExpanded, setIsExpanded }: ModelsListProps) => {
                   }`}
                   onClick={() => setSelectedRow(selectedRow === 'AD30-2S1D5' ? null : 'AD30-2S1D5')}
                 >
-                  <td className="border border-gray-300 px-3 py-2 text-center font-medium">AD30-2S1D5</td>
-                  <td className="border border-gray-300 px-3 py-2 text-center">1,5 кВт</td>
-                  <td className="border border-gray-300 px-2 py-2 text-center">7,0 А</td>
+                  <td className="border border-gray-300 px-3 py-2 text-center font-medium whitespace-nowrap">AD30-2S1D5</td>
+                  <td className="border border-gray-300 px-3 py-2 text-center whitespace-nowrap">1,5 кВт</td>
+                  <td className="border border-gray-300 px-2 py-2 text-center whitespace-nowrap">7,0 А</td>
                   <td className="border border-gray-300 px-2 py-2 text-center">Да</td>
                   <td className="border border-gray-300 px-2 py-2 text-center">Да</td>
                   <td className="border border-gray-300 px-2 py-2 text-center">
@@ -120,9 +120,9 @@ const ModelsList = ({ isExpanded, setIsExpanded }: ModelsListProps) => {
                   }`}
                   onClick={() => setSelectedRow(selectedRow === 'AD30-2S2D2' ? null : 'AD30-2S2D2')}
                 >
-                  <td className="border border-gray-300 px-3 py-2 text-center font-medium">AD30-2S2D2</td>
-                  <td className="border border-gray-300 px-3 py-2 text-center">2,2 кВт</td>
-                  <td className="border border-gray-300 px-2 py-2 text-center">9,6 А</td>
+                  <td className="border border-gray-300 px-3 py-2 text-center font-medium whitespace-nowrap">AD30-2S2D2</td>
+                  <td className="border border-gray-300 px-3 py-2 text-center whitespace-nowrap">2,2 кВт</td>
+                  <td className="border border-gray-300 px-2 py-2 text-center whitespace-nowrap">9,6 А</td>
                   <td className="border border-gray-300 px-2 py-2 text-center">Да</td>
                   <td className="border border-gray-300 px-2 py-2 text-center">Да</td>
                   <td className="border border-gray-300 px-2 py-2 text-center">
@@ -143,10 +143,10 @@ const ModelsList = ({ isExpanded, setIsExpanded }: ModelsListProps) => {
                   }`}
                   onClick={() => setSelectedRow(selectedRow === 'AD30-4TD75H/1D5L' ? null : 'AD30-4TD75H/1D5L')}
                 >
-                  <td className="border border-gray-300 px-3 py-2 text-center font-medium">AD30-4TD75H/1D5L</td>
-                  <td className="border border-gray-300 px-3 py-2 text-center" rowSpan={8}>3x380 VAC</td>
-                  <td className="border border-gray-300 px-3 py-2 text-center">0,75/1,5 кВт</td>
-                  <td className="border border-gray-300 px-2 py-2 text-center">2,1/3,8 А</td>
+                  <td className="border border-gray-300 px-3 py-2 text-center font-medium whitespace-nowrap">AD30-4TD75H/1D5L</td>
+                  <td className="border border-gray-300 px-2 py-2 text-center whitespace-nowrap" rowSpan={8}>3x380 VAC</td>
+                  <td className="border border-gray-300 px-3 py-2 text-center whitespace-nowrap">0,75/1,5 кВт</td>
+                  <td className="border border-gray-300 px-2 py-2 text-center whitespace-nowrap">2,1/3,8 А</td>
                   <td className="border border-gray-300 px-2 py-2 text-center">Да</td>
                   <td className="border border-gray-300 px-2 py-2 text-center">Да</td>
                   <td className="border border-gray-300 px-2 py-2 text-center">
@@ -165,9 +165,9 @@ const ModelsList = ({ isExpanded, setIsExpanded }: ModelsListProps) => {
                   }`}
                   onClick={() => setSelectedRow(selectedRow === 'AD30-4T1D5H/2D2L' ? null : 'AD30-4T1D5H/2D2L')}
                 >
-                  <td className="border border-gray-300 px-3 py-2 text-center font-medium">AD30-4T1D5H/2D2L</td>
-                  <td className="border border-gray-300 px-3 py-2 text-center">1,5/2,2 кВт</td>
-                  <td className="border border-gray-300 px-2 py-2 text-center">3,8/5,1 А</td>
+                  <td className="border border-gray-300 px-3 py-2 text-center font-medium whitespace-nowrap">AD30-4T1D5H/2D2L</td>
+                  <td className="border border-gray-300 px-3 py-2 text-center whitespace-nowrap">1,5/2,2 кВт</td>
+                  <td className="border border-gray-300 px-2 py-2 text-center whitespace-nowrap">3,8/5,1 А</td>
                   <td className="border border-gray-300 px-2 py-2 text-center">Да</td>
                   <td className="border border-gray-300 px-2 py-2 text-center">Да</td>
                   <td className="border border-gray-300 px-2 py-2 text-center">
@@ -186,9 +186,9 @@ const ModelsList = ({ isExpanded, setIsExpanded }: ModelsListProps) => {
                   }`}
                   onClick={() => setSelectedRow(selectedRow === 'AD30-4T2D2H/4D0L' ? null : 'AD30-4T2D2H/4D0L')}
                 >
-                  <td className="border border-gray-300 px-3 py-2 text-center font-medium">AD30-4T2D2H/4D0L</td>
-                  <td className="border border-gray-300 px-3 py-2 text-center">2,2/4 кВт</td>
-                  <td className="border border-gray-300 px-2 py-2 text-center">5,1/9 А</td>
+                  <td className="border border-gray-300 px-3 py-2 text-center font-medium whitespace-nowrap">AD30-4T2D2H/4D0L</td>
+                  <td className="border border-gray-300 px-3 py-2 text-center whitespace-nowrap">2,2/4 кВт</td>
+                  <td className="border border-gray-300 px-2 py-2 text-center whitespace-nowrap">5,1/9 А</td>
                   <td className="border border-gray-300 px-2 py-2 text-center">Да</td>
                   <td className="border border-gray-300 px-2 py-2 text-center">Да</td>
                   <td className="border border-gray-300 px-2 py-2 text-center">
@@ -207,9 +207,9 @@ const ModelsList = ({ isExpanded, setIsExpanded }: ModelsListProps) => {
                   }`}
                   onClick={() => setSelectedRow(selectedRow === 'AD30-4T4D0H/5D5L' ? null : 'AD30-4T4D0H/5D5L')}
                 >
-                  <td className="border border-gray-300 px-3 py-2 text-center font-medium">AD30-4T4D0H/5D5L</td>
-                  <td className="border border-gray-300 px-3 py-2 text-center">4/5,5 кВт</td>
-                  <td className="border border-gray-300 px-2 py-2 text-center">9/13 А</td>
+                  <td className="border border-gray-300 px-3 py-2 text-center font-medium whitespace-nowrap">AD30-4T4D0H/5D5L</td>
+                  <td className="border border-gray-300 px-3 py-2 text-center whitespace-nowrap">4/5,5 кВт</td>
+                  <td className="border border-gray-300 px-2 py-2 text-center whitespace-nowrap">9/13 А</td>
                   <td className="border border-gray-300 px-2 py-2 text-center">Да</td>
                   <td className="border border-gray-300 px-2 py-2 text-center">Да</td>
                   <td className="border border-gray-300 px-2 py-2 text-center">
