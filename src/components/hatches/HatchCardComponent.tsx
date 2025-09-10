@@ -100,16 +100,16 @@ const HatchCardComponent: React.FC<HatchCardProps> = ({
                 onContactClick={onContactClick}
               />
             </div>
-
-            {/* Характеристики под спойлером */}
-            <HatchFeaturesComponent
-              hatchId={hatch.id}
-              features={hatch.features}
-              expanded={expandedFeatures === hatch.id}
-              onToggle={() => onFeaturesToggle(hatch.id)}
-            />
           </div>
         </div>
+
+        {/* Характеристики под спойлером */}
+        <HatchFeaturesComponent
+          hatchId={hatch.id}
+          features={hatch.features}
+          expanded={expandedFeatures === hatch.id}
+          onToggle={() => onFeaturesToggle(hatch.id)}
+        />
 
         {/* Spoiler for Technical Blueprint */}
         <HatchBlueprintComponent
