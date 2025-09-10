@@ -56,7 +56,7 @@ const HatchTable: React.FC<HatchTableProps> = ({
               </td>
               <td className="border border-gray-300 px-1 md:px-3 py-2 text-center font-semibold text-xs md:text-sm">
                 <span className="hidden sm:inline">23 800,00 ₽</span>
-                <span className="sm:hidden">23800₽</span>
+                <span className="sm:hidden">23 800,00₽</span>
               </td>
             </tr>
             <tr 
@@ -77,7 +77,7 @@ const HatchTable: React.FC<HatchTableProps> = ({
               </td>
               <td className="border border-gray-300 px-1 md:px-3 py-2 text-center font-semibold text-xs md:text-sm">
                 <span className="hidden sm:inline">26 600,00 ₽</span>
-                <span className="sm:hidden">26.6к₽</span>
+                <span className="sm:hidden">26 600,00₽</span>
               </td>
             </tr>
             <tr 
@@ -101,7 +101,7 @@ const HatchTable: React.FC<HatchTableProps> = ({
               </td>
               <td className="border border-gray-300 px-1 md:px-3 py-2 text-center font-semibold text-xs md:text-sm">
                 <span className="hidden sm:inline">26 600,00 ₽</span>
-                <span className="sm:hidden">26.6к₽</span>
+                <span className="sm:hidden">26 600,00₽</span>
               </td>
             </tr>
             <tr 
@@ -128,7 +128,7 @@ const HatchTable: React.FC<HatchTableProps> = ({
                 selectedRow === 'oval-06-no' || selectedRow === 'oval-06-yes' ? 'bg-red-100' : ''
               }`}>
                 <span className="hidden sm:inline">29 400,00 ₽</span>
-                <span className="sm:hidden">29.4к₽</span>
+                <span className="sm:hidden">29 400,00₽</span>
               </td>
             </tr>
           </tbody>
