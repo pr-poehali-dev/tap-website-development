@@ -12,40 +12,35 @@ const HatchSection = () => {
     {
       id: 1,
       name: "Люк овальный самоуплотняющийся",
-      size: "340×440 мм",
       model: "Аналог 6009ECO",
-      pressure: ["0.6 МПа"],
       features: ["Самоуплотняющийся", "Овальная форма", "Нержавеющая сталь AISI304 крышка 2,5 мм, горловина 3 мм", "Опциональный кронштейн"],
       price: "от 23 800,00 ₽",
       image: "https://cdn.poehali.dev/files/71b88224-89da-4704-88d0-e4826d2d231e.jpg",
       blueprint: "https://cdn.poehali.dev/files/970282f0-86f2-42b7-89cc-ce45f9ead2a8.png",
-      tableImage: "https://cdn.poehali.dev/files/95abf3ca-dd4b-4215-9d80-634c17770178.png",
       tableData: [
-        { workingPressure: "0.6 МПа", bracket: "Нет", deliveryTime: "В наличии", price: "23 800,00 ₽" },
-        { workingPressure: "0.4 МПа", bracket: "Да", deliveryTime: "В наличии", price: "26 600,00 ₽" },
-        { workingPressure: "0.6 МПа", bracket: "Да", deliveryTime: "В наличии", price: "29 400,00 ₽" }
+        { workingPressure: "0.4 МПа", bracket: "Нет", deliveryTime: "В наличии", price: "23 800,00 ₽" },
+        { workingPressure: "", bracket: "Да", deliveryTime: "В наличии", price: "26 600,00 ₽" },
+        { workingPressure: "0.6 МПа", bracket: "Нет", deliveryTime: "В наличии", price: "26 600,00 ₽" },
+        { workingPressure: "", bracket: "Да", deliveryTime: "В наличии", price: "29 400,00 ₽" }
       ]
     },
     {
       id: 2,
       name: "Люк кольцевой с поворотно-откидной крышкой",
-      size: "DN400 / DN450",
       model: "Промышленный тип", 
-      pressure: [],
       features: ["Поворотно-откидная крышка", "Кольцевая конструкция", "Нержавеющая сталь AISI304 или AISI316", "Высота горловины от 100 мм до 400 мм"],
       price: "от 11 620,00 ₽",
       image: "https://cdn.poehali.dev/files/e57d06e3-e0fd-4542-8719-4a013db706a7.png",
       blueprint: "https://cdn.poehali.dev/files/4eff3f2e-7965-475d-845b-5e70ee4647f2.png",
-      tableImage: "https://cdn.poehali.dev/files/c771573b-c67c-4ce5-b2d9-9636c0c13e16.png",
       tableData: [
         { material: "AISI304", diameter: "DN400", neckHeight: "100 мм", deliveryTime: "В наличии", price: "11 620,00 ₽" },
         { material: "", diameter: "", neckHeight: "150 мм", deliveryTime: "В наличии", price: "13 580,00 ₽" },
         { material: "", diameter: "DN450", neckHeight: "100 мм", deliveryTime: "В наличии", price: "12 600,00 ₽" },
         { material: "", diameter: "", neckHeight: "150 мм", deliveryTime: "В наличии", price: "14 000,00 ₽" },
-        { material: "", diameter: "", neckHeight: "300 мм", deliveryTime: "В наличии", price: "18 600,00 ₽" },
+        { material: "", diameter: "", neckHeight: "300 мм", deliveryTime: "В наличии", price: "19 600,00 ₽" },
         { material: "", diameter: "", neckHeight: "400 мм", deliveryTime: "В наличии", price: "22 400,00 ₽" },
         { material: "AISI316", diameter: "DN400", neckHeight: "100 мм", deliveryTime: "Под заказ", price: "17 780,00 ₽" },
-        { material: "", diameter: "", neckHeight: "150 мм", deliveryTime: "Под заказ", price: "19 294,00 ₽" },
+        { material: "", diameter: "", neckHeight: "150 мм", deliveryTime: "Под заказ", price: "19 740,00 ₽" },
         { material: "", diameter: "DN450", neckHeight: "100 мм", deliveryTime: "Под заказ", price: "21 980,00 ₽" },
         { material: "", diameter: "", neckHeight: "150 мм", deliveryTime: "Под заказ", price: "22 820,00 ₽" }
       ]
@@ -115,24 +110,7 @@ const HatchSection = () => {
                       </p>
                     </div>
 
-                    <div className={hatch.pressure.length > 0 ? "grid grid-cols-2 gap-4" : "grid grid-cols-1 gap-4"}>
-                      <div>
-                        <span className="text-sm font-medium text-foreground">Размер:</span>
-                        <p className="text-lg font-semibold text-primary">{hatch.size}</p>
-                      </div>
-                      {hatch.pressure.length > 0 && (
-                        <div>
-                          <span className="text-sm font-medium text-foreground">Давление:</span>
-                          <div className="flex gap-2 mt-1">
-                            {hatch.pressure.map((p, index) => (
-                              <Badge key={index} variant="outline" className="text-xs">
-                                {p}
-                              </Badge>
-                            ))}
-                          </div>
-                        </div>
-                      )}
-                    </div>
+
 
                     <div>
                       <span className="text-sm font-medium text-foreground block mb-3">
