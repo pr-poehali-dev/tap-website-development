@@ -15,7 +15,7 @@ const AisiModelsList = ({ isExpanded, setIsExpanded }: AisiModelsListProps) => {
     }
   };
 
-  const tableData = [
+  const mainTableData = [
     {
       width: 300,
       height: 250,
@@ -268,6 +268,9 @@ const AisiModelsList = ({ isExpanded, setIsExpanded }: AisiModelsListProps) => {
       delivery: "5 р.д.",
       price: "73 950,00 ₽",
     },
+  ];
+
+  const doubleDoorTableData = [
     {
       width: 600,
       height: 800,
@@ -369,7 +372,7 @@ const AisiModelsList = ({ isExpanded, setIsExpanded }: AisiModelsListProps) => {
                   </tr>
                 </thead>
                 <tbody>
-                  {tableData.map((item, index) => (
+                  {mainTableData.map((item, index) => (
                     <tr
                       key={`${item.width}-${item.height}-${item.depth}-${index}`}
                       className={`cursor-pointer transition-colors hover:bg-red-50 ${
@@ -416,6 +419,89 @@ const AisiModelsList = ({ isExpanded, setIsExpanded }: AisiModelsListProps) => {
                   ))}
                 </tbody>
               </table>
+            </div>
+          </div>
+
+          {/* Second Table - Double Door Cabinets */}
+          <div className="mt-8">
+            <h4 className="text-lg font-bold text-gray-800 mb-4">
+              Таблица корпусов AISI304 с двумя дверями
+            </h4>
+            <p className="text-gray-600 text-sm mb-4">
+              Стоимость указана с НДС. Не является публичной офертой.
+            </p>
+            
+            <div className="overflow-x-auto -mx-4 sm:mx-0">
+              <div className="min-w-full px-4 sm:px-0">
+                <table className="w-full border-collapse border border-gray-300 text-xs sm:text-sm">
+                  <thead>
+                    <tr className="bg-gray-50">
+                      <th className="border border-gray-300 px-1 sm:px-3 py-2 sm:py-3 text-center font-semibold text-gray-800">
+                        Ш, мм
+                      </th>
+                      <th className="border border-gray-300 px-1 sm:px-3 py-2 sm:py-3 text-center font-semibold text-gray-800">
+                        В, мм
+                      </th>
+                      <th className="border border-gray-300 px-1 sm:px-3 py-2 sm:py-3 text-center font-semibold text-gray-800">
+                        Г, мм
+                      </th>
+                      <th className="border border-gray-300 px-1 sm:px-3 py-2 sm:py-3 text-center font-semibold text-gray-800">
+                        Поставка
+                      </th>
+                      <th className="border border-gray-300 px-1 sm:px-3 py-2 sm:py-3 text-center font-semibold text-gray-800">
+                        Цена
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {doubleDoorTableData.map((item, index) => (
+                      <tr
+                        key={`double-door-${item.width}-${item.height}-${item.depth}-${index}`}
+                        className={`cursor-pointer transition-colors hover:bg-red-50 ${
+                          selectedRow === `double-door-row-${index}` ? "bg-red-100" : ""
+                        }`}
+                        onClick={() =>
+                          setSelectedRow(
+                            selectedRow === `double-door-row-${index}`
+                              ? null
+                              : `double-door-row-${index}`,
+                          )
+                        }
+                      >
+                        <td className="border border-gray-300 px-1 sm:px-3 py-1 sm:py-2 text-center">
+                          {item.width}
+                        </td>
+                        <td className="border border-gray-300 px-1 sm:px-3 py-1 sm:py-2 text-center">
+                          {item.height}
+                        </td>
+                        <td className="border border-gray-300 px-1 sm:px-3 py-1 sm:py-2 text-center">
+                          {item.depth}
+                        </td>
+                        <td className="border border-gray-300 px-1 sm:px-3 py-1 sm:py-2 text-center">
+                          <button
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              scrollToContacts();
+                            }}
+                            className="text-red-600 hover:text-red-800 font-semibold cursor-pointer text-xs sm:text-sm"
+                          >
+                            <span className="hidden sm:inline">
+                              ✅ {item.delivery}
+                            </span>
+                            <span className="sm:hidden">✅ 5р.д.</span>
+                          </button>
+                        </td>
+                        <td className="border border-gray-300 px-1 sm:px-3 py-1 sm:py-2 text-center font-semibold">
+                          <span className="hidden sm:inline">{item.price}</span>
+                          <span className="sm:hidden">
+                            {item.price.replace(",00", "").replace(" ", "")}
+                          </span>
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
             </div>
           </div>
         </div>
