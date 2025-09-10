@@ -8,7 +8,7 @@ interface ContactsSectionProps {
 
 const ContactsSection = ({ className = '' }: ContactsSectionProps) => {
   return (
-    <section id="contacts" className={`py-16 px-6 bg-secondary ${className}`}>
+    <section id="contacts" data-section="contacts" className={`py-16 px-6 bg-secondary ${className}`}>
       <div className="container mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-white mb-4">Контакты</h2>

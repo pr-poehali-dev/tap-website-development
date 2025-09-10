@@ -17,26 +17,26 @@ const MainHeader = ({ className = '', currentPage = 'home' }: MainHeaderProps) =
               className="h-16 hover:scale-105 transition-transform cursor-pointer my-0 px-[5px]"
             />
           </a>
-          <a href="/" className="block">
+          <a href="/" className="block group">
             <div className="flex flex-col -space-y-1 md:block hidden">
-              <h1 className="text-black hover:text-primary transition-colors cursor-pointer leading-tight font-bold" style={{fontSize: '22px'}}>
+              <h1 className="text-black group-hover:text-primary transition-colors cursor-pointer leading-tight font-bold" style={{fontSize: '22px'}}>
                 <span className="text-red-600">Т</span>ехнологии
               </h1>
-              <h2 className="text-black hover:text-primary transition-colors cursor-pointer leading-tight font-bold" style={{fontSize: '22px'}}>
+              <h2 className="text-black group-hover:text-primary transition-colors cursor-pointer leading-tight font-bold" style={{fontSize: '22px'}}>
                 <span className="text-red-600">А</span>втоматизации
               </h2>
-              <h3 className="text-black hover:text-primary transition-colors cursor-pointer leading-tight font-bold" style={{fontSize: '22px'}}>
+              <h3 className="text-black group-hover:text-primary transition-colors cursor-pointer leading-tight font-bold" style={{fontSize: '22px'}}>
                 <span className="text-red-600">П</span>роизводств
               </h3>
             </div>
             <div className="flex flex-col -space-y-1 md:hidden block text-center">
-              <h1 className="text-black hover:text-primary transition-colors cursor-pointer leading-tight text-lg font-bold">
+              <h1 className="text-black group-hover:text-primary transition-colors cursor-pointer leading-tight text-lg font-bold">
                 <span className="text-red-600">Т</span>ехнологии
               </h1>
-              <h2 className="text-black hover:text-primary transition-colors cursor-pointer leading-tight text-lg font-bold">
+              <h2 className="text-black group-hover:text-primary transition-colors cursor-pointer leading-tight text-lg font-bold">
                 <span className="text-red-600">А</span>втоматизации
               </h2>
-              <h3 className="text-black hover:text-primary transition-colors cursor-pointer leading-tight text-lg font-bold">
+              <h3 className="text-black group-hover:text-primary transition-colors cursor-pointer leading-tight text-lg font-bold">
                 <span className="text-red-600">П</span>роизводств
               </h3>
             </div>

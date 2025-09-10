@@ -42,7 +42,12 @@ const FrequencyConverters = () => {
                 <img 
                   src="https://cdn.poehali.dev/files/91ee8b1b-2624-44bd-b986-d6b870fd3b82.jpg" 
                   alt="Частотные преобразователи AD30" 
-                  className="w-full h-auto rounded-lg shadow-lg"
+                  className="w-full h-auto rounded-lg shadow-lg cursor-zoom-in hover:shadow-xl transition-shadow duration-300"
+                  title="Нажмите для увеличения"
+                  onClick={() => setModalImage({
+                    src: "https://cdn.poehali.dev/files/91ee8b1b-2624-44bd-b986-d6b870fd3b82.jpg",
+                    alt: "Частотные преобразователи AD30"
+                  })}
                 />
               </div>
               
