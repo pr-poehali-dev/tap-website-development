@@ -19,7 +19,7 @@ const HatchFeaturesComponent: React.FC<HatchFeaturesProps> = ({
         onClick={onToggle}
         className="w-full flex items-center justify-between text-left mb-4 hover:bg-gray-50 p-2 rounded min-h-[50px]"
       >
-        <h4 className="text-base md:text-lg font-semibold text-gray-800 flex-1 pr-2">ХАРАКТЕРИСТИКИ</h4>
+        <h4 className="text-base md:text-lg text-gray-800 flex-1 pr-2 font-bold">ХАРАКТЕРИСТИКИ</h4>
         <div className="flex items-center gap-2 flex-shrink-0">
           <span className="text-xs sm:text-sm text-gray-600 hidden sm:inline">
             {expanded ? 'Скрыть' : 'Показать'}
