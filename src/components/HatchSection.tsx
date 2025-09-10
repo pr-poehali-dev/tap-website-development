@@ -131,21 +131,56 @@ const HatchSection = () => {
                               </tr>
                             </thead>
                             <tbody>
-                              {hatch.tableData.map((row, index) => (
-                                <tr key={index}>
-                                  <td className="border border-gray-300 px-3 py-2 text-center">{row.workingPressure}</td>
-                                  <td className="border border-gray-300 px-3 py-2 text-center">{row.bracket}</td>
-                                  <td className="border border-gray-300 px-3 py-2 text-center">
-                                    <button
-                                      onClick={handleContactClick}
-                                      className="text-red-600 hover:text-red-800 font-semibold cursor-pointer"
-                                    >
-                                      {row.deliveryTime}
-                                    </button>
-                                  </td>
-                                  <td className="border border-gray-300 px-3 py-2 text-center font-semibold">{row.price}</td>
-                                </tr>
-                              ))}
+                              <tr>
+                                <td className="border border-gray-300 px-3 py-2 text-center" rowSpan={2}>0.4 МПа</td>
+                                <td className="border border-gray-300 px-3 py-2 text-center">Нет</td>
+                                <td className="border border-gray-300 px-3 py-2 text-center">
+                                  <button
+                                    onClick={handleContactClick}
+                                    className="text-red-600 hover:text-red-800 font-semibold cursor-pointer"
+                                  >
+                                    В наличии
+                                  </button>
+                                </td>
+                                <td className="border border-gray-300 px-3 py-2 text-center font-semibold">23 800,00 ₽</td>
+                              </tr>
+                              <tr>
+                                <td className="border border-gray-300 px-3 py-2 text-center">Да</td>
+                                <td className="border border-gray-300 px-3 py-2 text-center">
+                                  <button
+                                    onClick={handleContactClick}
+                                    className="text-red-600 hover:text-red-800 font-semibold cursor-pointer"
+                                  >
+                                    В наличии
+                                  </button>
+                                </td>
+                                <td className="border border-gray-300 px-3 py-2 text-center font-semibold">26 600,00 ₽</td>
+                              </tr>
+                              <tr>
+                                <td className="border border-gray-300 px-3 py-2 text-center" rowSpan={2}>0.6 МПа</td>
+                                <td className="border border-gray-300 px-3 py-2 text-center">Нет</td>
+                                <td className="border border-gray-300 px-3 py-2 text-center">
+                                  <button
+                                    onClick={handleContactClick}
+                                    className="text-red-600 hover:text-red-800 font-semibold cursor-pointer"
+                                  >
+                                    В наличии
+                                  </button>
+                                </td>
+                                <td className="border border-gray-300 px-3 py-2 text-center font-semibold">26 600,00 ₽</td>
+                              </tr>
+                              <tr>
+                                <td className="border border-gray-300 px-3 py-2 text-center">Да</td>
+                                <td className="border border-gray-300 px-3 py-2 text-center">
+                                  <button
+                                    onClick={handleContactClick}
+                                    className="text-red-600 hover:text-red-800 font-semibold cursor-pointer"
+                                  >
+                                    В наличии
+                                  </button>
+                                </td>
+                                <td className="border border-gray-300 px-3 py-2 text-center font-semibold">29 400,00 ₽</td>
+                              </tr>
                             </tbody>
                           </table>
                         </div>
@@ -165,22 +200,132 @@ const HatchSection = () => {
                               </tr>
                             </thead>
                             <tbody>
-                              {hatch.tableData.map((row, index) => (
-                                <tr key={index}>
-                                  <td className="border border-gray-300 px-2 py-2 text-center">{row.material}</td>
-                                  <td className="border border-gray-300 px-2 py-2 text-center">{row.diameter}</td>
-                                  <td className="border border-gray-300 px-2 py-2 text-center">{row.neckHeight}</td>
-                                  <td className="border border-gray-300 px-2 py-2 text-center">
-                                    <button
-                                      onClick={handleContactClick}
-                                      className="text-red-600 hover:text-red-800 font-semibold cursor-pointer"
-                                    >
-                                      {row.deliveryTime}
-                                    </button>
-                                  </td>
-                                  <td className="border border-gray-300 px-2 py-2 text-center font-semibold">{row.price}</td>
-                                </tr>
-                              ))}
+                              <tr>
+                                <td className="border border-gray-300 px-2 py-2 text-center" rowSpan={6}>AISI304</td>
+                                <td className="border border-gray-300 px-2 py-2 text-center" rowSpan={2}>DN400</td>
+                                <td className="border border-gray-300 px-2 py-2 text-center">100 мм</td>
+                                <td className="border border-gray-300 px-2 py-2 text-center">
+                                  <button
+                                    onClick={handleContactClick}
+                                    className="text-red-600 hover:text-red-800 font-semibold cursor-pointer"
+                                  >
+                                    В наличии
+                                  </button>
+                                </td>
+                                <td className="border border-gray-300 px-2 py-2 text-center font-semibold">11 620,00 ₽</td>
+                              </tr>
+                              <tr>
+                                <td className="border border-gray-300 px-2 py-2 text-center">150 мм</td>
+                                <td className="border border-gray-300 px-2 py-2 text-center">
+                                  <button
+                                    onClick={handleContactClick}
+                                    className="text-red-600 hover:text-red-800 font-semibold cursor-pointer"
+                                  >
+                                    В наличии
+                                  </button>
+                                </td>
+                                <td className="border border-gray-300 px-2 py-2 text-center font-semibold">13 580,00 ₽</td>
+                              </tr>
+                              <tr>
+                                <td className="border border-gray-300 px-2 py-2 text-center" rowSpan={4}>DN450</td>
+                                <td className="border border-gray-300 px-2 py-2 text-center">100 мм</td>
+                                <td className="border border-gray-300 px-2 py-2 text-center">
+                                  <button
+                                    onClick={handleContactClick}
+                                    className="text-red-600 hover:text-red-800 font-semibold cursor-pointer"
+                                  >
+                                    В наличии
+                                  </button>
+                                </td>
+                                <td className="border border-gray-300 px-2 py-2 text-center font-semibold">12 600,00 ₽</td>
+                              </tr>
+                              <tr>
+                                <td className="border border-gray-300 px-2 py-2 text-center">150 мм</td>
+                                <td className="border border-gray-300 px-2 py-2 text-center">
+                                  <button
+                                    onClick={handleContactClick}
+                                    className="text-red-600 hover:text-red-800 font-semibold cursor-pointer"
+                                  >
+                                    В наличии
+                                  </button>
+                                </td>
+                                <td className="border border-gray-300 px-2 py-2 text-center font-semibold">14 000,00 ₽</td>
+                              </tr>
+                              <tr>
+                                <td className="border border-gray-300 px-2 py-2 text-center">300 мм</td>
+                                <td className="border border-gray-300 px-2 py-2 text-center">
+                                  <button
+                                    onClick={handleContactClick}
+                                    className="text-red-600 hover:text-red-800 font-semibold cursor-pointer"
+                                  >
+                                    В наличии
+                                  </button>
+                                </td>
+                                <td className="border border-gray-300 px-2 py-2 text-center font-semibold">19 600,00 ₽</td>
+                              </tr>
+                              <tr>
+                                <td className="border border-gray-300 px-2 py-2 text-center">400 мм</td>
+                                <td className="border border-gray-300 px-2 py-2 text-center">
+                                  <button
+                                    onClick={handleContactClick}
+                                    className="text-red-600 hover:text-red-800 font-semibold cursor-pointer"
+                                  >
+                                    В наличии
+                                  </button>
+                                </td>
+                                <td className="border border-gray-300 px-2 py-2 text-center font-semibold">22 400,00 ₽</td>
+                              </tr>
+                              <tr>
+                                <td className="border border-gray-300 px-2 py-2 text-center" rowSpan={4}>AISI316</td>
+                                <td className="border border-gray-300 px-2 py-2 text-center" rowSpan={2}>DN400</td>
+                                <td className="border border-gray-300 px-2 py-2 text-center">100 мм</td>
+                                <td className="border border-gray-300 px-2 py-2 text-center">
+                                  <button
+                                    onClick={handleContactClick}
+                                    className="text-red-600 hover:text-red-800 font-semibold cursor-pointer"
+                                  >
+                                    Под заказ
+                                  </button>
+                                </td>
+                                <td className="border border-gray-300 px-2 py-2 text-center font-semibold">17 780,00 ₽</td>
+                              </tr>
+                              <tr>
+                                <td className="border border-gray-300 px-2 py-2 text-center">150 мм</td>
+                                <td className="border border-gray-300 px-2 py-2 text-center">
+                                  <button
+                                    onClick={handleContactClick}
+                                    className="text-red-600 hover:text-red-800 font-semibold cursor-pointer"
+                                  >
+                                    Под заказ
+                                  </button>
+                                </td>
+                                <td className="border border-gray-300 px-2 py-2 text-center font-semibold">19 740,00 ₽</td>
+                              </tr>
+                              <tr>
+                                <td className="border border-gray-300 px-2 py-2 text-center" rowSpan={2}>DN450</td>
+                                <td className="border border-gray-300 px-2 py-2 text-center">100 мм</td>
+                                <td className="border border-gray-300 px-2 py-2 text-center">
+                                  <button
+                                    onClick={handleContactClick}
+                                    className="text-red-600 hover:text-red-800 font-semibold cursor-pointer"
+                                  >
+                                    Под заказ
+                                  </button>
+                                </td>
+                                <td className="border border-gray-300 px-2 py-2 text-center font-semibold">21 980,00 ₽</td>
+                              </tr>
+                              <tr>
+                                <td className="border border-gray-300 px-2 py-2 text-center">150 мм</td>
+                                <td className="border border-gray-300 px-2 py-2 text-center">
+                                  <button
+                                    onClick={handleContactClick}
+                                    className="text-red-600 hover:text-red-800 font-semibold cursor-pointer"
+                                  >
+                                    Под заказ
+                                  </button>
+                                </td>
+                                <td className="border border-gray-300 px-2 py-2 text-center font-semibold">22 820,00 ₽</td>
+                              </tr>
                             </tbody>
                           </table>
                         </div>
