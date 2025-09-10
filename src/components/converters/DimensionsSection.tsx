@@ -47,51 +47,51 @@ const DimensionsSection = ({ isExpanded, setIsExpanded, onImageClick }: Dimensio
             
             <div className="lg:w-1/2">
               <div className="overflow-x-auto">
-                <table className="w-full border-collapse border border-gray-300" style={{fontSize: '16px'}}>
+                <table className="w-full border-collapse border border-gray-300 min-w-[600px] text-xs sm:text-sm lg:text-base">
                   <thead>
                     <tr className="bg-gray-100">
-                      <th className="border border-gray-300 px-3 py-2 text-center font-semibold">Номинальная мощность<br/>(нормальный режим)<br/>кВт</th>
-                      <th className="border border-gray-300 px-2 py-2 text-center font-semibold" colSpan={3}>Габаритные размеры, мм</th>
-                      <th className="border border-gray-300 px-2 py-2 text-center font-semibold" colSpan={2}>Монтажные размеры, мм</th>
-                      <th className="border border-gray-300 px-3 py-2 text-center font-semibold">Вес, кг</th>
+                      <th className="border border-gray-300 px-1 sm:px-3 py-2 text-center font-semibold whitespace-nowrap text-xs sm:text-sm">Мощность<br className="hidden sm:inline"/><span className="sm:hidden"> </span>(кВт)</th>
+                      <th className="border border-gray-300 px-1 sm:px-2 py-2 text-center font-semibold text-xs sm:text-sm" colSpan={3}>Габариты, мм</th>
+                      <th className="border border-gray-300 px-1 sm:px-2 py-2 text-center font-semibold text-xs sm:text-sm" colSpan={2}>Монтаж, мм</th>
+                      <th className="border border-gray-300 px-1 sm:px-3 py-2 text-center font-semibold text-xs sm:text-sm">Вес</th>
                     </tr>
                     <tr className="bg-gray-50">
-                      <th className="border border-gray-300 px-3 py-2"></th>
-                      <th className="border border-gray-300 px-2 py-2 text-center font-semibold text-blue-600">Ш</th>
-                      <th className="border border-gray-300 px-2 py-2 text-center font-semibold text-red-600">В</th>
-                      <th className="border border-gray-300 px-2 py-2 text-center font-semibold text-green-600">Г</th>
-                      <th className="border border-gray-300 px-2 py-2 text-center font-semibold text-blue-600">А</th>
-                      <th className="border border-gray-300 px-2 py-2 text-center font-semibold text-red-600">В</th>
-                      <th className="border border-gray-300 px-3 py-2"></th>
+                      <th className="border border-gray-300 px-1 sm:px-3 py-1 sm:py-2"></th>
+                      <th className="border border-gray-300 px-1 py-1 sm:py-2 text-center font-semibold text-blue-600 text-xs sm:text-sm">Ш</th>
+                      <th className="border border-gray-300 px-1 py-1 sm:py-2 text-center font-semibold text-red-600 text-xs sm:text-sm">В</th>
+                      <th className="border border-gray-300 px-1 py-1 sm:py-2 text-center font-semibold text-green-600 text-xs sm:text-sm">Г</th>
+                      <th className="border border-gray-300 px-1 py-1 sm:py-2 text-center font-semibold text-blue-600 text-xs sm:text-sm">А</th>
+                      <th className="border border-gray-300 px-1 py-1 sm:py-2 text-center font-semibold text-red-600 text-xs sm:text-sm">В</th>
+                      <th className="border border-gray-300 px-1 sm:px-3 py-1 sm:py-2"></th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <td className="border border-gray-300 px-3 py-2 text-center font-medium">0,4 - 2,2</td>
-                      <td className="border border-gray-300 px-2 py-2 text-center text-blue-600 font-medium">83</td>
-                      <td className="border border-gray-300 px-2 py-2 text-center text-red-600 font-medium">149</td>
-                      <td className="border border-gray-300 px-2 py-2 text-center text-green-600 font-medium">111</td>
-                      <td className="border border-gray-300 px-2 py-2 text-center text-blue-600">66</td>
-                      <td className="border border-gray-300 px-2 py-2 text-center text-red-600">136</td>
-                      <td className="border border-gray-300 px-3 py-2 text-center">0,9</td>
+                      <td className="border border-gray-300 px-1 sm:px-3 py-1 sm:py-2 text-center font-medium text-xs sm:text-sm whitespace-nowrap">0,4-2,2</td>
+                      <td className="border border-gray-300 px-1 py-1 sm:py-2 text-center text-blue-600 font-medium text-xs sm:text-sm">83</td>
+                      <td className="border border-gray-300 px-1 py-1 sm:py-2 text-center text-red-600 font-medium text-xs sm:text-sm">149</td>
+                      <td className="border border-gray-300 px-1 py-1 sm:py-2 text-center text-green-600 font-medium text-xs sm:text-sm">111</td>
+                      <td className="border border-gray-300 px-1 py-1 sm:py-2 text-center text-blue-600 text-xs sm:text-sm">66</td>
+                      <td className="border border-gray-300 px-1 py-1 sm:py-2 text-center text-red-600 text-xs sm:text-sm">136</td>
+                      <td className="border border-gray-300 px-1 sm:px-3 py-1 sm:py-2 text-center text-xs sm:text-sm">0,9</td>
                     </tr>
                     <tr>
-                      <td className="border border-gray-300 px-3 py-2 text-center font-medium">4,0 - 7,5</td>
-                      <td className="border border-gray-300 px-2 py-2 text-center text-blue-600 font-medium">98</td>
-                      <td className="border border-gray-300 px-2 py-2 text-center text-red-600 font-medium">170</td>
-                      <td className="border border-gray-300 px-2 py-2 text-center text-green-600 font-medium">124</td>
-                      <td className="border border-gray-300 px-2 py-2 text-center text-blue-600">80</td>
-                      <td className="border border-gray-300 px-2 py-2 text-center text-red-600">157</td>
-                      <td className="border border-gray-300 px-3 py-2 text-center">1,3</td>
+                      <td className="border border-gray-300 px-1 sm:px-3 py-1 sm:py-2 text-center font-medium text-xs sm:text-sm whitespace-nowrap">4,0-7,5</td>
+                      <td className="border border-gray-300 px-1 py-1 sm:py-2 text-center text-blue-600 font-medium text-xs sm:text-sm">98</td>
+                      <td className="border border-gray-300 px-1 py-1 sm:py-2 text-center text-red-600 font-medium text-xs sm:text-sm">170</td>
+                      <td className="border border-gray-300 px-1 py-1 sm:py-2 text-center text-green-600 font-medium text-xs sm:text-sm">124</td>
+                      <td className="border border-gray-300 px-1 py-1 sm:py-2 text-center text-blue-600 text-xs sm:text-sm">80</td>
+                      <td className="border border-gray-300 px-1 py-1 sm:py-2 text-center text-red-600 text-xs sm:text-sm">157</td>
+                      <td className="border border-gray-300 px-1 sm:px-3 py-1 sm:py-2 text-center text-xs sm:text-sm">1,3</td>
                     </tr>
                     <tr>
-                      <td className="border border-gray-300 px-3 py-2 text-center font-medium">11 - 15</td>
-                      <td className="border border-gray-300 px-2 py-2 text-center text-blue-600 font-medium">135</td>
-                      <td className="border border-gray-300 px-2 py-2 text-center text-red-600 font-medium">228</td>
-                      <td className="border border-gray-300 px-2 py-2 text-center text-green-600 font-medium">160</td>
-                      <td className="border border-gray-300 px-2 py-2 text-center text-blue-600">112</td>
-                      <td className="border border-gray-300 px-2 py-2 text-center text-red-600">200</td>
-                      <td className="border border-gray-300 px-3 py-2 text-center">3,5</td>
+                      <td className="border border-gray-300 px-1 sm:px-3 py-1 sm:py-2 text-center font-medium text-xs sm:text-sm whitespace-nowrap">11-15</td>
+                      <td className="border border-gray-300 px-1 py-1 sm:py-2 text-center text-blue-600 font-medium text-xs sm:text-sm">135</td>
+                      <td className="border border-gray-300 px-1 py-1 sm:py-2 text-center text-red-600 font-medium text-xs sm:text-sm">228</td>
+                      <td className="border border-gray-300 px-1 py-1 sm:py-2 text-center text-green-600 font-medium text-xs sm:text-sm">160</td>
+                      <td className="border border-gray-300 px-1 py-1 sm:py-2 text-center text-blue-600 text-xs sm:text-sm">112</td>
+                      <td className="border border-gray-300 px-1 py-1 sm:py-2 text-center text-red-600 text-xs sm:text-sm">200</td>
+                      <td className="border border-gray-300 px-1 sm:px-3 py-1 sm:py-2 text-center text-xs sm:text-sm">3,5</td>
                     </tr>
                   </tbody>
                 </table>
