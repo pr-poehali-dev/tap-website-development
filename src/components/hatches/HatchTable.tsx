@@ -79,7 +79,7 @@ const HatchTable: React.FC<HatchTableProps> = ({
                   onClick={onContactClick}
                   className="text-red-600 hover:text-red-800 font-semibold cursor-pointer"
                 >
-                  В наличии
+                  Под заказ
                 </button>
               </td>
               <td className="border border-gray-300 px-2 md:px-3 py-2 text-center font-semibold">26 600,00 ₽</td>
@@ -100,7 +100,7 @@ const HatchTable: React.FC<HatchTableProps> = ({
                   onClick={onContactClick}
                   className="text-red-600 hover:text-red-800 font-semibold cursor-pointer"
                 >
-                  В наличии
+                  Под заказ
                 </button>
               </td>
               <td className={`border border-gray-300 px-2 md:px-3 py-2 text-center font-semibold ${
