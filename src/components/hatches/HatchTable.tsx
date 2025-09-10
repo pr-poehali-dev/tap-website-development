@@ -23,13 +23,13 @@ const HatchTable: React.FC<HatchTableProps> = ({
               <th className="border border-gray-300 px-1 md:px-3 py-2 text-center font-semibold text-xs md:text-sm w-[22%] md:w-auto">
                 Рабочее<br className="md:hidden"/><span className="hidden md:inline"> </span>давление
               </th>
-              <th className="border border-gray-300 px-1 md:px-3 py-2 text-center font-semibold text-xs md:text-sm w-[16%] md:w-auto">
+              <th className="border border-gray-300 px-1 md:px-3 py-2 text-center font-semibold text-xs md:text-sm w-[13%] md:w-auto">
                 Кронштейн
               </th>
-              <th className="border border-gray-300 px-1 md:px-3 py-2 text-center font-semibold text-xs md:text-sm w-[30%] md:w-auto">
+              <th className="border border-gray-300 px-1 md:px-3 py-2 text-center font-semibold text-xs md:text-sm w-[35%] md:w-auto">
                 Срок<br className="md:hidden"/><span className="hidden md:inline"> </span>поставки
               </th>
-              <th className="border border-gray-300 px-1 md:px-3 py-2 text-center font-semibold text-xs md:text-sm w-[32%] md:w-auto">
+              <th className="border border-gray-300 px-1 md:px-3 py-2 text-center font-semibold text-xs md:text-sm w-[30%] md:w-auto">
                 Стоимость
               </th>
             </tr>
