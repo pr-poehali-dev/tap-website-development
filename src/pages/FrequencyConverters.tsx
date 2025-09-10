@@ -8,6 +8,7 @@ import AdditionalFeatures from '@/components/converters/AdditionalFeatures';
 import DimensionsSection from '@/components/converters/DimensionsSection';
 import SpecificationsSection from '@/components/converters/SpecificationsSection';
 import ImageModal from '@/components/converters/ImageModal';
+import Icon from '@/components/ui/icon';
 
 const FrequencyConverters = () => {
   const [isModelsExpanded, setIsModelsExpanded] = useState(true);
@@ -39,16 +40,25 @@ const FrequencyConverters = () => {
             {/* Header Section */}
             <div className="flex flex-col lg:flex-row items-center lg:items-start gap-12 mb-16">
               <div className="lg:w-1/3">
-                <img 
-                  src="https://cdn.poehali.dev/files/91ee8b1b-2624-44bd-b986-d6b870fd3b82.jpg" 
-                  alt="Частотные преобразователи AD30" 
-                  className="w-full h-auto rounded-lg shadow-lg cursor-zoom-in hover:shadow-xl transition-shadow duration-300"
-                  title="Нажмите для увеличения"
+                <div 
+                  className="relative overflow-hidden cursor-pointer group/image rounded-lg"
                   onClick={() => setModalImage({
                     src: "https://cdn.poehali.dev/files/91ee8b1b-2624-44bd-b986-d6b870fd3b82.jpg",
                     alt: "Частотные преобразователи AD30"
                   })}
-                />
+                  title="Нажмите для увеличения"
+                >
+                  <img 
+                    src="https://cdn.poehali.dev/files/91ee8b1b-2624-44bd-b986-d6b870fd3b82.jpg" 
+                    alt="Частотные преобразователи AD30" 
+                    className="w-full h-auto rounded-lg shadow-lg group-hover:scale-105 transition-transform duration-300"
+                  />
+                  <div className="absolute inset-0 bg-black/0 group-hover/image:bg-black/20 transition-colors duration-300 flex items-center justify-center">
+                    <div className="opacity-0 group-hover/image:opacity-100 transition-opacity duration-300 bg-white/90 rounded-full p-2">
+                      <Icon name="ZoomIn" className="text-gray-800" size={20} />
+                    </div>
+                  </div>
+                </div>
               </div>
               
               <div className="lg:w-2/3">

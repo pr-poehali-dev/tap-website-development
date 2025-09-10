@@ -6,6 +6,8 @@ interface ModelsListProps {
 }
 
 const ModelsList = ({ isExpanded, setIsExpanded }: ModelsListProps) => {
+  const [selectedRow, setSelectedRow] = React.useState<string | null>(null);
+  
   const scrollToContacts = () => {
     const contactsSection = document.querySelector('[data-section="contacts"]');
     if (contactsSection) {
@@ -48,7 +50,12 @@ const ModelsList = ({ isExpanded, setIsExpanded }: ModelsListProps) => {
               </thead>
               <tbody>
                 {/* Single Phase 1x220 VAC */}
-                <tr>
+                <tr 
+                  className={`cursor-pointer transition-colors hover:bg-red-50 ${
+                    selectedRow === 'AD30-2SD40' ? 'bg-red-100' : ''
+                  }`}
+                  onClick={() => setSelectedRow(selectedRow === 'AD30-2SD40' ? null : 'AD30-2SD40')}
+                >
                   <td className="border border-gray-300 px-3 py-2 text-center font-medium">AD30-2SD40</td>
                   <td className="border border-gray-300 px-3 py-2 text-center" rowSpan={4}>1x220 VAC</td>
                   <td className="border border-gray-300 px-3 py-2 text-center">0,4 кВт</td>
@@ -65,7 +72,12 @@ const ModelsList = ({ isExpanded, setIsExpanded }: ModelsListProps) => {
                   </td>
                   <td className="border border-gray-300 px-3 py-2 text-center font-semibold">6 187,50 ₽</td>
                 </tr>
-                <tr>
+                <tr 
+                  className={`cursor-pointer transition-colors hover:bg-red-50 ${
+                    selectedRow === 'AD30-2SD75' ? 'bg-red-100' : ''
+                  }`}
+                  onClick={() => setSelectedRow(selectedRow === 'AD30-2SD75' ? null : 'AD30-2SD75')}
+                >
                   <td className="border border-gray-300 px-3 py-2 text-center font-medium">AD30-2SD75</td>
                   <td className="border border-gray-300 px-3 py-2 text-center">0,75 кВт</td>
                   <td className="border border-gray-300 px-2 py-2 text-center">4,0 А</td>
@@ -81,7 +93,12 @@ const ModelsList = ({ isExpanded, setIsExpanded }: ModelsListProps) => {
                   </td>
                   <td className="border border-gray-300 px-3 py-2 text-center font-semibold">6 765,00 ₽</td>
                 </tr>
-                <tr>
+                <tr 
+                  className={`cursor-pointer transition-colors hover:bg-red-50 ${
+                    selectedRow === 'AD30-2S1D5' ? 'bg-red-100' : ''
+                  }`}
+                  onClick={() => setSelectedRow(selectedRow === 'AD30-2S1D5' ? null : 'AD30-2S1D5')}
+                >
                   <td className="border border-gray-300 px-3 py-2 text-center font-medium">AD30-2S1D5</td>
                   <td className="border border-gray-300 px-3 py-2 text-center">1,5 кВт</td>
                   <td className="border border-gray-300 px-2 py-2 text-center">7,0 А</td>
@@ -97,7 +114,12 @@ const ModelsList = ({ isExpanded, setIsExpanded }: ModelsListProps) => {
                   </td>
                   <td className="border border-gray-300 px-3 py-2 text-center font-semibold">7 095,00 ₽</td>
                 </tr>
-                <tr>
+                <tr 
+                  className={`cursor-pointer transition-colors hover:bg-red-50 ${
+                    selectedRow === 'AD30-2S2D2' ? 'bg-red-100' : ''
+                  }`}
+                  onClick={() => setSelectedRow(selectedRow === 'AD30-2S2D2' ? null : 'AD30-2S2D2')}
+                >
                   <td className="border border-gray-300 px-3 py-2 text-center font-medium">AD30-2S2D2</td>
                   <td className="border border-gray-300 px-3 py-2 text-center">2,2 кВт</td>
                   <td className="border border-gray-300 px-2 py-2 text-center">9,6 А</td>
@@ -115,7 +137,12 @@ const ModelsList = ({ isExpanded, setIsExpanded }: ModelsListProps) => {
                 </tr>
                 
                 {/* Three Phase 3x380 VAC */}
-                <tr>
+                <tr 
+                  className={`cursor-pointer transition-colors hover:bg-red-50 ${
+                    selectedRow === 'AD30-4TD75H/1D5L' ? 'bg-red-100' : ''
+                  }`}
+                  onClick={() => setSelectedRow(selectedRow === 'AD30-4TD75H/1D5L' ? null : 'AD30-4TD75H/1D5L')}
+                >
                   <td className="border border-gray-300 px-3 py-2 text-center font-medium">AD30-4TD75H/1D5L</td>
                   <td className="border border-gray-300 px-3 py-2 text-center" rowSpan={8}>3x380 VAC</td>
                   <td className="border border-gray-300 px-3 py-2 text-center">0,75/1,5 кВт</td>
@@ -132,7 +159,12 @@ const ModelsList = ({ isExpanded, setIsExpanded }: ModelsListProps) => {
                   </td>
                   <td className="border border-gray-300 px-3 py-2 text-center font-semibold">8 662,50 ₽</td>
                 </tr>
-                <tr>
+                <tr 
+                  className={`cursor-pointer transition-colors hover:bg-red-50 ${
+                    selectedRow === 'AD30-4T1D5H/2D2L' ? 'bg-red-100' : ''
+                  }`}
+                  onClick={() => setSelectedRow(selectedRow === 'AD30-4T1D5H/2D2L' ? null : 'AD30-4T1D5H/2D2L')}
+                >
                   <td className="border border-gray-300 px-3 py-2 text-center font-medium">AD30-4T1D5H/2D2L</td>
                   <td className="border border-gray-300 px-3 py-2 text-center">1,5/2,2 кВт</td>
                   <td className="border border-gray-300 px-2 py-2 text-center">3,8/5,1 А</td>
@@ -148,7 +180,12 @@ const ModelsList = ({ isExpanded, setIsExpanded }: ModelsListProps) => {
                   </td>
                   <td className="border border-gray-300 px-3 py-2 text-center font-semibold">9 487,50 ₽</td>
                 </tr>
-                <tr>
+                <tr 
+                  className={`cursor-pointer transition-colors hover:bg-red-50 ${
+                    selectedRow === 'AD30-4T2D2H/4D0L' ? 'bg-red-100' : ''
+                  }`}
+                  onClick={() => setSelectedRow(selectedRow === 'AD30-4T2D2H/4D0L' ? null : 'AD30-4T2D2H/4D0L')}
+                >
                   <td className="border border-gray-300 px-3 py-2 text-center font-medium">AD30-4T2D2H/4D0L</td>
                   <td className="border border-gray-300 px-3 py-2 text-center">2,2/4 кВт</td>
                   <td className="border border-gray-300 px-2 py-2 text-center">5,1/9 А</td>
@@ -164,7 +201,12 @@ const ModelsList = ({ isExpanded, setIsExpanded }: ModelsListProps) => {
                   </td>
                   <td className="border border-gray-300 px-3 py-2 text-center font-semibold">9 982,50 ₽</td>
                 </tr>
-                <tr>
+                <tr 
+                  className={`cursor-pointer transition-colors hover:bg-red-50 ${
+                    selectedRow === 'AD30-4T4D0H/5D5L' ? 'bg-red-100' : ''
+                  }`}
+                  onClick={() => setSelectedRow(selectedRow === 'AD30-4T4D0H/5D5L' ? null : 'AD30-4T4D0H/5D5L')}
+                >
                   <td className="border border-gray-300 px-3 py-2 text-center font-medium">AD30-4T4D0H/5D5L</td>
                   <td className="border border-gray-300 px-3 py-2 text-center">4/5,5 кВт</td>
                   <td className="border border-gray-300 px-2 py-2 text-center">9/13 А</td>
@@ -180,7 +222,12 @@ const ModelsList = ({ isExpanded, setIsExpanded }: ModelsListProps) => {
                   </td>
                   <td className="border border-gray-300 px-3 py-2 text-center font-semibold">10 725,00 ₽</td>
                 </tr>
-                <tr>
+                <tr 
+                  className={`cursor-pointer transition-colors hover:bg-red-50 ${
+                    selectedRow === 'AD30-4T5DH/7D5L' ? 'bg-red-100' : ''
+                  }`}
+                  onClick={() => setSelectedRow(selectedRow === 'AD30-4T5DH/7D5L' ? null : 'AD30-4T5DH/7D5L')}
+                >
                   <td className="border border-gray-300 px-3 py-2 text-center font-medium">AD30-4T5DH/7D5L</td>
                   <td className="border border-gray-300 px-3 py-2 text-center">5,5/7,5 кВт</td>
                   <td className="border border-gray-300 px-2 py-2 text-center">13/17 А</td>
@@ -196,7 +243,12 @@ const ModelsList = ({ isExpanded, setIsExpanded }: ModelsListProps) => {
                   </td>
                   <td className="border border-gray-300 px-3 py-2 text-center font-semibold">13 035,00 ₽</td>
                 </tr>
-                <tr>
+                <tr 
+                  className={`cursor-pointer transition-colors hover:bg-red-50 ${
+                    selectedRow === 'AD30-4T7D5H/011L' ? 'bg-red-100' : ''
+                  }`}
+                  onClick={() => setSelectedRow(selectedRow === 'AD30-4T7D5H/011L' ? null : 'AD30-4T7D5H/011L')}
+                >
                   <td className="border border-gray-300 px-3 py-2 text-center font-medium">AD30-4T7D5H/011L</td>
                   <td className="border border-gray-300 px-3 py-2 text-center">7,5/11 кВт</td>
                   <td className="border border-gray-300 px-2 py-2 text-center">17/25 А</td>
@@ -212,7 +264,12 @@ const ModelsList = ({ isExpanded, setIsExpanded }: ModelsListProps) => {
                   </td>
                   <td className="border border-gray-300 px-3 py-2 text-center font-semibold">18 067,50 ₽</td>
                 </tr>
-                <tr>
+                <tr 
+                  className={`cursor-pointer transition-colors hover:bg-red-50 ${
+                    selectedRow === 'AD30-4T011H/015L' ? 'bg-red-100' : ''
+                  }`}
+                  onClick={() => setSelectedRow(selectedRow === 'AD30-4T011H/015L' ? null : 'AD30-4T011H/015L')}
+                >
                   <td className="border border-gray-300 px-3 py-2 text-center font-medium">AD30-4T011H/015L</td>
                   <td className="border border-gray-300 px-3 py-2 text-center">11/15 кВт</td>
                   <td className="border border-gray-300 px-2 py-2 text-center">25/32 А</td>
@@ -226,9 +283,14 @@ const ModelsList = ({ isExpanded, setIsExpanded }: ModelsListProps) => {
                       Уточнить
                     </button>
                   </td>
-                  <td className="border border-gray-300 px-3 py-2 text-center font-semibold">24 255,00 ₽</td>
+                  <td className="border border-gray-300 px-3 py-2 text-center font-semibold whitespace-nowrap">24 255,00 ₽</td>
                 </tr>
-                <tr>
+                <tr 
+                  className={`cursor-pointer transition-colors hover:bg-red-50 ${
+                    selectedRow === 'AD30-4T015H/18DL' ? 'bg-red-100' : ''
+                  }`}
+                  onClick={() => setSelectedRow(selectedRow === 'AD30-4T015H/18DL' ? null : 'AD30-4T015H/18DL')}
+                >
                   <td className="border border-gray-300 px-3 py-2 text-center font-medium">AD30-4T015H/18DL</td>
                   <td className="border border-gray-300 px-3 py-2 text-center">15/18,5 кВт</td>
                   <td className="border border-gray-300 px-2 py-2 text-center">32/37 А</td>
@@ -242,7 +304,7 @@ const ModelsList = ({ isExpanded, setIsExpanded }: ModelsListProps) => {
                       Уточнить
                     </button>
                   </td>
-                  <td className="border border-gray-300 px-3 py-2 text-center font-semibold">32 092,50 ₽</td>
+                  <td className="border border-gray-300 px-3 py-2 text-center font-semibold whitespace-nowrap">32 092,50 ₽</td>
                 </tr>
               </tbody>
             </table>
