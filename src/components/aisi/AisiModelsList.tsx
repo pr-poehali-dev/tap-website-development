@@ -326,7 +326,7 @@ const AisiModelsList = ({ isExpanded, setIsExpanded }: AisiModelsListProps) => {
         className="w-full flex items-center justify-between text-left mb-4 hover:bg-gray-50 p-2 rounded min-h-[60px]"
       >
         <h3 className="text-lg sm:text-xl font-bold text-gray-800 flex-1 pr-2">
-          Список корпусов AISI304
+          Таблица корпусов AISI304
         </h3>
         <div className="flex items-center gap-2 flex-shrink-0">
           <span className="text-xs sm:text-sm text-gray-600 hidden sm:inline">
@@ -400,13 +400,17 @@ const AisiModelsList = ({ isExpanded, setIsExpanded }: AisiModelsListProps) => {
                           }}
                           className="text-red-600 hover:text-red-800 font-semibold cursor-pointer text-xs sm:text-sm"
                         >
-                          <span className="hidden sm:inline">✅ {item.delivery}</span>
+                          <span className="hidden sm:inline">
+                            ✅ {item.delivery}
+                          </span>
                           <span className="sm:hidden">✅ 5р.д.</span>
                         </button>
                       </td>
                       <td className="border border-gray-300 px-1 sm:px-3 py-1 sm:py-2 text-center font-semibold">
                         <span className="hidden sm:inline">{item.price}</span>
-                        <span className="sm:hidden">{item.price.replace(',00', '').replace(' ', '')}</span>
+                        <span className="sm:hidden">
+                          {item.price.replace(",00", "").replace(" ", "")}
+                        </span>
                       </td>
                     </tr>
                   ))}
