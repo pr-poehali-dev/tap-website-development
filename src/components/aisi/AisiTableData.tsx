@@ -566,6 +566,9 @@ export const aisi316TableData: AisiTableItem[] = [
     delivery: "5 р.д.",
     price: "129 600,00 ₽",
   },
+];
+
+export const aisi316DoubleDoorTableData: AisiTableItem[] = [
   {
     width: 600,
     height: 800,

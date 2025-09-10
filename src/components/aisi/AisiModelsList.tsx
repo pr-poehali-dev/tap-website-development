@@ -1,6 +1,6 @@
 import React from "react";
 import AisiTable from "./AisiTable";
-import { mainTableData, doubleDoorTableData, aisi316TableData } from "./AisiTableData";
+import { mainTableData, doubleDoorTableData, aisi316TableData, aisi316DoubleDoorTableData } from "./AisiTableData";
 
 interface AisiModelsListProps {
   isExpanded: boolean;
@@ -125,6 +125,23 @@ const Aisi316ModelsList = ({ isExpanded, setIsExpanded }: Aisi316ModelsListProps
             scrollToContacts={scrollToContacts}
             tablePrefix="aisi316"
           />
+
+          <div className="mt-8">
+            <h4 className="text-lg font-bold text-gray-800 mb-4">
+              Таблица корпусов AISI316 с двумя дверями
+            </h4>
+            <p className="text-gray-600 text-sm mb-4">
+              Стоимость указана с НДС. Не является публичной офертой.
+            </p>
+            
+            <AisiTable
+              data={aisi316DoubleDoorTableData}
+              selectedRow={selectedRow}
+              setSelectedRow={setSelectedRow}
+              scrollToContacts={scrollToContacts}
+              tablePrefix="aisi316-double-door"
+            />
+          </div>
         </div>
       )}
     </div>
