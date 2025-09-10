@@ -14,7 +14,7 @@ const HatchSection = () => {
       id: 1,
       name: "Люк овальный самоуплотняющийся 340х440",
       model: "Аналог 6009ECO",
-      features: ["Самоуплотняющийся", "Овальная форма", "Нержавеющая сталь AISI304 крышка 2,5 мм, горловина 3 мм", "Опциональный кронштейн"],
+      features: ["Самоуплотняющийся", "Овальная форма", "Нержавеющая сталь AISI304 крышка 2,5 мм, горловина 3 мм, для люков 0.4 МПа", "Нержавеющая сталь AISI304 крышка 3 мм, горловина 3 мм, для люков 0.6 МПа", "Опциональный кронштейн"],
       price: "от 23 800,00 ₽",
       image: "https://cdn.poehali.dev/files/71b88224-89da-4704-88d0-e4826d2d231e.jpg",
       blueprint: "https://cdn.poehali.dev/files/970282f0-86f2-42b7-89cc-ce45f9ead2a8.png",
@@ -115,7 +115,8 @@ const HatchSection = () => {
 
                     {/* Список моделей */}
                     <div>
-                      <h4 className="text-lg font-semibold text-foreground mb-4">Список моделей</h4>
+                      <h4 className="text-lg font-semibold text-foreground mb-2">Список моделей</h4>
+                      <p className="text-sm text-gray-600 mb-4">Стоимость указана с НДС. Не является публичной офертой.</p>
                       
                       {/* Oval hatch table */}
                       {hatch.id === 1 && (
@@ -126,7 +127,7 @@ const HatchSection = () => {
                                 <th className="border border-gray-300 px-3 py-2 text-center font-semibold">Рабочее давление</th>
                                 <th className="border border-gray-300 px-3 py-2 text-center font-semibold">Кронштейн</th>
                                 <th className="border border-gray-300 px-3 py-2 text-center font-semibold">Срок поставки</th>
-                                <th className="border border-gray-300 px-3 py-2 text-center font-semibold">Стоимость с НДС</th>
+                                <th className="border border-gray-300 px-3 py-2 text-center font-semibold">Стоимость</th>
                               </tr>
                             </thead>
                             <tbody>
@@ -137,12 +138,12 @@ const HatchSection = () => {
                                   <td className="border border-gray-300 px-3 py-2 text-center">
                                     <button
                                       onClick={handleContactClick}
-                                      className="text-blue-600 hover:text-blue-800 font-semibold cursor-pointer"
+                                      className="text-red-600 hover:text-red-800 font-semibold cursor-pointer"
                                     >
                                       {row.deliveryTime}
                                     </button>
                                   </td>
-                                  <td className="border border-gray-300 px-3 py-2 text-center">{row.price}</td>
+                                  <td className="border border-gray-300 px-3 py-2 text-center font-semibold">{row.price}</td>
                                 </tr>
                               ))}
                             </tbody>
@@ -160,7 +161,7 @@ const HatchSection = () => {
                                 <th className="border border-gray-300 px-2 py-2 text-center font-semibold">Диаметр</th>
                                 <th className="border border-gray-300 px-2 py-2 text-center font-semibold">Высота горловины</th>
                                 <th className="border border-gray-300 px-2 py-2 text-center font-semibold">Срок поставки</th>
-                                <th className="border border-gray-300 px-2 py-2 text-center font-semibold">Цена продажи с НДС</th>
+                                <th className="border border-gray-300 px-2 py-2 text-center font-semibold">Стоимость</th>
                               </tr>
                             </thead>
                             <tbody>
@@ -172,16 +173,12 @@ const HatchSection = () => {
                                   <td className="border border-gray-300 px-2 py-2 text-center">
                                     <button
                                       onClick={handleContactClick}
-                                      className={`font-semibold cursor-pointer ${
-                                        row.deliveryTime === 'В наличии' 
-                                          ? 'text-blue-600 hover:text-blue-800' 
-                                          : 'text-blue-600 hover:text-blue-800'
-                                      }`}
+                                      className="text-red-600 hover:text-red-800 font-semibold cursor-pointer"
                                     >
                                       {row.deliveryTime}
                                     </button>
                                   </td>
-                                  <td className="border border-gray-300 px-2 py-2 text-center">{row.price}</td>
+                                  <td className="border border-gray-300 px-2 py-2 text-center font-semibold">{row.price}</td>
                                 </tr>
                               ))}
                             </tbody>
