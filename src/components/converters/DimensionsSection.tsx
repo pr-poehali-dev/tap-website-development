@@ -1,4 +1,5 @@
 import React from 'react';
+import Icon from '@/components/ui/icon';
 
 interface DimensionsSectionProps {
   isExpanded: boolean;
@@ -27,15 +28,20 @@ const DimensionsSection = ({ isExpanded, setIsExpanded, onImageClick }: Dimensio
           <div className="flex flex-col lg:flex-row gap-8 items-start">
             <div className="lg:w-1/2">
               <div 
-                className="cursor-pointer hover:opacity-80 transition-opacity"
+                className="relative overflow-hidden cursor-pointer group/image rounded-lg"
                 onClick={() => onImageClick({src: 'https://cdn.poehali.dev/files/56a32b05-f2cc-4e05-b955-50850ca5beba.png', alt: 'Габаритные размеры AD30'})}
                 title="Нажмите для увеличения"
               >
                 <img 
                   src="https://cdn.poehali.dev/files/56a32b05-f2cc-4e05-b955-50850ca5beba.png" 
                   alt="Габаритные размеры AD30" 
-                  className="w-full h-auto rounded-lg shadow-md"
+                  className="w-full h-auto rounded-lg shadow-md group-hover:scale-105 transition-transform duration-300"
                 />
+                <div className="absolute inset-0 bg-black/0 group-hover/image:bg-black/20 transition-colors duration-300 flex items-center justify-center">
+                  <div className="opacity-0 group-hover/image:opacity-100 transition-opacity duration-300 bg-white/90 rounded-full p-2">
+                    <Icon name="ZoomIn" className="text-gray-800" size={20} />
+                  </div>
+                </div>
               </div>
             </div>
             
@@ -45,7 +51,7 @@ const DimensionsSection = ({ isExpanded, setIsExpanded, onImageClick }: Dimensio
                   <thead>
                     <tr className="bg-gray-100">
                       <th className="border border-gray-300 px-3 py-2 text-center font-semibold">Номинальная мощность<br/>(нормальный режим)<br/>кВт</th>
-                      <th className="border border-gray-300 px-2 py-2 text-center font-semibold" colSpan={3}>габаритные размеры, мм</th>
+                      <th className="border border-gray-300 px-2 py-2 text-center font-semibold" colSpan={3}>Габаритные размеры, мм</th>
                       <th className="border border-gray-300 px-2 py-2 text-center font-semibold" colSpan={2}>Монтажные размеры, мм</th>
                       <th className="border border-gray-300 px-3 py-2 text-center font-semibold">Вес, кг</th>
                     </tr>

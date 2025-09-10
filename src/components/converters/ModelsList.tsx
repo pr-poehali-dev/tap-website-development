@@ -65,7 +65,7 @@ const ModelsList = ({ isExpanded, setIsExpanded }: ModelsListProps) => {
                   <td className="border border-gray-300 px-2 py-2 text-center">
                     <button 
                       onClick={scrollToContacts}
-                      className="text-blue-600 hover:text-blue-800 underline cursor-pointer transition-colors"
+                      className="text-red-600 hover:text-red-800 underline cursor-pointer transition-colors"
                     >
                       Уточнить
                     </button>
@@ -86,7 +86,7 @@ const ModelsList = ({ isExpanded, setIsExpanded }: ModelsListProps) => {
                   <td className="border border-gray-300 px-2 py-2 text-center">
                     <button 
                       onClick={scrollToContacts}
-                      className="text-blue-600 hover:text-blue-800 underline cursor-pointer transition-colors"
+                      className="text-red-600 hover:text-red-800 underline cursor-pointer transition-colors"
                     >
                       Уточнить
                     </button>
@@ -107,7 +107,7 @@ const ModelsList = ({ isExpanded, setIsExpanded }: ModelsListProps) => {
                   <td className="border border-gray-300 px-2 py-2 text-center">
                     <button 
                       onClick={scrollToContacts}
-                      className="text-blue-600 hover:text-blue-800 underline cursor-pointer transition-colors"
+                      className="text-red-600 hover:text-red-800 underline cursor-pointer transition-colors"
                     >
                       Уточнить
                     </button>
@@ -128,7 +128,7 @@ const ModelsList = ({ isExpanded, setIsExpanded }: ModelsListProps) => {
                   <td className="border border-gray-300 px-2 py-2 text-center">
                     <button 
                       onClick={scrollToContacts}
-                      className="text-blue-600 hover:text-blue-800 underline cursor-pointer transition-colors"
+                      className="text-red-600 hover:text-red-800 underline cursor-pointer transition-colors"
                     >
                       Уточнить
                     </button>
@@ -152,7 +152,7 @@ const ModelsList = ({ isExpanded, setIsExpanded }: ModelsListProps) => {
                   <td className="border border-gray-300 px-2 py-2 text-center">
                     <button 
                       onClick={scrollToContacts}
-                      className="text-blue-600 hover:text-blue-800 underline cursor-pointer transition-colors"
+                      className="text-red-600 hover:text-red-800 underline cursor-pointer transition-colors"
                     >
                       Уточнить
                     </button>
@@ -173,7 +173,7 @@ const ModelsList = ({ isExpanded, setIsExpanded }: ModelsListProps) => {
                   <td className="border border-gray-300 px-2 py-2 text-center">
                     <button 
                       onClick={scrollToContacts}
-                      className="text-blue-600 hover:text-blue-800 underline cursor-pointer transition-colors"
+                      className="text-red-600 hover:text-red-800 underline cursor-pointer transition-colors"
                     >
                       Уточнить
                     </button>
@@ -194,7 +194,7 @@ const ModelsList = ({ isExpanded, setIsExpanded }: ModelsListProps) => {
                   <td className="border border-gray-300 px-2 py-2 text-center">
                     <button 
                       onClick={scrollToContacts}
-                      className="text-blue-600 hover:text-blue-800 underline cursor-pointer transition-colors"
+                      className="text-red-600 hover:text-red-800 underline cursor-pointer transition-colors"
                     >
                       Уточнить
                     </button>
@@ -215,7 +215,7 @@ const ModelsList = ({ isExpanded, setIsExpanded }: ModelsListProps) => {
                   <td className="border border-gray-300 px-2 py-2 text-center">
                     <button 
                       onClick={scrollToContacts}
-                      className="text-blue-600 hover:text-blue-800 underline cursor-pointer transition-colors"
+                      className="text-red-600 hover:text-red-800 underline cursor-pointer transition-colors"
                     >
                       Уточнить
                     </button>
@@ -236,7 +236,7 @@ const ModelsList = ({ isExpanded, setIsExpanded }: ModelsListProps) => {
                   <td className="border border-gray-300 px-2 py-2 text-center">
                     <button 
                       onClick={scrollToContacts}
-                      className="text-blue-600 hover:text-blue-800 underline cursor-pointer transition-colors"
+                      className="text-red-600 hover:text-red-800 underline cursor-pointer transition-colors"
                     >
                       Уточнить
                     </button>
@@ -257,7 +257,7 @@ const ModelsList = ({ isExpanded, setIsExpanded }: ModelsListProps) => {
                   <td className="border border-gray-300 px-2 py-2 text-center">
                     <button 
                       onClick={scrollToContacts}
-                      className="text-blue-600 hover:text-blue-800 underline cursor-pointer transition-colors"
+                      className="text-red-600 hover:text-red-800 underline cursor-pointer transition-colors"
                     >
                       Уточнить
                     </button>
@@ -278,7 +278,7 @@ const ModelsList = ({ isExpanded, setIsExpanded }: ModelsListProps) => {
                   <td className="border border-gray-300 px-2 py-2 text-center">
                     <button 
                       onClick={scrollToContacts}
-                      className="text-blue-600 hover:text-blue-800 underline cursor-pointer transition-colors"
+                      className="text-red-600 hover:text-red-800 underline cursor-pointer transition-colors"
                     >
                       Уточнить
                     </button>
@@ -299,7 +299,7 @@ const ModelsList = ({ isExpanded, setIsExpanded }: ModelsListProps) => {
                   <td className="border border-gray-300 px-2 py-2 text-center">
                     <button 
                       onClick={scrollToContacts}
-                      className="text-blue-600 hover:text-blue-800 underline cursor-pointer transition-colors"
+                      className="text-red-600 hover:text-red-800 underline cursor-pointer transition-colors"
                     >
                       Уточнить
                     </button>
