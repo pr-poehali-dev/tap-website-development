@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
-import Icon from '@/components/ui/icon';
+import HatchCardComponent from '@/components/hatches/HatchCardComponent';
+import ImageModal from '@/components/hatches/ImageModal';
 
 const HatchSection = () => {
   const [selectedImage, setSelectedImage] = useState<{src: string, alt: string} | null>(null);
@@ -18,13 +16,7 @@ const HatchSection = () => {
       features: ["Самоуплотняющийся", "Овальная форма", "Нержавеющая сталь AISI304 крышка 2,5 мм, горловина 3 мм, для 0.4 МПа", "Нержавеющая сталь AISI304 крышка 3 мм, горловина 3 мм, для 0.6 МПа", "Опциональный кронштейн"],
       price: "от 23 800,00 ₽",
       image: "https://cdn.poehali.dev/files/71b88224-89da-4704-88d0-e4826d2d231e.jpg",
-      blueprint: "https://cdn.poehali.dev/files/970282f0-86f2-42b7-89cc-ce45f9ead2a8.png",
-      tableData: [
-        { workingPressure: "0.4 МПа", bracket: "Нет", deliveryTime: "В наличии", price: "23 800,00 ₽" },
-        { workingPressure: "", bracket: "Да", deliveryTime: "В наличии", price: "26 600,00 ₽" },
-        { workingPressure: "0.6 МПа", bracket: "Нет", deliveryTime: "В наличии", price: "26 600,00 ₽" },
-        { workingPressure: "", bracket: "Да", deliveryTime: "В наличии", price: "29 400,00 ₽" }
-      ]
+      blueprint: "https://cdn.poehali.dev/files/970282f0-86f2-42b7-89cc-ce45f9ead2a8.png"
     },
     {
       id: 2,
@@ -33,19 +25,7 @@ const HatchSection = () => {
       features: ["Поворотно-откидная крышка", "Кольцевая конструкция", "Нержавеющая сталь AISI304 или AISI316", "Высота горловины от 100 мм до 400 мм"],
       price: "от 11 620,00 ₽",
       image: "https://cdn.poehali.dev/files/e57d06e3-e0fd-4542-8719-4a013db706a7.png",
-      blueprint: "https://cdn.poehali.dev/files/4eff3f2e-7965-475d-845b-5e70ee4647f2.png",
-      tableData: [
-        { material: "AISI304", diameter: "DN400", neckHeight: "100 мм", deliveryTime: "В наличии", price: "11 620,00 ₽" },
-        { material: "", diameter: "", neckHeight: "150 мм", deliveryTime: "В наличии", price: "13 580,00 ₽" },
-        { material: "", diameter: "DN450", neckHeight: "100 мм", deliveryTime: "В наличии", price: "12 600,00 ₽" },
-        { material: "", diameter: "", neckHeight: "150 мм", deliveryTime: "В наличии", price: "14 000,00 ₽" },
-        { material: "", diameter: "", neckHeight: "300 мм", deliveryTime: "В наличии", price: "19 600,00 ₽" },
-        { material: "", diameter: "", neckHeight: "400 мм", deliveryTime: "В наличии", price: "22 400,00 ₽" },
-        { material: "AISI316", diameter: "DN400", neckHeight: "100 мм", deliveryTime: "Под заказ", price: "17 780,00 ₽" },
-        { material: "", diameter: "", neckHeight: "150 мм", deliveryTime: "Под заказ", price: "19 740,00 ₽" },
-        { material: "", diameter: "DN450", neckHeight: "100 мм", deliveryTime: "Под заказ", price: "21 980,00 ₽" },
-        { material: "", diameter: "", neckHeight: "150 мм", deliveryTime: "Под заказ", price: "22 820,00 ₽" }
-      ]
+      blueprint: "https://cdn.poehali.dev/files/4eff3f2e-7965-475d-845b-5e70ee4647f2.png"
     }
   ];
 
@@ -58,6 +38,18 @@ const HatchSection = () => {
     if (contactsSection) {
       contactsSection.scrollIntoView({ behavior: 'smooth' });
     }
+  };
+
+  const handleRowSelect = (rowId: string | null) => {
+    setSelectedRow(selectedRow === rowId ? null : rowId);
+  };
+
+  const handleBlueprintToggle = (hatchId: number) => {
+    setExpandedBlueprint(expandedBlueprint === hatchId ? null : hatchId);
+  };
+
+  const handleFeaturesToggle = (hatchId: number) => {
+    setExpandedFeatures(expandedFeatures === hatchId ? null : hatchId);
   };
 
   return (
@@ -74,427 +66,26 @@ const HatchSection = () => {
 
         <div className="space-y-16 max-w-7xl mx-auto">
           {hatchData.map((hatch) => (
-            <Card key={hatch.id} className="overflow-hidden">
-              <CardContent className="p-4 md:p-8">
-                {/* Top section: Photo left, Text right */}
-                <div className="grid lg:grid-cols-2 gap-4 md:gap-8 mb-6 md:mb-8">
-                  {/* Left: Hatch photo */}
-                  <div className="relative">
-                    <div className="aspect-square bg-gradient-to-br from-accent/20 to-primary/10 relative overflow-hidden rounded-lg group cursor-pointer"
-                         onClick={() => onImageClick({src: hatch.image, alt: hatch.name})}>
-                      <img 
-                        src={hatch.image} 
-                        alt={hatch.name} 
-                        className="w-full h-full object-cover transition-all duration-300 group-hover:scale-105"
-                      />
-                      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300 flex items-center justify-center">
-                        <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                          <Icon name="ZoomIn" className="w-12 h-12 text-white" />
-                        </div>
-                      </div>
-                    </div>
-                    <div className="absolute top-4 right-4">
-                      <Badge className="bg-primary text-primary-foreground">
-                        Новинка
-                      </Badge>
-                    </div>
-                  </div>
-
-                  {/* Right: Text content */}
-                  <div className="space-y-6">
-                    <div>
-                      <h3 className="text-xl md:text-2xl font-bold text-foreground mb-2 md:mb-3">
-                        {hatch.name}
-                      </h3>
-                      <div className="text-2xl md:text-3xl font-bold text-primary mb-2">{hatch.price}</div>
-                      <p className="text-lg text-muted-foreground">
-                        {hatch.model}
-                      </p>
-                    </div>
-
-
-
-                    {/* Список моделей */}
-                    <div>
-                      <h4 className="text-base md:text-lg font-semibold text-foreground mb-2">Список моделей</h4>
-                      <p className="text-xs md:text-sm text-gray-600 mb-3 md:mb-4">Стоимость указана с НДС. Не является публичной офертой.</p>
-                      
-                      {/* Oval hatch table */}
-                      {hatch.id === 1 && (
-                        <div className="overflow-x-auto -mx-2 md:mx-0">
-                          <table className="w-full border-collapse border border-gray-300 text-xs md:text-sm min-w-[500px] md:min-w-0">
-                            <thead>
-                              <tr className="bg-gray-100">
-                                <th className="border border-gray-300 px-2 md:px-3 py-2 text-center font-semibold">Рабочее<br className="md:hidden"/><span className="hidden md:inline"> </span>давление</th>
-                                <th className="border border-gray-300 px-2 md:px-3 py-2 text-center font-semibold">Кронштейн</th>
-                                <th className="border border-gray-300 px-2 md:px-3 py-2 text-center font-semibold">Срок<br className="md:hidden"/><span className="hidden md:inline"> </span>поставки</th>
-                                <th className="border border-gray-300 px-2 md:px-3 py-2 text-center font-semibold">Стоимость</th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              <tr 
-                                className={`cursor-pointer transition-colors hover:bg-red-50 ${
-                                  selectedRow === 'oval-04-no' ? 'bg-red-100' : ''
-                                }`}
-                                onClick={() => setSelectedRow(selectedRow === 'oval-04-no' ? null : 'oval-04-no')}
-                              >
-                                <td className="border border-gray-300 px-2 md:px-3 py-2 text-center" rowSpan={2}>0.4 МПа</td>
-                                <td className="border border-gray-300 px-2 md:px-3 py-2 text-center">Нет</td>
-                                <td className="border border-gray-300 px-1 md:px-3 py-2 text-center">
-                                  <button
-                                    onClick={handleContactClick}
-                                    className="text-red-600 hover:text-red-800 font-semibold cursor-pointer"
-                                  >
-                                    В наличии
-                                  </button>
-                                </td>
-                                <td className="border border-gray-300 px-2 md:px-3 py-2 text-center font-semibold">23 800,00 ₽</td>
-                              </tr>
-                              <tr>
-                                <td className="border border-gray-300 px-3 py-2 text-center">Да</td>
-                                <td className="border border-gray-300 px-3 py-2 text-center">
-                                  <button
-                                    onClick={handleContactClick}
-                                    className="text-red-600 hover:text-red-800 font-semibold cursor-pointer"
-                                  >
-                                    В наличии
-                                  </button>
-                                </td>
-                                <td className="border border-gray-300 px-2 md:px-3 py-2 text-center font-semibold">26 600,00 ₽</td>
-                              </tr>
-                              <tr 
-                                className={`cursor-pointer transition-colors hover:bg-red-50 ${
-                                  selectedRow === 'oval-06-no' ? 'bg-red-100' : ''
-                                }`}
-                                onClick={() => setSelectedRow(selectedRow === 'oval-06-no' ? null : 'oval-06-no')}
-                              >
-                                <td className="border border-gray-300 px-2 md:px-3 py-2 text-center" rowSpan={2}>0.6 МПа</td>
-                                <td className="border border-gray-300 px-2 md:px-3 py-2 text-center">Нет</td>
-                                <td className="border border-gray-300 px-1 md:px-3 py-2 text-center">
-                                  <button
-                                    onClick={handleContactClick}
-                                    className="text-red-600 hover:text-red-800 font-semibold cursor-pointer"
-                                  >
-                                    В наличии
-                                  </button>
-                                </td>
-                                <td className="border border-gray-300 px-2 md:px-3 py-2 text-center font-semibold">26 600,00 ₽</td>
-                              </tr>
-                              <tr 
-                                className={`cursor-pointer transition-colors hover:bg-red-50 ${
-                                  selectedRow === 'oval-06-yes' ? 'bg-red-100' : ''
-                                }`}
-                                onClick={() => setSelectedRow(selectedRow === 'oval-06-yes' ? null : 'oval-06-yes')}
-                              >
-                                <td className="border border-gray-300 px-3 py-2 text-center">Да</td>
-                                <td className="border border-gray-300 px-3 py-2 text-center">
-                                  <button
-                                    onClick={handleContactClick}
-                                    className="text-red-600 hover:text-red-800 font-semibold cursor-pointer"
-                                  >
-                                    В наличии
-                                  </button>
-                                </td>
-                                <td className="border border-gray-300 px-2 md:px-3 py-2 text-center font-semibold">29 400,00 ₽</td>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </div>
-                      )}
-
-                      {/* Ring hatch table */}
-                      {hatch.id === 2 && (
-                        <div className="overflow-x-auto -mx-2 md:mx-0">
-                          <table className="w-full border-collapse border border-gray-300 text-xs md:text-sm min-w-[600px] md:min-w-0">
-                            <thead>
-                              <tr className="bg-gray-100">
-                                <th className="border border-gray-300 px-1 md:px-2 py-2 text-center font-semibold">Материал</th>
-                                <th className="border border-gray-300 px-1 md:px-2 py-2 text-center font-semibold">Диаметр</th>
-                                <th className="border border-gray-300 px-1 md:px-2 py-2 text-center font-semibold">Высота<br className="md:hidden"/><span className="hidden md:inline"> </span>горловины</th>
-                                <th className="border border-gray-300 px-1 md:px-2 py-2 text-center font-semibold">Срок<br className="md:hidden"/><span className="hidden md:inline"> </span>поставки</th>
-                                <th className="border border-gray-300 px-1 md:px-2 py-2 text-center font-semibold">Стоимость</th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              <tr 
-                                className={`cursor-pointer transition-colors hover:bg-red-50 ${
-                                  selectedRow === 'ring-aisi304-dn400-100' ? 'bg-red-100' : ''
-                                }`}
-                                onClick={() => setSelectedRow(selectedRow === 'ring-aisi304-dn400-100' ? null : 'ring-aisi304-dn400-100')}
-                              >
-                                <td className="border border-gray-300 px-2 py-2 text-center" rowSpan={6}>AISI304</td>
-                                <td className="border border-gray-300 px-2 py-2 text-center" rowSpan={2}>DN400</td>
-                                <td className="border border-gray-300 px-2 py-2 text-center">100 мм</td>
-                                <td className="border border-gray-300 px-2 py-2 text-center">
-                                  <button
-                                    onClick={handleContactClick}
-                                    className="text-red-600 hover:text-red-800 font-semibold cursor-pointer"
-                                  >
-                                    В наличии
-                                  </button>
-                                </td>
-                                <td className="border border-gray-300 px-2 py-2 text-center font-semibold">11 620,00 ₽</td>
-                              </tr>
-                              <tr 
-                                className={`cursor-pointer transition-colors hover:bg-red-50 ${
-                                  selectedRow === 'ring-aisi304-dn400-150' ? 'bg-red-100' : ''
-                                }`}
-                                onClick={() => setSelectedRow(selectedRow === 'ring-aisi304-dn400-150' ? null : 'ring-aisi304-dn400-150')}
-                              >
-                                <td className="border border-gray-300 px-2 py-2 text-center">150 мм</td>
-                                <td className="border border-gray-300 px-2 py-2 text-center">
-                                  <button
-                                    onClick={handleContactClick}
-                                    className="text-red-600 hover:text-red-800 font-semibold cursor-pointer"
-                                  >
-                                    В наличии
-                                  </button>
-                                </td>
-                                <td className="border border-gray-300 px-2 py-2 text-center font-semibold">13 580,00 ₽</td>
-                              </tr>
-                              <tr 
-                                className={`cursor-pointer transition-colors hover:bg-red-50 ${
-                                  selectedRow === 'ring-aisi304-dn450-100' ? 'bg-red-100' : ''
-                                }`}
-                                onClick={() => setSelectedRow(selectedRow === 'ring-aisi304-dn450-100' ? null : 'ring-aisi304-dn450-100')}
-                              >
-                                <td className="border border-gray-300 px-2 py-2 text-center" rowSpan={4}>DN450</td>
-                                <td className="border border-gray-300 px-2 py-2 text-center">100 мм</td>
-                                <td className="border border-gray-300 px-2 py-2 text-center">
-                                  <button
-                                    onClick={handleContactClick}
-                                    className="text-red-600 hover:text-red-800 font-semibold cursor-pointer"
-                                  >
-                                    В наличии
-                                  </button>
-                                </td>
-                                <td className="border border-gray-300 px-2 py-2 text-center font-semibold">12 600,00 ₽</td>
-                              </tr>
-                              <tr 
-                                className={`cursor-pointer transition-colors hover:bg-red-50 ${
-                                  selectedRow === 'ring-aisi304-dn450-150' ? 'bg-red-100' : ''
-                                }`}
-                                onClick={() => setSelectedRow(selectedRow === 'ring-aisi304-dn450-150' ? null : 'ring-aisi304-dn450-150')}
-                              >
-                                <td className="border border-gray-300 px-2 py-2 text-center">150 мм</td>
-                                <td className="border border-gray-300 px-2 py-2 text-center">
-                                  <button
-                                    onClick={handleContactClick}
-                                    className="text-red-600 hover:text-red-800 font-semibold cursor-pointer"
-                                  >
-                                    В наличии
-                                  </button>
-                                </td>
-                                <td className="border border-gray-300 px-2 py-2 text-center font-semibold">14 000,00 ₽</td>
-                              </tr>
-                              <tr 
-                                className={`cursor-pointer transition-colors hover:bg-red-50 ${
-                                  selectedRow === 'ring-aisi304-dn450-300' ? 'bg-red-100' : ''
-                                }`}
-                                onClick={() => setSelectedRow(selectedRow === 'ring-aisi304-dn450-300' ? null : 'ring-aisi304-dn450-300')}
-                              >
-                                <td className="border border-gray-300 px-2 py-2 text-center">300 мм</td>
-                                <td className="border border-gray-300 px-2 py-2 text-center">
-                                  <button
-                                    onClick={handleContactClick}
-                                    className="text-red-600 hover:text-red-800 font-semibold cursor-pointer"
-                                  >
-                                    В наличии
-                                  </button>
-                                </td>
-                                <td className="border border-gray-300 px-2 py-2 text-center font-semibold">19 600,00 ₽</td>
-                              </tr>
-                              <tr 
-                                className={`cursor-pointer transition-colors hover:bg-red-50 ${
-                                  selectedRow === 'ring-aisi304-dn450-400' ? 'bg-red-100' : ''
-                                }`}
-                                onClick={() => setSelectedRow(selectedRow === 'ring-aisi304-dn450-400' ? null : 'ring-aisi304-dn450-400')}
-                              >
-                                <td className="border border-gray-300 px-2 py-2 text-center">400 мм</td>
-                                <td className="border border-gray-300 px-2 py-2 text-center">
-                                  <button
-                                    onClick={handleContactClick}
-                                    className="text-red-600 hover:text-red-800 font-semibold cursor-pointer"
-                                  >
-                                    В наличии
-                                  </button>
-                                </td>
-                                <td className="border border-gray-300 px-2 py-2 text-center font-semibold">22 400,00 ₽</td>
-                              </tr>
-                              <tr 
-                                className={`cursor-pointer transition-colors hover:bg-red-50 ${
-                                  selectedRow === 'ring-aisi316-dn400-100' ? 'bg-red-100' : ''
-                                }`}
-                                onClick={() => setSelectedRow(selectedRow === 'ring-aisi316-dn400-100' ? null : 'ring-aisi316-dn400-100')}
-                              >
-                                <td className="border border-gray-300 px-2 py-2 text-center" rowSpan={4}>AISI316</td>
-                                <td className="border border-gray-300 px-2 py-2 text-center" rowSpan={2}>DN400</td>
-                                <td className="border border-gray-300 px-2 py-2 text-center">100 мм</td>
-                                <td className="border border-gray-300 px-2 py-2 text-center">
-                                  <button
-                                    onClick={handleContactClick}
-                                    className="text-red-600 hover:text-red-800 font-semibold cursor-pointer"
-                                  >
-                                    Под заказ
-                                  </button>
-                                </td>
-                                <td className="border border-gray-300 px-2 py-2 text-center font-semibold">17 780,00 ₽</td>
-                              </tr>
-                              <tr 
-                                className={`cursor-pointer transition-colors hover:bg-red-50 ${
-                                  selectedRow === 'ring-aisi316-dn400-150' ? 'bg-red-100' : ''
-                                }`}
-                                onClick={() => setSelectedRow(selectedRow === 'ring-aisi316-dn400-150' ? null : 'ring-aisi316-dn400-150')}
-                              >
-                                <td className="border border-gray-300 px-2 py-2 text-center">150 мм</td>
-                                <td className="border border-gray-300 px-2 py-2 text-center">
-                                  <button
-                                    onClick={handleContactClick}
-                                    className="text-red-600 hover:text-red-800 font-semibold cursor-pointer"
-                                  >
-                                    Под заказ
-                                  </button>
-                                </td>
-                                <td className="border border-gray-300 px-2 py-2 text-center font-semibold">19 740,00 ₽</td>
-                              </tr>
-                              <tr 
-                                className={`cursor-pointer transition-colors hover:bg-red-50 ${
-                                  selectedRow === 'ring-aisi316-dn450-100' ? 'bg-red-100' : ''
-                                }`}
-                                onClick={() => setSelectedRow(selectedRow === 'ring-aisi316-dn450-100' ? null : 'ring-aisi316-dn450-100')}
-                              >
-                                <td className="border border-gray-300 px-2 py-2 text-center" rowSpan={2}>DN450</td>
-                                <td className="border border-gray-300 px-2 py-2 text-center">100 мм</td>
-                                <td className="border border-gray-300 px-2 py-2 text-center">
-                                  <button
-                                    onClick={handleContactClick}
-                                    className="text-red-600 hover:text-red-800 font-semibold cursor-pointer"
-                                  >
-                                    Под заказ
-                                  </button>
-                                </td>
-                                <td className="border border-gray-300 px-2 py-2 text-center font-semibold">21 980,00 ₽</td>
-                              </tr>
-                              <tr 
-                                className={`cursor-pointer transition-colors hover:bg-red-50 ${
-                                  selectedRow === 'ring-aisi316-dn450-150' ? 'bg-red-100' : ''
-                                }`}
-                                onClick={() => setSelectedRow(selectedRow === 'ring-aisi316-dn450-150' ? null : 'ring-aisi316-dn450-150')}
-                              >
-                                <td className="border border-gray-300 px-2 py-2 text-center">150 мм</td>
-                                <td className="border border-gray-300 px-2 py-2 text-center">
-                                  <button
-                                    onClick={handleContactClick}
-                                    className="text-red-600 hover:text-red-800 font-semibold cursor-pointer"
-                                  >
-                                    Под заказ
-                                  </button>
-                                </td>
-                                <td className="border border-gray-300 px-2 py-2 text-center font-semibold">22 820,00 ₽</td>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </div>
-                      )}
-                    </div>
-
-                    {/* Характеристики под спойлером */}
-                    <div className="bg-white rounded-lg shadow-lg p-4 md:p-6 mt-4 md:mt-6">
-                      <button 
-                        onClick={() => setExpandedFeatures(expandedFeatures === hatch.id ? null : hatch.id)}
-                        className="w-full flex items-center justify-between text-left mb-4 hover:bg-gray-50 p-2 rounded min-h-[50px]"
-                      >
-                        <h4 className="text-base md:text-lg font-semibold text-gray-800 flex-1 pr-2">ХАРАКТЕРИСТИКИ</h4>
-                        <div className="flex items-center gap-2 flex-shrink-0">
-                          <span className="text-xs sm:text-sm text-gray-600 hidden sm:inline">
-                            {expandedFeatures === hatch.id ? 'Скрыть' : 'Показать'}
-                          </span>
-                          <span className={`transform transition-transform duration-300 ${expandedFeatures === hatch.id ? 'rotate-180' : ''}`}>
-                            ▼
-                          </span>
-                        </div>
-                      </button>
-                      
-                      {expandedFeatures === hatch.id && (
-                        <div className="grid grid-cols-1 gap-3">
-                          {hatch.features.map((feature, index) => (
-                            <div key={index} className="flex items-start">
-                              <Icon name="CheckCircle2" className="w-5 h-5 text-primary mr-3 mt-0.5 flex-shrink-0" />
-                              <span className="text-sm text-muted-foreground">{feature}</span>
-                            </div>
-                          ))}
-                        </div>
-                      )}
-                    </div>
-                  </div>
-                </div>
-
-                {/* Spoiler for Technical Blueprint */}
-                <div className="bg-white rounded-lg shadow-lg p-4 md:p-8 mt-6 md:mt-8">
-                  <button 
-                    onClick={() => setExpandedBlueprint(expandedBlueprint === hatch.id ? null : hatch.id)}
-                    className="w-full flex items-center justify-between text-left mb-4 hover:bg-gray-50 p-2 rounded min-h-[60px]"
-                  >
-                    <h3 className="text-base md:text-lg lg:text-xl font-bold text-gray-800 flex-1 pr-2">ТЕХНИЧЕСКИЙ ЧЕРТЁЖ</h3>
-                    <div className="flex items-center gap-2 flex-shrink-0">
-                      <span className="text-xs sm:text-sm text-gray-600 hidden sm:inline">
-                        {expandedBlueprint === hatch.id ? 'Скрыть' : 'Показать'}
-                      </span>
-                      <span className={`transform transition-transform duration-300 ${expandedBlueprint === hatch.id ? 'rotate-180' : ''}`}>
-                        ▼
-                      </span>
-                    </div>
-                  </button>
-                  
-                  {expandedBlueprint === hatch.id && (
-                    <div className="space-y-6">
-                      <div className="relative group cursor-pointer"
-                           onClick={() => onImageClick({src: hatch.blueprint, alt: `Чертеж ${hatch.name}`})}>
-                        <img 
-                          src={hatch.blueprint} 
-                          alt={`Чертеж ${hatch.name}`} 
-                          className="w-full rounded-lg shadow-lg transition-all duration-300 group-hover:scale-105"
-                        />
-                        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300 flex items-center justify-center rounded-lg">
-                          <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            <Icon name="ZoomIn" className="w-8 h-8 text-white" />
-                          </div>
-                        </div>
-                      </div>
-                      <p className="text-xs text-muted-foreground mt-2 text-center">
-                        Нажмите для увеличения
-                      </p>
-                    </div>
-                  )}
-                </div>
-              </CardContent>
-            </Card>
+            <HatchCardComponent
+              key={hatch.id}
+              hatch={hatch}
+              selectedRow={selectedRow}
+              expandedBlueprint={expandedBlueprint}
+              expandedFeatures={expandedFeatures}
+              onImageClick={onImageClick}
+              onRowSelect={handleRowSelect}
+              onBlueprintToggle={handleBlueprintToggle}
+              onFeaturesToggle={handleFeaturesToggle}
+              onContactClick={handleContactClick}
+            />
           ))}
         </div>
       </div>
       
-      {/* Image Modal */}
-      {selectedImage && (
-        <div 
-          className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4"
-          onClick={() => setSelectedImage(null)}
-        >
-          <div className="relative w-full h-full flex items-center justify-center">
-            <img 
-              src={selectedImage.src} 
-              alt={selectedImage.alt} 
-              className="max-w-[95vw] max-h-[95vh] w-auto h-auto object-contain rounded-lg"
-              onClick={(e) => e.stopPropagation()}
-            />
-            <button 
-              onClick={() => setSelectedImage(null)}
-              className="absolute top-4 right-4 bg-black bg-opacity-50 hover:bg-opacity-70 rounded-full p-3 transition-all"
-            >
-              <Icon name="X" className="w-6 h-6 text-white" />
-            </button>
-          </div>
-        </div>
-      )}
+      <ImageModal 
+        image={selectedImage}
+        onClose={() => setSelectedImage(null)}
+      />
     </section>
   );
 };
