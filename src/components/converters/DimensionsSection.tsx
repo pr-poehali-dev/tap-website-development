@@ -50,13 +50,13 @@ const DimensionsSection = ({ isExpanded, setIsExpanded, onImageClick }: Dimensio
                 <table className="w-full border-collapse border border-gray-300 text-xs sm:text-sm lg:text-base">
                   <thead>
                     <tr className="bg-gray-100">
-                      <th className="border border-gray-300 px-1 sm:px-3 py-2 text-center font-semibold text-xs sm:text-sm w-[18%] sm:w-auto">Мощность<br className="hidden sm:inline"/><span className="sm:inline hidden"> </span><span className="sm:hidden">(кВт)</span></th>
+                      <th className="border border-gray-300 px-1 sm:px-3 py-2 text-center font-semibold text-xs sm:text-sm w-[14%] sm:w-auto">Мощность</th>
                       <th className="border border-gray-300 px-1 sm:px-2 py-2 text-center font-semibold text-xs sm:text-sm w-[12%] sm:w-auto" colSpan={3}>Габариты</th>
                       <th className="border border-gray-300 px-1 sm:px-2 py-2 text-center font-semibold text-xs sm:text-sm w-[12%] sm:w-auto" colSpan={2}>Монтаж</th>
                       <th className="border border-gray-300 px-1 sm:px-3 py-2 text-center font-semibold text-xs sm:text-sm w-[10%] sm:w-auto">Вес</th>
                     </tr>
                     <tr className="bg-gray-50">
-                      <th className="border border-gray-300 px-1 sm:px-3 py-1 sm:py-2 w-[18%] sm:w-auto"></th>
+                      <th className="border border-gray-300 px-1 sm:px-3 py-1 sm:py-2 w-[14%] sm:w-auto"></th>
                       <th className="border border-gray-300 px-1 py-1 sm:py-2 text-center font-semibold text-blue-600 text-xs sm:text-sm w-[12%] sm:w-auto">Ш</th>
                       <th className="border border-gray-300 px-1 py-1 sm:py-2 text-center font-semibold text-red-600 text-xs sm:text-sm w-[12%] sm:w-auto">В</th>
                       <th className="border border-gray-300 px-1 py-1 sm:py-2 text-center font-semibold text-green-600 text-xs sm:text-sm w-[12%] sm:w-auto">Г</th>
@@ -67,7 +67,7 @@ const DimensionsSection = ({ isExpanded, setIsExpanded, onImageClick }: Dimensio
                   </thead>
                   <tbody>
                     <tr>
-                      <td className="border border-gray-300 px-1 sm:px-3 py-1 sm:py-2 text-center font-medium text-xs sm:text-sm w-[18%] sm:w-auto">0,4-2,2</td>
+                      <td className="border border-gray-300 px-1 sm:px-3 py-1 sm:py-2 text-center font-medium text-xs sm:text-sm w-[14%] sm:w-auto">0,4-2,2</td>
                       <td className="border border-gray-300 px-1 py-1 sm:py-2 text-center text-blue-600 font-medium text-xs sm:text-sm w-[12%] sm:w-auto">83</td>
                       <td className="border border-gray-300 px-1 py-1 sm:py-2 text-center text-red-600 font-medium text-xs sm:text-sm w-[12%] sm:w-auto">149</td>
                       <td className="border border-gray-300 px-1 py-1 sm:py-2 text-center text-green-600 font-medium text-xs sm:text-sm w-[12%] sm:w-auto">111</td>
@@ -76,7 +76,7 @@ const DimensionsSection = ({ isExpanded, setIsExpanded, onImageClick }: Dimensio
                       <td className="border border-gray-300 px-1 sm:px-3 py-1 sm:py-2 text-center text-xs sm:text-sm w-[10%] sm:w-auto">0,9</td>
                     </tr>
                     <tr>
-                      <td className="border border-gray-300 px-1 sm:px-3 py-1 sm:py-2 text-center font-medium text-xs sm:text-sm w-[18%] sm:w-auto">4,0-7,5</td>
+                      <td className="border border-gray-300 px-1 sm:px-3 py-1 sm:py-2 text-center font-medium text-xs sm:text-sm w-[14%] sm:w-auto">4,0-7,5</td>
                       <td className="border border-gray-300 px-1 py-1 sm:py-2 text-center text-blue-600 font-medium text-xs sm:text-sm w-[12%] sm:w-auto">98</td>
                       <td className="border border-gray-300 px-1 py-1 sm:py-2 text-center text-red-600 font-medium text-xs sm:text-sm w-[12%] sm:w-auto">170</td>
                       <td className="border border-gray-300 px-1 py-1 sm:py-2 text-center text-green-600 font-medium text-xs sm:text-sm w-[12%] sm:w-auto">124</td>
@@ -85,7 +85,7 @@ const DimensionsSection = ({ isExpanded, setIsExpanded, onImageClick }: Dimensio
                       <td className="border border-gray-300 px-1 sm:px-3 py-1 sm:py-2 text-center text-xs sm:text-sm w-[10%] sm:w-auto">1,3</td>
                     </tr>
                     <tr>
-                      <td className="border border-gray-300 px-1 sm:px-3 py-1 sm:py-2 text-center font-medium text-xs sm:text-sm w-[18%] sm:w-auto">11-15</td>
+                      <td className="border border-gray-300 px-1 sm:px-3 py-1 sm:py-2 text-center font-medium text-xs sm:text-sm w-[14%] sm:w-auto">11-15</td>
                       <td className="border border-gray-300 px-1 py-1 sm:py-2 text-center text-blue-600 font-medium text-xs sm:text-sm w-[12%] sm:w-auto">135</td>
                       <td className="border border-gray-300 px-1 py-1 sm:py-2 text-center text-red-600 font-medium text-xs sm:text-sm w-[12%] sm:w-auto">228</td>
                       <td className="border border-gray-300 px-1 py-1 sm:py-2 text-center text-green-600 font-medium text-xs sm:text-sm w-[12%] sm:w-auto">160</td>
