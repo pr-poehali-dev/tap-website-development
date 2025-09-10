@@ -1,10 +1,10 @@
-import React from 'react';
-import { Card, CardContent } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import Icon from '@/components/ui/icon';
-import HatchTable from './HatchTable';
-import HatchFeaturesComponent from './HatchFeaturesComponent';
-import HatchBlueprintComponent from './HatchBlueprintComponent';
+import React from "react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import Icon from "@/components/ui/icon";
+import HatchTable from "./HatchTable";
+import HatchFeaturesComponent from "./HatchFeaturesComponent";
+import HatchBlueprintComponent from "./HatchBlueprintComponent";
 
 interface HatchData {
   id: number;
@@ -21,7 +21,7 @@ interface HatchCardProps {
   selectedRow: string | null;
   expandedBlueprint: number | null;
   expandedFeatures: number | null;
-  onImageClick: (image: {src: string, alt: string}) => void;
+  onImageClick: (image: { src: string; alt: string }) => void;
   onRowSelect: (rowId: string | null) => void;
   onBlueprintToggle: (hatchId: number) => void;
   onFeaturesToggle: (hatchId: number) => void;
@@ -37,7 +37,7 @@ const HatchCardComponent: React.FC<HatchCardProps> = ({
   onRowSelect,
   onBlueprintToggle,
   onFeaturesToggle,
-  onContactClick
+  onContactClick,
 }) => {
   return (
     <Card className="overflow-hidden">
@@ -46,11 +46,15 @@ const HatchCardComponent: React.FC<HatchCardProps> = ({
         <div className="grid lg:grid-cols-2 gap-4 md:gap-8 mb-6 md:mb-8">
           {/* Left: Hatch photo */}
           <div className="relative w-full max-w-[250px] mx-auto lg:max-w-full">
-            <div className="aspect-square bg-gradient-to-br from-accent/20 to-primary/10 relative overflow-hidden rounded-lg group cursor-pointer"
-                 onClick={() => onImageClick({src: hatch.image, alt: hatch.name})}>
-              <img 
-                src={hatch.image} 
-                alt={hatch.name} 
+            <div
+              className="aspect-square bg-gradient-to-br from-accent/20 to-primary/10 relative overflow-hidden rounded-lg group cursor-pointer"
+              onClick={() =>
+                onImageClick({ src: hatch.image, alt: hatch.name })
+              }
+            >
+              <img
+                src={hatch.image}
+                alt={hatch.name}
                 className="w-full h-full object-cover transition-all duration-300 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300 flex items-center justify-center">
@@ -72,7 +76,9 @@ const HatchCardComponent: React.FC<HatchCardProps> = ({
               <h3 className="text-lg md:text-2xl font-bold text-foreground mb-2 md:mb-3 break-words leading-tight">
                 {hatch.name}
               </h3>
-              <div className="text-xl md:text-3xl font-bold text-primary mb-2">{hatch.price}</div>
+              <div className="text-xl md:text-3xl font-bold text-primary mb-2">
+                {hatch.price}
+              </div>
               <p className="text-base md:text-lg text-muted-foreground break-words">
                 {hatch.model}
               </p>
@@ -80,10 +86,14 @@ const HatchCardComponent: React.FC<HatchCardProps> = ({
 
             {/* Список моделей */}
             <div className="px-2 md:px-0">
-              <h4 className="text-base md:text-lg font-semibold text-foreground mb-2">Список моделей</h4>
-              <p className="text-xs md:text-sm text-gray-600 mb-3 md:mb-4 break-words leading-relaxed">Стоимость указана с НДС. Не является публичной офертой.</p>
-              
-              <HatchTable 
+              <h4 className="text-base md:text-lg font-semibold text-foreground mb-2">
+                Таблица вариантов изготовления
+              </h4>
+              <p className="text-xs md:text-sm text-gray-600 mb-3 md:mb-4 break-words leading-relaxed">
+                Стоимость указана с НДС. Не является публичной офертой.
+              </p>
+
+              <HatchTable
                 hatchId={hatch.id}
                 selectedRow={selectedRow}
                 onRowSelect={onRowSelect}
