@@ -56,7 +56,7 @@ const HatchTable: React.FC<HatchTableProps> = ({
               </td>
               <td className="border border-gray-300 px-1 md:px-3 py-2 text-center font-semibold text-xs md:text-sm">
                 <span className="hidden sm:inline">23 800,00 ₽</span>
-                <span className="sm:hidden">23.8к₽</span>
+                <span className="sm:hidden">23800₽</span>
               </td>
             </tr>
             <tr 
