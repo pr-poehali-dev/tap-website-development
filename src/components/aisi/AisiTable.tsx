@@ -80,7 +80,7 @@ const AisiTable = ({
                 <td className="border border-gray-300 px-1 sm:px-3 py-1 sm:py-2 text-center font-semibold">
                   <span className="hidden sm:inline">{item.price}</span>
                   <span className="sm:hidden">
-                    {item.price.replace(",00", "").replace(" ", "")}
+                    {item.price.replace(",00 ", "")}
                   </span>
                 </td>
               </tr>
