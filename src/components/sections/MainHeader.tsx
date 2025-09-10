@@ -45,8 +45,18 @@ const MainHeader = ({ className = '', currentPage = 'home' }: MainHeaderProps) =
         <nav className="hidden md:flex space-x-8 text-xl items-center">
           <Navigation href="/" className={currentPage === 'home' ? 'text-primary font-medium' : 'text-black hover:text-primary transition-colors'}>Главная</Navigation>
           <Navigation href="/projects" className={currentPage === 'projects' ? 'text-primary font-medium' : 'text-black hover:text-primary transition-colors'}>Проекты</Navigation>
-          <Navigation href="/aisi" className={currentPage === 'aisi' ? 'text-primary font-medium' : 'text-black hover:text-primary transition-colors'}>Корпуса AISI304</Navigation>
-          <Navigation href="/hatches" className={currentPage === 'hatches' ? 'text-primary font-medium' : 'text-black hover:text-primary transition-colors'}>Люки</Navigation>
+          <Navigation href="/aisi" className={currentPage === 'aisi' ? 'text-primary font-medium' : 'text-black hover:text-primary transition-colors'}>
+            <span className="flex flex-col leading-tight text-center">
+              <span>Корпуса</span>
+              <span>AISI304</span>
+            </span>
+          </Navigation>
+          <Navigation href="/hatches" className={currentPage === 'hatches' ? 'text-primary font-medium' : 'text-black hover:text-primary transition-colors'}>
+            <span className="flex flex-col leading-tight text-center">
+              <span>Люки</span>
+              <span>AISI304</span>
+            </span>
+          </Navigation>
           <Navigation href="/preobrazovateli-chastotyi" className={currentPage === 'converters' ? 'text-primary font-medium' : 'text-black hover:text-primary transition-colors'}>
             <span className="flex flex-col leading-tight text-center">
               <span>Частотные</span>
