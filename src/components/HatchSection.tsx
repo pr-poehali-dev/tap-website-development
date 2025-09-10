@@ -6,6 +6,7 @@ import Icon from '@/components/ui/icon';
 
 const HatchSection = () => {
   const [selectedImage, setSelectedImage] = useState<{src: string, alt: string} | null>(null);
+  const [expandedBlueprint, setExpandedBlueprint] = useState<number | null>(null);
   
   const hatchData = [
     {
@@ -149,105 +150,43 @@ const HatchSection = () => {
                   </div>
                 </div>
 
-                {/* Bottom section: Blueprint left, Table right */}
-                <div className="grid lg:grid-cols-2 gap-8">
-                  {/* Left: Blueprint */}
-                  <div>
-                    <h4 className="text-lg font-semibold text-foreground mb-4">Технический чертеж</h4>
-                    <div className="relative group cursor-pointer"
-                         onClick={() => onImageClick({src: hatch.blueprint, alt: `Чертеж ${hatch.name}`})}>
-                      <img 
-                        src={hatch.blueprint} 
-                        alt={`Чертеж ${hatch.name}`} 
-                        className="w-full rounded-lg shadow-lg transition-all duration-300 group-hover:scale-105"
-                      />
-                      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300 flex items-center justify-center rounded-lg">
-                        <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                          <Icon name="ZoomIn" className="w-8 h-8 text-white" />
+                {/* Spoiler for Technical Blueprint */}
+                <div className="bg-white rounded-lg shadow-lg p-8 mt-8">
+                  <button 
+                    onClick={() => setExpandedBlueprint(expandedBlueprint === hatch.id ? null : hatch.id)}
+                    className="w-full flex items-center justify-between text-left mb-4 hover:bg-gray-50 p-2 rounded min-h-[60px]"
+                  >
+                    <h3 className="text-lg sm:text-xl font-bold text-gray-800 flex-1 pr-2">ТЕХНИЧЕСКИЙ ЧЕРТЁЖ</h3>
+                    <div className="flex items-center gap-2 flex-shrink-0">
+                      <span className="text-xs sm:text-sm text-gray-600 hidden sm:inline">
+                        {expandedBlueprint === hatch.id ? 'Скрыть' : 'Показать'}
+                      </span>
+                      <span className={`transform transition-transform duration-300 ${expandedBlueprint === hatch.id ? 'rotate-180' : ''}`}>
+                        ▼
+                      </span>
+                    </div>
+                  </button>
+                  
+                  {expandedBlueprint === hatch.id && (
+                    <div className="space-y-6">
+                      <div className="relative group cursor-pointer"
+                           onClick={() => onImageClick({src: hatch.blueprint, alt: `Чертеж ${hatch.name}`})}>
+                        <img 
+                          src={hatch.blueprint} 
+                          alt={`Чертеж ${hatch.name}`} 
+                          className="w-full rounded-lg shadow-lg transition-all duration-300 group-hover:scale-105"
+                        />
+                        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300 flex items-center justify-center rounded-lg">
+                          <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <Icon name="ZoomIn" className="w-8 h-8 text-white" />
+                          </div>
                         </div>
                       </div>
+                      <p className="text-xs text-muted-foreground mt-2 text-center">
+                        Нажмите для увеличения
+                      </p>
                     </div>
-                    <p className="text-xs text-muted-foreground mt-2 text-center">
-                      Нажмите для увеличения
-                    </p>
-                  </div>
-
-                  {/* Right: Table */}
-                  <div>
-                    <h4 className="text-lg font-semibold text-foreground mb-4">Список моделей</h4>
-                    
-                    {/* Oval hatch table */}
-                    {hatch.id === 1 && (
-                      <div className="overflow-x-auto">
-                        <table className="w-full border-collapse border border-gray-300 text-sm">
-                          <thead>
-                            <tr className="bg-gray-100">
-                              <th className="border border-gray-300 px-3 py-2 text-center font-semibold">Рабочее давление</th>
-                              <th className="border border-gray-300 px-3 py-2 text-center font-semibold">Кронштейн</th>
-                              <th className="border border-gray-300 px-3 py-2 text-center font-semibold">Срок поставки</th>
-                              <th className="border border-gray-300 px-3 py-2 text-center font-semibold">Стоимость с НДС</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            {hatch.tableData.map((row, index) => (
-                              <tr key={index}>
-                                <td className="border border-gray-300 px-3 py-2 text-center">{row.workingPressure}</td>
-                                <td className="border border-gray-300 px-3 py-2 text-center">{row.bracket}</td>
-                                <td className="border border-gray-300 px-3 py-2 text-center">
-                                  <button
-                                    onClick={handleContactClick}
-                                    className="text-blue-600 hover:text-blue-800 font-semibold cursor-pointer"
-                                  >
-                                    {row.deliveryTime}
-                                  </button>
-                                </td>
-                                <td className="border border-gray-300 px-3 py-2 text-center">{row.price}</td>
-                              </tr>
-                            ))}
-                          </tbody>
-                        </table>
-                      </div>
-                    )}
-
-                    {/* Ring hatch table */}
-                    {hatch.id === 2 && (
-                      <div className="overflow-x-auto">
-                        <table className="w-full border-collapse border border-gray-300 text-sm">
-                          <thead>
-                            <tr className="bg-gray-100">
-                              <th className="border border-gray-300 px-2 py-2 text-center font-semibold">Материал</th>
-                              <th className="border border-gray-300 px-2 py-2 text-center font-semibold">Диаметр</th>
-                              <th className="border border-gray-300 px-2 py-2 text-center font-semibold">Высота горловины</th>
-                              <th className="border border-gray-300 px-2 py-2 text-center font-semibold">Срок поставки</th>
-                              <th className="border border-gray-300 px-2 py-2 text-center font-semibold">Цена продажи с НДС</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            {hatch.tableData.map((row, index) => (
-                              <tr key={index}>
-                                <td className="border border-gray-300 px-2 py-2 text-center">{row.material}</td>
-                                <td className="border border-gray-300 px-2 py-2 text-center">{row.diameter}</td>
-                                <td className="border border-gray-300 px-2 py-2 text-center">{row.neckHeight}</td>
-                                <td className="border border-gray-300 px-2 py-2 text-center">
-                                  <button
-                                    onClick={handleContactClick}
-                                    className={`font-semibold cursor-pointer ${
-                                      row.deliveryTime === 'В наличии' 
-                                        ? 'text-blue-600 hover:text-blue-800' 
-                                        : 'text-blue-600 hover:text-blue-800'
-                                    }`}
-                                  >
-                                    {row.deliveryTime}
-                                  </button>
-                                </td>
-                                <td className="border border-gray-300 px-2 py-2 text-center">{row.price}</td>
-                              </tr>
-                            ))}
-                          </tbody>
-                        </table>
-                      </div>
-                    )}
-                  </div>
+                  )}
                 </div>
               </CardContent>
             </Card>
