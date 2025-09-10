@@ -61,7 +61,7 @@ const HatchSection = () => {
 
   return (
     <section className="py-20 bg-gradient-to-br from-background to-accent/5">
-      <div className="container mx-auto px-4 max-w-full overflow-hidden">
+      <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
             Технологические люки
@@ -84,7 +84,7 @@ const HatchSection = () => {
                       <img 
                         src={hatch.image} 
                         alt={hatch.name} 
-                        className="w-3/4 md:w-full h-full mx-auto object-cover transition-all duration-300 group-hover:scale-105"
+                        className="w-full h-full object-cover transition-all duration-300 group-hover:scale-105"
                       />
                       <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300 flex items-center justify-center">
                         <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -102,11 +102,11 @@ const HatchSection = () => {
                   {/* Right: Text content */}
                   <div className="space-y-6">
                     <div>
-                      <h3 className="text-lg md:text-2xl font-bold text-foreground mb-3 break-words">
+                      <h3 className="text-xl md:text-2xl font-bold text-foreground mb-2 md:mb-3">
                         {hatch.name}
                       </h3>
-                      <div className="text-xl md:text-3xl font-bold text-primary mb-2">{hatch.price}</div>
-                      <p className="text-sm md:text-lg text-muted-foreground break-words">
+                      <div className="text-2xl md:text-3xl font-bold text-primary mb-2">{hatch.price}</div>
+                      <p className="text-lg text-muted-foreground">
                         {hatch.model}
                       </p>
                     </div>
@@ -116,24 +116,24 @@ const HatchSection = () => {
                     {/* Список моделей */}
                     <div>
                       <h4 className="text-base md:text-lg font-semibold text-foreground mb-2">Список моделей</h4>
-                      <p className="text-sm text-gray-600 mb-4">Стоимость указана с НДС. Не является публичной офертой.</p>
+                      <p className="text-xs md:text-sm text-gray-600 mb-3 md:mb-4">Стоимость указана с НДС. Не является публичной офертой.</p>
                       
                       {/* Oval hatch table */}
                       {hatch.id === 1 && (
-                        <div className="overflow-x-auto -mx-4 md:mx-0">
+                        <div className="overflow-x-auto -mx-2 md:mx-0">
                           <table className="w-full border-collapse border border-gray-300 text-xs md:text-sm min-w-[500px] md:min-w-0">
                             <thead>
                               <tr className="bg-gray-100">
-                                <th className="border border-gray-300 px-1 md:px-3 py-2 text-center font-semibold">Рабочее<br className="md:hidden"/><span className="hidden md:inline"> </span>давление</th>
-                                <th className="border border-gray-300 px-1 md:px-3 py-2 text-center font-semibold">Кронштейн</th>
-                                <th className="border border-gray-300 px-1 md:px-3 py-2 text-center font-semibold">Срок<br className="md:hidden"/><span className="hidden md:inline"> </span>поставки</th>
-                                <th className="border border-gray-300 px-1 md:px-3 py-2 text-center font-semibold">Стоимость</th>
+                                <th className="border border-gray-300 px-2 md:px-3 py-2 text-center font-semibold">Рабочее<br className="md:hidden"/><span className="hidden md:inline"> </span>давление</th>
+                                <th className="border border-gray-300 px-2 md:px-3 py-2 text-center font-semibold">Кронштейн</th>
+                                <th className="border border-gray-300 px-2 md:px-3 py-2 text-center font-semibold">Срок<br className="md:hidden"/><span className="hidden md:inline"> </span>поставки</th>
+                                <th className="border border-gray-300 px-2 md:px-3 py-2 text-center font-semibold">Стоимость</th>
                               </tr>
                             </thead>
                             <tbody>
                               <tr>
-                                <td className="border border-gray-300 px-1 md:px-3 py-2 text-center" rowSpan={2}>0.4 МПа</td>
-                                <td className="border border-gray-300 px-1 md:px-3 py-2 text-center">Нет</td>
+                                <td className="border border-gray-300 px-2 md:px-3 py-2 text-center" rowSpan={2}>0.4 МПа</td>
+                                <td className="border border-gray-300 px-2 md:px-3 py-2 text-center">Нет</td>
                                 <td className="border border-gray-300 px-1 md:px-3 py-2 text-center">
                                   <button
                                     onClick={handleContactClick}
@@ -142,11 +142,11 @@ const HatchSection = () => {
                                     В наличии
                                   </button>
                                 </td>
-                                <td className="border border-gray-300 px-1 md:px-3 py-2 text-center font-semibold">23 800,00 ₽</td>
+                                <td className="border border-gray-300 px-2 md:px-3 py-2 text-center font-semibold">23 800,00 ₽</td>
                               </tr>
                               <tr>
-                                <td className="border border-gray-300 px-1 md:px-3 py-2 text-center">Да</td>
-                                <td className="border border-gray-300 px-1 md:px-3 py-2 text-center">
+                                <td className="border border-gray-300 px-3 py-2 text-center">Да</td>
+                                <td className="border border-gray-300 px-3 py-2 text-center">
                                   <button
                                     onClick={handleContactClick}
                                     className="text-red-600 hover:text-red-800 font-semibold cursor-pointer"
@@ -154,11 +154,11 @@ const HatchSection = () => {
                                     В наличии
                                   </button>
                                 </td>
-                                <td className="border border-gray-300 px-1 md:px-3 py-2 text-center font-semibold">26 600,00 ₽</td>
+                                <td className="border border-gray-300 px-2 md:px-3 py-2 text-center font-semibold">26 600,00 ₽</td>
                               </tr>
                               <tr>
-                                <td className="border border-gray-300 px-3 py-2 text-center" rowSpan={2}>0.6 МПа</td>
-                                <td className="border border-gray-300 px-1 md:px-3 py-2 text-center">Нет</td>
+                                <td className="border border-gray-300 px-2 md:px-3 py-2 text-center" rowSpan={2}>0.6 МПа</td>
+                                <td className="border border-gray-300 px-2 md:px-3 py-2 text-center">Нет</td>
                                 <td className="border border-gray-300 px-1 md:px-3 py-2 text-center">
                                   <button
                                     onClick={handleContactClick}
@@ -167,11 +167,11 @@ const HatchSection = () => {
                                     В наличии
                                   </button>
                                 </td>
-                                <td className="border border-gray-300 px-1 md:px-3 py-2 text-center font-semibold">26 600,00 ₽</td>
+                                <td className="border border-gray-300 px-2 md:px-3 py-2 text-center font-semibold">26 600,00 ₽</td>
                               </tr>
                               <tr>
-                                <td className="border border-gray-300 px-1 md:px-3 py-2 text-center">Да</td>
-                                <td className="border border-gray-300 px-1 md:px-3 py-2 text-center">
+                                <td className="border border-gray-300 px-3 py-2 text-center">Да</td>
+                                <td className="border border-gray-300 px-3 py-2 text-center">
                                   <button
                                     onClick={handleContactClick}
                                     className="text-red-600 hover:text-red-800 font-semibold cursor-pointer"
@@ -179,7 +179,7 @@ const HatchSection = () => {
                                     В наличии
                                   </button>
                                 </td>
-                                <td className="border border-gray-300 px-1 md:px-3 py-2 text-center font-semibold">29 400,00 ₽</td>
+                                <td className="border border-gray-300 px-2 md:px-3 py-2 text-center font-semibold">29 400,00 ₽</td>
                               </tr>
                             </tbody>
                           </table>
@@ -188,23 +188,23 @@ const HatchSection = () => {
 
                       {/* Ring hatch table */}
                       {hatch.id === 2 && (
-                        <div className="overflow-x-auto">
-                          <table className="w-full border-collapse border border-gray-300 text-sm">
+                        <div className="overflow-x-auto -mx-2 md:mx-0">
+                          <table className="w-full border-collapse border border-gray-300 text-xs md:text-sm min-w-[600px] md:min-w-0">
                             <thead>
                               <tr className="bg-gray-100">
-                                <th className="border border-gray-300 px-2 py-2 text-center font-semibold">Материал</th>
-                                <th className="border border-gray-300 px-2 py-2 text-center font-semibold">Диаметр</th>
-                                <th className="border border-gray-300 px-2 py-2 text-center font-semibold">Высота горловины</th>
-                                <th className="border border-gray-300 px-2 py-2 text-center font-semibold">Срок поставки</th>
-                                <th className="border border-gray-300 px-2 py-2 text-center font-semibold">Стоимость</th>
+                                <th className="border border-gray-300 px-1 md:px-2 py-2 text-center font-semibold">Материал</th>
+                                <th className="border border-gray-300 px-1 md:px-2 py-2 text-center font-semibold">Диаметр</th>
+                                <th className="border border-gray-300 px-1 md:px-2 py-2 text-center font-semibold">Высота<br className="md:hidden"/><span className="hidden md:inline"> </span>горловины</th>
+                                <th className="border border-gray-300 px-1 md:px-2 py-2 text-center font-semibold">Срок<br className="md:hidden"/><span className="hidden md:inline"> </span>поставки</th>
+                                <th className="border border-gray-300 px-1 md:px-2 py-2 text-center font-semibold">Стоимость</th>
                               </tr>
                             </thead>
                             <tbody>
                               <tr>
                                 <td className="border border-gray-300 px-2 py-2 text-center" rowSpan={6}>AISI304</td>
                                 <td className="border border-gray-300 px-2 py-2 text-center" rowSpan={2}>DN400</td>
-                                <td className="border border-gray-300 px-1 md:px-2 py-2 text-center">100 мм</td>
-                                <td className="border border-gray-300 px-1 md:px-2 py-2 text-center">
+                                <td className="border border-gray-300 px-2 py-2 text-center">100 мм</td>
+                                <td className="border border-gray-300 px-2 py-2 text-center">
                                   <button
                                     onClick={handleContactClick}
                                     className="text-red-600 hover:text-red-800 font-semibold cursor-pointer"
@@ -215,8 +215,8 @@ const HatchSection = () => {
                                 <td className="border border-gray-300 px-2 py-2 text-center font-semibold">11 620,00 ₽</td>
                               </tr>
                               <tr>
-                                <td className="border border-gray-300 px-1 md:px-2 py-2 text-center">150 мм</td>
-                                <td className="border border-gray-300 px-1 md:px-2 py-2 text-center">
+                                <td className="border border-gray-300 px-2 py-2 text-center">150 мм</td>
+                                <td className="border border-gray-300 px-2 py-2 text-center">
                                   <button
                                     onClick={handleContactClick}
                                     className="text-red-600 hover:text-red-800 font-semibold cursor-pointer"
@@ -228,8 +228,8 @@ const HatchSection = () => {
                               </tr>
                               <tr>
                                 <td className="border border-gray-300 px-2 py-2 text-center" rowSpan={4}>DN450</td>
-                                <td className="border border-gray-300 px-1 md:px-2 py-2 text-center">100 мм</td>
-                                <td className="border border-gray-300 px-1 md:px-2 py-2 text-center">
+                                <td className="border border-gray-300 px-2 py-2 text-center">100 мм</td>
+                                <td className="border border-gray-300 px-2 py-2 text-center">
                                   <button
                                     onClick={handleContactClick}
                                     className="text-red-600 hover:text-red-800 font-semibold cursor-pointer"
@@ -240,8 +240,8 @@ const HatchSection = () => {
                                 <td className="border border-gray-300 px-2 py-2 text-center font-semibold">12 600,00 ₽</td>
                               </tr>
                               <tr>
-                                <td className="border border-gray-300 px-1 md:px-2 py-2 text-center">150 мм</td>
-                                <td className="border border-gray-300 px-1 md:px-2 py-2 text-center">
+                                <td className="border border-gray-300 px-2 py-2 text-center">150 мм</td>
+                                <td className="border border-gray-300 px-2 py-2 text-center">
                                   <button
                                     onClick={handleContactClick}
                                     className="text-red-600 hover:text-red-800 font-semibold cursor-pointer"
@@ -252,8 +252,8 @@ const HatchSection = () => {
                                 <td className="border border-gray-300 px-2 py-2 text-center font-semibold">14 000,00 ₽</td>
                               </tr>
                               <tr>
-                                <td className="border border-gray-300 px-1 md:px-2 py-2 text-center">300 мм</td>
-                                <td className="border border-gray-300 px-1 md:px-2 py-2 text-center">
+                                <td className="border border-gray-300 px-2 py-2 text-center">300 мм</td>
+                                <td className="border border-gray-300 px-2 py-2 text-center">
                                   <button
                                     onClick={handleContactClick}
                                     className="text-red-600 hover:text-red-800 font-semibold cursor-pointer"
@@ -264,8 +264,8 @@ const HatchSection = () => {
                                 <td className="border border-gray-300 px-2 py-2 text-center font-semibold">19 600,00 ₽</td>
                               </tr>
                               <tr>
-                                <td className="border border-gray-300 px-1 md:px-2 py-2 text-center">400 мм</td>
-                                <td className="border border-gray-300 px-1 md:px-2 py-2 text-center">
+                                <td className="border border-gray-300 px-2 py-2 text-center">400 мм</td>
+                                <td className="border border-gray-300 px-2 py-2 text-center">
                                   <button
                                     onClick={handleContactClick}
                                     className="text-red-600 hover:text-red-800 font-semibold cursor-pointer"
@@ -278,8 +278,8 @@ const HatchSection = () => {
                               <tr>
                                 <td className="border border-gray-300 px-2 py-2 text-center" rowSpan={4}>AISI316</td>
                                 <td className="border border-gray-300 px-2 py-2 text-center" rowSpan={2}>DN400</td>
-                                <td className="border border-gray-300 px-1 md:px-2 py-2 text-center">100 мм</td>
-                                <td className="border border-gray-300 px-1 md:px-2 py-2 text-center">
+                                <td className="border border-gray-300 px-2 py-2 text-center">100 мм</td>
+                                <td className="border border-gray-300 px-2 py-2 text-center">
                                   <button
                                     onClick={handleContactClick}
                                     className="text-red-600 hover:text-red-800 font-semibold cursor-pointer"
@@ -290,8 +290,8 @@ const HatchSection = () => {
                                 <td className="border border-gray-300 px-2 py-2 text-center font-semibold">17 780,00 ₽</td>
                               </tr>
                               <tr>
-                                <td className="border border-gray-300 px-1 md:px-2 py-2 text-center">150 мм</td>
-                                <td className="border border-gray-300 px-1 md:px-2 py-2 text-center">
+                                <td className="border border-gray-300 px-2 py-2 text-center">150 мм</td>
+                                <td className="border border-gray-300 px-2 py-2 text-center">
                                   <button
                                     onClick={handleContactClick}
                                     className="text-red-600 hover:text-red-800 font-semibold cursor-pointer"
@@ -303,8 +303,8 @@ const HatchSection = () => {
                               </tr>
                               <tr>
                                 <td className="border border-gray-300 px-2 py-2 text-center" rowSpan={2}>DN450</td>
-                                <td className="border border-gray-300 px-1 md:px-2 py-2 text-center">100 мм</td>
-                                <td className="border border-gray-300 px-1 md:px-2 py-2 text-center">
+                                <td className="border border-gray-300 px-2 py-2 text-center">100 мм</td>
+                                <td className="border border-gray-300 px-2 py-2 text-center">
                                   <button
                                     onClick={handleContactClick}
                                     className="text-red-600 hover:text-red-800 font-semibold cursor-pointer"
@@ -315,8 +315,8 @@ const HatchSection = () => {
                                 <td className="border border-gray-300 px-2 py-2 text-center font-semibold">21 980,00 ₽</td>
                               </tr>
                               <tr>
-                                <td className="border border-gray-300 px-1 md:px-2 py-2 text-center">150 мм</td>
-                                <td className="border border-gray-300 px-1 md:px-2 py-2 text-center">
+                                <td className="border border-gray-300 px-2 py-2 text-center">150 мм</td>
+                                <td className="border border-gray-300 px-2 py-2 text-center">
                                   <button
                                     onClick={handleContactClick}
                                     className="text-red-600 hover:text-red-800 font-semibold cursor-pointer"
@@ -333,12 +333,12 @@ const HatchSection = () => {
                     </div>
 
                     {/* Характеристики под спойлером */}
-                    <div className="bg-white rounded-lg shadow-lg p-4 md:p-6 mt-6">
+                    <div className="bg-white rounded-lg shadow-lg p-4 md:p-6 mt-4 md:mt-6">
                       <button 
                         onClick={() => setExpandedFeatures(expandedFeatures === hatch.id ? null : hatch.id)}
                         className="w-full flex items-center justify-between text-left mb-4 hover:bg-gray-50 p-2 rounded min-h-[50px]"
                       >
-                        <h4 className="text-base md:text-lg font-semibold text-gray-800 flex-1 pr-2 break-words">ХАРАКТЕРИСТИКИ</h4>
+                        <h4 className="text-base md:text-lg font-semibold text-gray-800 flex-1 pr-2">ХАРАКТЕРИСТИКИ</h4>
                         <div className="flex items-center gap-2 flex-shrink-0">
                           <span className="text-xs sm:text-sm text-gray-600 hidden sm:inline">
                             {expandedFeatures === hatch.id ? 'Скрыть' : 'Показать'}
@@ -354,7 +354,7 @@ const HatchSection = () => {
                           {hatch.features.map((feature, index) => (
                             <div key={index} className="flex items-start">
                               <Icon name="CheckCircle2" className="w-5 h-5 text-primary mr-3 mt-0.5 flex-shrink-0" />
-                              <span className="text-sm text-muted-foreground break-words">{feature}</span>
+                              <span className="text-sm text-muted-foreground">{feature}</span>
                             </div>
                           ))}
                         </div>
@@ -369,7 +369,7 @@ const HatchSection = () => {
                     onClick={() => setExpandedBlueprint(expandedBlueprint === hatch.id ? null : hatch.id)}
                     className="w-full flex items-center justify-between text-left mb-4 hover:bg-gray-50 p-2 rounded min-h-[60px]"
                   >
-                    <h3 className="text-base md:text-lg font-bold text-gray-800 flex-1 pr-2 break-words">ТЕХНИЧЕСКИЙ ЧЕРТЁЖ</h3>
+                    <h3 className="text-base md:text-lg lg:text-xl font-bold text-gray-800 flex-1 pr-2">ТЕХНИЧЕСКИЙ ЧЕРТЁЖ</h3>
                     <div className="flex items-center gap-2 flex-shrink-0">
                       <span className="text-xs sm:text-sm text-gray-600 hidden sm:inline">
                         {expandedBlueprint === hatch.id ? 'Скрыть' : 'Показать'}
@@ -395,7 +395,7 @@ const HatchSection = () => {
                           </div>
                         </div>
                       </div>
-                      <p className="text-xs text-muted-foreground mt-2 text-center break-words">
+                      <p className="text-xs text-muted-foreground mt-2 text-center">
                         Нажмите для увеличения
                       </p>
                     </div>
