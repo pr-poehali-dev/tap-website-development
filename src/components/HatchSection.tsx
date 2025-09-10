@@ -7,11 +7,12 @@ import Icon from '@/components/ui/icon';
 const HatchSection = () => {
   const [selectedImage, setSelectedImage] = useState<{src: string, alt: string} | null>(null);
   const [expandedBlueprint, setExpandedBlueprint] = useState<number | null>(null);
+  const [expandedFeatures, setExpandedFeatures] = useState<number | null>(null);
   
   const hatchData = [
     {
       id: 1,
-      name: "Люк овальный самоуплотняющийся",
+      name: "Люк овальный самоуплотняющийся 340х440",
       model: "Аналог 6009ECO",
       features: ["Самоуплотняющийся", "Овальная форма", "Нержавеющая сталь AISI304 крышка 2,5 мм, горловина 3 мм", "Опциональный кронштейн"],
       price: "от 23 800,00 ₽",
@@ -112,18 +113,110 @@ const HatchSection = () => {
 
 
 
+                    {/* Список моделей */}
                     <div>
-                      <span className="text-sm font-medium text-foreground block mb-3">
-                        Характеристики:
-                      </span>
-                      <div className="grid grid-cols-1 gap-3">
-                        {hatch.features.map((feature, index) => (
-                          <div key={index} className="flex items-start">
-                            <Icon name="CheckCircle2" className="w-5 h-5 text-primary mr-3 mt-0.5 flex-shrink-0" />
-                            <span className="text-sm text-muted-foreground">{feature}</span>
-                          </div>
-                        ))}
-                      </div>
+                      <h4 className="text-lg font-semibold text-foreground mb-4">Список моделей</h4>
+                      
+                      {/* Oval hatch table */}
+                      {hatch.id === 1 && (
+                        <div className="overflow-x-auto">
+                          <table className="w-full border-collapse border border-gray-300 text-sm">
+                            <thead>
+                              <tr className="bg-gray-100">
+                                <th className="border border-gray-300 px-3 py-2 text-center font-semibold">Рабочее давление</th>
+                                <th className="border border-gray-300 px-3 py-2 text-center font-semibold">Кронштейн</th>
+                                <th className="border border-gray-300 px-3 py-2 text-center font-semibold">Срок поставки</th>
+                                <th className="border border-gray-300 px-3 py-2 text-center font-semibold">Стоимость с НДС</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              {hatch.tableData.map((row, index) => (
+                                <tr key={index}>
+                                  <td className="border border-gray-300 px-3 py-2 text-center">{row.workingPressure}</td>
+                                  <td className="border border-gray-300 px-3 py-2 text-center">{row.bracket}</td>
+                                  <td className="border border-gray-300 px-3 py-2 text-center">
+                                    <button
+                                      onClick={handleContactClick}
+                                      className="text-blue-600 hover:text-blue-800 font-semibold cursor-pointer"
+                                    >
+                                      {row.deliveryTime}
+                                    </button>
+                                  </td>
+                                  <td className="border border-gray-300 px-3 py-2 text-center">{row.price}</td>
+                                </tr>
+                              ))}
+                            </tbody>
+                          </table>
+                        </div>
+                      )}
+
+                      {/* Ring hatch table */}
+                      {hatch.id === 2 && (
+                        <div className="overflow-x-auto">
+                          <table className="w-full border-collapse border border-gray-300 text-sm">
+                            <thead>
+                              <tr className="bg-gray-100">
+                                <th className="border border-gray-300 px-2 py-2 text-center font-semibold">Материал</th>
+                                <th className="border border-gray-300 px-2 py-2 text-center font-semibold">Диаметр</th>
+                                <th className="border border-gray-300 px-2 py-2 text-center font-semibold">Высота горловины</th>
+                                <th className="border border-gray-300 px-2 py-2 text-center font-semibold">Срок поставки</th>
+                                <th className="border border-gray-300 px-2 py-2 text-center font-semibold">Цена продажи с НДС</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              {hatch.tableData.map((row, index) => (
+                                <tr key={index}>
+                                  <td className="border border-gray-300 px-2 py-2 text-center">{row.material}</td>
+                                  <td className="border border-gray-300 px-2 py-2 text-center">{row.diameter}</td>
+                                  <td className="border border-gray-300 px-2 py-2 text-center">{row.neckHeight}</td>
+                                  <td className="border border-gray-300 px-2 py-2 text-center">
+                                    <button
+                                      onClick={handleContactClick}
+                                      className={`font-semibold cursor-pointer ${
+                                        row.deliveryTime === 'В наличии' 
+                                          ? 'text-blue-600 hover:text-blue-800' 
+                                          : 'text-blue-600 hover:text-blue-800'
+                                      }`}
+                                    >
+                                      {row.deliveryTime}
+                                    </button>
+                                  </td>
+                                  <td className="border border-gray-300 px-2 py-2 text-center">{row.price}</td>
+                                </tr>
+                              ))}
+                            </tbody>
+                          </table>
+                        </div>
+                      )}
+                    </div>
+
+                    {/* Характеристики под спойлером */}
+                    <div className="bg-white rounded-lg shadow-lg p-6 mt-6">
+                      <button 
+                        onClick={() => setExpandedFeatures(expandedFeatures === hatch.id ? null : hatch.id)}
+                        className="w-full flex items-center justify-between text-left mb-4 hover:bg-gray-50 p-2 rounded min-h-[50px]"
+                      >
+                        <h4 className="text-lg font-semibold text-gray-800 flex-1 pr-2">ХАРАКТЕРИСТИКИ</h4>
+                        <div className="flex items-center gap-2 flex-shrink-0">
+                          <span className="text-xs sm:text-sm text-gray-600 hidden sm:inline">
+                            {expandedFeatures === hatch.id ? 'Скрыть' : 'Показать'}
+                          </span>
+                          <span className={`transform transition-transform duration-300 ${expandedFeatures === hatch.id ? 'rotate-180' : ''}`}>
+                            ▼
+                          </span>
+                        </div>
+                      </button>
+                      
+                      {expandedFeatures === hatch.id && (
+                        <div className="grid grid-cols-1 gap-3">
+                          {hatch.features.map((feature, index) => (
+                            <div key={index} className="flex items-start">
+                              <Icon name="CheckCircle2" className="w-5 h-5 text-primary mr-3 mt-0.5 flex-shrink-0" />
+                              <span className="text-sm text-muted-foreground">{feature}</span>
+                            </div>
+                          ))}
+                        </div>
+                      )}
                     </div>
                   </div>
                 </div>
