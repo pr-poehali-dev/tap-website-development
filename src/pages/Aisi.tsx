@@ -2,12 +2,13 @@ import React, { useState } from 'react';
 import Header from '@/components/sections/Header';
 import Footer from '@/components/sections/Footer';
 import ContactsSection from '@/components/sections/ContactsSection';
-import AisiModelsList from '@/components/aisi/AisiModelsList';
+import AisiModelsList, { Aisi316ModelsList } from '@/components/aisi/AisiModelsList';
 import ImageModal from '@/components/converters/ImageModal';
 import Icon from '@/components/ui/icon';
 
 const Aisi = () => {
   const [isModelsExpanded, setIsModelsExpanded] = useState(true);
+  const [isAisi316Expanded, setIsAisi316Expanded] = useState(false);
   const [modalImage, setModalImage] = useState<{src: string, alt: string} | null>(null);
   
   return (
@@ -74,6 +75,12 @@ const Aisi = () => {
             <AisiModelsList 
               isExpanded={isModelsExpanded}
               setIsExpanded={setIsModelsExpanded}
+            />
+
+            {/* AISI316 Models List Section */}
+            <Aisi316ModelsList 
+              isExpanded={isAisi316Expanded}
+              setIsExpanded={setIsAisi316Expanded}
             />
           </div>
         </div>
