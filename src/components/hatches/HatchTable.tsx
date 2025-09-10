@@ -16,20 +16,20 @@ const HatchTable: React.FC<HatchTableProps> = ({
   // Oval hatch table
   if (hatchId === 1) {
     return (
-      <div className="overflow-x-auto">
-        <table className="w-full border-collapse border border-gray-300 text-xs md:text-sm min-w-[600px]">
+      <div className="-mx-2 md:mx-0 overflow-x-auto">
+        <table className="w-full border-collapse border border-gray-300 text-xs md:text-sm">
           <thead>
             <tr className="bg-gray-100">
-              <th className="border border-gray-300 px-1 md:px-3 py-2 text-center font-semibold text-xs md:text-sm whitespace-nowrap">
-                Рабочее давление
+              <th className="border border-gray-300 px-1 md:px-3 py-2 text-center font-semibold text-xs md:text-sm w-[22%] md:w-auto">
+                Рабочее<br className="md:hidden"/><span className="hidden md:inline"> </span>давление
               </th>
-              <th className="border border-gray-300 px-1 md:px-3 py-2 text-center font-semibold text-xs md:text-sm whitespace-nowrap">
+              <th className="border border-gray-300 px-1 md:px-3 py-2 text-center font-semibold text-xs md:text-sm w-[13%] md:w-auto">
                 Кронштейн
               </th>
-              <th className="border border-gray-300 px-1 md:px-3 py-2 text-center font-semibold text-xs md:text-sm whitespace-nowrap">
-                Срок поставки
+              <th className="border border-gray-300 px-1 md:px-3 py-2 text-center font-semibold text-xs md:text-sm w-[35%] md:w-auto">
+                Срок<br className="md:hidden"/><span className="hidden md:inline"> </span>поставки
               </th>
-              <th className="border border-gray-300 px-1 md:px-3 py-2 text-center font-semibold text-xs md:text-sm whitespace-nowrap">
+              <th className="border border-gray-300 px-1 md:px-3 py-2 text-center font-semibold text-xs md:text-sm w-[30%] md:w-auto">
                 Стоимость
               </th>
             </tr>
@@ -140,23 +140,23 @@ const HatchTable: React.FC<HatchTableProps> = ({
   // Ring hatch table
   if (hatchId === 2) {
     return (
-      <div className="overflow-x-auto">
-        <table className="w-full border-collapse border border-gray-300 text-xs md:text-sm min-w-[600px]">
+      <div className="-mx-2 md:mx-0 overflow-x-auto">
+        <table className="w-full border-collapse border border-gray-300 text-xs md:text-sm">
           <thead>
             <tr className="bg-gray-100">
-              <th className="border border-gray-300 px-1 md:px-3 py-2 text-center font-semibold text-xs md:text-sm whitespace-nowrap">
+              <th className="border border-gray-300 px-1 md:px-3 py-2 text-center font-semibold text-xs md:text-sm w-[16%] md:w-auto">
                 Материал
               </th>
-              <th className="border border-gray-300 px-1 md:px-3 py-2 text-center font-semibold text-xs md:text-sm whitespace-nowrap">
+              <th className="border border-gray-300 px-1 md:px-3 py-2 text-center font-semibold text-xs md:text-sm w-[12%] md:w-auto">
                 Диаметр
               </th>
-              <th className="border border-gray-300 px-1 md:px-3 py-2 text-center font-semibold text-xs md:text-sm whitespace-nowrap">
-                Высота горловины
+              <th className="border border-gray-300 px-1 md:px-3 py-2 text-center font-semibold text-xs md:text-sm w-[18%] md:w-auto">
+                Высота<br className="md:hidden"/><span className="hidden md:inline"> </span>горловины
               </th>
-              <th className="border border-gray-300 px-1 md:px-3 py-2 text-center font-semibold text-xs md:text-sm whitespace-nowrap">
-                Срок поставки
+              <th className="border border-gray-300 px-1 md:px-3 py-2 text-center font-semibold text-xs md:text-sm w-[28%] md:w-auto">
+                Срок<br className="md:hidden"/><span className="hidden md:inline"> </span>поставки
               </th>
-              <th className="border border-gray-300 px-1 md:px-3 py-2 text-center font-semibold text-xs md:text-sm whitespace-nowrap">
+              <th className="border border-gray-300 px-1 md:px-3 py-2 text-center font-semibold text-xs md:text-sm w-[26%] md:w-auto">
                 Стоимость
               </th>
             </tr>
