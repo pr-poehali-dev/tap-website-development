@@ -42,7 +42,7 @@ const HatchTable: React.FC<HatchTableProps> = ({
                   onClick={onContactClick}
                   className="text-red-600 hover:text-red-800 font-semibold cursor-pointer"
                 >
-                  В наличии
+                  ✅ В наличии
                 </button>
               </td>
               <td className="border border-gray-300 px-2 md:px-3 py-2 text-center font-semibold">23 800,00 ₽</td>
@@ -59,7 +59,7 @@ const HatchTable: React.FC<HatchTableProps> = ({
                   onClick={onContactClick}
                   className="text-red-600 hover:text-red-800 font-semibold cursor-pointer"
                 >
-                  В наличии
+                  ✅ В наличии
                 </button>
               </td>
               <td className="border border-gray-300 px-2 md:px-3 py-2 text-center font-semibold">26 600,00 ₽</td>
@@ -79,7 +79,7 @@ const HatchTable: React.FC<HatchTableProps> = ({
                   onClick={onContactClick}
                   className="text-red-600 hover:text-red-800 font-semibold cursor-pointer"
                 >
-                  Под заказ
+                  🔄 Под заказ
                 </button>
               </td>
               <td className="border border-gray-300 px-2 md:px-3 py-2 text-center font-semibold">26 600,00 ₽</td>
@@ -100,7 +100,7 @@ const HatchTable: React.FC<HatchTableProps> = ({
                   onClick={onContactClick}
                   className="text-red-600 hover:text-red-800 font-semibold cursor-pointer"
                 >
-                  Под заказ
+                  🔄 Под заказ
                 </button>
               </td>
               <td className={`border border-gray-300 px-2 md:px-3 py-2 text-center font-semibold ${
@@ -142,7 +142,7 @@ const HatchTable: React.FC<HatchTableProps> = ({
                   onClick={onContactClick}
                   className="text-red-600 hover:text-red-800 font-semibold cursor-pointer"
                 >
-                  В наличии
+                  ✅ В наличии
                 </button>
               </td>
               <td className="border border-gray-300 px-2 py-2 text-center font-semibold">11 620,00 ₽</td>
@@ -159,7 +159,7 @@ const HatchTable: React.FC<HatchTableProps> = ({
                   onClick={onContactClick}
                   className="text-red-600 hover:text-red-800 font-semibold cursor-pointer"
                 >
-                  В наличии
+                  ✅ В наличии
                 </button>
               </td>
               <td className="border border-gray-300 px-2 py-2 text-center font-semibold">13 580,00 ₽</td>
@@ -177,7 +177,7 @@ const HatchTable: React.FC<HatchTableProps> = ({
                   onClick={onContactClick}
                   className="text-red-600 hover:text-red-800 font-semibold cursor-pointer"
                 >
-                  В наличии
+                  ✅ В наличии
                 </button>
               </td>
               <td className="border border-gray-300 px-2 py-2 text-center font-semibold">12 600,00 ₽</td>
@@ -194,7 +194,7 @@ const HatchTable: React.FC<HatchTableProps> = ({
                   onClick={onContactClick}
                   className="text-red-600 hover:text-red-800 font-semibold cursor-pointer"
                 >
-                  В наличии
+                  ✅ В наличии
                 </button>
               </td>
               <td className="border border-gray-300 px-2 py-2 text-center font-semibold">14 000,00 ₽</td>
@@ -211,7 +211,7 @@ const HatchTable: React.FC<HatchTableProps> = ({
                   onClick={onContactClick}
                   className="text-red-600 hover:text-red-800 font-semibold cursor-pointer"
                 >
-                  В наличии
+                  ✅ В наличии
                 </button>
               </td>
               <td className="border border-gray-300 px-2 py-2 text-center font-semibold">19 600,00 ₽</td>
@@ -228,7 +228,7 @@ const HatchTable: React.FC<HatchTableProps> = ({
                   onClick={onContactClick}
                   className="text-red-600 hover:text-red-800 font-semibold cursor-pointer"
                 >
-                  В наличии
+                  ✅ В наличии
                 </button>
               </td>
               <td className="border border-gray-300 px-2 py-2 text-center font-semibold">22 400,00 ₽</td>
@@ -247,7 +247,7 @@ const HatchTable: React.FC<HatchTableProps> = ({
                   onClick={onContactClick}
                   className="text-red-600 hover:text-red-800 font-semibold cursor-pointer"
                 >
-                  Под заказ
+                  🔄 Под заказ
                 </button>
               </td>
               <td className="border border-gray-300 px-2 py-2 text-center font-semibold">17 780,00 ₽</td>
@@ -264,7 +264,7 @@ const HatchTable: React.FC<HatchTableProps> = ({
                   onClick={onContactClick}
                   className="text-red-600 hover:text-red-800 font-semibold cursor-pointer"
                 >
-                  Под заказ
+                  🔄 Под заказ
                 </button>
               </td>
               <td className="border border-gray-300 px-2 py-2 text-center font-semibold">19 740,00 ₽</td>
@@ -282,7 +282,7 @@ const HatchTable: React.FC<HatchTableProps> = ({
                   onClick={onContactClick}
                   className="text-red-600 hover:text-red-800 font-semibold cursor-pointer"
                 >
-                  Под заказ
+                  🔄 Под заказ
                 </button>
               </td>
               <td className="border border-gray-300 px-2 py-2 text-center font-semibold">21 980,00 ₽</td>
@@ -299,7 +299,7 @@ const HatchTable: React.FC<HatchTableProps> = ({
                   onClick={onContactClick}
                   className="text-red-600 hover:text-red-800 font-semibold cursor-pointer"
                 >
-                  Под заказ
+                  🔄 Под заказ
                 </button>
               </td>
               <td className="border border-gray-300 px-2 py-2 text-center font-semibold">22 820,00 ₽</td>

@@ -45,7 +45,7 @@ const HatchCardComponent: React.FC<HatchCardProps> = ({
         {/* Top section: Photo left, Text right */}
         <div className="grid lg:grid-cols-2 gap-4 md:gap-8 mb-6 md:mb-8">
           {/* Left: Hatch photo */}
-          <div className="relative">
+          <div className="relative max-w-[50%] mx-auto lg:max-w-full">
             <div className="aspect-square bg-gradient-to-br from-accent/20 to-primary/10 relative overflow-hidden rounded-lg group cursor-pointer"
                  onClick={() => onImageClick({src: hatch.image, alt: hatch.name})}>
               <img 
