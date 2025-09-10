@@ -51,7 +51,7 @@ const HatchTable: React.FC<HatchTableProps> = ({
                   className="text-red-600 hover:text-red-800 font-semibold cursor-pointer text-xs md:text-sm"
                 >
                   <span className="hidden sm:inline">✅ В наличии</span>
-                  <span className="sm:hidden">✅</span>
+                  <span className="sm:hidden">✅В наличии</span>
                 </button>
               </td>
               <td className="border border-gray-300 px-1 md:px-3 py-2 text-center font-semibold text-xs md:text-sm">
@@ -72,7 +72,7 @@ const HatchTable: React.FC<HatchTableProps> = ({
                   className="text-red-600 hover:text-red-800 font-semibold cursor-pointer text-xs md:text-sm"
                 >
                   <span className="hidden sm:inline">✅ В наличии</span>
-                  <span className="sm:hidden">✅</span>
+                  <span className="sm:hidden">✅В наличии</span>
                 </button>
               </td>
               <td className="border border-gray-300 px-1 md:px-3 py-2 text-center font-semibold text-xs md:text-sm">
@@ -96,7 +96,7 @@ const HatchTable: React.FC<HatchTableProps> = ({
                   className="text-red-600 hover:text-red-800 font-semibold cursor-pointer text-xs md:text-sm"
                 >
                   <span className="hidden sm:inline">🔄 Под заказ</span>
-                  <span className="sm:hidden">🔄</span>
+                  <span className="sm:hidden">🔄Под заказ</span>
                 </button>
               </td>
               <td className="border border-gray-300 px-1 md:px-3 py-2 text-center font-semibold text-xs md:text-sm">
@@ -121,7 +121,7 @@ const HatchTable: React.FC<HatchTableProps> = ({
                   className="text-red-600 hover:text-red-800 font-semibold cursor-pointer text-xs md:text-sm"
                 >
                   <span className="hidden sm:inline">🔄 Под заказ</span>
-                  <span className="sm:hidden">🔄</span>
+                  <span className="sm:hidden">🔄Под заказ</span>
                 </button>
               </td>
               <td className={`border border-gray-300 px-1 md:px-3 py-2 text-center font-semibold text-xs md:text-sm ${
