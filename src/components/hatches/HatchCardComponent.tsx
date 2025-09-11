@@ -20,7 +20,7 @@ interface HatchCardProps {
   hatch: HatchData;
   selectedRow: string | null;
   expandedBlueprint: number | null;
-  expandedFeatures: number | null;
+  expandedFeatures: Set<number>;
   onImageClick: (image: { src: string; alt: string }) => void;
   onRowSelect: (rowId: string | null) => void;
   onBlueprintToggle: (hatchId: number) => void;
@@ -107,7 +107,7 @@ const HatchCardComponent: React.FC<HatchCardProps> = ({
         <HatchFeaturesComponent
           hatchId={hatch.id}
           features={hatch.features}
-          expanded={expandedFeatures === hatch.id}
+          expanded={expandedFeatures.has(hatch.id)}
           onToggle={() => onFeaturesToggle(hatch.id)}
         />
 

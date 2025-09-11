@@ -5,7 +5,7 @@ import ImageModal from '@/components/hatches/ImageModal';
 const HatchSection = () => {
   const [selectedImage, setSelectedImage] = useState<{src: string, alt: string} | null>(null);
   const [expandedBlueprint, setExpandedBlueprint] = useState<number | null>(null);
-  const [expandedFeatures, setExpandedFeatures] = useState<number | null>(null);
+  const [expandedFeatures, setExpandedFeatures] = useState<Set<number>>(new Set([1, 2]));
   const [selectedRow, setSelectedRow] = useState<string | null>(null);
   
   const hatchData = [
@@ -49,7 +49,15 @@ const HatchSection = () => {
   };
 
   const handleFeaturesToggle = (hatchId: number) => {
-    setExpandedFeatures(expandedFeatures === hatchId ? null : hatchId);
+    setExpandedFeatures(prev => {
+      const newSet = new Set(prev);
+      if (newSet.has(hatchId)) {
+        newSet.delete(hatchId);
+      } else {
+        newSet.add(hatchId);
+      }
+      return newSet;
+    });
   };
 
   return (
