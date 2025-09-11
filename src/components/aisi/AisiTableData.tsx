@@ -1,5 +1,5 @@
 // Экспорт типов
-export { AisiTableItem } from '@/components/aisi/types/AisiTypes';
+export { AisiTableItem } from '@/components/aisi/types';
 
 // Экспорт данных таблиц
 export { mainTableData } from '@/components/aisi/data/MainTableData';
