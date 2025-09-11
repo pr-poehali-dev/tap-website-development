@@ -77,7 +77,7 @@ const ProjectGallery = () => {
       year: "2025"
     },
     {
-      id: 4,
+      id: 5,
       title: "Ванна длительной пастеризации ВДП-300",
       category: "Пищевая промышленность",
       image: "https://cdn.poehali.dev/files/8ea1d273-a24f-4e0e-a236-eed623c8a7b9.jpg",
