@@ -9,6 +9,7 @@ import Icon from '@/components/ui/icon';
 const Aisi = () => {
   const [isModelsExpanded, setIsModelsExpanded] = useState(true);
   const [isAisi316Expanded, setIsAisi316Expanded] = useState(false);
+  const [isCharacteristicsExpanded, setIsCharacteristicsExpanded] = useState(true);
   const [modalImage, setModalImage] = useState<{src: string, alt: string} | null>(null);
   
   return (
@@ -69,6 +70,57 @@ const Aisi = () => {
                   </p>
                 </div>
               </div>
+            </div>
+
+            {/* Characteristics Section */}
+            <div className="bg-white rounded-lg shadow-lg p-4 md:p-6 mb-6">
+              <button 
+                onClick={() => setIsCharacteristicsExpanded(!isCharacteristicsExpanded)}
+                className="w-full flex items-center justify-between text-left mb-4 hover:bg-gray-50 p-2 rounded min-h-[50px]"
+              >
+                <h4 className="text-base md:text-lg text-gray-800 flex-1 pr-2 font-bold">ХАРАКТЕРИСТИКИ</h4>
+                <div className="flex items-center gap-2 flex-shrink-0">
+                  <span className="text-xs sm:text-sm text-gray-600 hidden sm:inline">
+                    {isCharacteristicsExpanded ? 'Скрыть' : 'Показать'}
+                  </span>
+                  <span className={`transform transition-transform duration-300 ${isCharacteristicsExpanded ? 'rotate-180' : ''}`}>
+                    ▼
+                  </span>
+                </div>
+              </button>
+              
+              {isCharacteristicsExpanded && (
+                <div className="grid grid-cols-1 gap-3 px-2">
+                  <div className="flex items-start">
+                    <Icon name="CheckCircle2" className="w-5 h-5 text-primary mr-3 mt-0.5 flex-shrink-0" />
+                    <span className="text-sm text-muted-foreground break-words leading-relaxed">Материал корпуса AISI304 или AISI316 толщиной 1.5 мм</span>
+                  </div>
+                  <div className="flex items-start">
+                    <Icon name="CheckCircle2" className="w-5 h-5 text-primary mr-3 mt-0.5 flex-shrink-0" />
+                    <span className="text-sm text-muted-foreground break-words leading-relaxed">Материал монтажной панели AISI403 толщиной 1 мм</span>
+                  </div>
+                  <div className="flex items-start">
+                    <Icon name="CheckCircle2" className="w-5 h-5 text-primary mr-3 mt-0.5 flex-shrink-0" />
+                    <span className="text-sm text-muted-foreground break-words leading-relaxed">Гладкие швы</span>
+                  </div>
+                  <div className="flex items-start">
+                    <Icon name="CheckCircle2" className="w-5 h-5 text-primary mr-3 mt-0.5 flex-shrink-0" />
+                    <span className="text-sm text-muted-foreground break-words leading-relaxed">Уплотнитель на двери</span>
+                  </div>
+                  <div className="flex items-start">
+                    <Icon name="CheckCircle2" className="w-5 h-5 text-primary mr-3 mt-0.5 flex-shrink-0" />
+                    <span className="text-sm text-muted-foreground break-words leading-relaxed">Зеркальная полировка по дополнительному запросу</span>
+                  </div>
+                  <div className="flex items-start">
+                    <Icon name="CheckCircle2" className="w-5 h-5 text-primary mr-3 mt-0.5 flex-shrink-0" />
+                    <span className="text-sm text-muted-foreground break-words leading-relaxed">Климатическое исполнение УХЛ1</span>
+                  </div>
+                  <div className="flex items-start">
+                    <Icon name="CheckCircle2" className="w-5 h-5 text-primary mr-3 mt-0.5 flex-shrink-0" />
+                    <span className="text-sm text-muted-foreground break-words leading-relaxed">Степень защиты IP66</span>
+                  </div>
+                </div>
+              )}
             </div>
 
             {/* Models List Section */}
