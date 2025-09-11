@@ -31,6 +31,7 @@ const HatchCard: React.FC<HatchCardProps> = ({ hatch, onImageClick }) => {
               <img 
                 src={hatch.image} 
                 alt={hatch.name} 
+                loading="lazy"
                 className="w-3/4 md:w-full h-full mx-auto object-cover transition-all duration-300 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300 flex items-center justify-center">

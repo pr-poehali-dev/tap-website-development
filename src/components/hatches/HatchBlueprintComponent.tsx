@@ -41,6 +41,7 @@ const HatchBlueprintComponent: React.FC<HatchBlueprintProps> = ({
             <img 
               src={blueprintSrc} 
               alt={`Чертеж ${hatchName}`} 
+              loading="lazy"
               className="w-full rounded-lg shadow-lg transition-all duration-300 group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300 flex items-center justify-center rounded-lg">

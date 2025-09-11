@@ -12,6 +12,7 @@ const Footer = ({ className = '' }: FooterProps) => {
               <img 
                 src="https://cdn.poehali.dev/files/705c65f8-bec4-4833-afb2-840f73d1b635.png" 
                 alt="ТАП Логотип" 
+                loading="lazy"
                 className="h-8 hover:scale-105 transition-transform cursor-pointer"
               />
             </a>

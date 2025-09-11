@@ -10,7 +10,7 @@ interface ImageModalProps {
   onImageChange?: (src: string) => void;
 }
 
-const ImageModal = ({ src, alt, isOpen, onClose, images, onImageChange }: ImageModalProps) => {
+const ImageModal = React.memo(({ src, alt, isOpen, onClose, images, onImageChange }: ImageModalProps) => {
   const [touchStart, setTouchStart] = React.useState<number | null>(null);
   const [touchEnd, setTouchEnd] = React.useState<number | null>(null);
   
@@ -98,6 +98,7 @@ const ImageModal = ({ src, alt, isOpen, onClose, images, onImageChange }: ImageM
         <img 
           src={src} 
           alt={alt} 
+          loading="lazy"
           className="max-w-full max-h-[85vh] object-contain rounded-lg shadow-2xl"
         />
         
@@ -144,6 +145,6 @@ const ImageModal = ({ src, alt, isOpen, onClose, images, onImageChange }: ImageM
       </div>
     </div>
   );
-};
+});
 
 export default ImageModal;

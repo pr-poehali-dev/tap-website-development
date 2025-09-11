@@ -18,6 +18,7 @@ const ImageModal: React.FC<ImageModalProps> = ({ image, onClose }) => {
         <img 
           src={image.src} 
           alt={image.alt} 
+          loading="lazy"
           className="max-w-[95vw] max-h-[95vh] w-auto h-auto object-contain rounded-lg"
           onClick={(e) => e.stopPropagation()}
         />

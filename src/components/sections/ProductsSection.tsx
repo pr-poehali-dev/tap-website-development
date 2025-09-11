@@ -1,3 +1,4 @@
+import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import Icon from '@/components/ui/icon';
 
@@ -5,7 +6,7 @@ interface ProductsSectionProps {
   className?: string;
 }
 
-const ProductsSection = ({ className = '' }: ProductsSectionProps) => {
+const ProductsSection = React.memo(({ className = '' }: ProductsSectionProps) => {
   return (
     <section id="services" className={`py-16 px-6 bg-white ${className}`}>
       <div className="container mx-auto">
@@ -22,6 +23,7 @@ const ProductsSection = ({ className = '' }: ProductsSectionProps) => {
                 <img 
                   src="https://cdn.poehali.dev/files/b14bf4f8-e72d-4de2-b587-57718327eee4.jpg" 
                   alt="Шкафы управления" 
+                  loading="lazy"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
@@ -48,6 +50,7 @@ const ProductsSection = ({ className = '' }: ProductsSectionProps) => {
                 <img 
                   src="https://cdn.poehali.dev/files/2154a0f8-3c93-4286-8377-eb8d01f6676f.jpg" 
                   alt="Корпуса из нержавеющей стали" 
+                  loading="lazy"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
@@ -74,6 +77,7 @@ const ProductsSection = ({ className = '' }: ProductsSectionProps) => {
                 <img 
                   src="https://cdn.poehali.dev/files/71b88224-89da-4704-88d0-e4826d2d231e.jpg" 
                   alt="Люки из нержавеющей стали" 
+                  loading="lazy"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
@@ -102,6 +106,7 @@ const ProductsSection = ({ className = '' }: ProductsSectionProps) => {
               <img 
                 src="https://cdn.poehali.dev/files/91ee8b1b-2624-44bd-b986-d6b870fd3b82.jpg" 
                 alt="Частотные преобразователи" 
+                loading="lazy"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
               />
             </div>
@@ -128,6 +133,7 @@ const ProductsSection = ({ className = '' }: ProductsSectionProps) => {
               <img 
                 src="https://cdn.poehali.dev/files/f90f6220-4e98-4b38-b96f-0eae1fd38318.png" 
                 alt="КИПиА" 
+                loading="lazy"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
               />
             </div>
@@ -151,6 +157,6 @@ const ProductsSection = ({ className = '' }: ProductsSectionProps) => {
       </div>
     </section>
   );
-};
+});
 
 export default ProductsSection;

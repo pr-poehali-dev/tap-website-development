@@ -1,8 +1,10 @@
+import React from 'react';
+
 interface TrustedCompaniesSectionProps {
   className?: string;
 }
 
-const TrustedCompaniesSection = ({ className = '' }: TrustedCompaniesSectionProps) => {
+const TrustedCompaniesSection = React.memo(({ className = '' }: TrustedCompaniesSectionProps) => {
   const companyLogos = [
     'https://cdn.poehali.dev/files/fcc0a262-51db-4462-a460-1ffa05f9376a.png',
     'https://cdn.poehali.dev/files/b0bfa2d4-b39f-467b-be20-39de38bf0acc.png',
@@ -31,6 +33,7 @@ const TrustedCompaniesSection = ({ className = '' }: TrustedCompaniesSectionProp
               <img 
                 src={logo} 
                 alt={`Логотип компании ${index + 1}`}
+                loading="lazy"
                 className="w-full h-57 md:h-34 object-contain transition-all duration-300"
                 style={{ maxWidth: '428px', maxHeight: '294px' }}
               />
@@ -40,6 +43,6 @@ const TrustedCompaniesSection = ({ className = '' }: TrustedCompaniesSectionProp
       </div>
     </section>
   );
-};
+});
 
 export default TrustedCompaniesSection;

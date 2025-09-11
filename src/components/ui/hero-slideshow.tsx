@@ -5,7 +5,7 @@ interface HeroSlideshowProps {
   children: React.ReactNode;
 }
 
-const HeroSlideshow = ({ images, children }: HeroSlideshowProps) => {
+const HeroSlideshow = React.memo(({ images, children }: HeroSlideshowProps) => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   useEffect(() => {
@@ -59,6 +59,6 @@ const HeroSlideshow = ({ images, children }: HeroSlideshowProps) => {
       </div>
     </section>
   );
-};
+});
 
 export default HeroSlideshow;

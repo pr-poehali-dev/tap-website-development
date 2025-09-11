@@ -14,7 +14,7 @@ interface CabinetModel {
   features: string[];
 }
 
-const Cabinet3DViewer = () => {
+const Cabinet3DViewer = React.memo(() => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [selectedModel, setSelectedModel] = useState<string>('standard');
   const [rotation, setRotation] = useState([0]);
@@ -346,6 +346,6 @@ const Cabinet3DViewer = () => {
       </div>
     </section>
   );
-};
+});
 
 export default Cabinet3DViewer;

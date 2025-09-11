@@ -25,6 +25,7 @@ const ImageModal = ({ modalImage, onClose }: ImageModalProps) => {
         <img 
           src={modalImage.src} 
           alt={modalImage.alt} 
+          loading="lazy"
           className="max-w-full max-h-[85vh] object-contain rounded-lg shadow-2xl"
         />
         

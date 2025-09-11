@@ -16,7 +16,7 @@ interface Project {
   year: string;
 }
 
-const ProjectGallery = () => {
+const ProjectGallery = React.memo(() => {
   const [modalImage, setModalImage] = React.useState<{src: string, alt: string, images?: string[]} | null>(null);
 
   const projects: Project[] = [
@@ -203,6 +203,7 @@ const ProjectGallery = () => {
                     <img 
                       src={project.image} 
                       alt={project.title} 
+                      loading="lazy"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     />
                     <div className="absolute inset-0 bg-black/0 group-hover/image:bg-black/20 transition-colors duration-300 flex items-center justify-center">
@@ -262,6 +263,6 @@ const ProjectGallery = () => {
       </div>
     </section>
   );
-};
+});
 
 export default ProjectGallery;

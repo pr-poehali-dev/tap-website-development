@@ -51,6 +51,7 @@ const FrequencyConverters = () => {
                   <img 
                     src="https://cdn.poehali.dev/files/91ee8b1b-2624-44bd-b986-d6b870fd3b82.jpg" 
                     alt="Частотные преобразователи AD30" 
+                    loading="lazy"
                     className="w-full h-auto rounded-lg shadow-lg group-hover:scale-105 transition-transform duration-300"
                   />
                   <div className="absolute inset-0 bg-black/0 group-hover/image:bg-black/20 transition-colors duration-300 flex items-center justify-center">

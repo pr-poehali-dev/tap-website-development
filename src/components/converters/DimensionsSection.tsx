@@ -35,6 +35,7 @@ const DimensionsSection = ({ isExpanded, setIsExpanded, onImageClick }: Dimensio
                 <img 
                   src="https://cdn.poehali.dev/files/56a32b05-f2cc-4e05-b955-50850ca5beba.png" 
                   alt="Габаритные размеры AD30" 
+                  loading="lazy"
                   className="w-full h-auto rounded-lg shadow-md group-hover:scale-105 transition-transform duration-300"
                 />
                 <div className="absolute inset-0 bg-black/0 group-hover/image:bg-black/20 transition-colors duration-300 flex items-center justify-center">

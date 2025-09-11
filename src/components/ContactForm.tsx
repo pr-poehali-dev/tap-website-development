@@ -12,7 +12,7 @@ interface ContactFormProps {
   onClose: () => void;
 }
 
-const ContactForm = ({ isOpen, onClose }: ContactFormProps) => {
+const ContactForm = React.memo(({ isOpen, onClose }: ContactFormProps) => {
   const [formData, setFormData] = useState({
     contactMethod: '',
     contact: '',
@@ -112,6 +112,6 @@ const ContactForm = ({ isOpen, onClose }: ContactFormProps) => {
       </Card>
     </div>
   );
-};
+});
 
 export default ContactForm;

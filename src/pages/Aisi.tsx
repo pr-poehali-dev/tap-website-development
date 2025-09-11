@@ -45,6 +45,7 @@ const Aisi = () => {
                   <img 
                     src="https://cdn.poehali.dev/files/8c397170-a958-4f0b-9a63-e61a0c18c4c6.jpg" 
                     alt="Корпуса из нержавеющей стали AISI304" 
+                    loading="lazy"
                     className="w-full h-auto rounded-lg shadow-lg group-hover:scale-105 transition-transform duration-300"
                   />
                   <div className="absolute inset-0 bg-black/0 group-hover/image:bg-black/20 transition-colors duration-300 flex items-center justify-center">

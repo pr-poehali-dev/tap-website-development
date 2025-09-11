@@ -8,7 +8,7 @@ interface ImageSliderProps {
   title?: string;
 }
 
-const ImageSlider = ({ images, alt, onImageClick, title }: ImageSliderProps) => {
+const ImageSlider = React.memo(({ images, alt, onImageClick, title }: ImageSliderProps) => {
   const [currentIndex, setCurrentIndex] = React.useState(0);
   const [touchStart, setTouchStart] = React.useState<number | null>(null);
   const [touchEnd, setTouchEnd] = React.useState<number | null>(null);
@@ -79,6 +79,7 @@ const ImageSlider = ({ images, alt, onImageClick, title }: ImageSliderProps) => 
       <img 
         src={images[currentIndex]} 
         alt={alt} 
+        loading="lazy"
         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
       />
       
@@ -130,6 +131,6 @@ const ImageSlider = ({ images, alt, onImageClick, title }: ImageSliderProps) => 
       )}
     </div>
   );
-};
+});
 
 export default ImageSlider;
