@@ -1,5 +1,11 @@
-// Экспорт типов
-export { AisiTableItem } from '@/components/aisi/types';
+// Определение типов
+export interface AisiTableItem {
+  width: number;
+  height: number;
+  depth: number;
+  delivery: string;
+  price: string;
+}
 
 // Экспорт данных таблиц
 export { mainTableData } from '@/components/aisi/data/MainTableData';

@@ -1,4 +1,4 @@
-import { AisiTableItem } from '@/components/aisi/types';
+import { AisiTableItem } from '../AisiTableData';
 
 export const mainTableData: AisiTableItem[] = [
   {
