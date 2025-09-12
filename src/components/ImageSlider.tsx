@@ -69,7 +69,7 @@ const ImageSlider = React.memo(({ images, alt, onImageClick, title }: ImageSlide
 
   return (
     <div 
-      className="aspect-[3/4] bg-gradient-to-br from-accent/20 to-primary/10 relative overflow-hidden cursor-pointer group/image"
+      className="aspect-[4/3] bg-gradient-to-br from-accent/20 to-primary/10 relative overflow-hidden cursor-pointer group/image"
       onClick={() => onImageClick(images[currentIndex])}
       title={title || "Нажмите для увеличения"}
       onTouchStart={handleTouchStart}
