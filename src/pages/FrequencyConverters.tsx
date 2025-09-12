@@ -7,7 +7,7 @@ import MainFeatures from '@/components/converters/MainFeatures';
 import AdditionalFeatures from '@/components/converters/AdditionalFeatures';
 import DimensionsSection from '@/components/converters/DimensionsSection';
 import SpecificationsSection from '@/components/converters/SpecificationsSection';
-import ImageModal from '@/components/converters/ImageModal';
+import ImageModal from '@/components/ImageModal';
 import Icon from '@/components/ui/icon';
 
 const FrequencyConverters = () => {
@@ -117,7 +117,9 @@ const FrequencyConverters = () => {
 
       {/* Image Modal */}
       <ImageModal 
-        modalImage={modalImage}
+        src={modalImage?.src || ''}
+        alt={modalImage?.alt || ''}
+        isOpen={!!modalImage}
         onClose={() => setModalImage(null)}
       />
 

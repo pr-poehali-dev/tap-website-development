@@ -3,7 +3,7 @@ import Header from '@/components/sections/Header';
 import Footer from '@/components/sections/Footer';
 import ContactsSection from '@/components/sections/ContactsSection';
 import AisiModelsList, { Aisi316ModelsList } from '@/components/aisi/AisiModelsList';
-import ImageModal from '@/components/converters/ImageModal';
+import ImageModal from '@/components/ImageModal';
 import ImageSlider from '@/components/ImageSlider';
 import Icon from '@/components/ui/icon';
 
@@ -182,7 +182,9 @@ const Aisi = () => {
 
       {/* Image Modal */}
       <ImageModal 
-        modalImage={modalImage}
+        src={modalImage?.src || ''}
+        alt={modalImage?.alt || ''}
+        isOpen={!!modalImage}
         onClose={() => setModalImage(null)}
         images={modalImage?.images}
         onImageChange={(src) => setModalImage(prev => prev ? {...prev, src} : null)}
