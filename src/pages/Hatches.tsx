@@ -11,10 +11,10 @@ const Hatches = () => {
         <title>Люки Нержавеющие AISI304/316 | Технологические Люки для Пищевого Оборудования</title>
         <meta name="description" content="Производство технологических люков из нержавеющей стали AISI304/316. Люки для емкостей, резервуаров, пищевого оборудования. Коррозионностойкое исполнение с гарантией." />
         <meta name="keywords" content="люки нержавеющие, технологические люки, AISI304 люки, AISI316 люки, люки пищевые, люки емкостей, люки резервуаров" />
-        <link rel="canonical" href="https://tap-automation.ru/hatches" />
+        <link rel="canonical" href="https://tap18.ru/hatches" />
         <meta property="og:title" content="Люки Нержавеющие AISI304/316 | Технологии Автоматизации" />
         <meta property="og:description" content="Производство технологических люков из нержавеющей стали AISI304/316 для пищевого оборудования" />
-        <meta property="og:url" content="https://tap-automation.ru/hatches" />
+        <meta property="og:url" content="https://tap18.ru/hatches" />
         <meta property="og:type" content="website" />
       </Helmet>
       <Header currentPage="hatches" />

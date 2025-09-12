@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemaps
-Sitemap: https://tap-automation.ru/sitemap.xml
+Sitemap: https://tap18.ru/sitemap.xml
 
 # Yandex specific
 User-agent: Yandex

@@ -25,10 +25,10 @@ const FrequencyConverters = () => {
         <title>Частотные Преобразователи AD30 | Продажа, Установка, Обслуживание</title>
         <meta name="description" content="Продажа частотных преобразователей AD30 Optimus Drive. Компактные универсальные преобразователи для управления асинхронными двигателями. Установка и обслуживание." />
         <meta name="keywords" content="частотные преобразователи, AD30 Optimus Drive, преобразователи частоты, купить преобразователь, установка преобразователя, частотник" />
-        <link rel="canonical" href="https://tap-automation.ru/preobrazovateli-chastotyi" />
+        <link rel="canonical" href="https://tap18.ru/preobrazovateli-chastotyi" />
         <meta property="og:title" content="Частотные Преобразователи AD30 | Технологии Автоматизации" />
         <meta property="og:description" content="Компактные универсальные преобразователи частоты AD30 Optimus Drive для управления асинхронными двигателями" />
-        <meta property="og:url" content="https://tap-automation.ru/preobrazovateli-chastotyi" />
+        <meta property="og:url" content="https://tap18.ru/preobrazovateli-chastotyi" />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://cdn.poehali.dev/files/91ee8b1b-2624-44bd-b986-d6b870fd3b82.jpg" />
       </Helmet>

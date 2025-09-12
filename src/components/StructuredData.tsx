@@ -16,7 +16,7 @@ const StructuredData = ({ type, data }: StructuredDataProps) => {
         "name": "Технологии Автоматизации Производств",
         "alternateName": "ТАП",
         "description": "Производство шкафов управления, корпусов из нержавеющей стали AISI304/316, технологических люков, частотных преобразователей",
-        "url": "https://tap-automation.ru",
+        "url": "https://tap18.ru",
         "logo": "https://cdn.poehali.dev/files/705c65f8-bec4-4833-afb2-840f73d1b635.png",
         "contactPoint": {
           "@type": "ContactPoint",
@@ -73,7 +73,7 @@ const StructuredData = ({ type, data }: StructuredDataProps) => {
           "@type": "ListItem",
           "position": index + 1,
           "name": item.label,
-          "item": item.href ? `https://tap-automation.ru${item.href}` : undefined
+          "item": item.href ? `https://tap18.ru${item.href}` : undefined
         })) || []
       };
       break;
