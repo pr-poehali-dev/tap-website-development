@@ -23,7 +23,7 @@ const HatchBlueprintComponent: React.FC<HatchBlueprintProps> = ({
         onClick={onToggle}
         className="w-full flex items-center justify-between text-left mb-4 hover:bg-gray-50 p-2 rounded min-h-[60px]"
       >
-        <h3 className="text-base md:text-lg lg:text-xl font-bold text-gray-800 flex-1 pr-2">ТЕХНИЧЕСКИЙ ЧЕРТЁЖ</h3>
+        <h3 className="font-bold text-gray-800 flex-1 pr-2" style={{fontSize: '18px'}}>Технический чертёж</h3>
         <div className="flex items-center gap-2 flex-shrink-0">
           <span className="text-xs sm:text-sm text-gray-600 hidden sm:inline">
             {expanded ? 'Скрыть' : 'Показать'}
