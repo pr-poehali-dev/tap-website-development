@@ -6,6 +6,7 @@ import AisiModelsList, { Aisi316ModelsList } from '@/components/aisi/AisiModelsL
 import ImageModal from '@/components/ImageModal';
 import ImageSlider from '@/components/ImageSlider';
 import Icon from '@/components/ui/icon';
+import SEOWrapper from '@/components/SEOWrapper';
 
 const Aisi = () => {
   const [isModelsExpanded, setIsModelsExpanded] = useState(true);
@@ -20,9 +21,26 @@ const Aisi = () => {
     "https://cdn.poehali.dev/files/0104119d-e7cc-4e4a-a186-b744cf42f34c.jpg"
   ];
   
+  const breadcrumbs = [
+    { label: 'Главная', href: '/' },
+    { label: 'Корпуса AISI304' }
+  ];
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background to-accent/5">
-      <Header currentPage="aisi" />
+    <SEOWrapper
+      title="Корпуса из нержавеющей стали AISI304 и AISI316 - Электротехнические корпуса на заказ"
+      description="Производим корпуса из высококачественной нержавеющей стали AISI304 и AISI316 для агрессивных условий эксплуатации в пищевой, химической промышленности. Индивидуальный подход, чертежи, технологические отверстия."
+      keywords="корпуса aisi304, корпуса aisi316, нержавеющая сталь, электротехнические корпуса, корпуса на заказ, пищевая промышленность, химическая промышленность, степень защиты IP66"
+      canonicalUrl="https://tap-automation.ru/aisi"
+      breadcrumbs={breadcrumbs}
+      structuredData={{
+        name: "Корпуса из нержавеющей стали AISI304",
+        description: "Электротехнические корпуса из нержавеющей стали марки AISI304 и AISI316 для агрессивных условий эксплуатации в пищевой, косметической, химической промышленности",
+        image: "https://cdn.poehali.dev/files/8c397170-a958-4f0b-9a63-e61a0c18c4c6.jpg"
+      }}
+    >
+      <div className="min-h-screen bg-gradient-to-br from-background to-accent/5">
+        <Header currentPage="aisi" />
 
       {/* Page Title Section */}
       <section className="pt-40 pb-8 px-6 sm:pt-36 md:pt-40">
@@ -190,9 +208,10 @@ const Aisi = () => {
         onImageChange={(src) => setModalImage(prev => prev ? {...prev, src} : null)}
       />
 
-      <ContactsSection />
-      <Footer />
-    </div>
+        <ContactsSection />
+        <Footer />
+      </div>
+    </SEOWrapper>
   );
 };
 
