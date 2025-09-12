@@ -4,13 +4,21 @@ import Footer from '@/components/sections/Footer';
 import ContactsSection from '@/components/sections/ContactsSection';
 import AisiModelsList, { Aisi316ModelsList } from '@/components/aisi/AisiModelsList';
 import ImageModal from '@/components/converters/ImageModal';
+import ImageSlider from '@/components/ImageSlider';
 import Icon from '@/components/ui/icon';
 
 const Aisi = () => {
   const [isModelsExpanded, setIsModelsExpanded] = useState(true);
   const [isAisi316Expanded, setIsAisi316Expanded] = useState(false);
   const [isCharacteristicsExpanded, setIsCharacteristicsExpanded] = useState(true);
-  const [modalImage, setModalImage] = useState<{src: string, alt: string} | null>(null);
+  const [isTechnicalDrawingExpanded, setIsTechnicalDrawingExpanded] = useState(false);
+  const [modalImage, setModalImage] = useState<{src: string, alt: string, images?: string[]} | null>(null);
+
+  const sliderImages = [
+    "https://cdn.poehali.dev/files/8c397170-a958-4f0b-9a63-e61a0c18c4c6.jpg",
+    "https://cdn.poehali.dev/files/8679c31a-6821-4923-a004-703cee3ad993.jpg",
+    "https://cdn.poehali.dev/files/0104119d-e7cc-4e4a-a186-b744cf42f34c.jpg"
+  ];
   
   return (
     <div className="min-h-screen bg-gradient-to-br from-background to-accent/5">
@@ -34,25 +42,13 @@ const Aisi = () => {
             {/* Header Section */}
             <div className="flex flex-col lg:flex-row items-center lg:items-start gap-12 mb-16">
               <div className="lg:w-1/3">
-                <div 
-                  className="relative overflow-hidden cursor-pointer group/image rounded-lg"
-                  onClick={() => setModalImage({
-                    src: "https://cdn.poehali.dev/files/8c397170-a958-4f0b-9a63-e61a0c18c4c6.jpg",
-                    alt: "Корпуса из нержавеющей стали AISI304"
-                  })}
-                  title="Нажмите для увеличения"
-                >
-                  <img 
-                    src="https://cdn.poehali.dev/files/8c397170-a958-4f0b-9a63-e61a0c18c4c6.jpg" 
-                    alt="Корпуса из нержавеющей стали AISI304" 
-                    loading="lazy"
-                    className="w-full h-auto rounded-lg shadow-lg group-hover:scale-105 transition-transform duration-300"
+                <div className="rounded-lg overflow-hidden shadow-lg">
+                  <ImageSlider
+                    images={sliderImages}
+                    alt="Корпуса из нержавеющей стали AISI304"
+                    onImageClick={(src) => setModalImage({src, alt: "Корпуса из нержавеющей стали AISI304", images: sliderImages})}
+                    title="Нажмите для увеличения"
                   />
-                  <div className="absolute inset-0 bg-black/0 group-hover/image:bg-black/20 transition-colors duration-300 flex items-center justify-center">
-                    <div className="opacity-0 group-hover/image:opacity-100 transition-opacity duration-300 bg-white/90 rounded-full p-2">
-                      <Icon name="ZoomIn" className="text-gray-800" size={20} />
-                    </div>
-                  </div>
                 </div>
               </div>
               
@@ -124,6 +120,49 @@ const Aisi = () => {
               )}
             </div>
 
+            {/* Technical Drawing Section */}
+            <div className="bg-white rounded-lg shadow-lg p-4 md:p-6 mb-6">
+              <button 
+                onClick={() => setIsTechnicalDrawingExpanded(!isTechnicalDrawingExpanded)}
+                className="w-full flex items-center justify-between text-left mb-4 hover:bg-gray-50 p-2 rounded min-h-[50px]"
+              >
+                <h4 className="text-base md:text-lg text-gray-800 flex-1 pr-2 font-bold">ТЕХНИЧЕСКИЙ ЧЕРТЁЖ</h4>
+                <div className="flex items-center gap-2 flex-shrink-0">
+                  <span className="text-xs sm:text-sm text-gray-600 hidden sm:inline">
+                    {isTechnicalDrawingExpanded ? 'Скрыть' : 'Показать'}
+                  </span>
+                  <span className={`transform transition-transform duration-300 ${isTechnicalDrawingExpanded ? 'rotate-180' : ''}`}>
+                    ▼
+                  </span>
+                </div>
+              </button>
+              
+              {isTechnicalDrawingExpanded && (
+                <div className="px-2">
+                  <div 
+                    className="relative overflow-hidden cursor-pointer group/image rounded-lg max-w-2xl mx-auto"
+                    onClick={() => setModalImage({
+                      src: "https://cdn.poehali.dev/files/906b6a9d-adca-4978-a8bb-a1a8222df58b.png",
+                      alt: "Технический чертёж корпуса AISI304"
+                    })}
+                    title="Нажмите для увеличения"
+                  >
+                    <img 
+                      src="https://cdn.poehali.dev/files/906b6a9d-adca-4978-a8bb-a1a8222df58b.png" 
+                      alt="Технический чертёж корпуса AISI304" 
+                      loading="lazy"
+                      className="w-full h-auto rounded-lg shadow-lg group-hover:scale-105 transition-transform duration-300"
+                    />
+                    <div className="absolute inset-0 bg-black/0 group-hover/image:bg-black/20 transition-colors duration-300 flex items-center justify-center">
+                      <div className="opacity-0 group-hover/image:opacity-100 transition-opacity duration-300 bg-white/90 rounded-full p-2">
+                        <Icon name="ZoomIn" className="text-gray-800" size={20} />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
+
             {/* Models List Section */}
             <AisiModelsList 
               isExpanded={isModelsExpanded}
@@ -145,6 +184,8 @@ const Aisi = () => {
       <ImageModal 
         modalImage={modalImage}
         onClose={() => setModalImage(null)}
+        images={modalImage?.images}
+        onImageChange={(src) => setModalImage(prev => prev ? {...prev, src} : null)}
       />
 
       <ContactsSection />
