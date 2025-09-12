@@ -42,27 +42,12 @@ const MainHeader = ({ className = '', currentPage = 'home' }: MainHeaderProps) =
             </div>
           </a>
         </div>
-        <nav className="hidden md:flex space-x-8 text-xl items-center">
+        <nav className="hidden md:flex space-x-6 text-lg items-center">
           <Navigation href="/" className={currentPage === 'home' ? 'text-primary font-medium' : 'text-black hover:text-primary transition-colors'}>Главная</Navigation>
           <Navigation href="/projects" className={currentPage === 'projects' ? 'text-primary font-medium' : 'text-black hover:text-primary transition-colors'}>Проекты</Navigation>
-          <Navigation href="/aisi" className={currentPage === 'aisi' ? 'text-primary font-medium' : 'text-black hover:text-primary transition-colors'}>
-            <span className="flex flex-col leading-tight text-center">
-              <span>Корпуса</span>
-              <span>AISI304</span>
-            </span>
-          </Navigation>
-          <Navigation href="/hatches" className={currentPage === 'hatches' ? 'text-primary font-medium' : 'text-black hover:text-primary transition-colors'}>
-            <span className="flex flex-col leading-tight text-center">
-              <span>Люки</span>
-              <span>AISI304</span>
-            </span>
-          </Navigation>
-          <Navigation href="/preobrazovateli-chastotyi" className={currentPage === 'converters' ? 'text-primary font-medium' : 'text-black hover:text-primary transition-colors'}>
-            <span className="flex flex-col leading-tight text-center">
-              <span>Частотные</span>
-              <span>преобразователи</span>
-            </span>
-          </Navigation>
+          <Navigation href="/aisi" className={currentPage === 'aisi' ? 'text-primary font-medium' : 'text-black hover:text-primary transition-colors'}>Корпуса AISI</Navigation>
+          <Navigation href="/hatches" className={currentPage === 'hatches' ? 'text-primary font-medium' : 'text-black hover:text-primary transition-colors'}>Люки AISI</Navigation>
+          <Navigation href="/preobrazovateli-chastotyi" className={currentPage === 'converters' ? 'text-primary font-medium' : 'text-black hover:text-primary transition-colors'}>Частотники</Navigation>
           <Navigation href="#contacts" className="text-black hover:text-primary transition-colors">Контакты</Navigation>
         </nav>
       </div>
