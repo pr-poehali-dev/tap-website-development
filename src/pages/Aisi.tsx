@@ -23,7 +23,7 @@ const Aisi = () => {
   
   const breadcrumbs = [
     { label: 'Главная', href: '/' },
-    { label: 'Корпуса AISI304' }
+    { label: 'Корпуса из нержавеющей стали AISI304' }
   ];
 
   return (
