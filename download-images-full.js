@@ -102,19 +102,30 @@ const projectImages = [
 
 async function downloadImage(url, filepath) {
   try {
+    console.log(`   🔄 Fetching: ${url}`);
     const response = await fetch(url);
-    if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+    
+    if (!response.ok) {
+      throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+    }
+    
+    const contentLength = response.headers.get('content-length');
+    const sizeInfo = contentLength ? ` (${Math.round(contentLength / 1024)}KB)` : '';
     
     const buffer = await response.arrayBuffer();
     const dir = dirname(filepath);
     
+    // Создаем папку если её нет
     mkdirSync(dir, { recursive: true });
+    
+    // Записываем файл
     writeFileSync(filepath, new Uint8Array(buffer));
     
-    console.log(`✅ Downloaded: ${filepath}`);
+    console.log(`   ✅ Saved: ${filepath}${sizeInfo}`);
     return true;
   } catch (error) {
-    console.log(`❌ Failed to download ${url}: ${error.message}`);
+    console.log(`   ❌ Failed to download ${url}`);
+    console.log(`      Error: ${error.message}`);
     return false;
   }
 }
@@ -128,7 +139,11 @@ async function main() {
   
   console.log(`📊 Total images to download: ${allImages.length}\n`);
   
-  for (const image of allImages) {
+  // Обработка небольшими пакетами для стабильности
+  for (let i = 0; i < allImages.length; i++) {
+    const image = allImages[i];
+    console.log(`[${i + 1}/${allImages.length}] Processing: ${image.path}`);
+    
     const success = await downloadImage(image.url, `.${image.path}`);
     if (success) {
       successful++;
@@ -136,14 +151,21 @@ async function main() {
       failed++;
     }
     
-    // Небольшая пауза между загрузками
-    await new Promise(resolve => setTimeout(resolve, 100));
+    // Небольшая пауза между загрузками для избежания перегрузки сервера
+    await new Promise(resolve => setTimeout(resolve, 200));
+    
+    // Промежуточная статистика каждые 10 изображений
+    if ((i + 1) % 10 === 0) {
+      console.log(`\n📈 Progress: ${i + 1}/${allImages.length} processed`);
+      console.log(`✅ Success: ${successful}, ❌ Failed: ${failed}\n`);
+    }
   }
   
-  console.log('\n📈 Download Statistics:');
+  console.log('\n📈 Final Download Statistics:');
   console.log(`✅ Successful downloads: ${successful}`);
   console.log(`❌ Failed downloads: ${failed}`);
   console.log(`📊 Total processed: ${successful + failed}`);
+  console.log(`📊 Success rate: ${((successful / allImages.length) * 100).toFixed(1)}%`);
   console.log('\n✨ Image download completed!');
   
   if (successful > 0) {
@@ -151,12 +173,31 @@ async function main() {
     console.log('public/image/');
     console.log('├── logo.png');
     console.log('├── seo/');
+    console.log('│   └── og-default.jpg');
     console.log('├── aisi/');
+    console.log('│   ├── main.jpg');
+    console.log('│   ├── slide2.jpg');
+    console.log('│   ├── slide3.jpg');
+    console.log('│   └── technical-drawing.png');
     console.log('├── frequency-converters/');
+    console.log('│   ├── ad30-main.jpg');
+    console.log('│   └── dimensions.png');
     console.log('├── home/');
+    console.log('│   ├── hero-slide1.jpg');
+    console.log('│   ├── hero-slide2.jpg');
+    console.log('│   ├── hero-slide3.jpg');
+    console.log('│   ├── control-cabinets.jpg');
+    console.log('│   ├── stainless-steel.jpg');
+    console.log('│   └── kip-automation.png');
     console.log('├── hatches/');
+    console.log('│   ├── oval-hatch.jpg');
+    console.log('│   ├── oval-drawing.png');
+    console.log('│   ├── ring-hatch.png');
+    console.log('│   └── ring-drawing.png');
     console.log('├── companies/');
+    console.log('│   ├── company1.png ... company10.png');
     console.log('└── projects/');
+    console.log('    └── [30 project images]');
   }
 }
 

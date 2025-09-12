@@ -1,7 +1,15 @@
 #!/bin/bash
-
-# Скрипт для загрузки всех изображений с CDN
-echo "🚀 Начинаю загрузку изображений с CDN..."
+echo "============================================="
+echo "Image Download Script for Poehali Website"
+echo "============================================="
+echo ""
+echo "Starting download of all images from CDN..."
+echo ""
+echo "Alternative: Run the Node.js script for full functionality:"
+echo "node download-images-full.js"
+echo ""
+echo "Current bash script will download images using curl..."
+echo ""
 
 # Создаем недостающие папки
 mkdir -p public/image/seo
